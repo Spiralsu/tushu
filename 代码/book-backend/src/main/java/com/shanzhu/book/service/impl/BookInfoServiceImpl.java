@@ -56,8 +56,9 @@ public class BookInfoServiceImpl implements BookInfoService {
         try{
             Map<String, Object> map = new HashMap<>();
             map.put("bookId", bookInfo.getBookid());
-            if(borrowMapper.selectCountBySearch(map) > 0) {
-                return -1;
+            // 修改：这里改为调用 selectCount
+            if(borrowMapper.selectCount(map) > 0) {
+                return -1; // 该书有借阅记录，不可删除
             }
             count = bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookid());
         } catch (Exception e) {
@@ -79,5 +80,4 @@ public class BookInfoServiceImpl implements BookInfoService {
     public Integer updateBookInfo(BookInfo bookInfo) {
         return bookInfoMapper.updateByPrimaryKeySelective(bookInfo);
     }
-
 }

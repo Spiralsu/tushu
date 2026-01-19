@@ -1,61 +1,27 @@
 package com.shanzhu.book.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
-
 import java.util.Date;
 
-/**
- * 借阅信息
- *
- * @author: ShanZhu
- * @date: 2023-12-31
- */
 @Data
 public class Borrow {
-
-    /**
-     * id
-     */
     private Integer borrowid;
-
-    /**
-     * 借阅者用户id
-     */
     private Integer userid;
-
-    /**
-     * 借阅者名称
-     */
     private String username;
-
-    /**
-     * 借阅图书id
-     */
+    private String studentid;
     private Integer bookid;
-
-    /**
-     * 借阅图书名
-     */
     private String bookname;
 
-    /**
-     * 借阅时间
-     */
-    private Date borrowtime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date borrowtime;      // 实际借出时间
 
-    /**
-     * 借阅时间str
-     */
-    private String borrowtimestr;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date returntime;      // 归还时间
 
-    /**
-     * 规还时间
-     */
-    private Date returntime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private Date applytime;       // 新增：申请时间
 
-    /**
-     * 规还时间str
-     */
-    private String returntimestr;
-
+    private String borrowreason;  // 新增：申请理由
+    private Integer state;        // 新增：0审核中 1待交接 2漂流中 3已归还 4已驳回
 }

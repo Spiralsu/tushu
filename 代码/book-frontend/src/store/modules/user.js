@@ -40,15 +40,34 @@ const actions = {
   login({ commit }, userInfo) {
     const { username, password, isadmin } = userInfo
     return new Promise((resolve, reject) => {
+      // 注意：前端字段 username 对应后端的 studentId
       login({ username: username.trim(), userpassword: password, isadmin: isadmin }).then(response => {
-        const { status, message, data } = response
-        
-        if(status !== 200) {
-          reject(message)
+        // 【关键修改】适配新后端的返回结构 (code, msg)
+        const { code, msg, data } = response
+
+        // 兼容性判断：后端成功通常返回 code:0
+        const resCode = code !== undefined ? code : response.status
+        const resMsg = msg || response.message || '登录失败'
+
+        // 只要不是成功状态
+        if(resCode !== 0 && resCode !== 200) {
+          reject(resMsg)
+          return
         }
 
-        commit('SET_TOKEN', data.token)
-        setToken(data.token)
+        // 校验 Token 是否存在
+        // 如果后端直接返回扁平结构(R extends HashMap)，token可能直接在response里
+        // 如果后端 put("data", ...)，token 可能在 response.data.token 里
+        // 为了保险，做多重检查
+        const token = data ? data.token : response.token;
+
+        if (!token) {
+          reject('Token获取失败: 后端未返回有效Token')
+          return
+        }
+
+        commit('SET_TOKEN', token)
+        setToken(token)
         resolve()
       }).catch(error => {
         reject(error)
@@ -60,23 +79,26 @@ const actions = {
   getInfo({ commit, state }) {
     return new Promise((resolve, reject) => {
       getInfo(state.token).then(response => {
-        const { data } = response
+        const { data, code } = response
 
-        if (!data) {
+        if ((code !== 0 && code !== 200) || !data) {
           reject('验证失败，请重新登录')
+          return
         }
 
+        // 处理头像
         data['avatar'] = '/pic/02.jpg'
+        // 根据 isAdmin 字段设置角色
         if (data.isadmin === 1){
           data['roles'] = ['admin']
           data['avatar'] = '/pic/05.jpg'
         }
-        else data['roles'] = ['reader']
-
+        else {
+          data['roles'] = ['reader']
+        }
 
         const { userid, roles, username, avatar } = data
 
-        // roles must be a non-empty array
         if (!roles || roles.length <= 0) {
           reject('getInfo: roles 必须是非空数组!')
         }
@@ -96,7 +118,7 @@ const actions = {
   logout({ commit, state }) {
     return new Promise((resolve, reject) => {
       logout(state.token).then(() => {
-        removeToken() // must remove  token  first
+        removeToken()
         resetRouter()
         commit('RESET_STATE')
         resolve()
@@ -109,7 +131,7 @@ const actions = {
   // remove token
   resetToken({ commit }) {
     return new Promise(resolve => {
-      removeToken() // must remove  token  first
+      removeToken()
       commit('RESET_STATE')
       resolve()
     })
@@ -122,4 +144,3 @@ export default {
   mutations,
   actions
 }
-
