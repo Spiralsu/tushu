@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanzhu.book.mapper.MessageMapper">
+    <resultMap id="BaseResultMap" type="com.shanzhu.book.model.Message">
+        <id column="messageId" jdbcType="INTEGER" property="messageid" />
+        <result column="userId" jdbcType="INTEGER" property="userid" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="isRead" jdbcType="INTEGER" property="isread" />
+        <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        messageId, userId, content, isRead, createTime
+    </sql>
+
+    <insert id="insert" parameterType="com.shanzhu.book.model.Message">
+        insert into message (userId, content, isRead, createTime)
+        values (#{userid}, #{content}, #{isread}, #{createtime})
+    </insert>
+
+    <select id="selectByUserId" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
+        from message
+        where userId = #{userid}
+        order by createTime desc
+    </select>
+
+    <update id="updateReadStatus">
+        update message set isRead = 1 where messageId = #{messageid}
+    </update>
+</mapper>

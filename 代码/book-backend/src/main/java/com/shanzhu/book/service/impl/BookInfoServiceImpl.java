@@ -1,13 +1,12 @@
 package com.shanzhu.book.service.impl;
 
 import com.shanzhu.book.mapper.BookInfoMapper;
-import com.shanzhu.book.mapper.BorrowMapper;
 import com.shanzhu.book.model.BookInfo;
 import com.shanzhu.book.service.BookInfoService;
+import com.shanzhu.book.utils.PageUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,22 +16,15 @@ public class BookInfoServiceImpl implements BookInfoService {
     @Resource
     private BookInfoMapper bookInfoMapper;
 
-    @Resource
-    private BorrowMapper borrowMapper;
-
     @Override
     public Integer getCount() {
         return bookInfoMapper.selectCount();
     }
 
+    // Dashboard 图表依赖此方法
     @Override
     public List<BookInfo> queryBookInfos() {
         return bookInfoMapper.selectAll();
-    }
-
-    @Override
-    public BookInfo queryBookInfoById(Integer bookid) {
-        return bookInfoMapper.selectByPrimaryKey(bookid);
     }
 
     @Override
@@ -47,31 +39,23 @@ public class BookInfoServiceImpl implements BookInfoService {
 
     @Override
     public Integer addBookInfo(BookInfo bookInfo) {
-        return bookInfoMapper.insertSelective(bookInfo);
+        // 自动设置库存
+        if (bookInfo.getBookcount() != null && bookInfo.getInventory() == null) {
+            bookInfo.setInventory(bookInfo.getBookcount());
+        }
+        return bookInfoMapper.insert(bookInfo);
     }
 
     @Override
     public Integer deleteBookInfo(BookInfo bookInfo) {
-        int count = 0;
-        try{
-            Map<String, Object> map = new HashMap<>();
-            map.put("bookId", bookInfo.getBookid());
-            // 修改：这里改为调用 selectCount
-            if(borrowMapper.selectCount(map) > 0) {
-                return -1; // 该书有借阅记录，不可删除
-            }
-            count = bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookid());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return count;
+        return bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookid());
     }
 
     @Override
     public Integer deleteBookInfos(List<BookInfo> bookInfos) {
         int count = 0;
-        for(BookInfo bookInfo : bookInfos) {
-            count += deleteBookInfo(bookInfo);
+        for (BookInfo bookInfo : bookInfos) {
+            count += bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookid());
         }
         return count;
     }
@@ -79,5 +63,11 @@ public class BookInfoServiceImpl implements BookInfoService {
     @Override
     public Integer updateBookInfo(BookInfo bookInfo) {
         return bookInfoMapper.updateByPrimaryKeySelective(bookInfo);
+    }
+
+    // 【核心修复】添加缺失的方法实现
+    @Override
+    public BookInfo queryBookInfoById(Integer id) {
+        return bookInfoMapper.selectByPrimaryKey(id);
     }
 }

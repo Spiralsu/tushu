@@ -12,131 +12,64 @@
         <result column="bookDesc" jdbcType="VARCHAR" property="bookdesc" />
         <result column="isBorrow" jdbcType="TINYINT" property="isborrowed" />
         <result column="bookImage" jdbcType="VARCHAR" property="bookimg" />
+        <result column="bookCount" jdbcType="INTEGER" property="bookcount" />
+        <result column="inventory" jdbcType="INTEGER" property="inventory" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage
+        bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory
     </sql>
 
-    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List" />
+    <select id="selectAll" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
         from book_info
-        where bookId = #{bookid,jdbcType=INTEGER}
+        order by bookId desc
     </select>
 
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-        delete from book_info
-        where bookId = #{bookid,jdbcType=INTEGER}
-    </delete>
-
     <insert id="insert" parameterType="com.shanzhu.book.model.BookInfo">
-        insert into book_info (bookId, bookName, bookAuthor,
-                               bookPrice, bookTypeId, bookDesc,
-                               isBorrow, bookImage)
-        values (#{bookid,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{bookauthor,jdbcType=VARCHAR},
-                #{bookprice,jdbcType=DECIMAL}, #{booktypeid,jdbcType=INTEGER}, #{bookdesc,jdbcType=VARCHAR},
-                #{isborrowed,jdbcType=TINYINT}, #{bookimg,jdbcType=VARCHAR})
-    </insert>
-
-    <insert id="insertSelective" parameterType="com.shanzhu.book.model.BookInfo">
-        insert into book_info
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="bookid != null">
-                bookId,
-            </if>
-            <if test="bookname != null">
-                bookName,
-            </if>
-            <if test="bookauthor != null">
-                bookAuthor,
-            </if>
-            <if test="bookprice != null">
-                bookPrice,
-            </if>
-            <if test="booktypeid != null">
-                bookTypeId,
-            </if>
-            <if test="bookdesc != null">
-                bookDesc,
-            </if>
-            <if test="isborrowed != null">
-                isBorrow,
-            </if>
-            <if test="bookimg != null">
-                bookImage, </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="bookid != null">
-                #{bookid,jdbcType=INTEGER},
-            </if>
-            <if test="bookname != null">
-                #{bookname,jdbcType=VARCHAR},
-            </if>
-            <if test="bookauthor != null">
-                #{bookauthor,jdbcType=VARCHAR},
-            </if>
-            <if test="bookprice != null">
-                #{bookprice,jdbcType=DECIMAL},
-            </if>
-            <if test="booktypeid != null">
-                #{booktypeid,jdbcType=INTEGER},
-            </if>
-            <if test="bookdesc != null">
-                #{bookdesc,jdbcType=VARCHAR},
-            </if>
-            <if test="isborrowed != null">
-                #{isborrowed,jdbcType=TINYINT},
-            </if>
-            <if test="bookimg != null">
-                #{bookimg,jdbcType=VARCHAR},
-            </if>
-        </trim>
+        insert into book_info (bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory)
+        values (#{bookname}, #{bookauthor}, #{bookprice}, #{booktypeid}, #{bookdesc},
+                #{isborrowed}, #{bookimg}, #{bookcount}, #{inventory})
     </insert>
 
     <update id="updateByPrimaryKeySelective" parameterType="com.shanzhu.book.model.BookInfo">
         update book_info
         <set>
-            <if test="bookname != null">
-                bookName = #{bookname,jdbcType=VARCHAR},
-            </if>
-            <if test="bookauthor != null">
-                bookAuthor = #{bookauthor,jdbcType=VARCHAR},
-            </if>
-            <if test="bookprice != null">
-                bookPrice = #{bookprice,jdbcType=DECIMAL},
-            </if>
-            <if test="booktypeid != null">
-                bookTypeId = #{booktypeid,jdbcType=INTEGER},
-            </if>
-            <if test="bookdesc != null">
-                bookDesc = #{bookdesc,jdbcType=VARCHAR},
-            </if>
-            <if test="isborrowed != null">
-                isBorrow = #{isborrowed,jdbcType=TINYINT},
-            </if>
-            <if test="bookimg != null">
-                bookImage = #{bookimg,jdbcType=VARCHAR}, </if>
+            <if test="bookname != null"> bookName = #{bookname}, </if>
+            <if test="bookauthor != null"> bookAuthor = #{bookauthor}, </if>
+            <if test="bookprice != null"> bookPrice = #{bookprice}, </if>
+            <if test="booktypeid != null"> bookTypeId = #{booktypeid}, </if>
+            <if test="bookdesc != null"> bookDesc = #{bookdesc}, </if>
+            <if test="isborrowed != null"> isBorrow = #{isborrowed}, </if>
+            <if test="bookimg != null"> bookImage = #{bookimg}, </if>
+            <if test="bookcount != null"> bookCount = #{bookcount}, </if>
+            <if test="inventory != null"> inventory = #{inventory}, </if>
         </set>
-        where bookId = #{bookid,jdbcType=INTEGER}
+        where bookId = #{bookid}
     </update>
 
-    <update id="updateByPrimaryKey" parameterType="com.shanzhu.book.model.BookInfo">
-        update book_info
-        set bookName = #{bookname,jdbcType=VARCHAR},
-            bookAuthor = #{bookauthor,jdbcType=VARCHAR},
-            bookPrice = #{bookprice,jdbcType=DECIMAL},
-            bookTypeId = #{booktypeid,jdbcType=INTEGER},
-            bookDesc = #{bookdesc,jdbcType=VARCHAR},
-            isBorrow = #{isborrowed,jdbcType=TINYINT},
-            bookImage = #{bookimg,jdbcType=VARCHAR} where bookId = #{bookid,jdbcType=INTEGER}
-    </update>
+    <select id="selectBySearch" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />,
+        (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
+        from book_info
+        <where>
+            <if test="bookname != null and bookname != '' "> and bookName like concat('%',#{bookname},'%') </if>
+            <if test="bookauthor != null and bookauthor != '' "> and bookAuthor like concat('%',#{bookauthor},'%') </if>
+            <if test="booktypeid != null"> and bookTypeId = #{booktypeid} </if>
+        </where>
+        limit #{begin}, #{size}
+    </select>
 
     <select id="selectAllByLimit" resultMap="BaseResultMap">
-        select bookId, bookName, bookAuthor,bookPrice, bookTypeId, bookDesc, isBorrow, bookImage,
-               (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
+        select <include refid="Base_Column_List" />,
+        (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
         from book_info
-                 limit #{begin}, #{size}
+        order by bookId desc
+        limit #{begin}, #{size}
+    </select>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" /> from book_info where bookId = #{bookid}
     </select>
 
     <select id="selectCount" resultType="int">
@@ -146,61 +79,17 @@
     <select id="selectCountBySearch" resultType="int">
         select count(*) from book_info
         <where>
-            <if test="bookname != null and bookname != '' ">
-                and bookName like concat('%',#{bookname},'%')
-            </if>
-            <if test="bookauthor != null and bookauthor != '' ">
-                and bookAuthor like concat('%',#{bookauthor},'%')
-            </if>
-            <if test="booktypeid != null and booktypeid != '' ">
-                and bookTypeId = #{booktypeid}
-            </if>
+            <if test="bookname != null and bookname != '' "> and bookName like concat('%',#{bookname},'%') </if>
+            <if test="bookauthor != null and bookauthor != '' "> and bookAuthor like concat('%',#{bookauthor},'%') </if>
+            <if test="booktypeid != null"> and bookTypeId = #{booktypeid} </if>
         </where>
-    </select>
-
-    <select id="selectBySearch" resultMap="BaseResultMap">
-        select bookId, bookName, bookAuthor,bookPrice, bookTypeId, bookDesc, isBorrow, bookImage,
-        (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
-        from book_info
-        <where>
-            <if test="bookname != null and bookname != '' ">
-                and bookName like concat('%',#{bookname},'%')
-            </if>
-            <if test="bookauthor != null and bookauthor != '' ">
-                and bookAuthor like concat('%',#{bookauthor},'%')
-            </if>
-            <if test="booktypeid != null and booktypeid != '' ">
-                and bookTypeId = #{booktypeid}
-            </if>
-        </where>
-        limit #{begin}, #{size}
-    </select>
-
-    <select id="selectAll" resultMap="BaseResultMap">
-        select bookId, bookName, bookAuthor,bookPrice, bookTypeId, bookDesc, isBorrow, bookImage,
-               (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
-        from book_info
     </select>
 
     <select id="selectCountByType" resultType="int">
-        select count(*) from book_info
-        <where>
-            <if test="booktypeid != null and booktypeid != '' ">
-                and bookTypeId = #{booktypeid}
-            </if>
-        </where>
+        select count(*) from book_info where bookTypeId = #{booktypeid}
     </select>
 
-    <select id="selectByType" resultMap="BaseResultMap">
-        select bookId, bookName, bookAuthor,bookPrice, bookTypeId, bookDesc, isBorrow, bookImage,
-        (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
-        from book_info
-        <where>
-            <if test="booktypeid != null and booktypeid != '' ">
-                and bookTypeId = #{booktypeid}
-            </if>
-        </where>
-        limit #{begin}, #{size}
-    </select>
-
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from book_info where bookId = #{bookid}
+    </delete>
 </mapper>

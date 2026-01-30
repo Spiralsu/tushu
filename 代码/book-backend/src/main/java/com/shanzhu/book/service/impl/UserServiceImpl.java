@@ -8,6 +8,7 @@ import com.shanzhu.book.utils.TokenProcessor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,10 +24,18 @@ public class UserServiceImpl implements UserService {
         User dbUser = userMapper.selectByUserName(user.getStudentid());
         if (dbUser == null) return R.error("学号未注册");
 
+        // 1. 校验密码
         if (!dbUser.getUserpassword().equals(user.getUserpassword())) {
             return R.error("密码错误");
         }
 
+        // 2. 校验身份 (0:读者, 1:管理员)
+        if (user.getIsadmin() != null && !user.getIsadmin().equals(dbUser.getIsadmin())) {
+            String roleName = user.getIsadmin() == 1 ? "管理员" : "读者";
+            return R.error("登录失败：该账号不是" + roleName + "身份");
+        }
+
+        // 3. 校验状态
         if (dbUser.getStatus() == 0) return R.error("账号审核中，请联系管理员");
         if (dbUser.getStatus() == 2) return R.error("账号被禁用");
 
@@ -51,16 +60,14 @@ public class UserServiceImpl implements UserService {
     // --- 兼容旧方法 ---
     @Override
     public User login(User user) {
-        // 兼容旧Controller调用，但尽量改用userLogin
         return userMapper.selectByUserName(user.getUsername());
     }
 
     @Override
     public Integer register(String username, String password) {
-        // 核心修复：旧接口调用时，将 username 赋值给 studentId
         User user = new User();
-        user.setUsername("新用户"); // 默认昵称
-        user.setStudentid(username); // 将前端输入的账号作为学号
+        user.setUsername("新用户");
+        user.setStudentid(username);
         user.setUserpassword(password);
         user.setStatus(0);
         user.setIsadmin(0);
@@ -80,20 +87,45 @@ public class UserServiceImpl implements UserService {
         user.setUserpassword(password);
         userMapper.updateByPrimaryKeySelective(user);
     }
+
     @Override
-    public Integer getCount() { return userMapper.selectCount(null); }
+    public Integer getCount() {
+        return userMapper.selectCount(new HashMap<>());
+    }
+
+    // 【核心修复】构造 Map 参数调用 userMapper
     @Override
-    public List<User> queryUsers() { return userMapper.selectAllByLimit(0, 1000, null); }
+    public List<User> queryUsers() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("begin", 0);
+        map.put("size", 1000);
+        return userMapper.selectAllByLimit(map);
+    }
+
+    // 【核心修复】直接传递 Map 参数
     @Override
-    public int getSearchCount(Map<String, Object> searchParam) { return userMapper.selectCount(null); }
+    public int getSearchCount(Map<String, Object> searchParam) {
+        return userMapper.selectCount(searchParam);
+    }
+
+    // 【核心修复】直接传递 Map 参数
     @Override
-    public List<User> searchUsersByPage(Map<String, Object> params) { return userMapper.selectAllByLimit(0, 10, null); }
+    public List<User> searchUsersByPage(Map<String, Object> params) {
+        return userMapper.selectAllByLimit(params);
+    }
+
     @Override
     public Integer addUser(User user) { return userMapper.insert(user); }
     @Override
     public Integer deleteUser(User user) { return userMapper.deleteByPrimaryKey(user.getUserid()); }
     @Override
-    public Integer deleteUsers(List<User> users) { return 0; }
+    public Integer deleteUsers(List<User> users) {
+        int count = 0;
+        for(User u : users) {
+            count += userMapper.deleteByPrimaryKey(u.getUserid());
+        }
+        return count;
+    }
     @Override
     public Integer updateUser(User user) { return userMapper.updateByPrimaryKeySelective(user); }
 }

@@ -26,15 +26,17 @@
 
     <insert id="insert" parameterType="com.shanzhu.book.model.User">
         insert into user (userName, studentId, userPassword, isAdmin, status)
-        values (#{username}, #{studentid}, #{userpassword}, #{isadmin}, 0)
+        values (#{username}, #{studentid}, #{userpassword}, #{isadmin}, #{status})
     </insert>
 
     <update id="updateByPrimaryKeySelective" parameterType="com.shanzhu.book.model.User">
         update user
         <set>
             <if test="username != null"> userName = #{username}, </if>
+            <if test="studentid != null"> studentId = #{studentid}, </if>
             <if test="userpassword != null"> userPassword = #{userpassword}, </if>
             <if test="status != null"> status = #{status}, </if>
+            <if test="isadmin != null"> isAdmin = #{isadmin}, </if>
         </set>
         where userId = #{userid}
     </update>
@@ -42,8 +44,8 @@
     <select id="selectAllByLimit" resultMap="BaseResultMap">
         select <include refid="Base_Column_List" /> from user
         <where>
-            <if test="user != null and user.username != null and user.username != ''">
-                and (userName like concat('%',#{user.username},'%') OR studentId like concat('%',#{user.username},'%'))
+            <if test="username != null and username != ''">
+                and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%'))
             </if>
         </where>
         order by status asc, userId desc
@@ -52,6 +54,11 @@
 
     <select id="selectCount" resultType="int">
         select count(*) from user
+        <where>
+            <if test="username != null and username != ''">
+                and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%'))
+            </if>
+        </where>
     </select>
 
     <select id="selectByPrimaryKey" resultMap="BaseResultMap">

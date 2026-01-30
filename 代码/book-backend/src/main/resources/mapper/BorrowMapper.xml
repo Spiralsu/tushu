@@ -15,6 +15,10 @@
         <result column="bookName" jdbcType="VARCHAR" property="bookname" />
     </resultMap>
 
+    <sql id="Base_Column_List">
+        borrowId, userId, bookId, borrowTime, returnTime, applyTime, borrowReason, state
+    </sql>
+
     <insert id="insert" parameterType="com.shanzhu.book.model.Borrow">
         insert into borrow (userId, bookId, applyTime, borrowReason, state, borrowTime)
         values (#{userid}, #{bookid}, NOW(), #{borrowreason}, #{state}, #{borrowtime})
@@ -31,7 +35,11 @@
     </update>
 
     <select id="selectAllByLimit" resultMap="BaseResultMap">
-        SELECT b.*, u.userName, u.studentId, bk.bookName
+        SELECT
+        b.*,
+        u.userName,
+        u.studentId,
+        bk.bookName
         FROM borrow b
         LEFT JOIN user u ON b.userId = u.userId
         LEFT JOIN book_info bk ON b.bookId = bk.bookId
@@ -39,7 +47,7 @@
             <if test="userId != null"> and b.userId = #{userId} </if>
             <if test="state != null"> and b.state = #{state} </if>
         </where>
-        ORDER BY b.applyTime DESC
+        ORDER BY b.applyTime DESC, b.state ASC
         <if test="begin != null and size != null">
             LIMIT #{begin}, #{size}
         </if>
@@ -49,12 +57,16 @@
         select count(*) from borrow
         <where>
             <if test="userId != null"> and userId = #{userId} </if>
-            <if test="bookId != null"> and bookId = #{bookId} </if>
+            <if test="state != null"> and state = #{state} </if>
         </where>
     </select>
 
     <select id="selectByPrimaryKey" resultMap="BaseResultMap">
-        select * from borrow where borrowId = #{borrowid}
+        select b.*, u.userName, bk.bookName
+        from borrow b
+                 LEFT JOIN user u ON b.userId = u.userId
+                 LEFT JOIN book_info bk ON b.bookId = bk.bookId
+        where borrowId = #{borrowid}
     </select>
 
     <delete id="deleteByPrimaryKey">

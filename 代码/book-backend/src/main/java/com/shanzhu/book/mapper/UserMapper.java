@@ -1,24 +1,26 @@
 package com.shanzhu.book.mapper;
 
 import com.shanzhu.book.model.User;
-import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer userid);
+
     int insert(User record);
-    int insertSelective(User record);
+
     User selectByPrimaryKey(Integer userid);
+
+    // 按用户名/学号查询
+    User selectByUserName(String username);
+
+    int selectCountByUserName(String username);
+
     int updateByPrimaryKeySelective(User record);
-    int updateByPrimaryKey(User record);
 
-    // 修改：根据学号查询
-    User selectByUserName(@Param("username") String username);
+    // 统一改为 Map 传参，支持搜索
+    List<User> selectAllByLimit(Map<String, Object> params);
 
-    // 修改：统计学号数量
-    int selectCountByUserName(@Param("username") String username);
-
-    List<User> selectAllByLimit(@Param("begin") Integer begin, @Param("size") Integer size, @Param("user") User user);
-    Integer selectCount(@Param("user") User user);
+    // 统一改为 Map 传参，支持搜索计数
+    int selectCount(Map<String, Object> params);
 }
