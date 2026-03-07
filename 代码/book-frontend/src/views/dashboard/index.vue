@@ -1,252 +1,214 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-welcome">
-      <div class="welcome-content">
-        <h1>欢迎使用图书管理系统</h1>
-        <p>你好，{{ name }}，祝你有美好的一天！</p>
-        <div class="welcome-actions">
-          <el-button type="primary" icon="el-icon-position" @click="navigateTo('/bookmanage/bookinfo?openDonate=true')">去漂流</el-button>
-          <el-button type="success" icon="el-icon-document" @click="navigateTo('/bookmanage/borrow')">我的漂流进度</el-button>
+    <div class="bento-grid">
+
+      <div class="bento-item welcome-banner">
+        <div class="banner-content">
+          <h2>你好，{{ name }}！欢迎回到校园旧书漂流站</h2>
+          <p>每一本书都有一段旅程，今天你想让哪本书开启新的漂流？</p>
+          <div class="banner-actions">
+            <el-button type="primary" round icon="el-icon-position" @click="$router.push('/bookmanage/bookinfo')">我要漂流</el-button>
+          </div>
+        </div>
+        <div class="banner-illustration">
+          <i class="el-icon-collection" style="font-size: 100px; opacity: 0.2; color: #409eff;"></i>
         </div>
       </div>
-      <div class="welcome-image">
-        <i class="el-icon-collection"></i>
+
+      <div class="bento-item stat-card">
+        <div class="stat-icon bg-blue"><i class="el-icon-reading"></i></div>
+        <div class="stat-info">
+          <div class="stat-value">{{ bookCount }}</div>
+          <div class="stat-label">全校在漂书籍</div>
+        </div>
       </div>
+
+      <div class="bento-item stat-card">
+        <div class="stat-icon bg-green"><i class="el-icon-refresh"></i></div>
+        <div class="stat-info">
+          <div class="stat-value">{{ borrowCount }}</div>
+          <div class="stat-label">成功传递次数</div>
+        </div>
+      </div>
+
+      <div class="bento-item stat-card">
+        <div class="stat-icon bg-orange"><i class="el-icon-user"></i></div>
+        <div class="stat-info">
+          <div class="stat-value">{{ userCount }}</div>
+          <div class="stat-label">参与漂流师生</div>
+        </div>
+      </div>
+
+      <div class="bento-item activity-feed">
+        <div class="item-header">
+          <h3>最新上架漂流书籍</h3>
+          <el-button type="text" @click="$router.push('/bookmanage/bookinfo')">查看书库</el-button>
+        </div>
+        <div class="recent-books">
+          <div v-for="book in recentBooks" :key="book.bookid" class="recent-book-item">
+            <el-image
+              :src="$store.state.settings.baseApi + book.bookimg"
+              class="book-mini-cover"
+              fit="cover">
+              <div slot="error" class="image-error"><i class="el-icon-picture-outline"></i></div>
+            </el-image>
+            <div class="book-meta">
+              <span class="book-name">{{ book.bookname }}</span>
+              <span class="book-time">发布者共享</span>
+            </div>
+            <el-button size="mini" round class="go-look-btn" @click="$router.push('/bookmanage/bookinfo')">去看看</el-button>
+          </div>
+          <div v-if="recentBooks.length === 0" class="empty-tips">暂无新书上架</div>
+        </div>
+      </div>
+
+      <div class="bento-item quick-actions">
+        <div class="item-header">
+          <h3>常用功能</h3>
+        </div>
+        <div class="action-grid">
+          <div class="action-btn" @click="$router.push('/bookmanage/bookinfo?openDonate=true')">
+            <i class="el-icon-upload el-icon--upload"></i>
+            <span>发布旧书</span>
+          </div>
+          <div class="action-btn" @click="$router.push('/bookmanage/borrow')">
+            <i class="el-icon-document-checked"></i>
+            <span>我的借阅</span>
+          </div>
+          <div class="action-btn" @click="handleOpenMessage">
+            <i class="el-icon-bell"></i>
+            <span>站内消息通知</span>
+          </div>
+          <div class="action-btn" @click="profileDialogVisible = true">
+            <i class="el-icon-user"></i>
+            <span>个人中心</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <el-row :gutter="24" class="data-overview">
-      <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-        <el-card shadow="hover" class="data-card book-card">
-          <div class="card-content">
-            <div class="card-icon">
-              <i class="el-icon-reading"></i>
-            </div>
-            <div class="card-info">
-              <div class="card-title">图书总数</div>
-              <div class="card-value">{{ bookCount }}</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-        <el-card shadow="hover" class="data-card borrow-card">
-          <div class="card-content">
-            <div class="card-icon">
-              <i class="el-icon-document"></i>
-            </div>
-            <div class="card-info">
-              <div class="card-title">漂流总数</div>
-              <div class="card-value">{{ borrowCount }}</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-        <el-card shadow="hover" class="data-card user-card">
-          <div class="card-content">
-            <div class="card-icon">
-              <i class="el-icon-user"></i>
-            </div>
-            <div class="card-info">
-              <div class="card-title">用户总数</div>
-              <div class="card-value">{{ userCount }}</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :xs="12" :sm="12" :md="6" :lg="6" :xl="6">
-        <el-card shadow="hover" class="data-card type-card">
-          <div class="card-content">
-            <div class="card-icon">
-              <i class="el-icon-collection-tag"></i>
-            </div>
-            <div class="card-info">
-              <div class="card-title">图书类型</div>
-              <div class="card-value">{{ typeCount }}</div>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
+    <el-dialog title="站内消息通知" :visible.sync="msgDialogVisible" width="450px" style="border-radius: 16px;">
+      <div v-loading="msgLoading" style="min-height: 120px;">
+        <el-timeline v-if="messages.length > 0">
+          <el-timeline-item v-for="(msg, index) in messages" :key="index" :type="msg.type" :timestamp="msg.time">
+            {{ msg.content }}
+          </el-timeline-item>
+        </el-timeline>
+        <el-empty v-if="!msgLoading && messages.length === 0" description="暂无新的通知消息"></el-empty>
+      </div>
+    </el-dialog>
 
-    <el-row :gutter="24" class="chart-section">
-      <el-col :span="24">
-        <div class="section-header">
-          <h2 class="section-title">统计分析</h2>
-          <el-divider></el-divider>
+    <el-dialog title="个人中心" :visible.sync="profileDialogVisible" width="400px" center>
+      <div class="profile-card">
+        <div class="avatar-wrapper"><i class="el-icon-user-solid"></i></div>
+        <h3 class="username">书友 {{ name || '未知用户' }}</h3>
+        <p class="role-tag">
+          <el-tag size="small" :type="roles[0] === 'admin' ? 'danger' : 'success'">
+            {{ roles[0] === 'admin' ? '系统管理员' : '漂流书友' }}
+          </el-tag>
+        </p>
+
+        <div class="profile-details">
+          <div class="detail-item">
+            <span class="label">学号 / 账号：</span>
+            <span class="value" style="color: #409eff; font-size: 16px;">{{ username }}</span>
+          </div>
         </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
-        <el-card shadow="hover" class="chart-card">
-          <div slot="header" class="card-header">
-            <span>图书类型分布</span>
-          </div>
-          <div class="chart-container" ref="pieChartContainer"></div>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="12" :lg="8" :xl="8">
-        <el-card shadow="hover" class="chart-card">
-          <div slot="header" class="card-header">
-            <span>漂流状态分布</span>
-          </div>
-          <div class="chart-container" ref="barChartContainer"></div>
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
-        <el-card shadow="hover" class="chart-card">
-          <div slot="header" class="card-header">
-            <span>高价图书排行</span>
-          </div>
-          <div class="chart-container" ref="lineChartContainer"></div>
-        </el-card>
-      </el-col>
-    </el-row>
+
+        <div class="profile-actions">
+          <el-button type="primary" round style="width: 100%; margin-top: 15px;" @click="goToPassword">修改安全密码</el-button>
+        </div>
+      </div>
+    </el-dialog>
+
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { getCount as getBookCount } from "@/api/bookinfo";
+import { mapGetters } from 'vuex'
+import { getCount as getBookCount, queryBookInfosByPage } from "@/api/bookinfo";
 import { getCount as getBorrowCount } from "@/api/borrow";
 import { getCount as getUserCount } from "@/api/user";
-import { getCount as getTypeCount } from "@/api/booktype";
-import { getBookTypeDistribution, getBorrowStatusDistribution, getHighPriceBooks } from "@/api/dashboard";
-import request from "@/utils/request";
+import request from '@/utils/request';
 
 export default {
-  name: "Dashboard",
+  name: 'Dashboard',
+  computed: {
+    // 引入 username
+    ...mapGetters(['id', 'name', 'roles', 'username'])
+  },
   data() {
     return {
       bookCount: 0,
       borrowCount: 0,
       userCount: 0,
-      typeCount: 0,
-      chartData: {
-        pieData: [],
-        barData: { categories: [], values: [] },
-        lineData: { books: [], values: [] }
-      },
-      charts: { pieChart: null, barChart: null, lineChart: null },
-    };
+      recentBooks: [],
+      msgDialogVisible: false,
+      profileDialogVisible: false,
+      msgLoading: false,
+      messages: []
+    }
   },
-  computed: {
-    ...mapGetters(["id", "name", "roles"]),
-  },
-  mounted() {
-    this.fetchData();
-    this.$nextTick(() => {
-      this.initCharts();
-      this.fetchChartData();
-    });
-    window.addEventListener('resize', this.handleResize);
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.handleResize);
+  created() {
+    this.fetchRealData()
   },
   methods: {
-    handleResize() {
-      Object.values(this.charts).forEach(chart => chart && chart.resize());
-    },
-    fetchData() {
-      getBookCount().then(res => { this.bookCount = res; }).catch(() => { this.bookCount = 0; });
-      // 使用正确的漂流统计接口
-      request({url:'/borrow/getCount', method:'get'}).then(res => { this.borrowCount = res; }).catch(() => { this.borrowCount = 0; });
-      getUserCount().then(res => { this.userCount = res; }).catch(() => { this.userCount = 0; });
-      getTypeCount().then(res => { this.typeCount = res; }).catch(() => { this.typeCount = 0; });
-    },
-    async fetchChartData() {
+    async fetchRealData() {
+      try { this.bookCount = await getBookCount() || 0; } catch (e) {}
+      try { this.borrowCount = await getBorrowCount() || 0; } catch (e) {}
+      try { this.userCount = await getUserCount() || 0; } catch (e) {}
       try {
-        const pieData = await getBookTypeDistribution();
-        this.chartData.pieData = pieData;
-        if (this.charts.pieChart) this.updatePieChart();
+        const resRecent = await queryBookInfosByPage({ page: 1, limit: 4 });
+        this.recentBooks = resRecent.data || [];
+      } catch (e) {}
+    },
 
-        const barData = await getBorrowStatusDistribution();
-        this.chartData.barData = barData;
-        if (this.charts.barChart) this.updateBarChart();
+    handleOpenMessage() {
+      this.msgDialogVisible = true;
+      this.msgLoading = true;
+      request({
+        url: '/message/getByUserId',
+        method: 'get',
+        params: { userid: this.id }
+      }).then(res => {
+        const msgList = res.data || res || [];
+        this.messages = msgList.map(msg => {
+          return {
+            content: msg.content,
+            time: new Date(msg.createtime).toLocaleString(),
+            type: msg.isread === 0 ? 'primary' : 'info'
+          }
+        });
+        this.msgLoading = false;
+      }).catch(err => {
+        console.error("获取消息失败", err);
+        this.msgLoading = false;
+      });
+    },
 
-        const lineData = await getHighPriceBooks();
-        this.chartData.lineData = lineData;
-        if (this.charts.lineChart) this.updateLineChart();
-      } catch (error) {
-        console.error('获取图表数据失败:', error);
-      }
-    },
-    navigateTo(path) {
-      this.$router.push(path);
-    },
-    initCharts() {
-      this.charts.pieChart = this.$echarts.init(this.$refs.pieChartContainer);
-      this.charts.barChart = this.$echarts.init(this.$refs.barChartContainer);
-      this.charts.lineChart = this.$echarts.init(this.$refs.lineChartContainer);
-      Object.values(this.charts).forEach(chart => chart.showLoading());
-    },
-    updatePieChart() {
-      this.charts.pieChart.hideLoading();
-      const option = {
-        tooltip: { trigger: 'item', formatter: '{a} <br/>{b}: {c} ({d}%)' },
-        series: [{
-          name: '图书类型', type: 'pie', radius: ['35%', '60%'], center: ['50%', '45%'],
-          data: this.chartData.pieData,
-          itemStyle: { borderRadius: 8, borderColor: '#fff', borderWidth: 2 }
-        }]
-      };
-      this.charts.pieChart.setOption(option);
-    },
-    updateBarChart() {
-      this.charts.barChart.hideLoading();
-      const option = {
-        tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
-        xAxis: [{ type: 'category', data: this.chartData.barData.categories }],
-        yAxis: [{ type: 'value' }],
-        series: [{
-          name: '数量', type: 'bar', barWidth: '60%',
-          data: this.chartData.barData.values,
-          itemStyle: {
-            color: function(params) {
-              return params.dataIndex === 0 ? '#67C23A' : '#E6A23C';
-            }
-          }
-        }]
-      };
-      this.charts.barChart.setOption(option);
-    },
-    updateLineChart() {
-      this.charts.lineChart.hideLoading();
-      const option = {
-        tooltip: { trigger: 'axis' },
-        grid: { left: '3%', right: '4%', bottom: '3%', containLabel: true },
-        xAxis: { type: 'value' },
-        yAxis: {
-          type: 'category',
-          data: this.chartData.lineData.books,
-          // 【问题2修复】：限制文字长度，防止遮挡
-          axisLabel: {
-            formatter: function(value) {
-              if (value.length > 5) {
-                return value.substring(0, 5) + '...';
-              }
-              return value;
-            }
-          }
-        },
-        series: [{
-          name: '图书价格', type: 'bar', data: this.chartData.lineData.values,
-          itemStyle: { color: '#F56C6C' }
-        }]
-      };
-      this.charts.lineChart.setOption(option);
+    goToPassword() {
+      this.profileDialogVisible = false;
+      this.$router.push('/other/password');
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
-.dashboard-container { padding: 24px; background-color: #f5f7fa; min-height: calc(100vh - 50px); }
-.dashboard-welcome { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; background: linear-gradient(to right, #1989fa, #5cbcff); border-radius: 8px; padding: 30px; color: #fff; box-shadow: 0 4px 12px rgba(25, 137, 250, 0.2); h1 { font-size: 28px; font-weight: 600; margin: 0 0 12px 0; } p { font-size: 16px; margin: 0 0 20px 0; opacity: 0.9; } .welcome-actions { margin-top: 20px; .el-button { margin-right: 15px; } } .welcome-image i { font-size: 120px; opacity: 0.2; } }
-.data-card { height: 120px; border-radius: 8px; overflow: hidden; transition: all 0.3s; .card-content { display: flex; align-items: center; height: 100%; padding: 20px; } .card-icon { width: 64px; height: 64px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; i { font-size: 30px; color: #fff; } } .card-info { flex: 1; } .card-title { font-size: 16px; color: #606266; margin-bottom: 10px; } .card-value { font-size: 30px; font-weight: bold; color: #303133; } }
-.book-card .card-icon { background: linear-gradient(135deg, #409EFF, #53a8ff); }
-.borrow-card .card-icon { background: linear-gradient(135deg, #67C23A, #85ce61); }
-.user-card .card-icon { background: linear-gradient(135deg, #E6A23C, #f5a657); }
-.type-card .card-icon { background: linear-gradient(135deg, #F56C6C, #f78989); }
-.chart-card { margin-bottom: 20px; .chart-container { height: 300px; width: 100%; } }
+/* 样式保持不变，直接复制之前的即可，这里简略以节省篇幅，确保覆盖时样式完整 */
+.dashboard-container { padding: 10px; background-color: #f7f9fc; min-height: calc(100vh - 50px); }
+.bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.bento-item { background: #ffffff; border-radius: 20px; padding: 24px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); border: 1px solid #f0f2f5; transition: transform 0.2s, box-shadow 0.2s; &:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); } }
+.welcome-banner { grid-column: span 3; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%); border: none; .banner-content { flex: 1; h2 { margin: 0 0 12px 0; color: #1f2d3d; font-size: 24px; } p { color: #5e6d82; margin-bottom: 24px; font-size: 15px; } } }
+.stat-card { display: flex; align-items: center; gap: 20px; .stat-icon { width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #fff; &.bg-blue { background: #409eff; box-shadow: 0 4px 12px rgba(64,158,255,0.3); } &.bg-green { background: #67c23a; box-shadow: 0 4px 12px rgba(103,194,58,0.3); } &.bg-orange { background: #e6a23c; box-shadow: 0 4px 12px rgba(230,162,60,0.3); } } .stat-info { .stat-value { font-size: 28px; font-weight: 700; color: #303133; margin-bottom: 4px; } .stat-label { font-size: 14px; color: #909399; } } }
+.activity-feed { grid-column: span 2; }
+.quick-actions { grid-column: span 1; }
+.item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; h3 { margin: 0; font-size: 18px; color: #303133; font-weight: 600; } }
+.recent-book-item { display: flex; align-items: center; padding: 12px 0; border-bottom: 1px dashed #ebeef5; .book-mini-cover { width: 40px; height: 55px; border-radius: 4px; margin-right: 15px; background: #f0f2f5; } .book-meta { flex: 1; display: flex; flex-direction: column; .book-name { font-size: 15px; font-weight: 500; color: #333; } .book-time { font-size: 12px; color: #999; margin-top: 4px; } } &:last-child { border-bottom: none; } }
+.go-look-btn { background-color: #ecf5ff; color: #409eff; border: none; font-weight: 600; padding: 8px 16px; transition: all 0.3s; &:hover { background-color: #409eff; color: #ffffff; } }
+.empty-tips { text-align: center; color: #999; font-size: 13px; margin-top: 20px; }
+.action-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; .action-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: #f7f9fc; border-radius: 12px; cursor: pointer; transition: background 0.2s; i { font-size: 28px; color: #409eff; margin-bottom: 12px; } span { font-size: 14px; color: #606266; font-weight: 500; } &:hover { background: #ecf5ff; } } }
+.profile-card { text-align: center; padding: 10px; .avatar-wrapper { width: 80px; height: 80px; margin: 0 auto 15px; border-radius: 50%; background: #ecf5ff; display: flex; align-items: center; justify-content: center; font-size: 40px; color: #409eff; } .username { font-size: 20px; margin: 0 0 10px 0; color: #303133; } .role-tag { margin-bottom: 25px; } .profile-details { background: #f7f9fc; border-radius: 8px; padding: 15px; margin-bottom: 25px; .detail-item { font-size: 14px; display: flex; justify-content: center; gap: 10px; .label { color: #909399; } .value { font-weight: bold; color: #303133; } } } }
+::v-deep .el-dialog { border-radius: 16px; overflow: hidden; }
 </style>

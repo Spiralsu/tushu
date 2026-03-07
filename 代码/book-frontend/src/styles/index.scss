@@ -69,11 +69,121 @@ div:focus {
   .menu-icon-wrapper {
     box-shadow: 0 2px 5px rgba(24, 144, 255, 0.1);
   }
-  
+
   .el-menu-item {
     .menu-title,
     .menu-icon {
       transition: color 0.3s;
     }
+  }
+}
+/* src/styles/index.scss 末尾追加 */
+
+// 全局卡片毛玻璃化
+.el-card {
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05) !important;
+}
+
+// 表格透明化处理
+.el-table {
+  background-color: transparent !important;
+  border-radius: 12px;
+  overflow: hidden;
+
+  tr, th, td {
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  &::before { display: none; }
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+// 按钮圆润化
+.el-button {
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+.el-button--primary {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: transform 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  }
+}
+
+// 输入框统一风格
+.el-input__inner {
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  &:focus {
+    background: #fff !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  }
+}
+/* src/styles/index.scss 末尾追加 */
+
+// 全局卡片毛玻璃化
+.el-card {
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05) !important;
+}
+
+// 表格透明化处理
+.el-table {
+  background-color: transparent !important;
+  border-radius: 12px;
+  overflow: hidden;
+
+  tr, th, td {
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  &::before { display: none; }
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+// 按钮圆润化
+.el-button {
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+.el-button--primary {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: transform 0.2s;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  }
+}
+
+// 输入框统一风格
+.el-input__inner {
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  &:focus {
+    background: #fff !important;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
   }
 }

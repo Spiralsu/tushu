@@ -1,437 +1,187 @@
 <template>
-    <div class="app-container">
-        <!-- 顶部功能 -->
-        <div class="filter-container" style="margin-bottom: 15px">
-            <!-- 类型名输入 -->
-            <el-input
-                v-model="queryParam.booktypename"
-                placeholder="类型名"
-                style="width: 200px"
-                class="filter-item"
-                @keyup.enter.native="handleFilter"
-            />
-            <br />
-            <br />
-            <!-- 一些按钮 -->
-            <el-button
-                v-waves
-                class="filter-item"
-                style="font-size: 18px"
-                size="small"
-                type="primary"
-                @click="handleFilter"
-            >
-                <i class="iconfont icon-r-find" style="font-size: 22px"></i>
-                搜索
-            </el-button>
+  <div class="app-container">
+    <el-card class="filter-wrapper" shadow="never">
+      <div class="filter-left">
+        <span class="page-title">🏷️ 漂流分类索引</span>
+        <span class="page-desc">为每一本书找到它的归属</span>
+      </div>
+      <div class="filter-right">
+        <el-input v-model="listQuery.booktypename" placeholder="搜索分类..." class="round-input" style="width: 200px;" @keyup.enter.native="handleFilter">
+          <i slot="prefix" class="el-input__icon el-icon-search"></i>
+        </el-input>
+        <el-button type="primary" class="round-btn" icon="el-icon-search" @click="handleFilter">搜索</el-button>
+        <el-button type="success" class="round-btn" icon="el-icon-plus" @click="handleCreate">新建分类</el-button>
+      </div>
+    </el-card>
 
-            <el-button
-                class="filter-item"
-                style="margin-left: 10px; font-size: 18px"
-                size="small"
-                type="success"
-                @click="handleCreate"
-            >
-                <i class="iconfont icon-r-add" style="font-size: 22px"></i>
-                添加类型
-            </el-button>
-            <el-button
-                class="filter-item"
-                style="margin-left: 10px; font-size: 18px"
-                size="small"
-                type="danger"
-                @click="handleDeleteSome"
-            >
-                <i class="iconfont icon-r-delete" style="font-size: 22px"></i>
-                批量删除
-            </el-button>
+    <div class="category-grid" v-loading="listLoading">
+      <div v-for="(item, index) in list" :key="item.booktypeid" class="category-card" :style="{ '--delay': index * 0.05 + 's' }">
+        <div class="card-inner">
+          <div class="icon-wrapper" :class="'gradient-' + (index % 6)">
+            <i class="el-icon-collection-tag"></i>
+          </div>
+          <div class="info-wrapper">
+            <h3 class="category-name">{{ item.booktypename }}</h3>
+            <p class="category-desc">分类 ID: {{ item.booktypeid }}</p>
+          </div>
+          <div class="action-wrapper">
+            <el-button type="primary" circle icon="el-icon-edit" size="small" @click="handleUpdate(item)"></el-button>
+            <el-button type="danger" circle icon="el-icon-delete" size="small" @click="handleDelete(item)"></el-button>
+          </div>
         </div>
-
-        <!--弹出框-->
-        <el-dialog
-            :title="formTitle"
-            :visible.sync="dialogFormVisible"
-            width="30%"
-        >
-            <!--普通表单-->
-            <el-form
-                :model="form"
-                :rules="rules"
-                ref="ruleForm"
-                label-width="80px"
-            >
-                <el-form-item label="类型名称" prop="booktypename">
-                    <el-input v-model="form.booktypename"></el-input>
-                </el-form-item>
-
-                <el-form-item label="类型描述" prop="booktypedesc">
-                    <el-input
-                        type="textarea"
-                        v-model="form.booktypedesc"
-                    ></el-input>
-                </el-form-item>
-            </el-form>
-
-            <div slot="footer" class="dialog-footer">
-                <el-button
-                    @click="dialogFormVisible = false"
-                    style="font-size: 18px"
-                >
-                    <i class="iconfont icon-r-left" style="font-size: 22px"></i>
-                    取 消</el-button
-                >
-                <el-button
-                    type="primary"
-                    @click="submitForm"
-                    style="font-size: 18px"
-                >
-                    <i class="iconfont icon-r-yes" style="font-size: 22px"></i>
-                    确 定</el-button
-                >
-            </div>
-        </el-dialog>
-
-        <!--数据表格-->
-        <el-table
-            ref="multipleTable"
-            :data="tableData"
-            border
-            size="small"
-            style="width: 100%"
-        >
-            <el-table-column fixed type="selection" width="55">
-            </el-table-column>
-            <el-table-column fixed prop="booktypeid" label="序号" width="100">
-            </el-table-column>
-            <el-table-column
-                prop="booktypename"
-                label="类型名称"
-                show-overflow-tooltip
-            >
-            </el-table-column>
-            <el-table-column
-                prop="booktypedesc"
-                label="类型描述"
-                show-overflow-tooltip
-            >
-            </el-table-column>
-            <el-table-column fixed="right" label="操作" width="240">
-                <template slot-scope="scope">
-                    <el-button
-                        @click="handleUpdate(scope.row)"
-                        type="primary"
-                        style="font-size: 18px"
-                        size="small"
-                    >
-                        <i
-                            class="iconfont icon-r-edit"
-                            style="font-size: 22px"
-                        ></i>
-
-                        编辑</el-button
-                    >
-                    <el-button
-                        @click="handleDelete(scope.row, scope.$index)"
-                        type="danger"
-                        style="font-size: 18px"
-                        size="small"
-                    >
-                        <i
-                            class="iconfont icon-r-delete"
-                            style="font-size: 22px"
-                        ></i>
-                        删除</el-button
-                    >
-                </template>
-            </el-table-column>
-        </el-table>
-
-        <!--分页条-->
-        <el-pagination
-            background
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page.sync="queryParam.page"
-            :page-sizes="[5, 10, 20, 50]"
-            :page-size="queryParam.limit"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="recordTotal"
-            style="margin-top: 15px"
-        >
-        </el-pagination>
+      </div>
     </div>
+
+    <div class="pagination-container" v-if="total > 0">
+      <el-pagination background @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="listQuery.page" :page-sizes="[12, 24, 36]" :page-size="listQuery.limit" layout="total, prev, pager, next" :total="total"></el-pagination>
+    </div>
+
+    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" width="380px" custom-class="glass-dialog" center>
+      <el-form ref="dataForm" :rules="rules" :model="temp" label-position="top">
+        <el-form-item label="分类名称" prop="booktypename">
+          <el-input v-model="temp.booktypename" placeholder="例如：科幻小说、考研资料..." />
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible = false" round>取消</el-button>
+        <el-button type="primary" @click="dialogStatus==='create'?createData():updateData()" round>保存</el-button>
+      </div>
+    </el-dialog>
+  </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-
-import waves from "@/directive/waves"; // waves directive
-import {
-    getCount,
-    queryBookTypes,
-    queryBookTypesByPage,
-    addBookType,
-    deleteBookType,
-    deleteBookTypes,
-    updateBookType,
-} from "@/api/booktype";
+import { queryBookTypesByPage, addBookType, updateBookType, deleteBookType } from '@/api/booktype'
 
 export default {
-    name: "Bookinfo",
-    directives: { waves },
-    // 创建后
-    created() {
-        // 从服务器获取数据表格第一页的信息
-        queryBookTypesByPage(this.queryParam).then((res) => {
-            console.log("首页数据获取成功", res);
-            this.tableData = res.data;
-            this.recordTotal = res.count;
-            ;
-        });
+  name: 'BookType',
+  data() {
+    return {
+      list: [],
+      total: 0,
+      listLoading: true,
+      listQuery: { page: 1, limit: 12, booktypename: undefined },
+      temp: { booktypeid: undefined, booktypename: '' },
+      dialogFormVisible: false,
+      dialogStatus: '',
+      textMap: { update: '编辑分类', create: '新建分类' },
+      rules: { booktypename: [{ required: true, message: '分类名不能为空', trigger: 'blur' }] }
+    }
+  },
+  created() {
+    this.getList()
+  },
+  methods: {
+    getList() {
+      this.listLoading = true
+      // 注意：如果你的后端只有 queryBookTypes (不带分页)，请改用 queryBookTypes()
+      // 这里假设你按照规范有分页接口，如果没有，请自行替换为 queryBookTypes().then(res => this.list = res)
+      queryBookTypesByPage(this.listQuery).then(res => {
+        if(res.data) { this.list = res.data; this.total = res.count || res.total || 0; }
+        else if(res.rows) { this.list = res.rows; this.total = res.total; }
+        else { this.list = res; this.total = res.length; } // 兼容不分页
+        this.listLoading = false
+      }).catch(() => { this.listLoading = false })
     },
-    methods: {
-        // 分页大小改变监听
-        handleSizeChange(curSize) {
-            const params = this.queryParam;
-            params.limit = curSize;
-            queryBookTypesByPage(params).then((res) => {
-                console.log("分页数据获取成功", res);
-                this.tableData = res.data;
-                this.recordTotal = res.count;
-            ;
-            });
-        },
-
-        // 点击分页监听方法
-        handleCurrentChange(curPage) {
-            const params = this.queryParam;
-            params.page = curPage;
-            queryBookTypesByPage(params).then((res) => {
-                console.log("分页数据获取成功", res);
-                this.tableData = res.data;
-                this.recordTotal = res.count;
-                ;
-            });
-        },
-
-        // 搜索
-        handleFilter() {
-            this.queryParam.page = 1;
-            queryBookTypesByPage(this.queryParam).then((res) => {
-                if (res.code === 0) {
-                    this.tableData = res.data;
-                    this.recordTotal = res.count;
-                    ;
-                }
-            });
-        },
-
-        // 显示全部
-        handleShowAll() {
-            this.queryParam.page = 1;
-            this.queryParam.booktypename = null;
-            queryBookTypesByPage(this.queryParam).then((res) => {
-                if (res.code === 0) {
-                    this.tableData = res.data;
-                    this.recordTotal = res.count;
-                    ;
-                }
-            });
-        },
-
-        // 点击添加记录
-        handleCreate() {
-            // 表单是添加状态
-            this.formType = 0;
-            // 将空数据置入form
-            this.form = {
-                booktypeid: null,
-                booktypename: "",
-                booktypedesc: "",
-            };
-            // 显示表单框
-            this.dialogFormVisible = true;
-        },
-
-        // 点击编辑记录
-        handleUpdate(row) {
-            // 表单是编辑状态
-            this.formType = 1;
-            // 将行数据置入form
-            this.form = {
-                booktypeid: row.booktypeid,
-                booktypename: row.booktypename,
-                booktypedesc: row.booktypedesc,
-            };
-            // 显示表单框
-            this.dialogFormVisible = true;
-        },
-
-        // 添加和更新的提交表单
-        submitForm() {
-            if (this.formType === 0) {
-                // 添加记录
-                addBookType(this.form).then((res) => {
-                    if (res === 1) {
-                        this.$message.success("添加记录成功");
-                        // 跳转到末尾
-                        getCount().then((res) => {
-                            this.recordTotal = res;
-                            this.queryParam.page = Math.ceil(
-                                this.recordTotal / this.queryParam.limit
-                            );
-                            this.handleCurrentChange(this.queryParam.page);
-                        });
-                    } else {
-                        this.$message.error("添加记录失败");
-                    }
-                    this.dialogFormVisible = false; // 关闭对话框
-                });
-            } else if (this.formType === 1) {
-                //更新记录
-                updateBookType(this.form).then((res) => {
-                    if (res === 1 || res === 0) {
-                        this.$message.success("更新记录成功");
-                        this.handleCurrentChange(this.queryParam.page);
-                    } else {
-                        this.$message.error("更新记录失败");
-                    }
-                    this.dialogFormVisible = false; // 关闭对话框
-                });
-            }
-        },
-
-        // 删除记录
-        handleDelete(row, index) {
-            this.$confirm("确定要删除该条记录吗?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                type: "warning",
-            }).then(() => {
-                deleteBookType(row).then((res) => {
-                    if (res === 1) {
-                        this.$message.success("删除记录成功");
-                        this.tableData.splice(index, 1);
-                        // 如果删完了，获取上一页
-                        if (this.tableData.length === 0) {
-                            this.queryParam.page = this.queryParam.page - 1;
-                            this.handleCurrentChange(this.queryParam.page);
-                        }
-                    } else if (res === -1) {
-                        this.$message.error(
-                            "该图书类型下存在图书，请先删除所属的图书再尝试删除类型"
-                        );
-                    } else {
-                        this.$message.error("删除记录失败");
-                    }
-                });
-            });
-        },
-
-        // 删除一些
-        handleDeleteSome() {
-            this.$confirm("确定要删除这些记录吗?", "提示", {
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                type: "warning",
-            }).then(() => {
-                // 获取选中的对象数组
-                const items = this.$refs.multipleTable.selection;
-                deleteBookTypes(items).then((res) => {
-                    if (res > 0) {
-                        this.$message.success("删除" + res + "条记录成功");
-                        if (this.tableData.length === res) {
-                            //如果本页内容全部删光了
-                            //当前页为上一页
-                            if (this.queryParam.page !== 0) {
-                                this.queryParam.page = this.queryParam.page - 1;
-                            }
-                        }
-                        // 重载当前页
-                        this.handleCurrentChange(this.queryParam.page);
-                    } else {
-                        this.$message.error("删除记录失败");
-                    }
-                });
-            });
-        },
+    handleFilter() { this.listQuery.page = 1; this.getList() },
+    handleSizeChange(val) { this.listQuery.limit = val; this.getList() },
+    handleCurrentChange(val) { this.listQuery.page = val; this.getList() },
+    resetTemp() { this.temp = { booktypeid: undefined, booktypename: '' } },
+    handleCreate() {
+      this.resetTemp(); this.dialogStatus = 'create'; this.dialogFormVisible = true;
+      this.$nextTick(() => { this.$refs['dataForm'].clearValidate() })
     },
-    mounted() {
-
+    createData() {
+      this.$refs['dataForm'].validate((valid) => {
+        if (valid) {
+          addBookType(this.temp).then(() => {
+            this.list.unshift(this.temp); this.dialogFormVisible = false;
+            this.$message.success('创建成功'); this.getList()
+          })
+        }
+      })
     },
-    data() {
-        return {
-            // 表格数据
-            tableData: [],
-            // 记录总数
-            recordTotal: 0,
-            // 查询参数
-            queryParam: {
-                page: 1,
-                limit: 10,
-                booktypename: null,
-            },
-            // 对话框表单显示
-            dialogFormVisible: false,
-            // 表单类型（添加数据:0,修改数据:1）
-            formType: 0,
-            // 表单数据
-            form: {
-                bookid: null,
-                booktypename: "",
-                booktypedesc: "",
-            },
-            rules: {
-                booktypename: [
-                    {
-                        required: true,
-                        message: "请输入图书类型名称",
-                        trigger: "blur",
-                    },
-                ],
-                booktypedesc: [
-                    {
-                        required: true,
-                        message: "请输入图书类型描述",
-                        trigger: "blur",
-                    },
-                ],
-            },
-        };
+    handleUpdate(row) {
+      this.temp = Object.assign({}, row); this.dialogStatus = 'update'; this.dialogFormVisible = true;
+      this.$nextTick(() => { this.$refs['dataForm'].clearValidate() })
     },
-    computed: {
-        // 获得user信息
-        ...mapGetters(["id", "name", "roles"]),
-        // 通过表单类型计算表单标题
-        formTitle() {
-            return this.formType === 0 ? "添加记录" : "修改记录";
-        },
+    updateData() {
+      this.$refs['dataForm'].validate((valid) => {
+        if (valid) {
+          updateBookType(this.temp).then(() => {
+            this.dialogFormVisible = false; this.$message.success('更新成功'); this.getList()
+          })
+        }
+      })
     },
-};
+    handleDelete(row) {
+      this.$confirm('删除分类可能导致该分类下的书籍数据异常，确定删除吗？', '慎重操作', {
+        type: 'warning', customClass: 'glass-message-box'
+      }).then(() => {
+        deleteBookType({ booktypeid: row.booktypeid }).then(() => {
+          this.$message.success('删除成功'); this.getList()
+        })
+      })
+    }
+  }
+}
 </script>
 
-<style scoped>
-.avatar-uploader .el-upload {
-    border: 1px dashed #d9d9d9;
-    border-radius: 6px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+<style lang="scss" scoped>
+.app-container { padding: 24px; background-color: #f7f9fc; min-height: calc(100vh - 50px); }
+.filter-wrapper {
+  margin-bottom: 24px; border-radius: 16px; border: none;
+  ::v-deep .el-card__body { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
+  .filter-left { display: flex; flex-direction: column; }
+  .page-title { font-size: 20px; font-weight: bold; color: #303133; }
+  .page-desc { font-size: 13px; color: #909399; margin-top: 4px; }
+  .filter-right { display: flex; gap: 10px; }
+  .round-input ::v-deep .el-input__inner { border-radius: 20px; }
+  .round-btn { border-radius: 20px; }
 }
-.avatar-uploader .el-upload:hover {
-    border-color: #409eff;
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
 }
-.avatar-uploader-icon {
-    font-size: 28px;
-    color: #8c939d;
-    width: 178px;
-    height: 178px;
-    line-height: 178px;
-    text-align: center;
+
+.category-card {
+  background: #fff; border-radius: 16px; position: relative; overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.3s;
+  animation: fadeUp 0.5s ease forwards; animation-delay: var(--delay); opacity: 0;
+
+  &:hover {
+    transform: translateY(-5px); box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    .action-wrapper { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-inner {
+    padding: 24px; display: flex; align-items: center; gap: 20px;
+  }
+
+  .icon-wrapper {
+    width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff; flex-shrink: 0;
+    &.gradient-0 { background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%); }
+    &.gradient-1 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+    &.gradient-2 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+    &.gradient-3 { background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%); color: #666; }
+    &.gradient-4 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+    &.gradient-5 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  }
+
+  .info-wrapper {
+    .category-name { margin: 0 0 6px 0; font-size: 18px; color: #303133; }
+    .category-desc { margin: 0; font-size: 12px; color: #909399; }
+  }
+
+  .action-wrapper {
+    position: absolute; right: 15px; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; gap: 8px;
+    opacity: 0; transform: translateX(10px); transition: all 0.3s;
+    background: linear-gradient(90deg, transparent, #fff 20%); padding-left: 10px;
+  }
 }
-.avatar {
-    width: 150px;
-    height: 200px;
-    display: block;
-}
+
+.pagination-container { text-align: center; margin-top: 30px; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 </style>

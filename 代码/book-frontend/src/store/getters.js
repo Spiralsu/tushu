@@ -2,10 +2,11 @@ const getters = {
   sidebar: state => state.app.sidebar,
   device: state => state.app.device,
   token: state => state.user.token,
-  id: state => state.user.id,
   avatar: state => state.user.avatar,
   name: state => state.user.name,
-  roles: state => state.user.roles,
-  permission_routes: state => state.permission.routes
+  // 新增这一行，让页面能拿到学号
+  username: state => state.user.username,
+  id: state => state.user.id,
+  roles: state => state.user.roles
 }
 export default getters

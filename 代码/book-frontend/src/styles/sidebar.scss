@@ -1,17 +1,23 @@
+// src/styles/sidebar.scss
 #app {
+  background-color: #f7f9fc;
+  min-height: 100vh;
+  // 核心修复1：禁用整个APP的横向溢出，彻底消灭底部滚动条
+  overflow-x: hidden;
 
   .main-container {
-    min-height: 100%;
-    transition: margin-left .28s;
+    min-height: 100vh;
+    // 核心修复2：修改动画曲线，让缩回展开更丝滑
+    transition: margin-left .3s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-left: $sideBarWidth;
     position: relative;
+    padding: 24px;
   }
 
   .sidebar-container {
-    transition: width 0.28s;
+    transition: width .3s cubic-bezier(0.645, 0.045, 0.355, 1);
     width: $sideBarWidth !important;
-    background-color: $menuBg;
-    height: 100%;
+    height: 100vh;
     position: fixed;
     font-size: 0px;
     top: 0;
@@ -19,238 +25,61 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.08);
 
-    // reset element-ui css
-    .horizontal-collapse-transition {
-      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
-    }
+    background: #ffffff !important;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.02);
+    border-right: 1px solid #edf2f7;
 
     .scrollbar-wrapper {
+      // 核心修复3：强制隐藏内部菜单的横向滚动条
       overflow-x: hidden !important;
-    }
-
-    .el-scrollbar__bar.is-vertical {
-      right: 0px;
-    }
-
-    .el-scrollbar {
-      height: 100%;
-    }
-
-    &.has-logo {
-      .el-scrollbar {
-        height: calc(100% - 70px);
-      }
-    }
-
-    .is-horizontal {
-      display: none;
-    }
-
-    a {
-      display: inline-block;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .svg-icon {
-      margin-right: 16px;
     }
 
     .el-menu {
       border: none;
       height: 100%;
       width: 100% !important;
+      background: transparent !important;
     }
 
-    // menu hover
-    .submenu-title-noDropdown,
-    .el-submenu__title {
+    .el-submenu__title, .el-menu-item {
+      margin: 4px 12px;
+      border-radius: 8px;
       &:hover {
-        background-color: $menuHover !important;
+        background-color: #f0f4ff !important;
+        color: #409eff !important;
       }
     }
-
-    .is-active>.el-submenu__title {
-      color: $subMenuActiveText !important;
-    }
-
-    & .nest-menu .el-submenu>.el-submenu__title,
-    & .el-submenu .el-menu-item {
-      min-width: $sideBarWidth !important;
-      background-color: $subMenuBg !important;
-      padding-left: 50px !important;
-      
-      &:hover {
-        background-color: $subMenuHover !important;
-      }
-    }
-  
-    .el-menu-item {
-      height: 56px;
-      line-height: 56px;
-      border-left: 4px solid transparent;
-      margin: 4px 0;
-      border-radius: 0 6px 6px 0;
-      margin-right: 12px;
-      transition: all 0.3s;
-      
-      &.is-active {
-        border-left: 4px solid $menuActiveText;
-        background-color: $menuHover !important;
-        color: $menuActiveText !important;
-        font-weight: 600;
-      }
-      
-      &:hover {
-        background-color: $menuHover !important;
-      }
-    }
-    
-    .el-submenu__title {
-      height: 56px;
-      line-height: 56px;
-      margin: 4px 0;
-      border-radius: 0 6px 6px 0;
-      margin-right: 12px;
-      
-      &:hover {
-        background-color: $menuHover !important;
-      }
+    .is-active {
+      background-color: #e6f0ff !important;
+      color: #409eff !important;
+      font-weight: 600;
     }
   }
 
   .hideSidebar {
     .sidebar-container {
-      width: 64px !important;
-    }
+      width: 64px !important; // 适当加宽给图标居中留出空间
 
+      // 核心修复4：修复折叠后的图标错位和文字残留问题
+      .el-submenu__title, .el-menu-item {
+        margin: 4px 8px;
+        padding: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span, .el-submenu__icon-arrow {
+          display: none !important; // 强制隐藏文字和下拉箭头
+        }
+        .svg-icon, i {
+          margin-right: 0 !important;
+          font-size: 18px;
+        }
+      }
+    }
     .main-container {
       margin-left: 64px;
-    }
-
-    .submenu-title-noDropdown {
-      padding: 0 !important;
-      position: relative;
-
-      .el-tooltip {
-        padding: 0 !important;
-
-        .svg-icon {
-          margin-left: 20px;
-        }
-
-        .sub-el-icon {
-          margin-left: 19px;
-        }
-      }
-    }
-
-    .el-submenu {
-      overflow: hidden;
-
-      &>.el-submenu__title {
-        padding: 0 !important;
-
-        .svg-icon {
-          margin-left: 20px;
-        }
-
-        .sub-el-icon {
-          margin-left: 19px;
-        }
-
-        .el-submenu__icon-arrow {
-          display: none;
-        }
-      }
-    }
-
-    .el-menu--collapse {
-      .el-submenu {
-        &>.el-submenu__title {
-          &>span {
-            height: 0;
-            width: 0;
-            overflow: hidden;
-            visibility: hidden;
-            display: inline-block;
-          }
-        }
-      }
-    }
-  }
-
-  .el-menu--collapse .el-menu .el-submenu {
-    min-width: $sideBarWidth !important;
-  }
-
-  // mobile responsive
-  .mobile {
-    .main-container {
-      margin-left: 0px;
-    }
-
-    .sidebar-container {
-      transition: transform .28s;
-      width: $sideBarWidth !important;
-    }
-
-    &.hideSidebar {
-      .sidebar-container {
-        pointer-events: none;
-        transition-duration: 0.3s;
-        transform: translate3d(-$sideBarWidth, 0, 0);
-      }
-    }
-  }
-
-  .withoutAnimation {
-
-    .main-container,
-    .sidebar-container {
-      transition: none;
-    }
-  }
-}
-
-// when menu collapsed
-.el-menu--vertical {
-  &>.el-menu {
-    .svg-icon {
-      margin-right: 16px;
-    }
-    .sub-el-icon {
-      margin-right: 12px;
-      margin-left: -2px;
-    }
-  }
-
-  .nest-menu .el-submenu>.el-submenu__title,
-  .el-menu-item {
-    &:hover {
-      // you can use $subMenuHover
-      background-color: $menuHover !important;
-    }
-  }
-
-  // the scroll bar appears when the subMenu is too long
-  >.el-menu--popup {
-    max-height: 100vh;
-    overflow-y: auto;
-
-    &::-webkit-scrollbar-track-piece {
-      background: #ffffff;
-    }
-
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #e0e0e0;
-      border-radius: 20px;
     }
   }
 }

@@ -1,22 +1,16 @@
 <template>
   <div class="navbar">
     <hamburger :is-active="sidebar.opened" class="hamburger-container" @toggleClick="toggleSideBar" />
-
     <breadcrumb class="breadcrumb-container" />
-
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
-
         <div class="avatar-wrapper">
-          <span class="user-name"> {{name}} </span>
+          <img src="@/assets/logo.png" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
-        <el-dropdown-menu slot="dropdown" class="user-dropdown" style="padding-bottom: 10px;">
+        <el-dropdown-menu slot="dropdown" class="user-dropdown">
           <router-link to="/">
-
-            <el-dropdown-item>
-              首页
-            </el-dropdown-item>
+            <el-dropdown-item>首页</el-dropdown-item>
           </router-link>
           <el-dropdown-item divided @click.native="logout">
             <span style="display:block;">退出登录</span>
@@ -33,25 +27,13 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 
 export default {
-  components: {
-    Breadcrumb,
-    Hamburger
-  },
-  computed: {
-    ...mapGetters([
-      'sidebar',
-      'avatar',
-      'name'
-    ])
-  },
+  components: { Breadcrumb, Hamburger },
+  computed: { ...mapGetters(['sidebar', 'avatar']) },
   methods: {
-    toggleSideBar() {
-      this.$store.dispatch('app/toggleSideBar')
-    },
+    toggleSideBar() { this.$store.dispatch('app/toggleSideBar') },
     async logout() {
       await this.$store.dispatch('user/logout')
-      // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
-      this.$router.push(`/login`)
+      this.$router.push(`/login?redirect=${this.$route.fullPath}`)
     }
   }
 }
@@ -62,80 +44,59 @@ export default {
   height: 60px;
   overflow: hidden;
   position: relative;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  margin-bottom: 20px;
+
+  /* 悬浮毛玻璃导航条 */
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 
   .hamburger-container {
-    line-height: 60px;
+    line-height: 56px;
     height: 100%;
     float: left;
     cursor: pointer;
     transition: background .3s;
     -webkit-tap-highlight-color:transparent;
-
-    &:hover {
-      background: rgba(0, 0, 0, .025)
-    }
+    padding: 0 20px;
+    border-radius: 20px 0 0 20px;
+    &:hover { background: rgba(0, 0, 0, .025) }
   }
 
-  .breadcrumb-container {
-    float: left;
-    font-size: 18px;
-    margin-top: 8px;
-  }
+  .breadcrumb-container { float: left; }
 
   .right-menu {
     float: right;
     height: 100%;
-    line-height: 50px;
-
-    &:focus {
-      outline: none;
-    }
-
-    .right-menu-item {
-      display: inline-block;
-      padding: 0 8px;
-      height: 100%;
-      font-size: 18px;
-      color: #5a5e66;
-      vertical-align: text-bottom;
-
-      &.hover-effect {
-        cursor: pointer;
-        transition: background .3s;
-
-        &:hover {
-          background: rgba(0, 0, 0, .025)
-        }
-      }
-    }
+    line-height: 60px;
+    padding-right: 20px;
+    &:focus { outline: none; }
 
     .avatar-container {
-      margin-right: 30px;
-
+      margin-right: 10px;
       .avatar-wrapper {
-        margin-top: 5px;
+        margin-top: 10px;
         position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
 
         .user-avatar {
           cursor: pointer;
-          width: 50px;
-          height: 50px;
-          border-radius: 5px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .user-name {
-          cursor: pointer;
-          font-size: 22px;
-        }
-
         .el-icon-caret-bottom {
           cursor: pointer;
-          position: absolute;
-          right: -20px;
-          top: 35px;
           font-size: 12px;
+          margin-left: 8px;
+          color: #666;
         }
       }
     }

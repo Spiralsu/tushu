@@ -1,269 +1,141 @@
 <template>
-  <div class="app-container">
-    <el-card class="password-card" shadow="hover">
-      <div slot="header" class="card-header">
-        <span><i class="el-icon-lock"></i> 密码修改</span>
-      </div>
-      <el-form
-        ref="form"
-        :model="form"
-        :rules="passwordRules"
-        label-width="120px"
-        class="password-form"
-      >
-        <el-form-item label="旧密码" prop="oldPassword">
-          <el-input
-            v-model="form.oldPassword"
-            type="password"
-            placeholder="请输入旧密码"
-            prefix-icon="el-icon-key"
-            show-password
-          />
-        </el-form-item>
-        <el-form-item label="新密码" prop="newPassword">
-          <el-input
-            v-model="form.newPassword"
-            type="password"
-            placeholder="请输入新密码"
-            prefix-icon="el-icon-lock"
-            show-password
-          />
-        </el-form-item>
-        <el-form-item label="确认新密码" prop="repeat">
-          <el-input
-            v-model="form.repeat"
-            type="password"
-            placeholder="请再输入一遍新密码"
-            prefix-icon="el-icon-lock"
-            show-password
-          />
-        </el-form-item>
-        <el-form-item>
-          <el-button 
-            type="primary" 
-            @click="onSubmit" 
-            icon="el-icon-check"
-            :loading="loading"
-            class="submit-button"
-          >
-            确认
-          </el-button>
-          <el-button 
-            @click="resetForm" 
-            icon="el-icon-refresh-right"
-          >
-            重置
-          </el-button>
-        </el-form-item>
-      </el-form>
+  <div class="security-container">
+    <el-card class="security-card">
+      <div class="card-content">
+        <div class="visual-side">
+          <div class="icon-box">
+            <i class="el-icon-lock"></i>
+          </div>
+          <h2>安全中心</h2>
+          <p>定期修改密码，保护您的漂流账户安全</p>
+          <ul class="security-tips">
+            <li><i class="el-icon-check"></i> 建议使用 6 位以上密码</li>
+            <li><i class="el-icon-check"></i> 不要使用纯数字</li>
+            <li><i class="el-icon-check"></i> 妥善保管您的账号</li>
+          </ul>
+        </div>
 
-      <div class="password-tips">
-        <h4><i class="el-icon-info-circle"></i> 密码修改提示</h4>
-        <ul>
-          <li>为保证账号安全，建议定期修改密码</li>
-          <li>密码长度建议大于6位，包含数字和字母</li>
-          <li>请勿使用与其他网站相同的密码</li>
-        </ul>
+        <div class="form-side">
+          <h3>修改登录密码</h3>
+          <el-form ref="ruleForm" :model="ruleForm" :rules="rules" label-position="top" class="pwd-form">
+            <el-form-item label="原密码" prop="oldPassword">
+              <el-input v-model="ruleForm.oldPassword" type="password" placeholder="请输入当前使用的密码" show-password prefix-icon="el-icon-key"></el-input>
+            </el-form-item>
+            <el-form-item label="新密码" prop="newPassword">
+              <el-input v-model="ruleForm.newPassword" type="password" placeholder="请输入想要设置的新密码" show-password prefix-icon="el-icon-lock"></el-input>
+            </el-form-item>
+            <el-form-item label="确认新密码" prop="checkPassword">
+              <el-input v-model="ruleForm.checkPassword" type="password" placeholder="请再次输入新密码" show-password prefix-icon="el-icon-circle-check"></el-input>
+            </el-form-item>
+
+            <el-form-item style="margin-top: 30px;">
+              <el-button type="primary" class="submit-btn" @click="submitForm('ruleForm')" :loading="loading">确认修改</el-button>
+              <el-button class="reset-btn" @click="resetForm('ruleForm')">重置</el-button>
+            </el-form-item>
+          </el-form>
+        </div>
       </div>
     </el-card>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { alterPassword } from "@/api/user";
-
+import { alterPassword } from '@/api/user'
+import { mapGetters } from 'vuex'
 
 export default {
+  name: 'Password',
   data() {
-    const validateRepeat = (rule, value, callback) => {
-      if (value !== this.form.newPassword) {
-        callback(new Error("两次输入的密码不一致!"));
-      } else {
+    var validatePass = (rule, value, callback) => {
+      if (value === '') callback(new Error('请输入密码'));
+      else {
+        if (this.ruleForm.checkPassword !== '') this.$refs.ruleForm.validateField('checkPassword');
         callback();
       }
     };
-    const validateNewPassword = (rule, value, callback) => {
-      if (value === this.form.oldPassword) {
-        callback(new Error("新密码不能与旧密码相同!"));
-      } else {
-        callback();
-      }
+    var validatePass2 = (rule, value, callback) => {
+      if (value === '') callback(new Error('请再次输入密码'));
+      else if (value !== this.ruleForm.newPassword) callback(new Error('两次输入密码不一致!'));
+      else callback();
     };
     return {
-      form: {
-        oldPassword: "",
-        newPassword: "",
-        repeat: "",
-      },
       loading: false,
-      passwordRules: {
-        oldPassword: [
-          { required: true, message: "请输入旧密码", trigger: "blur" },
-        ],
-        newPassword: [
-          { required: true, message: "请输入新密码", trigger: "blur" },
-          { min: 6, message: "密码长度至少6个字符", trigger: "blur" },
-          { validator: validateNewPassword, trigger: "blur" }
-        ],
-        repeat: [
-          { required: true, message: "请再输入新密码", trigger: "blur" },
-          { trigger: "blur", validator: validateRepeat },
-        ],
-      },
+      ruleForm: { oldPassword: '', newPassword: '', checkPassword: '' },
+      rules: {
+        oldPassword: [{ required: true, message: '请输入原密码', trigger: 'blur' }],
+        newPassword: [{ validator: validatePass, trigger: 'blur' }],
+        checkPassword: [{ validator: validatePass2, trigger: 'blur' }]
+      }
     };
   },
-  mounted() {
-
-  },
+  computed: { ...mapGetters(['id', 'username']) },
   methods: {
-    onSubmit() {
-      this.$refs.form.validate((valid) => {
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.loading = true;
-          const isadmin = this.roles[0] === "admin" ? 1 : 0;
+          this.loading = true
+          // 调用后端接口
           alterPassword({
-            userid: this.id,
-            username: this.name,
-            isadmin: isadmin,
-            oldPassword: this.form.oldPassword,
-            newPassword: this.form.newPassword,
-          }).then((res) => {
-            this.loading = false;
-            if (res === 0) {
-              this.$message.error("旧密码不正确");
+            username: this.username, // 你的后端可能需要 username
+            userid: this.id,         // 或者 userid
+            oldPassword: this.ruleForm.oldPassword,
+            newPassword: this.ruleForm.newPassword
+          }).then(res => {
+            this.loading = false
+            // 兼容后端返回
+            if(res.code === 0 || res === 1 || res.code === 200) {
+              this.$message.success('密码修改成功，请重新登录')
+              this.$store.dispatch('user/logout')
+              this.$router.push(`/login?redirect=${this.$route.fullPath}`)
             } else {
-              this.$message({
-                type: 'success',
-                message: '密码修改成功',
-                duration: 2000
-              });
-              this.resetForm();
+              this.$message.error(res.msg || '修改失败，原密码可能错误')
             }
-          }).catch(() => {
-            this.loading = false;
-          });
-        } else {
-          return false;
+          }).catch(() => { this.loading = false })
         }
       });
     },
-    resetForm() {
-      this.$refs.form.resetFields();
-    }
-  },
-  computed: {
-    // 获得user信息
-    ...mapGetters(["id", "name", "roles"]),
-  },
-};
+    resetForm(formName) { this.$refs[formName].resetFields(); }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-.app-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+.security-container {
+  min-height: calc(100vh - 50px);
+  background-color: #f7f9fc;
+  display: flex; justify-content: center; align-items: center; padding: 20px;
 }
 
-.password-card {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 8px;
-  
-  .card-header {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #303133;
-    
-    i {
-      margin-right: 8px;
-      font-size: 20px;
-      color: #409EFF;
-    }
+.security-card {
+  width: 900px; height: 500px; border-radius: 24px; border: none; overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  ::v-deep .el-card__body { padding: 0; height: 100%; }
+}
+
+.card-content { display: flex; height: 100%; }
+
+.visual-side {
+  width: 40%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+
+  .icon-box {
+    width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; margin-bottom: 20px;
   }
-  
-  .password-form {
-    margin-top: 20px;
-    
-    .el-form-item {
-      margin-bottom: 22px;
-    }
-    
-    .el-input {
-      .el-input__inner {
-        border-radius: 4px;
-      }
-    }
-    
-    .submit-button {
-      min-width: 80px;
-      border-radius: 4px;
-      margin-right: 15px;
-    }
-    
-    .el-button {
-      padding: 9px 20px;
-      
-      i {
-        margin-right: 5px;
-        font-weight: bold;
-      }
-    }
-  }
-  
-  .password-tips {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #f8f8f8;
-    border-radius: 4px;
-    
-    h4 {
-      font-size: 15px;
-      color: #606266;
-      margin-top: 0;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      
-      i {
-        margin-right: 6px;
-        color: #E6A23C;
-      }
-    }
-    
-    ul {
-      margin: 0;
-      padding-left: 20px;
-      
-      li {
-        color: #909399;
-        font-size: 13px;
-        line-height: 1.8;
-      }
-    }
+  h2 { margin: 0 0 10px 0; }
+  p { opacity: 0.9; font-size: 14px; margin-bottom: 40px; }
+  .security-tips {
+    text-align: left; list-style: none; padding: 0; margin: 0;
+    li { margin-bottom: 12px; font-size: 13px; opacity: 0.8; i { margin-right: 8px; } }
   }
 }
 
-@media screen and (max-width: 768px) {
-  .password-card {
-    width: 100%;
-  }
-  
-  .password-form {
-    .el-form-item__label {
-      float: none;
-      text-align: left;
-      display: block;
-      margin-bottom: 8px;
-    }
-    
-    .el-form-item__content {
-      margin-left: 0 !important;
-    }
-  }
+.form-side {
+  width: 60%; padding: 40px 60px; display: flex; flex-direction: column; justify-content: center;
+  h3 { color: #303133; font-size: 24px; margin-bottom: 30px; }
+
+  .submit-btn { width: 100%; height: 44px; border-radius: 22px; font-size: 16px; margin-bottom: 15px; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); border: none; }
+  .reset-btn { width: 100%; border-radius: 22px; border: none; background: #f4f4f5; &:hover { background: #e9e9eb; } }
+
+  ::v-deep .el-input__inner { border-radius: 20px; background: #f8f9fa; border: 1px solid #e4e7ed; &:focus { background: #fff; border-color: #764ba2; } }
 }
 </style>

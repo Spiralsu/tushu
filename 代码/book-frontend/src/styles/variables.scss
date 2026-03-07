@@ -1,25 +1,18 @@
-// sidebar
-$menuText: #414750;
-$menuActiveText: #1890FF;
-$subMenuActiveText: #1890FF;
+// src/styles/variables.scss
 
-$menuBg: #f7f9fc;
-$menuHover: #e6f2ff;
+// 现代化主色调 (Indigo 靛蓝色)
+$primary: #6366f1;
 
-$subMenuBg: #f0f5fa;
-$subMenuHover: #e6f2ff;
+// 侧边栏及菜单样式 (采用毛玻璃浅色系)
+$menuText: #4b5563;
+$menuActiveText: #6366f1;
+$subMenuActiveText: #6366f1;
 
-$sideBarWidth: 240px;
+$menuBg: transparent;
+$menuHover: rgba(99, 102, 241, 0.1);
 
-// the :export directive is the magic sauce for webpack
-// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
-:export {
-  menuText: $menuText;
-  menuActiveText: $menuActiveText;
-  subMenuActiveText: $subMenuActiveText;
-  menuBg: $menuBg;
-  menuHover: $menuHover;
-  subMenuBg: $subMenuBg;
-  subMenuHover: $subMenuHover;
-  sideBarWidth: $sideBarWidth;
-}
+$subMenuBg: transparent;
+$subMenuHover: rgba(99, 102, 241, 0.05);
+
+// 侧边栏宽度
+$sideBarWidth: 260px;

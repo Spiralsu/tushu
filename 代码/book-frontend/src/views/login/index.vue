@@ -1,80 +1,53 @@
 <template>
   <div class="login-container">
-    <div class="login-background">
-      <div class="login-content">
-        <div class="login-header">
-          <h2 class="login-title">图书管理系统</h2>
-          <p class="login-subtitle">知识的海洋，智慧的港湾</p>
+    <div class="login-box">
+      <div class="login-header">
+        <h2 class="title">校园旧书漂流共享系统</h2>
+        <p class="subtitle">传递书香，共享知识</p>
+      </div>
+
+      <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form">
+        <el-form-item prop="username">
+          <el-input
+            ref="username"
+            v-model="loginForm.username"
+            placeholder="请输入学号/工号"
+            name="username"
+            type="text"
+            tabindex="1"
+            prefix-icon="el-icon-user"
+          />
+        </el-form-item>
+
+        <el-form-item prop="password">
+          <el-input
+            :key="passwordType"
+            ref="password"
+            v-model="loginForm.password"
+            :type="passwordType"
+            placeholder="请输入密码"
+            name="password"
+            tabindex="2"
+            prefix-icon="el-icon-lock"
+            @keyup.enter.native="handleLogin"
+          />
+          <span class="show-pwd" @click="showPwd">
+            <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" />
+          </span>
+        </el-form-item>
+
+        <div class="form-actions">
+          <el-checkbox v-model="rememberMe">记住我</el-checkbox>
+          <el-button type="text" class="forgot-pwd" @click="handleForgetPwd">忘记密码？</el-button>
         </div>
 
-        <el-form
-          ref="loginForm"
-          :model="loginForm"
-          :rules="loginRules"
-          class="login-form"
-          auto-complete="on"
-          label-position="left"
-        >
-          <el-form-item prop="username">
-            <div class="input-with-icon">
-              <i class="el-icon-user input-icon"></i>
-              <el-input
-                ref="username"
-                v-model="loginForm.username"
-                placeholder="请输入学号"
-                name="username"
-                type="text"
-                tabindex="1"
-                auto-complete="on"
-              />
-            </div>
-          </el-form-item>
+        <el-button :loading="loading" type="primary" class="login-btn" @click.native.prevent="handleLogin">
+          安全登录
+        </el-button>
+      </el-form>
 
-          <el-form-item prop="password">
-            <div class="input-with-icon">
-              <i class="el-icon-lock input-icon"></i>
-              <el-input
-                :key="passwordType"
-                ref="password"
-                v-model="loginForm.password"
-                :type="passwordType"
-                placeholder="请输入密码"
-                name="password"
-                tabindex="2"
-                auto-complete="on"
-                @keyup.enter.native="handleLogin"
-              />
-              <span class="show-pwd" @click="showPwd">
-                                <i :class="passwordType === 'password' ? 'el-icon-view' : 'el-icon-hide'"></i>
-                            </span>
-            </div>
-          </el-form-item>
-
-          <el-form-item prop="authority">
-            <div class="input-with-icon">
-              <i class="el-icon-medal input-icon"></i>
-              <el-select
-                v-model="loginForm.isadmin"
-                placeholder="请选择登录身份"
-                style="width: 100%"
-              >
-                <el-option :key="0" label="读者" :value="0"></el-option>
-                <el-option :key="1" label="管理员" :value="1"></el-option>
-              </el-select>
-            </div>
-          </el-form-item>
-
-          <div class="form-actions">
-            <a
-              href="javascript:;"
-              class="custom-login-button"
-              :class="{'disabled': loading}"
-              @click="!loading && handleLogin()"
-            >
-              登录
-            </a>
-          </div>
-        </el-form>
+      <div class="footer-tips">
+        <p>本系统仅供校内师生内部使用</p>
       </div>
     </div>
   </div>
@@ -82,257 +55,143 @@
 
 <script>
 export default {
-  name: "Login",
+  name: 'Login',
   data() {
-    const validateUsername = (rule, value, callback) => {
-      if (!value) {
-        callback(new Error('请输入学号'));
-      } else {
-        callback();
-      }
-    };
-    const validatePassword = (rule, value, callback) => {
-      if (!value) {
-        callback(new Error('请输入密码'));
-      } else {
-        callback();
-      }
-    };
     return {
-      loginForm: {
-        username: "",
-        password: "",
-        isadmin: 0,
-      },
+      loginForm: { username: '', password: '' },
       loginRules: {
-        username: [
-          {
-            required: true,
-            trigger: "blur",
-            validator: validateUsername,
-          },
-        ],
-        password: [
-          {
-            required: true,
-            trigger: "blur",
-            validator: validatePassword,
-          },
-        ],
+        username: [{ required: true, trigger: 'blur', message: '学号/工号不能为空' }],
+        password: [{ required: true, trigger: 'blur', message: '密码不能为空' }]
       },
       loading: false,
-      passwordType: "password",
-      redirect: undefined
-    };
+      passwordType: 'password',
+      redirect: undefined,
+      rememberMe: false
+    }
+  },
+  watch: {
+    $route: {
+      handler: function(route) { this.redirect = route.query && route.query.redirect },
+      immediate: true
+    }
   },
   methods: {
     showPwd() {
-      if (this.passwordType === "password") {
-        this.passwordType = "";
-      } else {
-        this.passwordType = "password";
-      }
-      this.$nextTick(() => {
-        this.$refs.password.focus();
-      });
+      this.passwordType = this.passwordType === 'password' ? '' : 'password'
+      this.$nextTick(() => { this.$refs.password.focus() })
     },
     handleLogin() {
-      this.$refs.loginForm.validate((valid) => {
+      this.$refs.loginForm.validate(valid => {
         if (valid) {
-          this.loading = true;
-          this.$store
-            .dispatch("user/login", this.loginForm)
-            .then(() => {
-              this.$router.push({ path: "/" });
-              this.loading = false;
-            })
-            .catch((e) => {
-              console.log(e);
-              this.loading = false;
-              if (
-                e.response == undefined ||
-                e.response.data == undefined
-              ) {
-                this.$message({
-                  showClose: true,
-                  message: e,
-                  type: "error",
-                  duration: 5000,
-                });
-              } else {
-                this.$message({
-                  showClose: true,
-                  message: e.response.data,
-                  type: "error",
-                  duration: 5000,
-                });
-              }
-            });
+          this.loading = true
+          this.$store.dispatch('user/login', this.loginForm).then(() => {
+            this.$router.push({ path: this.redirect || '/' })
+            this.loading = false
+          }).catch(() => {
+            this.loading = false
+          })
         } else {
-          console.log("不允许提交!");
-          return false;
+          return false
         }
+      })
+    },
+    handleForgetPwd() {
+      this.$alert('为保障校内信息安全，请携带本人学生证/教工卡前往图书馆1楼服务台或网络信息中心进行密码重置。', '密码重置指引', {
+        confirmButtonText: '我知道了',
+        type: 'info'
       });
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
 .login-container {
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  width: 100%;
+  background-color: #f0f2f5;
+  background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d6d9e0" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 
-  .login-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(30, 58, 138, 0.85), rgba(37, 99, 235, 0.85)), url("../../assets/bg5.jpg") center center / cover no-repeat;
+  .login-box {
+    width: 420px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+    padding: 50px 40px;
+    border: 1px solid #ebeef5;
+  }
+
+  .login-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    .title {
+      font-size: 24px;
+      color: #1f2d3d;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #909399;
+      margin: 0;
+    }
+  }
+
+  .form-actions {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
+    margin-bottom: 24px;
 
-  .login-content {
-    width: 440px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    position: relative;
-    backdrop-filter: blur(10px);
-
-    .login-header {
-      text-align: center;
-      margin-bottom: 40px;
-
-      .login-title {
-        color: #1e3a8a;
-        font-size: 28px;
-        font-weight: 700;
-        margin: 0 0 8px;
-      }
-
-      .login-subtitle {
-        color: #6b7280;
-        font-size: 16px;
-        margin: 0;
-      }
-    }
-
-    .login-form {
-      .input-with-icon {
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        .input-icon {
-          position: absolute;
-          left: 12px;
-          font-size: 18px;
-          color: #6b7280;
-          z-index: 1;
-        }
-
-        .el-input {
-          width: 100%;
-
-          ::v-deep .el-input__inner {
-            padding-left: 40px;
-            height: 48px;
-            border-radius: 8px;
-            border: 1px solid #e5e7eb;
-            transition: all 0.3s;
-
-            &:focus {
-              border-color: #3b82f6;
-              box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-            }
-          }
-        }
-
-        .el-select {
-          width: 100%;
-
-          ::v-deep .el-input__inner {
-            padding-left: 40px;
-            height: 48px;
-            border-radius: 8px;
-          }
-        }
-
-        .show-pwd {
-          position: absolute;
-          right: 12px;
-          color: #6b7280;
-          cursor: pointer;
-          font-size: 18px;
-
-          &:hover {
-            color: #3b82f6;
-          }
-        }
-      }
-    }
-
-    .form-actions {
-      display: flex;
-      flex-direction: column; /* 改为单列布局 */
-      gap: 15px;
-      margin-top: 30px;
-
-      .custom-login-button {
-        width: 100%;
-        height: 48px;
-        font-size: 16px;
-        background: linear-gradient(to right, #1e3a8a, #3b82f6);
-        border: none;
-        border-radius: 8px;
-        padding: 0 12px;
-        color: white;
-        cursor: pointer;
-        outline: none;
-        transition: all 0.3s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
-
-        &:hover, &:focus {
-          background: linear-gradient(to right, #1e40af, #2563eb);
-          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-        }
-
-        &.disabled {
-          opacity: 0.7;
-          cursor: not-allowed;
-          box-shadow: none;
-        }
-      }
+    .forgot-pwd {
+      color: #909399;
+      font-size: 14px;
+      &:hover { color: #409eff; }
     }
   }
-}
 
-// 适配深色主题的样式
-@media (prefers-color-scheme: dark) {
-  .login-content {
-    background: rgba(31, 41, 55, 0.95);
+  .login-btn {
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(64, 158, 255, 0.3);
+  }
 
-    .login-header {
-      .login-title {
-        color: #60a5fa;
-      }
+  .show-pwd {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    font-size: 16px;
+    color: #c0c4cc;
+    cursor: pointer;
+  }
 
-      .login-subtitle {
-        color: #9ca3af;
-      }
+  ::v-deep .el-input__inner {
+    height: 46px;
+    background: #f7f9fc !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
+    padding-left: 35px;
+    transition: all 0.3s;
+    &:focus {
+      background: #ffffff !important;
+      border-color: #409eff !important;
+      box-shadow: 0 0 0 2px rgba(64, 158, 255, 0.1);
     }
+  }
+
+  .footer-tips {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #c0c4cc;
   }
 }
 </style>

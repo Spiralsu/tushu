@@ -5,9 +5,10 @@ import { resetRouter } from '@/router'
 const getDefaultState = () => {
   return {
     token: getToken(),
-    id: 0,
     name: '',
+    username: '', // 专门用来存学号
     avatar: '',
+    id: null,
     roles: []
   }
 }
@@ -21,14 +22,17 @@ const mutations = {
   SET_TOKEN: (state, token) => {
     state.token = token
   },
-  SET_ID: (state, id) => {
-    state.id = id
-  },
   SET_NAME: (state, name) => {
     state.name = name
   },
+  SET_USERNAME: (state, username) => {
+    state.username = username
+  },
   SET_AVATAR: (state, avatar) => {
     state.avatar = avatar
+  },
+  SET_ID: (state, id) => {
+    state.id = id
   },
   SET_ROLES: (state, roles) => {
     state.roles = roles
@@ -38,38 +42,58 @@ const mutations = {
 const actions = {
   // user login
   login({ commit }, userInfo) {
-    const { username, password, isadmin } = userInfo
+    const { username, password } = userInfo
     return new Promise((resolve, reject) => {
-      // 注意：前端字段 username 对应后端的 studentId
-      login({ username: username.trim(), userpassword: password, isadmin: isadmin }).then(response => {
-        // 【关键修改】适配新后端的返回结构 (code, msg)
+
+      // 1. 构造后端需要的参数对象
+      // 后端 User.java 中密码字段叫 userpassword，必须对应上！
+      const loginParams = {
+        username: username.trim(),
+        userpassword: password
+      }
+
+      console.log('正在发起登录请求，参数：', loginParams)
+
+      login(loginParams).then(response => {
+        console.log('后端返回的原始结果：', response)
+
+        // 2. 解析返回结果
+        // 兼容两种常见的后端返回格式：
+        // 格式A: { code: 0, msg: "success", data: { token: "xxx" } }
+        // 格式B: { code: 0, msg: "success", data: "xxx-token-string" }
         const { code, msg, data } = response
 
-        // 兼容性判断：后端成功通常返回 code:0
-        const resCode = code !== undefined ? code : response.status
-        const resMsg = msg || response.message || '登录失败'
-
-        // 只要不是成功状态
-        if(resCode !== 0 && resCode !== 200) {
-          reject(resMsg)
+        // 3. 校验业务状态码 (假设 0 或 200 为成功)
+        if (code !== 0 && code !== 200) {
+          console.error('登录失败：后端返回错误码', code, msg)
+          reject(msg || '登录失败，请检查账号密码')
           return
         }
 
-        // 校验 Token 是否存在
-        // 如果后端直接返回扁平结构(R extends HashMap)，token可能直接在response里
-        // 如果后端 put("data", ...)，token 可能在 response.data.token 里
-        // 为了保险，做多重检查
-        const token = data ? data.token : response.token;
+        // 4. 提取 Token
+        // 优先尝试从 data.token 取，如果 data 本身就是字符串，则直接用 data
+        let token = null
+        if (data && typeof data === 'object' && data.token) {
+          token = data.token
+        } else if (data && typeof data === 'string') {
+          token = data
+        } else if (response.token) {
+          // 极少数情况，token 直接在最外层
+          token = response.token
+        }
 
         if (!token) {
-          reject('Token获取失败: 后端未返回有效Token')
+          console.error('登录失败：未找到有效Token', data)
+          reject('系统错误：后端未返回有效Token')
           return
         }
 
+        console.log('登录成功，获取到Token：', token)
         commit('SET_TOKEN', token)
         setToken(token)
         resolve()
       }).catch(error => {
+        console.error('登录请求发生网络或代码异常：', error)
         reject(error)
       })
     })
@@ -79,35 +103,30 @@ const actions = {
   getInfo({ commit, state }) {
     return new Promise((resolve, reject) => {
       getInfo(state.token).then(response => {
-        const { data, code } = response
+        const { data } = response
 
-        if ((code !== 0 && code !== 200) || !data) {
-          reject('验证失败，请重新登录')
-          return
+        if (!data) {
+          return reject('验证失败，请重新登录')
         }
 
-        // 处理头像
-        data['avatar'] = '/pic/02.jpg'
-        // 根据 isAdmin 字段设置角色
-        if (data.isadmin === 1){
-          data['roles'] = ['admin']
-          data['avatar'] = '/pic/05.jpg'
-        }
-        else {
-          data['roles'] = ['reader']
-        }
+        // 解构后端字段
+        // 注意：后端可能返回 studentid 作为学号，也可能没返回
+        const { roles, username, studentid, avatar, userid, isadmin } = data
 
-        const { userid, roles, username, avatar } = data
-
-        if (!roles || roles.length <= 0) {
-          reject('getInfo: roles 必须是非空数组!')
+        // 构造角色数组
+        let computedRoles = roles
+        if (!computedRoles || computedRoles.length <= 0) {
+          // 根据 isadmin (0/1) 判断角色
+          computedRoles = (isadmin === 1) ? ['admin'] : ['reader']
         }
 
-        commit('SET_ID', userid)
-        commit('SET_ROLES', roles)
-        commit('SET_NAME', username)
+        commit('SET_ROLES', computedRoles)
+        commit('SET_NAME', username) // 姓名
+        commit('SET_USERNAME', studentid || username) // 学号 (优先取 studentid)
         commit('SET_AVATAR', avatar)
-        resolve(data)
+        commit('SET_ID', userid)
+
+        resolve({ ...data, roles: computedRoles })
       }).catch(error => {
         reject(error)
       })
