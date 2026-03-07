@@ -9,10 +9,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // 映射本地文件目录，确保图片可以访问
-        // 请确保 System.getProperty("user.dir") + "/src/main/resources/static/files/" 路径下确实有图片
+        // 【终极方案】：直接映射到你的物理绝对路径
+        String absolutePath = "file:E:/java/project/校园旧书漂流共享系统/代码/book-backend/src/main/resources/static/files/";
+
         registry.addResourceHandler("/files/**")
-                .addResourceLocations("classpath:/static/files/")
-                .addResourceLocations("file:" + System.getProperty("user.dir") + "/src/main/resources/static/files/");
+                .addResourceLocations(absolutePath);
     }
 }

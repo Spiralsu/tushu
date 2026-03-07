@@ -13,10 +13,11 @@
         <result column="userName" jdbcType="VARCHAR" property="username" />
         <result column="studentId" jdbcType="VARCHAR" property="studentid" />
         <result column="bookName" jdbcType="VARCHAR" property="bookname" />
+        <result column="returnMsg" jdbcType="VARCHAR" property="returnmsg" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        borrowId, userId, bookId, borrowTime, returnTime, applyTime, borrowReason, state
+        borrowId, userId, bookId, borrowTime, returnTime, applyTime, borrowReason, state, returnMsg
     </sql>
 
     <insert id="insert" parameterType="com.shanzhu.book.model.Borrow">
@@ -30,21 +31,19 @@
             <if test="borrowtime != null"> borrowTime = #{borrowtime}, </if>
             <if test="returntime != null"> returnTime = #{returntime}, </if>
             <if test="state != null"> state = #{state}, </if>
+            <if test="returnmsg != null"> returnMsg = #{returnmsg}, </if>
         </set>
         where borrowId = #{borrowid}
     </update>
 
     <select id="selectAllByLimit" resultMap="BaseResultMap">
-        SELECT
-        b.*,
-        u.userName,
-        u.studentId,
-        bk.bookName
+        SELECT b.*, u.userName, u.studentId, bk.bookName
         FROM borrow b
         LEFT JOIN user u ON b.userId = u.userId
         LEFT JOIN book_info bk ON b.bookId = bk.bookId
         <where>
             <if test="userId != null"> and b.userId = #{userId} </if>
+            <if test="bookId != null"> and b.bookId = #{bookId} </if>
             <if test="state != null"> and b.state = #{state} </if>
         </where>
         ORDER BY b.applyTime DESC, b.state ASC
@@ -57,6 +56,7 @@
         select count(*) from borrow
         <where>
             <if test="userId != null"> and userId = #{userId} </if>
+            <if test="bookId != null"> and bookId = #{bookId} </if>
             <if test="state != null"> and state = #{state} </if>
         </where>
     </select>

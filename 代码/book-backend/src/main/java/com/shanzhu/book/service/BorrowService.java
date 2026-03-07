@@ -28,6 +28,6 @@ public interface BorrowService {
     Integer updateBorrow2(Borrow borrow);
     Integer addBorrow2(Borrow borrow);
 
-    // 【新增】归还图书接口
-    Integer returnBook(Integer borrowId, Integer bookId);
+    // 【修改点】归还图书接口，增加 returnMsg 参数
+    Integer returnBook(Integer borrowId, Integer bookId, String returnMsg);
 }

@@ -80,8 +80,10 @@ public class BorrowController {
 
     // 【核心修复】归还接口 (解决归还报404或无反应)
     @RequestMapping("/returnBook")
-    public Integer returnBook(@RequestParam Integer borrowid, @RequestParam Integer bookid) {
-        return borrowService.returnBook(borrowid, bookid);
+    public Integer returnBook(@RequestParam Integer borrowid,
+                              @RequestParam Integer bookid,
+                              @RequestParam(required = false) String returnmsg) {
+        return borrowService.returnBook(borrowid, bookid, returnmsg);
     }
 
     // 【核心修复】删除接口 (解决删除报404)

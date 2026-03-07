@@ -74,13 +74,14 @@ export function borrowBook(userid, bookid) {
 }
 
 // 还书
-export function returnBook(borrowid, bookid) {
-    return request({
-        url: '/borrow/returnBook',
-        method: 'post',
-        params: {
-            borrowid,
-            bookid
-        }
-    })
+export function returnBook(borrowid, bookid, returnmsg) {
+  return request({
+    url: '/borrow/returnBook',
+    method: 'post',
+    params: {
+      borrowid,
+      bookid,
+      returnmsg
+    }
+  })
 }

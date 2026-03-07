@@ -79,10 +79,10 @@ public class BorrowServiceImpl implements BorrowService {
         }
     }
 
-    // 【核心修复】归还图书业务逻辑
+    // 【修改点】归还图书业务逻辑，带上寄语保存功能
     @Override
     @Transactional
-    public Integer returnBook(Integer borrowId, Integer bookId) {
+    public Integer returnBook(Integer borrowId, Integer bookId, String returnMsg) {
         // 1. 获取借阅记录
         Borrow borrow = borrowMapper.selectByPrimaryKey(borrowId);
         if (borrow == null || borrow.getState() != 1) {
@@ -92,6 +92,8 @@ public class BorrowServiceImpl implements BorrowService {
         // 2. 更新借阅状态 -> 2 (已归还)
         borrow.setState(2);
         borrow.setReturntime(new Date());
+        // 【新增】保存归还寄语
+        borrow.setReturnmsg(returnMsg);
         borrowMapper.updateByPrimaryKeySelective(borrow);
 
         // 3. 更新图书库存
@@ -104,10 +106,6 @@ public class BorrowServiceImpl implements BorrowService {
             }
             bookInfoMapper.updateByPrimaryKeySelective(book);
         }
-
-        // 4. 发送通知 (可选)
-        // Message msg = new Message(borrow.getUserid(), "您已成功归还《" + book.getBookname() + "》，感谢您的爱心漂流！");
-        // messageMapper.insert(msg);
 
         return 1;
     }

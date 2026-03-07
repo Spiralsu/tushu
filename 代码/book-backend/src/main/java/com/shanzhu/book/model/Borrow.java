@@ -14,14 +14,16 @@ public class Borrow {
     private String bookname;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date borrowtime;      // 实际借出时间
+    private Date borrowtime;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date returntime;      // 归还时间
+    private Date returntime;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date applytime;       // 新增：申请时间
+    private Date applytime;
 
-    private String borrowreason;  // 新增：申请理由
-    private Integer state;        // 新增：0审核中 1待交接 2漂流中 3已归还 4已驳回
+    private String borrowreason;
+    private Integer state;
+
+    private String returnmsg;
 }
