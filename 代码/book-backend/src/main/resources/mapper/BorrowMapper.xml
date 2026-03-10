@@ -10,19 +10,24 @@
         <result column="applyTime" jdbcType="TIMESTAMP" property="applytime" />
         <result column="borrowReason" jdbcType="VARCHAR" property="borrowreason" />
         <result column="state" jdbcType="INTEGER" property="state" />
+
         <result column="userName" jdbcType="VARCHAR" property="username" />
         <result column="studentId" jdbcType="VARCHAR" property="studentid" />
         <result column="bookName" jdbcType="VARCHAR" property="bookname" />
         <result column="returnMsg" jdbcType="VARCHAR" property="returnmsg" />
+        <result column="secretCode" jdbcType="VARCHAR" property="secretCode" />
+
+        <result column="borrow_days" jdbcType="INTEGER" property="borrowDays" />
+        <result column="credit_score" jdbcType="INTEGER" property="creditScore" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        borrowId, userId, bookId, borrowTime, returnTime, applyTime, borrowReason, state, returnMsg
+        borrowId, userId, bookId, borrowTime, returnTime, applyTime, borrowReason, state, returnMsg, secretCode, borrow_days
     </sql>
 
     <insert id="insert" parameterType="com.shanzhu.book.model.Borrow">
-        insert into borrow (userId, bookId, applyTime, borrowReason, state, borrowTime)
-        values (#{userid}, #{bookid}, NOW(), #{borrowreason}, #{state}, #{borrowtime})
+        insert into borrow (userId, bookId, applyTime, borrowReason, state, borrowTime, borrow_days)
+        values (#{userid}, #{bookid}, NOW(), #{borrowreason}, #{state}, #{borrowtime}, #{borrowDays})
     </insert>
 
     <update id="updateByPrimaryKeySelective" parameterType="com.shanzhu.book.model.Borrow">
@@ -32,12 +37,14 @@
             <if test="returntime != null"> returnTime = #{returntime}, </if>
             <if test="state != null"> state = #{state}, </if>
             <if test="returnmsg != null"> returnMsg = #{returnmsg}, </if>
+            <if test="secretCode != null"> secretCode = #{secretCode}, </if>
+            <if test="borrowDays != null"> borrow_days = #{borrowDays}, </if>
         </set>
         where borrowId = #{borrowid}
     </update>
 
     <select id="selectAllByLimit" resultMap="BaseResultMap">
-        SELECT b.*, u.userName, u.studentId, bk.bookName
+        SELECT b.*, u.userName, u.studentId, u.credit_score, bk.bookName
         FROM borrow b
         LEFT JOIN user u ON b.userId = u.userId
         LEFT JOIN book_info bk ON b.bookId = bk.bookId
@@ -45,6 +52,7 @@
             <if test="userId != null"> and b.userId = #{userId} </if>
             <if test="bookId != null"> and b.bookId = #{bookId} </if>
             <if test="state != null"> and b.state = #{state} </if>
+            <if test="uploaderId != null"> and bk.uploaderId = #{uploaderId} </if>
         </where>
         ORDER BY b.applyTime DESC, b.state ASC
         <if test="begin != null and size != null">
@@ -53,16 +61,18 @@
     </select>
 
     <select id="selectCount" resultType="int">
-        select count(*) from borrow
+        SELECT count(*) FROM borrow b
+        LEFT JOIN book_info bk ON b.bookId = bk.bookId
         <where>
-            <if test="userId != null"> and userId = #{userId} </if>
-            <if test="bookId != null"> and bookId = #{bookId} </if>
-            <if test="state != null"> and state = #{state} </if>
+            <if test="userId != null"> and b.userId = #{userId} </if>
+            <if test="bookId != null"> and b.bookId = #{bookId} </if>
+            <if test="state != null"> and b.state = #{state} </if>
+            <if test="uploaderId != null"> and bk.uploaderId = #{uploaderId} </if>
         </where>
     </select>
 
     <select id="selectByPrimaryKey" resultMap="BaseResultMap">
-        select b.*, u.userName, bk.bookName
+        select b.*, u.userName, u.credit_score, bk.bookName
         from borrow b
                  LEFT JOIN user u ON b.userId = u.userId
                  LEFT JOIN book_info bk ON b.bookId = bk.bookId

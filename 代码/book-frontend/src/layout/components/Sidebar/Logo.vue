@@ -11,7 +11,7 @@
           <div class="logo-icon">
             <i class="el-icon-reading"></i>
           </div>
-          <h1 class="sidebar-title">图书管理系统</h1>
+          <h1 class="sidebar-title">校园旧书漂流共享系统</h1>
         </div>
       </router-link>
     </transition>
@@ -55,7 +55,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     .logo-container {
       display: flex;
       align-items: center;
@@ -76,13 +76,13 @@ export default {
       justify-content: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 255, 255, 0.1) inset;
       backdrop-filter: blur(5px);
-      
+
       &.collapsed {
         margin: 0;
         width: 40px;
         height: 40px;
       }
-      
+
       i {
         font-size: 24px;
         color: #fff;
@@ -93,7 +93,7 @@ export default {
       margin: 0;
       color: #fff;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 17px;
       font-family: "Microsoft YaHei", Arial, sans-serif;
       letter-spacing: 1px;
       white-space: nowrap;

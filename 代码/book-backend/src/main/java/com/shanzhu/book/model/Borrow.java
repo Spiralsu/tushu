@@ -26,4 +26,13 @@ public class Borrow {
     private Integer state;
 
     private String returnmsg;
+
+    // 【本次新增】交接暗号字段
+    private String secretCode;
+
+    // 【新增】：借阅天数
+    private Integer borrowDays;
+
+    // 【新增】：用于前端展示借阅者的信用分（联查字段）
+    private Integer creditScore;
 }

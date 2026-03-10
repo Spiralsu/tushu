@@ -31,7 +31,7 @@ public class BorrowController {
         return borrowService.queryBorrowsByPage(page, size, userId);
     }
 
-    // 管理员审核与流程管理
+    // 管理员审核与流程管理 (包含下发暗号)
     @PostMapping("/audit")
     public R auditBorrow(@RequestParam Integer borrowId,
                          @RequestParam Integer state,
@@ -39,13 +39,17 @@ public class BorrowController {
         return borrowService.auditBorrow(borrowId, state, feedback);
     }
 
-    // 【核心修复】首页获取借阅总数，解决 404 错误
+    // 【新增】真正的验证暗号接口
+    @PostMapping("/verifyCode")
+    public R verifyCode(@RequestParam Integer borrowId, @RequestParam String secretCode) {
+        return borrowService.verifyCode(borrowId, secretCode);
+    }
+
     @GetMapping(value = "/getCount")
     public Integer getCount() {
         return borrowService.getCount();
     }
 
-    // 【优化】分页查询
     @RequestMapping(value = "/queryBorrowsByPage")
     public Map<String, Object> queryBorrowsByPage(@RequestParam Map<String, Object> params) {
         List<Borrow> list = borrowService.searchBorrowsByPage(params);
@@ -53,13 +57,11 @@ public class BorrowController {
         return R.getListResultMap(0, "success", count, list);
     }
 
-    // 兼容旧接口
     @RequestMapping(value = "/addBorrow")
     public R addBorrowOld(@RequestBody Borrow borrow) {
         return borrowService.addBorrow(borrow);
     }
 
-    // 【核心修复】借书/申请接口 (解决申请报404)
     @RequestMapping("/borrowBook")
     public Integer borrowBook(@RequestParam(required = false) Integer userid,
                               @RequestParam(required = false) Integer bookid,
@@ -74,27 +76,78 @@ public class BorrowController {
         borrow.setUserid(userid);
         borrow.setBookid(bookid);
 
+        // 【核心修复】：准确接收用户的申请理由
+        if (body != null && body.get("borrowreason") != null) {
+            borrow.setBorrowreason(body.get("borrowreason").toString());
+        }
+
         R result = borrowService.addBorrow(borrow);
         return result.getCode() == 0 ? 1 : 0;
     }
 
-    // 【核心修复】归还接口 (解决归还报404或无反应)
-    @RequestMapping("/returnBook")
-    public Integer returnBook(@RequestParam Integer borrowid,
-                              @RequestParam Integer bookid,
-                              @RequestParam(required = false) String returnmsg) {
-        return borrowService.returnBook(borrowid, bookid, returnmsg);
+    @PostMapping("/returnBook")
+    public R returnBook(@RequestParam Integer borrowId, @RequestParam Integer bookId, @RequestParam String returnMsg, @RequestParam(defaultValue = "") String contactInfo) {
+        int result = borrowService.returnBook(borrowId, bookId, returnMsg, contactInfo);
+        if (result > 0) {
+            return R.ok();
+        }
+        return R.error("操作失败");
     }
 
-    // 【核心修复】删除接口 (解决删除报404)
     @RequestMapping(value = "/deleteBorrow")
     public Integer deleteBorrow(@RequestBody Borrow borrow) {
         return borrowService.deleteBorrow(borrow);
     }
 
-    // 【核心修复】批量删除接口
     @RequestMapping(value = "/deleteBorrows")
     public Integer deleteBorrows(@RequestBody List<Borrow> borrows) {
         return borrowService.deleteBorrows(borrows);
     }
+
+
+    // 【新增】撤销交接接口
+    @PostMapping("/cancel")
+    public R cancelBorrow(@RequestParam Integer borrowId, @RequestParam String reason) {
+        return borrowService.cancelBorrow(borrowId, reason);
+    }
+
+
+    // 【新增】跨区协商交接接口
+    @PostMapping("/nudge")
+    public R nudgeUploader(@RequestParam Integer borrowId, @RequestParam String message) {
+        return borrowService.nudgeUploader(borrowId, message);
+    }
+
+
+    // 毒点4：报损登记接口
+    @PostMapping("/reportLoss")
+    public R reportLoss(@RequestParam Integer borrowId, @RequestParam String reason) {
+        return borrowService.reportLoss(borrowId, reason);
+    }
+
+    // 毒点2：一键催还接口
+    @PostMapping("/urge")
+    public R urgeReturn(@RequestParam Integer borrowId) {
+        return borrowService.urgeReturn(borrowId);
+    }
+
+    // 毒点5：绑定微信测试号 OpenID 接口
+    @PostMapping("/bindWx")
+    public R bindWx(@RequestParam Integer userId, @RequestParam String openId) {
+        return borrowService.bindWx(userId, openId);
+    }
+
+
+    // 毒点：解除微信绑定
+    @PostMapping("/unbindWx")
+    public R unbindWx(@RequestParam Integer userId) {
+        return borrowService.unbindWx(userId);
+    }
+
+    @PostMapping("/forcePenalize")
+    public R forcePenalize(@RequestParam Integer borrowId) {
+        return borrowService.forcePenalize(borrowId);
+    }
+
+
 }

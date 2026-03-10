@@ -21,4 +21,13 @@ public interface BookWishMapper {
 
     @Delete("DELETE FROM book_wish WHERE wish_id = #{wishId}")
     int deleteWish(@Param("wishId") Integer wishId);
+
+
+    // 暂时改为精确匹配，测试一下是否能跑通
+    @Select("SELECT wish_id as wishId, user_id as userId, user_name as userName, " +
+            "book_name as bookName, wish_desc as wishDesc, state, " +
+            "create_time as createTime, fulfill_user_id as fulfillUserId " +
+            "FROM book_wish WHERE state = 0 AND book_name = #{bookName}")
+    List<BookWish> selectUnfulfilledWishesByBookName(@Param("bookName") String bookName);
+
 }

@@ -14,11 +14,11 @@
         <result column="bookImage" jdbcType="VARCHAR" property="bookimg" />
         <result column="bookCount" jdbcType="INTEGER" property="bookcount" />
         <result column="inventory" jdbcType="INTEGER" property="inventory" />
+
+        <result column="isSameSex" jdbcType="INTEGER" property="isSameSex" />
+
     </resultMap>
 
-    <sql id="Base_Column_List">
-        bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory
-    </sql>
 
     <select id="selectAll" resultMap="BaseResultMap">
         select <include refid="Base_Column_List" />
@@ -26,10 +26,14 @@
         order by bookId desc
     </select>
 
+    <sql id="Base_Column_List">
+        bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory, uploaderId, contactInfo
+    </sql>
+
     <insert id="insert" parameterType="com.shanzhu.book.model.BookInfo">
-        insert into book_info (bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory)
+        insert into book_info (bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory, uploaderId, contactInfo)
         values (#{bookname}, #{bookauthor}, #{bookprice}, #{booktypeid}, #{bookdesc},
-                #{isborrowed}, #{bookimg}, #{bookcount}, #{inventory})
+                #{isborrowed}, #{bookimg}, #{bookcount}, #{inventory}, #{uploaderid}, #{contactinfo})
     </insert>
 
     <update id="updateByPrimaryKeySelective" parameterType="com.shanzhu.book.model.BookInfo">
@@ -44,19 +48,29 @@
             <if test="bookimg != null"> bookImage = #{bookimg}, </if>
             <if test="bookcount != null"> bookCount = #{bookcount}, </if>
             <if test="inventory != null"> inventory = #{inventory}, </if>
+
+            <if test="uploaderid != null"> uploaderId = #{uploaderid}, </if>
+            <if test="contactinfo != null"> contactInfo = #{contactinfo}, </if>
         </set>
         where bookId = #{bookid}
     </update>
 
     <select id="selectBySearch" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List" />,
-        (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
-        from book_info
+        SELECT b.*,
+        (SELECT bookTypeName FROM book_type WHERE book_type.bookTypeId = b.bookTypeId) as bookTypeName,
+        <if test="userid != null">
+            CASE WHEN u.gender = (SELECT gender FROM user WHERE userId = #{userid}) AND u.gender != 2 THEN 1 ELSE 0 END AS isSameSex
+        </if>
+        <if test="userid == null"> 0 AS isSameSex </if>
+
+        FROM book_info b
+        LEFT JOIN user u ON b.uploaderId = u.userId
         <where>
-            <if test="bookname != null and bookname != '' "> and bookName like concat('%',#{bookname},'%') </if>
-            <if test="bookauthor != null and bookauthor != '' "> and bookAuthor like concat('%',#{bookauthor},'%') </if>
-            <if test="booktypeid != null"> and bookTypeId = #{booktypeid} </if>
+            <if test="bookname != null and bookname != '' "> and b.bookName like concat('%',#{bookname},'%') </if>
+            <if test="bookauthor != null and bookauthor != '' "> and b.bookAuthor like concat('%',#{bookauthor},'%') </if>
+            <if test="booktypeid != null"> and b.bookTypeId = #{booktypeid} </if>
         </where>
+        ORDER BY isSameSex DESC, b.bookId DESC
         limit #{begin}, #{size}
     </select>
 

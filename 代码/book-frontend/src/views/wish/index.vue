@@ -98,20 +98,32 @@ export default {
         }
       })
     },
+
+
     handleFulfill(item) {
-      this.$confirm(`如果你手头刚好有《${item.bookName}》，请去【发布旧书】并把它漂流起来吧！`, '我来满足TA', {
-        confirmButtonText: '点亮TA的心愿',
+      this.$confirm(`如果你手头刚好有《${item.bookName}》，请去【发布旧书】并把它漂流起来吧！系统会在你发布成功后自动点亮TA的心愿！`, '我来满足TA', {
+        confirmButtonText: '去发布书籍',
         cancelButtonText: '再想想',
         type: 'success'
       }).then(() => {
-        fulfillWish(item.wishId, this.id).then(res => {
-          if(res > 0) {
-            this.$message.success("太棒了！你的善意点亮了TA的心愿！")
-            this.$router.push({ path: '/bookmanage/bookinfo', query: { openDonate: 'true' } })
+        this.$message.info("请填写书籍信息进行发布，发布成功后心愿将自动达成并通知对方！");
+
+        // 【核心修改】：不仅传书名，还要把心愿ID和许愿人的ID传过去，为了给TA发微信！
+        this.$router.push({
+          path: '/bookmanage/bookinfo',
+          query: {
+            openDonate: 'true',
+            wishBookName: item.bookName,
+            wishId: item.wishId,      // 追踪这是哪个心愿
+            wisherId: item.userId     // 追踪该给谁发微信
           }
-        })
-      })
+        });
+      }).catch(() => {});
     },
+
+
+
+
     handleDelete(item) {
       this.$confirm("确定要摘下这颗心愿星吗？", "提示").then(() => {
         deleteWish(item.wishId).then(res => {

@@ -85,3 +85,12 @@ export function returnBook(borrowid, bookid, returnmsg) {
     }
   })
 }
+
+//更新前端借阅 API
+export function approveBorrow(borrowid) {
+  return request({
+    url: '/borrow/approve',
+    method: 'post',
+    params: { borrowid }
+  })
+}

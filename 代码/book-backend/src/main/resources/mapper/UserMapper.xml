@@ -8,10 +8,15 @@
         <result column="userPassword" jdbcType="VARCHAR" property="userpassword" />
         <result column="isAdmin" jdbcType="INTEGER" property="isadmin" />
         <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="gender" jdbcType="INTEGER" property="gender" />
+        <result column="open_id" jdbcType="VARCHAR" property="openId" />
+        <result column="department" jdbcType="VARCHAR" property="department" />
+
+        <result column="credit_score" jdbcType="INTEGER" property="creditScore" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        userId, userName, studentId, userPassword, isAdmin, status
+        userId, userName, studentId, userPassword, isAdmin, status, gender, open_id, department, credit_score
     </sql>
 
     <select id="selectByUserName" resultMap="BaseResultMap">
@@ -25,8 +30,8 @@
     </select>
 
     <insert id="insert" parameterType="com.shanzhu.book.model.User">
-        insert into user (userName, studentId, userPassword, isAdmin, status)
-        values (#{username}, #{studentid}, #{userpassword}, #{isadmin}, #{status})
+        insert into user (userName, studentId, userPassword, isAdmin, status, gender, department)
+        values (#{username}, #{studentid}, #{userpassword}, #{isadmin}, #{status}, #{gender}, #{department})
     </insert>
 
     <update id="updateByPrimaryKeySelective" parameterType="com.shanzhu.book.model.User">
@@ -35,8 +40,13 @@
             <if test="username != null"> userName = #{username}, </if>
             <if test="studentid != null"> studentId = #{studentid}, </if>
             <if test="userpassword != null"> userPassword = #{userpassword}, </if>
-            <if test="status != null"> status = #{status}, </if>
             <if test="isadmin != null"> isAdmin = #{isadmin}, </if>
+            <if test="status != null"> status = #{status}, </if>
+            <if test="gender != null"> gender = #{gender}, </if>
+            <if test="openId != null"> open_id = #{openId}, </if>
+            <if test="department != null"> department = #{department}, </if>
+
+            <if test="creditScore != null"> credit_score = #{creditScore}, </if>
         </set>
         where userId = #{userid}
     </update>
@@ -46,6 +56,9 @@
         <where>
             <if test="username != null and username != ''">
                 and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%'))
+            </if>
+            <if test="department != null and department != ''">
+                and department = #{department}
             </if>
         </where>
         order by status asc, userId desc
@@ -57,6 +70,9 @@
         <where>
             <if test="username != null and username != ''">
                 and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%'))
+            </if>
+            <if test="department != null and department != ''">
+                and department = #{department}
             </if>
         </where>
     </select>

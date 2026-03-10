@@ -85,7 +85,14 @@ export default {
         if (valid) {
           this.loading = true
           this.$store.dispatch('user/login', this.loginForm).then(() => {
-            this.$router.push({ path: this.redirect || '/' })
+            // 【修复 404 死亡重定向陷阱】
+            const targetPath = this.redirect || '/';
+            // 如果发现系统想把你往 404 送，直接强行按住，送回首页！
+            if (targetPath.includes('/404')) {
+              this.$router.push({ path: '/' });
+            } else {
+              this.$router.push({ path: targetPath });
+            }
             this.loading = false
           }).catch(() => {
             this.loading = false

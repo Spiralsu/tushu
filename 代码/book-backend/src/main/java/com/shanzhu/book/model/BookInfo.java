@@ -19,4 +19,13 @@ public class BookInfo implements Serializable {
     // 【新增】库存字段
     private Integer bookcount; // 总数
     private Integer inventory; // 剩余库存
+
+    // 【新增】
+    private Integer uploaderid; // 发布者ID
+    private String contactinfo; // 隐藏的交接联系方式
+
+    // 【新增】用于前端判断是否为同性发布（不在数据库里，只做展示）
+    private Integer isSameSex;
+
+
 }
