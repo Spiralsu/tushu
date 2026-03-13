@@ -39,6 +39,7 @@
             <if test="returnmsg != null"> returnMsg = #{returnmsg}, </if>
             <if test="secretCode != null"> secretCode = #{secretCode}, </if>
             <if test="borrowDays != null"> borrow_days = #{borrowDays}, </if>
+            <if test="applytime != null"> applyTime = #{applytime}, </if>
         </set>
         where borrowId = #{borrowid}
     </update>

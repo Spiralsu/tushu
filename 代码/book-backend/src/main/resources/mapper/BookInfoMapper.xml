@@ -62,13 +62,13 @@
             CASE WHEN u.gender = (SELECT gender FROM user WHERE userId = #{userid}) AND u.gender != 2 THEN 1 ELSE 0 END AS isSameSex
         </if>
         <if test="userid == null"> 0 AS isSameSex </if>
-
         FROM book_info b
         LEFT JOIN user u ON b.uploaderId = u.userId
         <where>
             <if test="bookname != null and bookname != '' "> and b.bookName like concat('%',#{bookname},'%') </if>
             <if test="bookauthor != null and bookauthor != '' "> and b.bookAuthor like concat('%',#{bookauthor},'%') </if>
             <if test="booktypeid != null"> and b.bookTypeId = #{booktypeid} </if>
+            <if test="uploaderId != null"> and b.uploaderId = #{uploaderId} </if>
         </where>
         ORDER BY isSameSex DESC, b.bookId DESC
         limit #{begin}, #{size}
@@ -96,6 +96,7 @@
             <if test="bookname != null and bookname != '' "> and bookName like concat('%',#{bookname},'%') </if>
             <if test="bookauthor != null and bookauthor != '' "> and bookAuthor like concat('%',#{bookauthor},'%') </if>
             <if test="booktypeid != null"> and bookTypeId = #{booktypeid} </if>
+            <if test="uploaderId != null"> and uploaderId = #{uploaderId} </if>
         </where>
     </select>
 

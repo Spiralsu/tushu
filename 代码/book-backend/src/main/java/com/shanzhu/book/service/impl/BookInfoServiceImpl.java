@@ -54,42 +54,59 @@ public class BookInfoServiceImpl implements BookInfoService {
 
     @Override
     public Integer addBookInfo(BookInfo bookInfo) {
-        // 1. 自动设置库存
         if (bookInfo.getBookcount() != null && bookInfo.getInventory() == null) {
             bookInfo.setInventory(bookInfo.getBookcount());
         }
-
         if (bookInfo.getIsborrowed() == null) {
             bookInfo.setIsborrowed(0);
         }
 
-        // 2. 将书籍插入数据库
         int result = bookInfoMapper.insert(bookInfo);
 
-        // 3. 给发布者自己发一条“发布成功”的站内信
+        // 发布成功通知与严格【做贡献回血策略】
         if (result > 0 && bookInfo.getUploaderid() != null) {
-            String successMsg = "【系统通知】恭喜！您的书籍《" + bookInfo.getBookname() + "》已成功发布到漂流大厅！\n" +
-                    "感谢您为校园旧书漂流做出的贡献。当有同学申请借阅时，系统会第一时间通知您。";
-            messageMapper.insert(new Message(bookInfo.getUploaderid(), successMsg));
+            messageMapper.insert(new Message(bookInfo.getUploaderid(), "【系统通知】您的书籍《" + bookInfo.getBookname() + "》已发布！"));
+
+            User uploader = userMapper.selectByPrimaryKey(bookInfo.getUploaderid());
+            if (uploader != null && (uploader.getCreditScore() == null || uploader.getCreditScore() < 100)) {
+                java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+                String todayStr = sdf.format(new java.util.Date());
+                String updateStr = uploader.getScoreUpdateDate() == null ? "" : sdf.format(uploader.getScoreUpdateDate());
+
+                int todayAdded = uploader.getTodayAddScore() == null ? 0 : uploader.getTodayAddScore();
+                // 如果今天还没加过分，重置今日额度
+                if (!todayStr.equals(updateStr)) {
+                    todayAdded = 0;
+                    uploader.setScoreUpdateDate(new java.util.Date());
+                }
+
+                int currentScore = uploader.getCreditScore() == null ? 100 : uploader.getCreditScore();
+                // 只有今天加分还没满5分，且没满100分时才加
+                if (todayAdded < 5 && currentScore < 100) {
+                    // 发布书籍理论加2分，但不能超过(5-已加分数)的剩余额度
+                    int canAdd = Math.min(2, 5 - todayAdded);
+                    int finalScore = Math.min(100, currentScore + canAdd);
+                    int actualAdded = finalScore - currentScore;
+
+                    if (actualAdded > 0) {
+                        uploader.setCreditScore(finalScore);
+                        uploader.setTodayAddScore(todayAdded + actualAdded);
+                        userMapper.updateByPrimaryKeySelective(uploader);
+                        messageMapper.insert(new Message(uploader.getUserid(), "【信用奖励】发布书籍奖励生效！本次恢复 " + actualAdded + " 分 (今日已累计恢复 " + (todayAdded + actualAdded) + "/5 分)，当前信用分：" + finalScore + " 分。"));
+                    }
+                }
+            }
         }
 
-        // 4. 【核心升级】：检查心愿广场并发送微信推送！
+        // 响应心愿墙逻辑...
         if (result > 0 && bookInfo.getBookname() != null) {
             List<BookWish> wishes = bookWishMapper.selectUnfulfilledWishesByBookName(bookInfo.getBookname());
             for (BookWish wish : wishes) {
-                String content = "好消息！您在心愿广场求购的书籍《" + bookInfo.getBookname() + "》刚刚被发布啦，快去漂流大厅看看吧！";
-                Message message = new Message(wish.getUserId(), content);
-                messageMapper.insert(message);
+                messageMapper.insert(new Message(wish.getUserId(), "好消息！您在心愿广场求购的书籍《" + bookInfo.getBookname() + "》被发布啦！"));
                 bookWishMapper.fulfillWish(wish.getWishId(), 0);
-
-                // 【WxPusher 场景7：响应心愿通知】
                 User wisher = userMapper.selectByPrimaryKey(wish.getUserId());
                 if (wisher != null && wisher.getOpenId() != null) {
-                    WechatPushUtils.pushMessage(
-                            wisher.getOpenId(),
-                            "🌟 您的求书心愿已被点亮！",
-                            "激动人心的好消息！您在心愿墙求购的书籍《" + bookInfo.getBookname() + "》刚刚被热心书友发布啦！<br/><br/>快登录系统去【探索好书】里申请借阅吧，手慢无哦！"
-                    );
+                    WechatPushUtils.pushMessage(wisher.getOpenId(), "🌟 心愿被点亮！", "您求购的《" + bookInfo.getBookname() + "》被发布啦！快去借阅！");
                 }
             }
         }

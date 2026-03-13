@@ -63,26 +63,32 @@ public class BorrowController {
     }
 
     @RequestMapping("/borrowBook")
-    public Integer borrowBook(@RequestParam(required = false) Integer userid,
-                              @RequestParam(required = false) Integer bookid,
-                              @RequestBody(required = false) Map<String, Object> body) {
+    public R borrowBook(@RequestParam(required = false) Integer userid,
+                        @RequestParam(required = false) Integer bookid,
+                        @RequestBody(required = false) Map<String, Object> body) {
         if (userid == null && body != null) {
             if (body.get("userid") != null) userid = Integer.parseInt(body.get("userid").toString());
             if (body.get("bookid") != null) bookid = Integer.parseInt(body.get("bookid").toString());
         }
-        if (userid == null || bookid == null) return 0;
+        if (userid == null || bookid == null) return R.error("缺少用户或书籍ID");
 
         Borrow borrow = new Borrow();
         borrow.setUserid(userid);
         borrow.setBookid(bookid);
 
-        // 【核心修复】：准确接收用户的申请理由
-        if (body != null && body.get("borrowreason") != null) {
-            borrow.setBorrowreason(body.get("borrowreason").toString());
+        if (body != null) {
+            // 准确接收用户的申请理由
+            if (body.get("borrowreason") != null) {
+                borrow.setBorrowreason(body.get("borrowreason").toString());
+            }
+            // 【核心修复】：准确接收前端传来的借阅天数！
+            if (body.get("borrowDays") != null) {
+                borrow.setBorrowDays(Integer.parseInt(body.get("borrowDays").toString()));
+            }
         }
 
-        R result = borrowService.addBorrow(borrow);
-        return result.getCode() == 0 ? 1 : 0;
+        // 【核心修复】：直接返回 R 对象。这样前端才能拿到具体的报错文本（如：信用分不足等提示）
+        return borrowService.addBorrow(borrow);
     }
 
     @PostMapping("/returnBook")

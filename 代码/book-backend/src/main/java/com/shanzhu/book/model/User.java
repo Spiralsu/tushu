@@ -22,4 +22,10 @@ public class User implements Serializable {
 
     // 【新增】：信用分风控字段
     private Integer creditScore;
+
+    // 【新增】：每日回血上限风控字段
+    private Integer todayAddScore;
+    private java.util.Date scoreUpdateDate;
+
+
 }

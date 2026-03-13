@@ -11,13 +11,14 @@
         </el-form-item>
         <el-form-item class="search-btn-group">
           <el-button type="primary" icon="el-icon-search" @click="handleFilter" class="modern-btn">探索好书</el-button>
-          <el-button type="success" icon="el-icon-plus" @click="handleCreate" class="modern-btn">发布旧书</el-button>
           <el-button type="info" plain icon="el-icon-refresh-left" @click="resetQuery" class="modern-btn">显示全部</el-button>
+          <el-button type="warning" plain icon="el-icon-user" @click="handleMyPublished" class="modern-btn">我发布的</el-button>
+          <el-button type="success" icon="el-icon-plus" @click="handleCreate" class="modern-btn">发布旧书</el-button>
         </el-form-item>
       </el-form>
     </el-card>
 
-    <el-row :gutter="24" v-loading="tableLoading">
+    <el-row :gutter="24" v-loading="tableLoading" class="book-list-container">
       <el-col :xs="24" :sm="12" :md="8" :lg="6" v-for="item in tableData" :key="item.bookid" style="margin-bottom: 24px;">
         <el-card class="book-card-item" shadow="hover">
           <div class="book-image-box">
@@ -42,9 +43,10 @@
             </el-button>
             <div class="b-ops">
               <el-button type="text" size="small" @click="openFootprint(item)" icon="el-icon-guide">漂流足迹</el-button>
-              <div v-if="roleIsAdmin">
+
+              <div v-if="roleIsAdmin || item.uploaderid === id">
                 <el-button type="text" size="small" @click="handleUpdate(item)">维护</el-button>
-                <el-button type="text" size="small" style="color:#f56c6c;" @click="handleDelete(item)">下架</el-button>
+                <el-button type="text" size="small" style="color:#f56c6c;" @click="handleDelete(item)">下架 / 删除</el-button>
               </div>
             </div>
           </div>
@@ -132,7 +134,6 @@
         <el-empty v-else description="这本书还没有开始它的漂流之旅哦"></el-empty>
       </div>
     </el-dialog>
-
   </div>
 </template>
 
@@ -150,18 +151,12 @@ export default {
     return {
       tableData: [], recordTotal: 0, typeData: [],
       queryParam: { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null },
-
       dialogFormVisible: false, formType: 0,
       form: { bookid: null, bookname: "", bookauthor: "", bookprice: 0, booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null },
       tableLoading: false,
-
-      // 【新增】：借阅表单专属数据
-      borrowDialogVisible: false,
-      borrowLoading: false,
+      borrowDialogVisible: false, borrowLoading: false,
       borrowForm: { bookid: null, borrowreason: '', borrowDays: 30 },
-
-      footprintDialogVisible: false,
-      footprintList: [],
+      footprintDialogVisible: false, footprintList: [],
     };
   },
   computed: {
@@ -195,35 +190,20 @@ export default {
       this.form = { bookid: null, bookname: "", bookauthor: "", bookprice: 0, booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null };
       this.dialogFormVisible = true;
     },
-    handleUpdate(row) {
-      this.formType = 1; this.form = { ...row }; this.dialogFormVisible = true;
-    },
-    handleAvatarSuccess(res) {
-      if (res.code === 0) { this.form.bookimg = res.data; this.$message.success("封面上传成功"); }
-    },
+    handleUpdate(row) { this.formType = 1; this.form = { ...row }; this.dialogFormVisible = true; },
+    handleAvatarSuccess(res) { if (res.code === 0) { this.form.bookimg = res.data; this.$message.success("封面上传成功"); } },
 
-    // 1. 打开借阅弹窗
     openBorrowDialog(row) {
-      this.borrowForm = { bookid: row.bookid, borrowreason: '', borrowDays: 30 }; // 默认填入 30 天
+      this.borrowForm = { bookid: row.bookid, borrowreason: '', borrowDays: 30 };
       this.borrowDialogVisible = true;
     },
 
-
-    // 2. 提交借阅请求
     submitBorrow() {
-      if (!this.borrowForm.borrowreason || this.borrowForm.borrowreason.trim() === '') {
-        return this.$message.warning("申请理由不能为空哦！");
-      }
+      if (!this.borrowForm.borrowreason || this.borrowForm.borrowreason.trim() === '') { return this.$message.warning("申请理由不能为空哦！"); }
       this.borrowLoading = true;
       request({
-        url: '/borrow/borrowBook',
-        method: 'post',
-        data: {
-          userid: this.id,
-          bookid: this.borrowForm.bookid,
-          borrowreason: this.borrowForm.borrowreason,
-          borrowDays: this.borrowForm.borrowDays // 【带上天数发送给后端】
-        }
+        url: '/borrow/borrowBook', method: 'post',
+        data: { userid: this.id, bookid: this.borrowForm.bookid, borrowreason: this.borrowForm.borrowreason, borrowDays: this.borrowForm.borrowDays }
       }).then(res => {
         this.borrowLoading = false;
         if (res.code === 0 || res === 1 || res.code === 200) {
@@ -231,23 +211,15 @@ export default {
           this.borrowDialogVisible = false;
           this.fetchData();
         } else {
-          // 【修复】：直接读取后端传回来的真实错误信息（包含信用分拦截提示）
           this.$message.error(res.msg || res.message || "操作失败，请检查或重试！");
         }
-      }).catch(() => {
-        this.borrowLoading = false;
-      });
+      }).catch(() => { this.borrowLoading = false; });
     },
 
     submitForm() {
       const action = this.formType === 0 ? addBookInfo : updateBookInfo;
-      if (this.formType === 0) {
-        this.form.inventory = this.form.bookcount;
-        this.form.uploaderid = this.id;
-      }
-      action(this.form).then((res) => {
-        if (res === 1) { this.$message.success("操作成功"); this.fetchData(); this.dialogFormVisible = false; }
-      });
+      if (this.formType === 0) { this.form.inventory = this.form.bookcount; this.form.uploaderid = this.id; }
+      action(this.form).then((res) => { if (res === 1) { this.$message.success("操作成功"); this.fetchData(); this.dialogFormVisible = false; } });
     },
     handleDelete(row) {
       this.$confirm("确定要下架这本图书吗?", "提示", { type: 'warning' }).then(() => {
@@ -255,12 +227,17 @@ export default {
       });
     },
     resetQuery() {
-      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, };
+      // 清空所有条件，包括 uploaderId
+      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, uploaderId: null };
+      this.fetchData();
+    },
+    // 【新增】：仅查询自己的发布
+    handleMyPublished() {
+      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, uploaderId: this.id };
       this.fetchData();
     },
     openFootprint(row) {
-      this.footprintDialogVisible = true;
-      this.footprintList = [];
+      this.footprintDialogVisible = true; this.footprintList = [];
       import('@/utils/request').then(({ default: request }) => {
         request({ url: '/borrow/queryBorrowsByPage', method: 'get', params: { page: 1, limit: 100, bookId: row.bookid } }).then(res => {
           if (res.data) { this.footprintList = res.data; } else if (res.rows) { this.footprintList = res.rows; }
@@ -272,19 +249,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* 保持样式不变 */
 .header-form-flex { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; .el-form-item { margin-bottom: 0 !important; } }
 .modern-btn { min-width: 110px !important; height: 40px !important; display: inline-flex !important; align-items: center; justify-content: center; padding: 0 15px !important; }
-.book-card-item { border-radius: 18px; transition: transform 0.3s ease;
-  .book-image-box { height: 180px; position: relative; background: rgba(0,0,0,0.03); display: flex; justify-content: center; align-items: center; .book-main-img { width: 100%; height: 100%; } .status-tag { position: absolute; top: 12px; right: 12px; padding: 2px 8px; border-radius: 10px; font-size: 11px; background: #6366f1; color: #fff; &.out { background: #94a3b8; } } }
-  .book-content-box { padding: 15px;
+
+/* 【关键修复 2】：把粗暴的全局 .el-row 改成了限定于 .book-list-container，这样就绝对不会影响弹窗了！ */
+.book-list-container { display: flex; flex-wrap: wrap; }
+.book-list-container > .el-col { display: flex; margin-bottom: 24px; }
+
+.book-card-item {
+  width: 100%; border-radius: 18px; transition: transform 0.3s ease; display: flex; flex-direction: column;
+  .book-image-box { height: 180px; position: relative; background: rgba(0,0,0,0.03); display: flex; justify-content: center; align-items: center; flex-shrink: 0; .book-main-img { width: 100%; height: 100%; } .status-tag { position: absolute; top: 12px; right: 12px; padding: 2px 8px; border-radius: 10px; font-size: 11px; background: #6366f1; color: #fff; &.out { background: #94a3b8; } } }
+  .book-content-box {
+    padding: 15px; flex: 1; display: flex; flex-direction: column;
     .b-title { font-size: 16px; font-weight: 600; margin: 0; color: #1e293b; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .b-author { font-size: 13px; color: #64748b; margin: 5px 0 8px 0; }
-    .b-desc { font-size: 12px; color: #94a3b8; margin: 0 0 10px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-style: italic; }
+    .b-desc { font-size: 12px; color: #94a3b8; margin: 0 0 10px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-style: italic; flex: 1; }
     .b-ops { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; border-top: 1px solid #f1f5f9; padding-top: 5px; }
   }
   &:hover { transform: translateY(-5px); }
 }
+
 .side-upload-panel { display: flex; flex-direction: column; align-items: center; .upload-title { font-size: 14px; font-weight: bold; margin-bottom: 15px; color: #475569; } .book-uploader ::v-deep .el-upload { border: 2px dashed #cbd5e1; border-radius: 12px; cursor: pointer; width: 170px; height: 230px; display: flex; justify-content: center; align-items: center; background: rgba(255,255,255,0.4); &:hover { border-color: #6366f1; } } .cover-image { width: 170px; height: 230px; border-radius: 12px; object-fit: cover; } .upload-placeholder { color: #94a3b8; text-align: center; i { font-size: 30px; margin-bottom: 8px; } } }
 .standard-footer { display: flex; justify-content: center; gap: 20px; .dialog-action-btn { width: 140px !important; height: 45px !important; font-size: 15px !important; display: inline-flex !important; align-items: center; justify-content: center; } .cancel-style { background: #f1f5f9 !important; color: #475569 !important; border: none !important; } }
 .page-box { text-align: center; margin-top: 25px; }

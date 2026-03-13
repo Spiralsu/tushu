@@ -35,10 +35,15 @@ public class BorrowServiceImpl implements BorrowService {
     @Override
     @Transactional
     public R addBorrow(Borrow borrow) {
-        // 【风控拦截 1】：查出当前借书人的信用分，低于 60 分直接熔断！
         User currentUser = userMapper.selectByPrimaryKey(borrow.getUserid());
+
+        // 【新增】：管理员不可借书！
+        if (currentUser != null && currentUser.getIsadmin() != null && currentUser.getIsadmin() == 1) {
+            return R.error("管理员账号为后台管理专用，不可参与前端借阅流转！");
+        }
+
         if (currentUser != null && currentUser.getCreditScore() != null && currentUser.getCreditScore() < 60) {
-            return R.error("您的信用分低于 60 分，已被系统限制借阅权限！如有特殊情况请线下联系管理员。");
+            return R.error("您的信用分低于 60 分，已被限制借阅！如有特殊情况请线下联系管理员。");
         }
 
         BookInfo book = bookInfoMapper.selectByPrimaryKey(borrow.getBookid());
@@ -96,6 +101,10 @@ public class BorrowServiceImpl implements BorrowService {
 
             String secretCode = String.valueOf((int)((Math.random() * 9 + 1) * 100000));
             borrow.setState(4); // 4-待交接
+
+            // 【核心修复】：同意的瞬间，将 applytime 刷新为现在！让3天交接倒计时重新开始算！
+            borrow.setApplytime(new Date());
+
             borrow.setSecretCode(secretCode);
             borrowMapper.updateByPrimaryKeySelective(borrow);
 
@@ -105,41 +114,28 @@ public class BorrowServiceImpl implements BorrowService {
                     "你的专属提货暗号为：【" + secretCode + "】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。";
             messageMapper.insert(new Message(borrow.getUserid(), msgToApplicant));
 
-            // 【WxPusher 场景2：审核通过通知】
             User applyUser = userMapper.selectByPrimaryKey(borrow.getUserid());
             if (applyUser != null && applyUser.getOpenId() != null) {
-                WechatPushUtils.pushMessage(
-                        applyUser.getOpenId(),
-                        "✅ 审核通过通知",
-                        "恭喜！您对《" + book.getBookname() + "》的借阅申请已通过！<br/>请登录系统查看交接暗号和对方地址，准备线下交接。"
-                );
+                WechatPushUtils.pushMessage(applyUser.getOpenId(), "✅ 审核通过通知", "您对《" + book.getBookname() + "》的借阅申请已通过！请准备线下交接。");
             }
 
             if (book.getUploaderid() != null) {
-                String msgToUploader = "【系统通知】您发布的书籍《" + book.getBookname() + "》借阅申请已通过审核！\n" +
-                        "请准备好书籍等待交接。对方在拿到书后会向您出示 6 位数字暗号，请您在“借阅信息管理”的【我借出的】列表中点击核销暗号，完成最终交接！";
+                String msgToUploader = "【系统通知】您发布的书籍《" + book.getBookname() + "》借阅申请已通过审核！请等待交接。";
                 messageMapper.insert(new Message(book.getUploaderid(), msgToUploader));
             }
-
-            return R.ok("审核通过，已双向下发交接通知");
+            return R.ok("审核通过，已下发交接暗号，倒计时重置！");
         } else {
             borrow.setState(3); // 3-驳回
+            String reason = feedback != null ? feedback : "无";
+            borrow.setReturnmsg("【发布者驳回】" + reason); // 【展示死因】
             borrowMapper.updateByPrimaryKeySelective(borrow);
 
-            String reason = feedback != null ? feedback : "无";
-            Message msg = new Message(borrow.getUserid(), "【系统通知】您的漂流申请《" + book.getBookname() + "》被驳回。原因：" + reason);
+            Message msg = new Message(borrow.getUserid(), "【系统通知】您的申请《" + book.getBookname() + "》被驳回。原因：" + reason);
             messageMapper.insert(msg);
-
-            // 【WxPusher 场景3：审核驳回通知】
             User applyUser = userMapper.selectByPrimaryKey(borrow.getUserid());
             if (applyUser != null && applyUser.getOpenId() != null) {
-                WechatPushUtils.pushMessage(
-                        applyUser.getOpenId(),
-                        "❌ 审核驳回通知",
-                        "很遗憾，您对《" + book.getBookname() + "》的申请已被拒绝。<br/>原因：" + reason
-                );
+                WechatPushUtils.pushMessage(applyUser.getOpenId(), "❌ 审核驳回通知", "对《" + book.getBookname() + "》的申请被拒绝。<br/>原因：" + reason);
             }
-
             return R.ok("已驳回申请");
         }
     }
@@ -150,14 +146,51 @@ public class BorrowServiceImpl implements BorrowService {
         Borrow borrow = borrowMapper.selectByPrimaryKey(borrowId);
         if (borrow == null) return R.error("记录不存在");
         if (borrow.getState() != 4) return R.error("当前状态不支持验证暗号");
-
         if (borrow.getSecretCode() == null || !borrow.getSecretCode().equals(secretCode)) {
             return R.error("暗号错误，请核对后再试！");
+        }
+
+        // 漏洞防范：核销时如果变成老赖，直接阻断！
+        User borrower = userMapper.selectByPrimaryKey(borrow.getUserid());
+        if (borrower != null && borrower.getCreditScore() != null && borrower.getCreditScore() < 60) {
+            return R.error("阻断交易！该借阅者近期违规信用已跌破60，系统强制终止交接！");
         }
 
         borrow.setState(1);
         borrow.setBorrowtime(new Date());
         borrowMapper.updateByPrimaryKeySelective(borrow);
+
+        // 【成功交接回血策略】
+        BookInfo book = bookInfoMapper.selectByPrimaryKey(borrow.getBookid());
+        if (book != null && book.getUploaderid() != null) {
+            User uploader = userMapper.selectByPrimaryKey(book.getUploaderid());
+            if (uploader != null && (uploader.getCreditScore() == null || uploader.getCreditScore() < 100)) {
+                java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+                String todayStr = sdf.format(new java.util.Date());
+                String updateStr = uploader.getScoreUpdateDate() == null ? "" : sdf.format(uploader.getScoreUpdateDate());
+
+                int todayAdded = uploader.getTodayAddScore() == null ? 0 : uploader.getTodayAddScore();
+                if (!todayStr.equals(updateStr)) {
+                    todayAdded = 0;
+                    uploader.setScoreUpdateDate(new java.util.Date());
+                }
+
+                int currentScore = uploader.getCreditScore() == null ? 100 : uploader.getCreditScore();
+                if (todayAdded < 5 && currentScore < 100) {
+                    // 交接成功理论加3分
+                    int canAdd = Math.min(3, 5 - todayAdded);
+                    int finalScore = Math.min(100, currentScore + canAdd);
+                    int actualAdded = finalScore - currentScore;
+
+                    if (actualAdded > 0) {
+                        uploader.setCreditScore(finalScore);
+                        uploader.setTodayAddScore(todayAdded + actualAdded);
+                        userMapper.updateByPrimaryKeySelective(uploader);
+                        messageMapper.insert(new Message(uploader.getUserid(), "【信用奖励】成功交接给下一位书友！本次恢复 " + actualAdded + " 分 (今日已累计恢复 " + (todayAdded + actualAdded) + "/5 分)，当前：" + finalScore + " 分。"));
+                    }
+                }
+            }
+        }
         return R.ok("暗号正确！交接成功，书籍正式进入漂流中。");
     }
 
@@ -232,44 +265,29 @@ public class BorrowServiceImpl implements BorrowService {
     @Transactional
     public R cancelBorrow(Integer borrowId, String reason) {
         Borrow borrow = borrowMapper.selectByPrimaryKey(borrowId);
-        // 【新增】：允许 state=4(待交接) 和 state=0(待审核) 两个状态下进行撤销
-        if (borrow == null || (borrow.getState() != 4 && borrow.getState() != 0)) {
-            return R.error("当前状态无法撤销");
-        }
-
+        if (borrow == null || (borrow.getState() != 4 && borrow.getState() != 0)) return R.error("当前状态无法撤销");
         BookInfo book = bookInfoMapper.selectByPrimaryKey(borrow.getBookid());
 
-        // 【关键逻辑】：如果是待交接(4)撤销，需要把库存还回去；如果是待审核(0)撤销，因为之前还没扣库存，所以不需要恢复！
         if (borrow.getState() == 4 && book != null) {
             book.setInventory(book.getInventory() + 1);
             if (book.getInventory() > 0) book.setIsborrowed(0);
             bookInfoMapper.updateByPrimaryKeySelective(book);
         }
 
-        // 修改状态为 5-已撤销
         borrow.setState(5);
+        borrow.setReturnmsg("【用户放弃】" + reason); // 【展示死因】
         borrowMapper.updateByPrimaryKeySelective(borrow);
 
         String stageStr = (borrow.getState() == 0) ? "【申请阶段】" : "【交接阶段】";
+        messageMapper.insert(new Message(borrow.getUserid(), "【系统通知】您已撤销对《" + book.getBookname() + "》的借阅。"));
 
-        // 给自己发站内信
-        messageMapper.insert(new Message(borrow.getUserid(), "【系统通知】您已成功撤销对《" + book.getBookname() + "》的借阅。"));
-
-        // 给发布者发站内信和微信推送
         if (book != null && book.getUploaderid() != null) {
-            messageMapper.insert(new Message(book.getUploaderid(), "【系统通知】对方在" + stageStr + "撤销了对《" + book.getBookname() + "》的借阅。原因：[" + reason + "]。"));
-
-            // 【WxPusher：借阅撤销通知】
+            messageMapper.insert(new Message(book.getUploaderid(), "【通知】对方在" + stageStr + "撤销了借阅。原因：[" + reason + "]"));
             User uploader = userMapper.selectByPrimaryKey(book.getUploaderid());
             if (uploader != null && uploader.getOpenId() != null) {
-                WechatPushUtils.pushMessage(
-                        uploader.getOpenId(),
-                        "⚠️ 借阅撤销通知",
-                        "借书人取消了对《" + book.getBookname() + "》的借阅申请。<br/>撤销阶段：" + stageStr + "<br/>对方留言：" + reason + "<br/>请悉知，无需再进行处理。"
-                );
+                WechatPushUtils.pushMessage(uploader.getOpenId(), "⚠️ 借阅撤销", "对方取消了《" + book.getBookname() + "》的借阅。<br/>对方留言：" + reason);
             }
         }
-
         return R.ok("撤销成功！");
     }
 
@@ -337,37 +355,27 @@ public class BorrowServiceImpl implements BorrowService {
     public R urgeReturn(Integer borrowId) {
         Borrow borrow = borrowMapper.selectByPrimaryKey(borrowId);
         BookInfo book = bookInfoMapper.selectByPrimaryKey(borrow.getBookid());
-
-
-        // 【核心拦截器】：获取当前借阅者自己申请的借阅天数（没填默认30）
         int allowDays = (borrow.getBorrowDays() != null) ? borrow.getBorrowDays() : 30;
 
-        // 计算时间差：如果还没到期，无情拦截！
         if (borrow.getBorrowtime() != null) {
             long borrowedMillis = System.currentTimeMillis() - borrow.getBorrowtime().getTime();
             long allowMillis = (long) allowDays * 24 * 60 * 60 * 1000;
-
-            // 如果不是测试的 0 天，且借阅时间还没超过允许的时间
+            // 还没到期（且不是0天测试）
             if (allowDays != 0 && borrowedMillis < allowMillis) {
-                // 计算还差几天到期
                 long remainDays = (allowMillis - borrowedMillis) / (1000 * 3600 * 24) + 1;
                 return R.error("对方还在合理借阅期内（剩余 " + remainDays + " 天），请耐心等待哦~");
             }
         }
 
-        // 校验通过，开始发站内信
+        // 到期了，一键催还
         messageMapper.insert(new Message(borrow.getUserid(), "【催还通知】⏰ 您借阅的《" + book.getBookname() + "》已经到期啦，请尽快阅读并传递哦！"));
-
-        // 【WxPusher 场景6：一键催还提醒】
         User targetUser = userMapper.selectByPrimaryKey(borrow.getUserid());
         if (targetUser != null && targetUser.getOpenId() != null) {
-            WechatPushUtils.pushMessage(
-                    targetUser.getOpenId(),
-                    "⏰ 一键催还提醒",
-                    "上一任主人在催您啦！<br/>您借阅的《" + book.getBookname() + "》已达期望借阅期限，请尽快阅读完毕并在系统中点击【归还/传递】交接给下一位书友哦！"
+            WechatPushUtils.pushMessage(targetUser.getOpenId(), "⏰ 一键催还提醒",
+                    "上一任主人在催您啦！<br/>您借阅的《" + book.getBookname() + "》已逾期！请尽快阅读完毕并点击【归还/传递】！<br/>⚠️ 注：逾期后系统每日将自动扣除您的信用分！"
             );
         }
-        return R.ok("催还通知已成功发送给该读者！");
+        return R.ok("催还通知已成功发送！若对方持续不还，系统将每日自动扣除其信用分！");
     }
 
     // 绑定微信 UID

@@ -11,18 +11,17 @@
         <result column="gender" jdbcType="INTEGER" property="gender" />
         <result column="open_id" jdbcType="VARCHAR" property="openId" />
         <result column="department" jdbcType="VARCHAR" property="department" />
-
         <result column="credit_score" jdbcType="INTEGER" property="creditScore" />
+        <result column="today_add_score" jdbcType="INTEGER" property="todayAddScore" />
+        <result column="score_update_date" jdbcType="DATE" property="scoreUpdateDate" />
     </resultMap>
 
     <sql id="Base_Column_List">
-        userId, userName, studentId, userPassword, isAdmin, status, gender, open_id, department, credit_score
+        userId, userName, studentId, userPassword, isAdmin, status, gender, open_id, department, credit_score, today_add_score, score_update_date
     </sql>
 
     <select id="selectByUserName" resultMap="BaseResultMap">
-        select <include refid="Base_Column_List" />
-        from user
-        where studentId = #{username}
+        select <include refid="Base_Column_List" /> from user where studentId = #{username}
     </select>
 
     <select id="selectCountByUserName" resultType="java.lang.Integer">
@@ -45,8 +44,9 @@
             <if test="gender != null"> gender = #{gender}, </if>
             <if test="openId != null"> open_id = #{openId}, </if>
             <if test="department != null"> department = #{department}, </if>
-
             <if test="creditScore != null"> credit_score = #{creditScore}, </if>
+            <if test="todayAddScore != null"> today_add_score = #{todayAddScore}, </if>
+            <if test="scoreUpdateDate != null"> score_update_date = #{scoreUpdateDate}, </if>
         </set>
         where userId = #{userid}
     </update>
@@ -54,12 +54,8 @@
     <select id="selectAllByLimit" resultMap="BaseResultMap">
         select <include refid="Base_Column_List" /> from user
         <where>
-            <if test="username != null and username != ''">
-                and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%'))
-            </if>
-            <if test="department != null and department != ''">
-                and department = #{department}
-            </if>
+            <if test="username != null and username != ''"> and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%')) </if>
+            <if test="department != null and department != ''"> and department = #{department} </if>
         </where>
         order by status asc, userId desc
         limit #{begin}, #{size}
@@ -68,12 +64,8 @@
     <select id="selectCount" resultType="int">
         select count(*) from user
         <where>
-            <if test="username != null and username != ''">
-                and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%'))
-            </if>
-            <if test="department != null and department != ''">
-                and department = #{department}
-            </if>
+            <if test="username != null and username != ''"> and (userName like concat('%',#{username},'%') OR studentId like concat('%',#{username},'%')) </if>
+            <if test="department != null and department != ''"> and department = #{department} </if>
         </where>
     </select>
 
@@ -81,7 +73,5 @@
         select <include refid="Base_Column_List" /> from user where userId = #{userid}
     </select>
 
-    <delete id="deleteByPrimaryKey">
-        delete from user where userId = #{userid}
-    </delete>
+    <delete id="deleteByPrimaryKey"> delete from user where userId = #{userid} </delete>
 </mapper>
