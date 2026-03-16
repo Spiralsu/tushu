@@ -61,8 +61,21 @@
           <div style="font-size: 12px; color: #909399; margin-top: 8px;" v-if="myCreditScore < 100"><i class="el-icon-warning-outline"></i> 信用低于 60 分将被限制借阅书籍</div>
         </div>
         <div class="profile-actions">
-          <el-button type="primary" round style="width: 100%;" @click="goToPassword">修改安全密码</el-button>
-          <el-button type="success" round style="width: 100%; margin-top: 15px; margin-left: 0; box-shadow: 0 4px 10px rgba(103,194,58,0.3);" icon="el-icon-chat-dot-round" @click="openWxBind">管理微信推送</el-button>
+          <el-button
+            type="primary"
+            class="unified-btn primary-shadow"
+            icon="el-icon-lock"
+            @click="goToPassword">
+            修改安全密码
+          </el-button>
+
+          <el-button
+            type="success"
+            class="unified-btn success-shadow"
+            icon="el-icon-chat-dot-round"
+            @click="openWxBind">
+            管理微信推送
+          </el-button>
         </div>
       </div>
     </el-dialog>
@@ -78,23 +91,45 @@
       <div slot="footer" style="text-align:center;"><el-button round @click="ruleVisible = false" type="primary">我已了解规则</el-button></div>
     </el-dialog>
 
-    <el-dialog title="📲 微信实时推送管理" :visible.sync="wxDialogVisible" width="550px" custom-class="glass-dialog" append-to-body>
-      <div style="text-align: center; padding: 10px;">
-        <i class="el-icon-chat-dot-round" style="font-size: 45px; color: #07c160; margin-bottom: 10px;"></i>
-        <div style="margin: 20px 0; padding: 20px; background: #f0f7ff; border-radius: 12px; border: 1px dashed #a1c4fd;">
-          <h4 style="margin-top: 0; color: #409eff; font-size: 16px;"><i class="el-icon-link"></i> 第一步：获取专属 UID</h4>
-          <p style="font-size: 13px; color: #606266; line-height: 1.6; margin-bottom: 15px;">请点击下方按钮，在打开的网页中使用微信扫码关注。<br>关注后，公众号将自动给您发送一串您的专属 UID。</p>
-          <a href="https://wxpusher.zjiecode.com/wxuser/?type=1&id=120258#/follow" target="_blank" style="text-decoration: none;"><el-button type="primary" round icon="el-icon-position" style="box-shadow: 0 4px 10px rgba(64,158,255,0.3);">点此处获取微信 UID</el-button></a>
+    <el-dialog title="📲 微信实时推送管理" :visible.sync="wxDialogVisible" width="500px" custom-class="glass-dialog" append-to-body>
+      <div class="wx-dialog-body">
+        <div class="status-header">
+          <i class="el-icon-chat-dot-round wx-icon" :class="{'is-bound': isWxBound}"></i>
+          <div class="status-text">
+            当前状态：
+            <el-tag :type="isWxBound ? 'success' : 'info'" size="small" effect="dark" class="status-badge">
+              <i :class="isWxBound ? 'el-icon-success' : 'el-icon-warning'"></i>
+              {{ isWxBound ? '已绑定' : '未绑定' }}
+            </el-tag>
+          </div>
         </div>
-        <div style="text-align: left; background: #f0f9eb; padding: 15px; border-radius: 12px; border: 1px solid #e1f3d8;">
-          <h4 style="margin-top: 0; color: #67C23A; font-size: 15px;"><i class="el-icon-edit-outline"></i> 第二步：绑定账号</h4>
-          <p style="color: #606266; font-size: 13px; margin: 0;">将您在微信里收到的 <strong>UID_</strong> 开头的字符完整复制并填入下方。</p>
+
+        <div class="step-card primary-step">
+          <h4 class="step-title"><i class="el-icon-link"></i> 第一步：获取专属 UID</h4>
+          <p class="step-desc">请点击下方按钮，在打开的网页中使用微信扫码关注。<br>关注后，公众号将自动给您发送一串您的专属 UID。</p>
+          <div style="margin-top: 10px;">
+            <el-button type="primary" class="unified-btn primary-shadow step-btn" icon="el-icon-position" @click="openWxPusherWindow">点此处打开扫码窗口</el-button>
+          </div>
         </div>
-        <el-input v-model="wxOpenId" placeholder="请粘贴您的专属 UID (格式如: UID_xXyY...)" style="margin-top: 20px;" clearable><template slot="prepend"><i class="el-icon-key"></i></template></el-input>
+
+        <div class="step-card success-step">
+          <h4 class="step-title"><i class="el-icon-edit-outline"></i> 第二步：绑定账号</h4>
+          <p class="step-desc">将您在微信里收到的 <strong>UID_</strong> 开头的字符完整复制并填入下方。</p>
+        </div>
+
+        <el-input v-model="wxOpenId" placeholder="请粘贴您的专属 UID (格式如: UID_xXyY...)" class="uid-input" clearable>
+          <template slot="prepend"><i class="el-icon-key"></i></template>
+        </el-input>
       </div>
-      <div slot="footer" style="display: flex; justify-content: space-between; align-items: center; padding: 0 10px;">
-        <el-button type="text" style="color: #F56C6C;" @click="submitUnbindWx"><i class="el-icon-delete"></i> 解除当前绑定</el-button>
-        <div><el-button round @click="wxDialogVisible = false">取消</el-button><el-button type="success" round @click="submitBindWx" style="background-color: #07c160; border-color: #07c160; box-shadow: 0 4px 10px rgba(7,193,96,0.3);">确 认 绑 定</el-button></div>
+
+      <div slot="footer" class="wx-dialog-footer">
+        <el-button type="text" class="unbind-btn" @click="submitUnbindWx" :disabled="!isWxBound">
+          <i class="el-icon-delete"></i> 解除当前绑定
+        </el-button>
+        <div class="right-actions">
+          <el-button class="unified-btn default-shadow" @click="wxDialogVisible = false">取 消</el-button>
+          <el-button type="success" class="unified-btn success-shadow" @click="submitBindWx">确认绑定</el-button>
+        </div>
       </div>
     </el-dialog>
   </div>
@@ -114,7 +149,8 @@ export default {
     return {
       bookCount: 0, borrowCount: 0, userCount: 0, recentBooks: [],
       msgDialogVisible: false, profileDialogVisible: false, wxDialogVisible: false, ruleVisible: false,
-      msgLoading: false, messages: [], wxOpenId: '', myCreditScore: 100
+      msgLoading: false, messages: [], wxOpenId: '', myCreditScore: 100,
+      isWxBound: false // <-- 新增这行
     }
   },
   created() { this.fetchRealData() },
@@ -129,7 +165,11 @@ export default {
       this.profileDialogVisible = true;
       queryUsersByPage({ username: this.username, page: 1, limit: 1 }).then(res => {
         const list = res.data || res.rows || res;
-        if (list && list.length > 0) { this.myCreditScore = list[0].creditScore != null ? list[0].creditScore : 100; }
+        if (list && list.length > 0) {
+          this.myCreditScore = list[0].creditScore != null ? list[0].creditScore : 100;
+          // 判定是否有绑定的微信 openid (兼容不同命名)
+          this.isWxBound = !!(list[0].openid || list[0].openId);
+        }
       }).catch(() => {});
     },
     handleOpenMessage() {
@@ -145,15 +185,26 @@ export default {
     submitBindWx() {
       if(!this.wxOpenId || !this.wxOpenId.startsWith('UID_')) return this.$message.warning("格式不正确！请填入以 UID_ 开头的完整字符。");
       request({ url: '/borrow/bindWx', method: 'post', params: { userId: this.id, openId: this.wxOpenId } }).then(res => {
-        if(res.code === 0 || res === 1) { this.$message.success("微信推送绑定成功！"); this.wxDialogVisible = false; } else { this.$message.error(res.msg || "绑定失败"); }
+        if(res.code === 0 || res === 1) {
+          this.$message.success("微信推送绑定成功！");
+          this.isWxBound = true; // 绑定成功，状态变为 true
+          this.wxDialogVisible = false;
+        } else {
+          this.$message.error(res.msg || "绑定失败");
+        }
       });
     },
-    submitUnbindWx() {
-      this.$confirm('确定要解除微信绑定吗？', '解绑确认', { confirmButtonText: '确定解绑', cancelButtonText: '暂不解绑', type: 'warning' }).then(() => {
-        request({ url: '/borrow/unbindWx', method: 'post', params: { userId: this.id } }).then(res => {
-          if(res.code === 0 || res === 1) { this.$message.success("已解除微信绑定！"); this.wxOpenId = ''; this.wxDialogVisible = false; }
-        });
-      });
+// 打开限制大小的微信扫码窗口
+    openWxPusherWindow() {
+      const url = 'https://wxpusher.zjiecode.com/wxuser/?type=1&id=120258#/follow';
+      const width = 400;  // 限制窗口宽度（手机屏幕大小）
+      const height = 650; // 限制窗口高度
+      // 计算让窗口在屏幕居中的位置
+      const left = (window.screen.width - width) / 2;
+      const top = (window.screen.height - height) / 2;
+
+      // 打开独立小窗口
+      window.open(url, 'WxPusher', `width=${width},height=${height},top=${top},left=${left},toolbar=no,menubar=no,scrollbars=auto,resizable=no,location=no,status=no`);
     }
   }
 }
@@ -172,8 +223,258 @@ export default {
 .go-look-btn { background-color: #ecf5ff; color: #409eff; border: none; font-weight: 600; padding: 8px 16px; transition: all 0.3s; &:hover { background-color: #409eff; color: #ffffff; } }
 .empty-tips { text-align: center; color: #999; font-size: 13px; margin-top: 20px; }
 .action-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; .action-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: #f7f9fc; border-radius: 12px; cursor: pointer; transition: background 0.2s; i { font-size: 28px; color: #409eff; margin-bottom: 12px; } span { font-size: 14px; color: #606266; font-weight: 500; } &:hover { background: #ecf5ff; } } }
-.profile-card { text-align: center; padding: 10px; .avatar-wrapper { width: 80px; height: 80px; margin: 0 auto 15px; border-radius: 50%; background: #ecf5ff; display: flex; align-items: center; justify-content: center; font-size: 40px; color: #409eff; } .username { font-size: 20px; margin: 0 0 10px 0; color: #303133; } .role-tag { margin-bottom: 25px; } .profile-details { background: #f7f9fc; border-radius: 8px; padding: 15px; margin-bottom: 25px; .detail-item { font-size: 14px; display: flex; justify-content: center; gap: 10px; .label { color: #909399; } .value { font-weight: bold; color: #303133; } } } }
+
+.profile-card {
+  text-align: center;
+  padding: 0 10px 5px; /* 减小了顶部内边距 */
+
+  .avatar-wrapper {
+    width: 70px; /* 头像微调变小一点 */
+    height: 70px;
+    margin: 0 auto 10px; /* 减小了底部间距 */
+    border-radius: 50%;
+    background: #ecf5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #409eff;
+  }
+
+  .username {
+    font-size: 19px;
+    margin: 0 0 8px 0;
+    color: #303133;
+  }
+
+  .role-tag {
+    margin-bottom: 15px; /* 减小了标签的下边距 (原为25px) */
+  }
+
+  .profile-details {
+    background: #f7f9fc;
+    border-radius: 8px;
+    padding: 12px; /* 稍微减小内边距 */
+    margin-bottom: 15px; /* 减小与下方按钮的距离 (原为25px) */
+
+    .detail-item {
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      .label {
+        color: #909399;
+      }
+
+      .value {
+        font-weight: bold;
+        color: #303133;
+      }
+    }
+  }
+
+  /* ======== 统一的按钮样式区 ======== */
+  .profile-actions {
+    margin-top: 10px;
+    padding: 0 10px;
+
+    /* 强制统一的基础按钮样式 */
+    ::v-deep .unified-btn {
+      width: 100% !important;
+      height: 40px !important; /* 高度从 42px 微调到 40px */
+      border-radius: 20px !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      letter-spacing: 1px !important;
+
+      i {
+        font-size: 17px !important;
+        margin-right: 6px !important;
+      }
+
+      span {
+        margin-left: 0 !important;
+      }
+    }
+
+    /* 强制控制两个按钮之间的垂直间距 */
+    ::v-deep .unified-btn + .unified-btn {
+      margin-top: 12px !important; /* 间距从 16px 减小到 12px */
+      margin-left: 0 !important;
+    }
+
+    ::v-deep .primary-shadow {
+      background-color: #409eff !important;
+      border-color: #409eff !important;
+      box-shadow: 0 4px 10px rgba(64, 158, 255, 0.3) !important;
+      &:hover {
+        background-color: #66b1ff !important;
+        border-color: #66b1ff !important;
+      }
+    }
+
+    ::v-deep .success-shadow {
+      background-color: #07c160 !important;
+      border-color: #07c160 !important;
+      box-shadow: 0 4px 10px rgba(7, 193, 96, 0.3) !important;
+      &:hover {
+        background-color: #06ad56 !important;
+        border-color: #06ad56 !important;
+      }
+    }
+  }
+}
 ::v-deep .el-dialog { border-radius: 16px; overflow: hidden; }
 ::v-deep .glass-dialog { border-radius: 20px !important; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important; }
 ::v-deep .el-dialog__body { max-height: 450px; overflow-y: auto; }
+
+/* ======== 微信推送弹窗样式优化 ======== */
+.wx-dialog-body {
+  padding: 0 5px;
+
+  .status-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .wx-icon {
+      font-size: 42px;
+      color: #dcdfe6; /* 未绑定时显示灰色 */
+      transition: color 0.3s;
+      &.is-bound {
+        color: #07c160; /* 绑定后变为微信绿 */
+      }
+    }
+
+    .status-text {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #606266;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .status-badge {
+        border-radius: 12px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  /* 步骤卡片优化：缩小内边距消除滚动条 */
+  .step-card {
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+
+    .step-title {
+      margin: 0 0 6px 0;
+      font-size: 15px;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: #606266;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    &.primary-step {
+      background: #f0f7ff;
+      border: 1px dashed #a1c4fd;
+      .step-title { color: #409eff; }
+      .step-link { text-decoration: none; display: block; margin-top: 10px; }
+      /* 获取UID按钮，单独应用居中样式 */
+      ::v-deep .step-btn {
+        width: 100% !important;
+        height: 38px !important;
+        border-radius: 19px !important;
+        margin: 0 !important;
+      }
+    }
+
+    &.success-step {
+      background: #f0f9eb;
+      border: 1px solid #e1f3d8;
+      .step-title { color: #67C23A; }
+    }
+  }
+
+  /* 输入框圆角处理 */
+  ::v-deep .uid-input .el-input__inner {
+    border-radius: 0 20px 20px 0;
+    height: 40px;
+  }
+  ::v-deep .uid-input .el-input-group__prepend {
+    border-radius: 20px 0 0 20px;
+    background-color: #f5f7fa;
+  }
+}
+
+/* 底部操作区优化 */
+.wx-dialog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  margin-top: -10px;
+
+  .unbind-btn {
+    color: #F56C6C;
+    font-size: 14px;
+    padding: 0;
+    &:hover { color: #f78989; }
+    &.is-disabled { color: #c0c4cc; cursor: not-allowed; }
+  }
+
+  .right-actions {
+    display: flex;
+    gap: 12px;
+
+    /* 强制统一确认与取消按钮 */
+    ::v-deep .unified-btn {
+      width: 100px !important;
+      height: 38px !important;
+      border-radius: 19px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      letter-spacing: 1px !important;
+    }
+
+    ::v-deep .default-shadow {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04) !important;
+      border: 1px solid #DCDFE6 !important;
+      color: #606266 !important;
+      background: #fff !important;
+      &:hover {
+        color: #409eff !important;
+        border-color: #c6e2ff !important;
+        background-color: #ecf5ff !important;
+      }
+    }
+
+    ::v-deep .success-shadow {
+      background-color: #07c160 !important;
+      border-color: #07c160 !important;
+      box-shadow: 0 4px 10px rgba(7, 193, 96, 0.3) !important;
+      &:hover {
+        background-color: #06ad56 !important;
+        border-color: #06ad56 !important;
+      }
+    }
+  }
+}
+
 </style>

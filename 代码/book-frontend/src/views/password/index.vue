@@ -16,10 +16,10 @@
           <el-input type="password" v-model="ruleForm.confirmPassword" autocomplete="off" placeholder="请再次输入新密码" show-password></el-input>
         </el-form-item>
 
-        <el-form-item style="margin-top: 30px; text-align: center; margin-left: -100px;">
-          <el-button type="primary" @click="submitForm('ruleForm')" style="width: 120px;" round>确认修改</el-button>
-          <el-button @click="resetForm('ruleForm')" style="width: 120px;" round>重置输入</el-button>
-        </el-form-item>
+        <div class="action-buttons">
+          <el-button type="primary" @click="submitForm('ruleForm')" class="unified-btn primary-shadow">确认修改</el-button>
+          <el-button @click="resetForm('ruleForm')" class="unified-btn default-shadow">重置输入</el-button>
+        </div>
       </el-form>
     </el-card>
   </div>
@@ -102,13 +102,64 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .app-container {
   padding: 40px;
   background-color: #f7f9fc;
   min-height: calc(100vh - 50px);
 }
+
 ::v-deep .el-input__inner {
   border-radius: 20px;
+}
+
+/* ======== 新增按钮统一样式 ======== */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px; /* 控制两个按钮之间的间距 */
+  margin-top: 35px;
+  padding-bottom: 10px;
+
+  /* 强制统一基础按钮样式 */
+  ::v-deep .unified-btn {
+    width: 130px !important;
+    height: 40px !important;
+    border-radius: 20px !important;
+    margin: 0 !important; /* 清除 Element UI 的默认外边距 */
+    padding: 0 !important; /* 清除默认内边距 */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px !important; /* 稍微拉开字间距更好看 */
+
+    span {
+      margin-left: 0 !important;
+    }
+  }
+
+  /* 蓝色主按钮 */
+  ::v-deep .primary-shadow {
+    background-color: #409eff !important;
+    border-color: #409eff !important;
+    box-shadow: 0 4px 10px rgba(64, 158, 255, 0.3) !important;
+    &:hover {
+      background-color: #66b1ff !important;
+      border-color: #66b1ff !important;
+    }
+  }
+
+  /* 白色重置按钮 */
+  ::v-deep .default-shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04) !important;
+    &:hover {
+      color: #409eff !important;
+      border-color: #c6e2ff !important;
+      background-color: #ecf5ff !important;
+    }
+  }
 }
 </style>

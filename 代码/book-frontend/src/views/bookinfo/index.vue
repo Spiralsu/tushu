@@ -277,4 +277,38 @@ export default {
 .footprint-scroll-box::-webkit-scrollbar-thumb { border-radius: 6px; background: rgba(144, 147, 153, 0.3); }
 .footprint-scroll-box::-webkit-scrollbar-thumb:hover { background: rgba(144, 147, 153, 0.5); }
 .footprint-scroll-box::-webkit-scrollbar-track { border-radius: 6px; background: rgba(144, 147, 153, 0.05); }
+
+
+/* ======== 修复顶部操作按钮文字与容器大小不统一 ======== */
+/* 注意：这里的外层类名可能是 filter-wrapper 或 filter-container，我把常见的都加上了以防万一 */
+::v-deep .filter-wrapper .el-button,
+::v-deep .filter-container .el-button,
+::v-deep .filter-right .el-button {
+  height: 38px !important; /* 强制统一高度 */
+  border-radius: 19px !important; /* 完美胶囊圆角 */
+  padding: 0 18px !important; /* 重置内边距 */
+  display: inline-flex !important; /* 核心：开启 Flex 布局 */
+  justify-content: center !important; /* 水平居中 */
+  align-items: center !important; /* 垂直绝对居中 */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+
+  /* 强制统一图标的尺寸与间距 */
+  i {
+    font-size: 16px !important;
+    margin-right: 5px !important;
+  }
+
+  /* 杀掉自带的 span 偏移 */
+  span {
+    margin-left: 0 !important;
+  }
+}
+
+/* 强制给相邻的按钮加上合理的间距，防止挤在一起 */
+::v-deep .filter-wrapper .el-button + .el-button,
+::v-deep .filter-container .el-button + .el-button {
+  margin-left: 12px !important;
+}
 </style>
