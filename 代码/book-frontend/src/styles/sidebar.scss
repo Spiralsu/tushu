@@ -59,24 +59,7 @@
 
   .hideSidebar {
     .sidebar-container {
-      width: 64px !important; // 适当加宽给图标居中留出空间
-
-      // 核心修复4：修复折叠后的图标错位和文字残留问题
-      .el-submenu__title, .el-menu-item {
-        margin: 4px 8px;
-        padding: 0 !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        span, .el-submenu__icon-arrow {
-          display: none !important; // 强制隐藏文字和下拉箭头
-        }
-        .svg-icon, i {
-          margin-right: 0 !important;
-          font-size: 18px;
-        }
-      }
+      width: 64px !important;
     }
     .main-container {
       margin-left: 64px;

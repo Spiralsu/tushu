@@ -30,7 +30,7 @@ public class BorrowTask {
     private MessageMapper messageMapper;
 
     // 定时器：每 1 分钟执行一次扫描
-    @Scheduled(cron = "0 */1 * * * ?")
+    @Scheduled(cron = "0 */59 * * * ?")
     public void systemPatrolTask() {
         System.out.println("【系统巡查卫士】开始执行自动化风控巡查...");
         long now = System.currentTimeMillis();

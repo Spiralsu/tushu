@@ -33,7 +33,7 @@
               <el-tag v-else-if="row.state === 3" type="danger" size="small">已驳回</el-tag>
               <el-tag v-else-if="row.state === 4" type="warning" size="small">⏳ 待交接</el-tag>
               <el-tag v-else-if="row.state === 5" type="info" effect="plain" size="small" style="color:#909399;">已撤销</el-tag>
-              <el-tag v-else-if="row.state === 6" type="info" effect="dark" size="small" style="background-color: #909399; border-color: #909399;">已报损</el-tag>
+              <el-tag v-else-if="row.state === 6" type="info" effect="dark" size="small" style="background-color: #909399; border-color: #909399;">已遗失</el-tag>
               <el-tag v-else-if="row.state === 7" type="info" effect="plain" size="small" style="color:#C0C4CC;">已失效</el-tag>
             </template>
           </el-table-column>
@@ -45,7 +45,7 @@
               </template>
               <el-button v-else-if="row.state === 4" size="mini" type="danger" plain round @click="handleCancel(row)">强制撤销</el-button>
               <el-button v-else-if="row.state === 1" size="mini" type="danger" round plain @click="handleReturn(row)">强制归还</el-button>
-              <el-button v-else size="mini" type="text" disabled>{{ row.state === 5 ? '已撤销' : (row.state === 6 ? '已报损' : (row.state === 7 ? '已失效' : '已结束')) }}</el-button>
+              <el-button v-else size="mini" type="text" disabled>{{ row.state === 5 ? '已撤销' : (row.state === 6 ? '已遗失' : (row.state === 7 ? '已失效' : '已结束')) }}</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -56,7 +56,7 @@
     <div v-else class="user-view">
       <div class="timeline-header"><h2>我的漂流档案</h2><p>让知识传递，让信任流转</p></div>
       <el-tabs v-model="activeTab" @tab-click="handleTabClick" class="custom-tabs">
-        <el-tab-pane label="我借入的 (漂流足迹)" name="borrow">
+        <el-tab-pane label="我借入的" name="borrow">
           <div class="timeline-container" v-loading="listLoading">
             <el-timeline v-if="list.length > 0">
               <el-timeline-item v-for="(item, index) in list" :key="item.borrowid" :timestamp="item.applytime" placement="top" :color="item.returntime ? '#e4e7ed' : (item.state === 4 ? '#E6A23C' : (item.state === 6 ? '#909399' : '#409eff'))">
@@ -71,20 +71,20 @@
                         <span v-else-if="item.state === 1" class="status-tag active">正在阅读 {{ getRemainingTimeText(item) }}</span>
                         <span v-else-if="item.state === 3" class="status-tag" style="color: #F56C6C;">被拒原因：{{ item.returnmsg }}</span>
                         <span v-else-if="item.state === 5" class="status-tag" style="color: #C0C4CC;">已撤销：{{ item.returnmsg }}</span>
-                        <span v-else-if="item.state === 6" class="status-tag" style="color: #909399; text-decoration: line-through;">书籍已报损，终止漂流</span>
+                        <span v-else-if="item.state === 6" class="status-tag" style="color: #909399; text-decoration: line-through;">书籍已遗失，终止漂流</span>
                         <span v-else-if="item.state === 7" class="status-tag" style="color: #C0C4CC;">长时间未处理，申请已自动失效</span>
                       </div>
                       <div v-if="item.state === 4" class="secret-code-box"><span>向发布者出示此暗号提书:</span><strong class="code-text">{{ item.secretCode }}</strong></div>
                       <div v-if="item.state === 4" style="margin-top: 10px;"><el-button size="mini" type="primary" plain icon="el-icon-chat-line-square" @click="handleNudge(item)">无法前往？协商新地点</el-button></div>
                     </div>
 
-                    <div class="book-action">
+                    <div class="book-action" style="width: 130px;">
                       <template v-if="item.state === 1 && !item.returntime">
-                        <el-button type="primary" round size="medium" @click="handleReturn(item)" style="margin-bottom: 8px; width: 100%;">归还 / 传递</el-button>
-                        <el-button type="info" plain round size="mini" @click="handleReportLoss(item)" style="width: 100%; margin:0;">登记报损 / 遗失</el-button>
+                        <el-button type="primary" round class="modern-btn" icon="el-icon-position" @click="handleReturn(item)" style="width: 100%; margin: 0 0 10px 0;">传递</el-button>
+                        <el-button type="info" plain round class="modern-btn" icon="el-icon-warning-outline" @click="handleReportLoss(item)" style="width: 100%; margin: 0;">遗失</el-button>
                       </template>
-                      <el-button v-if="item.state === 0" size="small" type="info" plain round @click="handleCancel(item)">取消申请</el-button>
-                      <el-button v-if="item.state === 4" size="small" type="danger" plain round @click="handleCancel(item)">联系不上？放弃交接</el-button>
+                      <el-button v-if="item.state === 0" type="info" plain round class="modern-btn" @click="handleCancel(item)" style="width: 100%; margin: 0;">取消申请</el-button>
+                      <el-button v-if="item.state === 4" type="danger" plain round class="modern-btn" @click="handleCancel(item)" style="width: 100%; margin: 0;">放弃交接</el-button>
                     </div>
                   </div>
                 </el-card>
@@ -94,7 +94,7 @@
           </div>
         </el-tab-pane>
 
-        <el-tab-pane label="我借出的 (我的发布)" name="lend">
+        <el-tab-pane label="我借出的" name="lend">
           <div class="timeline-container" v-loading="listLoading">
             <el-timeline v-if="list.length > 0">
               <el-timeline-item v-for="(item, index) in list" :key="item.borrowid" :timestamp="item.applytime" placement="top" :color="item.state === 0 ? '#909399' : (item.state === 4 ? '#F56C6C' : '#67C23A')">
@@ -113,17 +113,18 @@
                         <span v-else-if="item.state === 1" class="status-tag" style="color: #67C23A;"><i class="el-icon-reading"></i> 对方正在阅读中 {{ getRemainingTimeText(item) }}</span>
                         <span v-else-if="item.state === 3" class="status-tag" style="color: #909399;">已被您驳回</span>
                         <span v-else-if="item.state === 5" class="status-tag" style="color: #F56C6C;">对方已撤销：{{ item.returnmsg }}</span>
+                        <span v-else-if="item.state === 6" class="status-tag" style="color: #909399;"><i class="el-icon-warning-outline"></i> 对方已遗失书籍：{{ item.returnmsg }}</span>
                         <span v-else-if="item.state === 7" class="status-tag" style="color: #C0C4CC;">长时间未交接，已自动释放并退回库存</span>
                       </div>
                     </div>
                     <div class="book-action">
                       <template v-if="item.state === 0">
-                        <el-button size="small" type="success" round @click="handleAudit(item, 1)" style="box-shadow: 0 4px 10px rgba(103, 194, 58, 0.3);">同意借出</el-button>
-                        <el-button size="small" type="info" plain round @click="handleAudit(item, 3)" style="margin-top: 5px;">委婉拒绝</el-button>
+                        <el-button type="success" round class="modern-btn" @click="handleAudit(item, 1)" style="width: 100%; margin: 0 0 10px 0; box-shadow: 0 4px 10px rgba(103, 194, 58, 0.3);">同意借出</el-button>
+                        <el-button type="info" plain round class="modern-btn" @click="handleAudit(item, 3)" style="width: 100%; margin: 0;">委婉拒绝</el-button>
                       </template>
                       <el-button v-else-if="item.state === 4" size="medium" type="danger" round @click="openHandoverDialog(item)" style="box-shadow: 0 4px 10px rgba(245, 108, 108, 0.3);"><i class="el-icon-scan"></i> 核销提书暗号</el-button>
                       <el-button v-else-if="item.state === 1" size="small" type="warning" plain round @click="handleUrge(item)" icon="el-icon-message-solid">一键催还</el-button>
-                      <el-button v-else type="text" disabled>已结束 / 已失效</el-button>
+                      <el-button v-else type="text" disabled>{{ item.state === 6 ? '已遗失' : '已结束 / 已失效' }}</el-button>
                     </div>
                   </div>
                 </el-card>
@@ -145,7 +146,7 @@
         <el-form-item label="您的漂流感悟 (所有人可见的漂流足迹)"><el-input type="textarea" :rows="3" v-model="returnForm.returnMsg" placeholder="这本书给你带来了什么启发？留下你的足迹吧..." /></el-form-item>
         <el-form-item label="您的交接说明 (非常重要！绝对保密)"><el-input type="textarea" :rows="2" v-model="returnForm.contactInfo" placeholder="例如：我是男生，住在5栋302，或者加我微信 xxxx" /><div style="font-size: 12px; color: #909399; margin-top: 5px;"><i class="el-icon-info"></i> 这本书现在由您保管！请留下您的联系方式，等待下一位有缘人申请。</div></el-form-item>
       </el-form>
-      <div slot="footer" class="dialog-footer"><el-button @click="returnDialogVisible = false" round>暂不传递</el-button><el-button type="primary" @click="submitReturn" round>确认传递，等待下一位</el-button></div>
+      <div slot="footer" class="dialog-footer"><el-button round class="modern-btn" @click="returnDialogVisible = false">暂不传递</el-button><el-button type="primary" class="modern-btn" @click="submitReturn" round>确认传递，等待下一位</el-button></div>
     </el-dialog>
   </div>
 </template>
@@ -255,10 +256,10 @@ export default {
       });
     },
     handleReportLoss(row) {
-      this.$prompt('填写报损原因：', '登记报损', { confirmButtonText: '确认报损', cancelButtonText: '取消', type: 'error' }).then(({ value }) => {
-        if (!value) return this.$message.warning("请填写报损原因！");
+      this.$prompt('✏️ 请填写遗失原因 (每次遗失将扣除 10 信誉分！)：', '登记遗失', { confirmButtonText: '确认遗失', cancelButtonText: '取消', type: 'error' }).then(({ value }) => {
+        if (!value) return this.$message.warning("请填写遗失原因！");
         request({ url: '/borrow/reportLoss', method: 'post', params: { borrowId: row.borrowid, reason: value } }).then(res => {
-          if(res.code === 0 || res === 1) { this.$message.success("报损登记成功。"); this.getList(); }
+          if(res.code === 0 || res === 1) { this.$message.success("遗失登记成功，已扣除信誉分。"); this.getList(); }
         });
       });
     },
@@ -282,11 +283,46 @@ export default {
 /* 保持之前的所有漂亮样式完全一致，不用改动 */
 .app-container { padding: 24px; background-color: #f7f9fc; min-height: calc(100vh - 50px); }
 .admin-view { .filter-container { border-radius: 16px; border: none; margin-bottom: 20px; .filter-header { display: flex; justify-content: space-between; align-items: center; .filter-title { font-size: 18px; font-weight: bold; color: #303133; } .filter-actions { display: flex; gap: 10px; } } } .table-card { border-radius: 16px; border: none; .book-name-text { font-weight: 500; color: #303133; } .text-muted { color: #c0c4cc; } } .round-input ::v-deep .el-input__inner { border-radius: 20px; } .round-btn { border-radius: 20px; } }
-.user-view { max-width: 900px; margin: 0 auto; .timeline-header { text-align: center; margin-bottom: 40px; h2 { font-size: 28px; color: #303133; margin-bottom: 10px; } p { color: #909399; font-size: 16px; letter-spacing: 1px; } } .footprint-card { border-radius: 16px; border: none; transition: transform 0.3s, box-shadow 0.3s; background: #fff; display: flex; flex-direction: column; &.is-active { border-left: 5px solid #409eff; background: #fdfdff; } &.is-pending { border-left: 5px solid #E6A23C; background: #fff8eb; } &:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); } .card-content { display: flex; align-items: center; padding: 10px; } .book-details { flex: 1; .book-title { margin: 0 0 8px 0; font-size: 18px; color: #303133; } .status-line { margin-bottom: 8px; } .status-tag { font-size: 13px; display: inline-flex; align-items: center; gap: 4px; &.active { color: #409eff; font-weight: 600; } &.returned { color: #909399; } } .borrow-meta { margin: 0; font-size: 12px; color: #c0c4cc; } } .book-action { margin-left: 20px; display: flex; flex-direction: column; justify-content: center; gap: 6px; } } }
+.user-view { max-width: 900px; margin: 0 auto; .timeline-header { text-align: center; margin-bottom: 40px; h2 { font-size: 28px; color: #303133; margin-bottom: 10px; } p { color: #909399; font-size: 16px; letter-spacing: 1px; } } .footprint-card { border-radius: 16px; border: none; transition: transform 0.3s, box-shadow 0.3s; background: #fff; display: flex; flex-direction: column; &.is-active { border-left: 5px solid #409eff; background: #fdfdff; } &.is-pending { border-left: 5px solid #E6A23C; background: #fff8eb; } &:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); } .card-content { display: flex; align-items: center; padding: 10px; } .book-details { flex: 1; .book-title { margin: 0 0 8px 0; font-size: 18px; color: #303133; } .status-line { margin-bottom: 8px; } .status-tag { font-size: 13px; display: inline-flex; align-items: center; gap: 4px; &.active { color: #409eff; font-weight: 600; } &.returned { color: #909399; } } .borrow-meta { margin: 0; font-size: 12px; color: #c0c4cc; } } .book-action { margin-left: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; } } }
 .secret-code-box { display: inline-block; background-color: #fdf6ec; border: 1px dashed #f5dac0; padding: 5px 12px; border-radius: 8px; margin-top: 5px; margin-bottom: 5px; font-size: 13px; color: #E6A23C; .code-text { font-size: 18px; font-family: 'Courier New', Courier, monospace; color: #F56C6C; margin-left: 8px; letter-spacing: 2px; } }
 ::v-deep .glass-dialog { border-radius: 20px !important; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1) !important; }
 .dialog-header-custom { text-align: center; padding-top: 10px; .icon-ring { width: 60px; height: 60px; margin: 0 auto; background: #ecf5ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #409EFF; font-size: 28px; box-shadow: 0 0 0 8px rgba(64,158,255, 0.05); } }
 .secret-input ::v-deep .el-input__inner { text-align: center; font-size: 32px; letter-spacing: 12px; font-family: monospace; font-weight: bold; height: 60px; border-radius: 12px; border: 2px solid #e4e7ed; background-color: #fafbfc; transition: all 0.3s; }
 .secret-input ::v-deep .el-input__inner:focus { border-color: #409EFF; box-shadow: 0 0 0 4px rgba(64, 158, 255, 0.1); background-color: #fff; }
 .custom-tabs ::v-deep .el-tabs__item { font-size: 16px; height: 50px; line-height: 50px; }
+
+/* ======== 修复操作按钮文字与容器大小不统一 ======== */
+::v-deep .modern-btn,
+::v-deep .el-message-box__btns .el-button {
+  height: 38px !important; /* 强制统一高度 */
+  border-radius: 19px !important; /* 完美胶囊圆角 */
+  padding: 0 18px !important; /* 重置内边示意 */
+  display: inline-flex !important; /* 核心：开启 Flex 布局 */
+  justify-content: center !important; /* 水平居中 */
+  align-items: center !important; /* 垂直绝对居中 */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+}
+
+::v-deep .modern-btn i,
+::v-deep .el-message-box__btns .el-button i {
+  font-size: 16px !important;
+  margin-right: 5px !important;
+}
+
+::v-deep .modern-btn span,
+::v-deep .el-message-box__btns .el-button span {
+  margin-left: 0 !important;
+}
+
+::v-deep .el-message-box__btns {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+::v-deep .el-message-box__btns .el-button + .el-button {
+  margin-left: 0 !important;
+}
 </style>

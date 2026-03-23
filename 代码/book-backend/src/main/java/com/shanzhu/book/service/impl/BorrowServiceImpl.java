@@ -331,24 +331,41 @@ public class BorrowServiceImpl implements BorrowService {
         borrowMapper.updateByPrimaryKeySelective(borrow);
 
         BookInfo book = bookInfoMapper.selectByPrimaryKey(borrow.getBookid());
-        book.setInventory(0);
+        book.setInventory(-1);
         book.setIsborrowed(1);
         book.setContactinfo("此书已遗憾退出漂流");
         bookInfoMapper.updateByPrimaryKeySelective(book);
 
-        messageMapper.insert(new Message(book.getUploaderid(), "【遗失通知】很遗憾，您发布的《" + book.getBookname() + "》被读者登记为遗失/损毁。原因：" + reason));
+        // 【新增惩罚机制：扣除10信用分】
+        User badUser = userMapper.selectByPrimaryKey(borrow.getUserid());
+        if (badUser != null) {
+            int currentScore = (badUser.getCreditScore() != null) ? badUser.getCreditScore() : 100;
+            badUser.setCreditScore(Math.max(0, currentScore - 10)); // 每次遗失扣除 10 分
+            userMapper.updateByPrimaryKeySelective(badUser);
 
-        // 【WxPusher 场景5：书籍遗憾报损】
+            if (badUser.getOpenId() != null) {
+                WechatPushUtils.pushMessage(
+                        badUser.getOpenId(),
+                        "⛔ 信用降级通知",
+                        "因您主动向发布者登记所借阅的书籍《" + book.getBookname() + "》已遗失，系统依照惩罚规则，已自动扣除您 10 信誉分。<br/>保护好每一本书是对漂流社区的尊重！<br/>您当前的剩余信誉分将变为：" + badUser.getCreditScore() + "分。"
+                );
+            }
+        }
+
+        messageMapper.insert(new Message(book.getUploaderid(), "【遗失通知】很遗憾，您发布的《" + book.getBookname() + "》被读者登记为遗失。原因：" + reason));
+        messageMapper.insert(new Message(borrow.getUserid(), "【扣分通知】因登记书籍遗失，系统已自动扣除您 10 信誉分。保护好每一本书是对漂流社区的尊重！"));
+
+        // 【WxPusher 场景5：书籍遗憾遗失】
         User uploader = userMapper.selectByPrimaryKey(book.getUploaderid());
         if (uploader != null && uploader.getOpenId() != null) {
             WechatPushUtils.pushMessage(
                     uploader.getOpenId(),
-                    "💔 书籍遗憾报损",
-                    "十分抱歉，您发布的《" + book.getBookname() + "》被当前借阅人登记为遗失/损坏。<br/>原因：" + reason + "<br/>此书已退出漂流系统。"
+                    "💔 书籍遗憾遗失",
+                    "十分抱歉，您发布的《" + book.getBookname() + "》被当前借阅人登记为遗失。<br/>原因：" + reason + "<br/>此书已退出漂流系统。"
             );
         }
 
-        return R.ok("登记成功，该书已终止漂流");
+        return R.ok("登记遗失成功，并已扣除您 10 信誉分作为惩罚！该书已终止漂流");
     }
 
     @Override

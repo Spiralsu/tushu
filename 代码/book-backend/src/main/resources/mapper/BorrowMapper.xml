@@ -54,6 +54,8 @@
             <if test="bookId != null"> and b.bookId = #{bookId} </if>
             <if test="state != null"> and b.state = #{state} </if>
             <if test="uploaderId != null"> and bk.uploaderId = #{uploaderId} </if>
+            <if test="username != null and username != ''"> and u.userName like concat('%', #{username}, '%') </if>
+            <if test="bookname != null and bookname != ''"> and bk.bookName like concat('%', #{bookname}, '%') </if>
         </where>
         ORDER BY b.applyTime DESC, b.state ASC
         <if test="begin != null and size != null">
@@ -63,6 +65,7 @@
 
     <select id="selectCount" resultType="int">
         SELECT count(*) FROM borrow b
+        LEFT JOIN user u ON b.userId = u.userId
         LEFT JOIN book_info bk ON b.bookId = bk.bookId
         <where>
             <if test="userId != null"> and b.userId = #{userId} </if>

@@ -2,26 +2,8 @@
   <div>
     <logo v-if="showLogo" :collapse="isCollapse" />
 
-    <el-scrollbar wrap-class="scrollbar-wrapper">
-      <custom-sidebar v-if="!isCollapse" />
-      <el-menu
-        v-else
-        :default-active="activeMenu"
-        :collapse="isCollapse"
-        :background-color="variables.menuBg"
-        :text-color="variables.menuText"
-        :unique-opened="false"
-        :active-text-color="variables.menuActiveText"
-        :collapse-transition="false"
-        mode="vertical"
-      >
-        <sidebar-item
-          v-for="route in permission_routes"
-          :key="route.path"
-          :item="route"
-          :base-path="route.path"
-        />
-      </el-menu>
+    <el-scrollbar wrap-class="scrollbar-wrapper" style="height: calc(100vh - 70px);">
+      <custom-sidebar :collapsed="isCollapse" />
     </el-scrollbar>
   </div>
 </template>
@@ -57,3 +39,4 @@ export default {
   },
 };
 </script>
+

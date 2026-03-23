@@ -83,7 +83,7 @@
     <el-dialog title="📋 信用分流转与惩罚规则" :visible.sync="ruleVisible" width="450px" custom-class="glass-dialog">
       <div style="line-height: 1.8; color: #606266; font-size: 14px;">
         <p><strong>🌟 信用分回血（每日最高可+5分）：</strong><br/>1. 发布一本闲置旧书：<span style="color:#67C23A; font-weight:bold;">+2 分</span><br/>2. 成功将书交接给下一位书友：<span style="color:#67C23A; font-weight:bold;">+3 分</span></p>
-        <p><strong>⚠️ 违规扣分记录：</strong><br/>1. 逾期未还：系统每日凌晨巡查，<span style="color:#F56C6C; font-weight:bold;">每日扣除 2 分</span><br/>2. 无视催还被管理员强裁：<span style="color:#F56C6C; font-weight:bold;">一次性扣 10 分</span></p>
+        <p><strong>⚠️ 违规扣分记录：</strong><br/>1. 逾期未还：系统每日凌晨巡查，<span style="color:#F56C6C; font-weight:bold;">每日扣除 2 分</span><br/>2. 遗失书籍：无意隐瞒或损毁导致退出漂流，<span style="color:#F56C6C; font-weight:bold;">单次扣除 10 分</span><br/>3. 无视催还被管理员强裁：<span style="color:#F56C6C; font-weight:bold;">强制扣除 10 分</span></p>
         <div style="margin-top: 20px; padding: 12px; background: #fef0f0; border-radius: 8px; color: #F56C6C; font-size: 13px;">
           <i class="el-icon-warning"></i> <strong>极度警告：</strong><br/>当信用分低于 60 分时，系统将彻底锁死您的所有借阅权限！<br/>若需解封，请您携带相关证明线下联系辅导员或管理员进行处理！
         </div>

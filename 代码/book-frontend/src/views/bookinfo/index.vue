@@ -38,15 +38,16 @@
             <el-tooltip :content="item.bookdesc || '这位书友很神秘，没有留下寄语...'" placement="top" effect="light">
               <p class="b-desc"><i class="el-icon-chat-line-round"></i> {{ item.bookdesc || '暂无寄语...' }}</p>
             </el-tooltip>
-            <el-button type="primary" size="small" round @click="openBorrowDialog(item)" :disabled="item.inventory <= 0" style="width: 100%; margin-top: 5px;">
+            <el-button type="primary" round class="action-btn-custom" @click="openBorrowDialog(item)" :disabled="item.inventory <= 0" style="width: 100%; margin-top: 5px;">
+              <i class="el-icon-circle-plus-outline" v-if="item.inventory > 0" style="margin-right: 4px;"></i>
               {{ item.inventory > 0 ? '申请漂流' : '已借完' }}
             </el-button>
             <div class="b-ops">
               <el-button type="text" size="small" @click="openFootprint(item)" icon="el-icon-guide">漂流足迹</el-button>
 
-              <div v-if="roleIsAdmin || item.uploaderid === id">
-                <el-button type="text" size="small" @click="handleUpdate(item)">维护</el-button>
-                <el-button type="text" size="small" style="color:#f56c6c;" @click="handleDelete(item)">下架 / 删除</el-button>
+              <div v-if="roleIsAdmin || item.uploaderid === id" style="display:inline-flex; align-items:center; gap: 8px;">
+                <el-button type="text" size="small" icon="el-icon-edit" @click="handleUpdate(item)">维护</el-button>
+                <el-button type="text" size="small" icon="el-icon-delete" style="color:#f56c6c; margin-left: 0;" @click="handleDelete(item)">下架</el-button>
               </div>
             </div>
           </div>
@@ -190,7 +191,15 @@ export default {
       this.form = { bookid: null, bookname: "", bookauthor: "", bookprice: 0, booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null };
       this.dialogFormVisible = true;
     },
-    handleUpdate(row) { this.formType = 1; this.form = { ...row }; this.dialogFormVisible = true; },
+    handleUpdate(row) { 
+      if (row.inventory < row.bookcount) {
+        this.$message.warning("该书籍正在漂流交接中或已被借阅，暂时无法修改信息！");
+        return;
+      }
+      this.formType = 1; 
+      this.form = { ...row }; 
+      this.dialogFormVisible = true; 
+    },
     handleAvatarSuccess(res) { if (res.code === 0) { this.form.bookimg = res.data; this.$message.success("封面上传成功"); } },
 
     openBorrowDialog(row) {
@@ -222,6 +231,10 @@ export default {
       action(this.form).then((res) => { if (res === 1) { this.$message.success("操作成功"); this.fetchData(); this.dialogFormVisible = false; } });
     },
     handleDelete(row) {
+      if (row.inventory < row.bookcount) {
+        this.$message.warning("该书籍正在漂流交接中或已被借阅，无法下架！");
+        return;
+      }
       this.$confirm("确定要下架这本图书吗?", "提示", { type: 'warning' }).then(() => {
         deleteBookInfo(row).then((res) => { if (res === 1) { this.$message.success("下架成功"); this.fetchData(); } });
       });
@@ -310,5 +323,17 @@ export default {
 ::v-deep .filter-wrapper .el-button + .el-button,
 ::v-deep .filter-container .el-button + .el-button {
   margin-left: 12px !important;
+}
+
+::v-deep .action-btn-custom {
+  height: 38px !important;
+  border-radius: 19px !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
 }
 </style>

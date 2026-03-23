@@ -65,6 +65,7 @@
         FROM book_info b
         LEFT JOIN user u ON b.uploaderId = u.userId
         <where>
+            b.inventory >= 0
             <if test="bookname != null and bookname != '' "> and b.bookName like concat('%',#{bookname},'%') </if>
             <if test="bookauthor != null and bookauthor != '' "> and b.bookAuthor like concat('%',#{bookauthor},'%') </if>
             <if test="booktypeid != null"> and b.bookTypeId = #{booktypeid} </if>
@@ -93,6 +94,7 @@
     <select id="selectCountBySearch" resultType="int">
         select count(*) from book_info
         <where>
+            inventory >= 0
             <if test="bookname != null and bookname != '' "> and bookName like concat('%',#{bookname},'%') </if>
             <if test="bookauthor != null and bookauthor != '' "> and bookAuthor like concat('%',#{bookauthor},'%') </if>
             <if test="booktypeid != null"> and bookTypeId = #{booktypeid} </if>
