@@ -37,6 +37,9 @@ public class BookTypeServiceImpl implements BookTypeService {
 
     @Override
     public Integer addBookType(BookType bookType) {
+        if (bookType.getBooktypedesc() == null) {
+            bookType.setBooktypedesc("");
+        }
         return bookTypeMapper.insertSelective(bookType);
     }
 

@@ -60,3 +60,12 @@ export function updateBookInfo(data) {
         data
     })
 }
+
+// 审核图书信息
+export function auditBook(bookid, auditstatus, reason) {
+    return request({
+        url: '/bookInfo/audit',
+        method: 'post',
+        params: { bookid, auditstatus, reason }
+    })
+}

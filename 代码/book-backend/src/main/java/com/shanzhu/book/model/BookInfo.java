@@ -24,6 +24,9 @@ public class BookInfo implements Serializable {
     private Integer uploaderid; // 发布者ID
     private String contactinfo; // 隐藏的交接联系方式
 
+    // 【新增】审核状态
+    private Integer auditstatus; // 0:待审核 1:审核通过/已上架 2:拒绝驳回
+
     // 【新增】用于前端判断是否为同性发布（不在数据库里，只做展示）
     private Integer isSameSex;
 

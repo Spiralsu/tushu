@@ -23,6 +23,10 @@
             <i class="el-icon-collection-tag"></i>
             <span>图书类型管理</span>
           </div>
+          <div v-if="isAdmin" class="popover-menu-item" :class="{ active: $route.path.includes('/bookmanage/bookaudit') }" @click="navigate('/bookmanage/bookaudit')">
+            <i class="el-icon-s-check"></i>
+            <span>图书审核管理</span>
+          </div>
           <div class="popover-menu-item" :class="{ active: $route.path.includes('/bookmanage/borrow') }" @click="navigate('/bookmanage/borrow')">
             <i class="el-icon-document"></i>
             <span>借阅信息管理</span>
@@ -56,6 +60,15 @@
             <i class="el-icon-collection-tag menu-icon"></i>
           </div>
           <span class="menu-title">图书类型管理</span>
+        </div>
+
+        <div v-if="isAdmin" class="menu-item sub-menu"
+             :class="{ active: $route.path.includes('/bookmanage/bookaudit') }"
+             @click.stop="navigate('/bookmanage/bookaudit')">
+          <div class="menu-icon-wrapper">
+            <i class="el-icon-s-check menu-icon"></i>
+          </div>
+          <span class="menu-title">图书审核管理</span>
         </div>
 
         <div class="menu-item sub-menu"

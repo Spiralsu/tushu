@@ -56,6 +56,13 @@ export const asyncRoutes = [
         meta: { title: '图书信息管理', icon: 'el-icon-notebook-1', noCache: true } // 不写 roles，大家都能用
       },
       {
+        path: 'bookaudit',
+        name: 'Bookaudit',
+        component: () => import('@/views/bookaudit/index'),
+        // 【核心隔离】审核专用，仅管理员可见！
+        meta: { title: '图书审核管理', icon: 'el-icon-s-check', roles: ['admin'], noCache: true }
+      },
+      {
         path: 'booktype',
         name: 'Booktype',
         component: () => import('@/views/booktype/index'),

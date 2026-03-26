@@ -14,6 +14,7 @@
         <result column="bookImage" jdbcType="VARCHAR" property="bookimg" />
         <result column="bookCount" jdbcType="INTEGER" property="bookcount" />
         <result column="inventory" jdbcType="INTEGER" property="inventory" />
+        <result column="auditStatus" jdbcType="INTEGER" property="auditstatus" />
 
         <result column="isSameSex" jdbcType="INTEGER" property="isSameSex" />
 
@@ -27,13 +28,13 @@
     </select>
 
     <sql id="Base_Column_List">
-        bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory, uploaderId, contactInfo
+        bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory, uploaderId, contactInfo, auditStatus
     </sql>
 
     <insert id="insert" parameterType="com.shanzhu.book.model.BookInfo">
-        insert into book_info (bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory, uploaderId, contactInfo)
+        insert into book_info (bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrow, bookImage, bookCount, inventory, uploaderId, contactInfo, auditStatus)
         values (#{bookname}, #{bookauthor}, #{bookprice}, #{booktypeid}, #{bookdesc},
-                #{isborrowed}, #{bookimg}, #{bookcount}, #{inventory}, #{uploaderid}, #{contactinfo})
+                #{isborrowed}, #{bookimg}, #{bookcount}, #{inventory}, #{uploaderid}, #{contactinfo}, #{auditstatus})
     </insert>
 
     <update id="updateByPrimaryKeySelective" parameterType="com.shanzhu.book.model.BookInfo">
@@ -51,6 +52,7 @@
 
             <if test="uploaderid != null"> uploaderId = #{uploaderid}, </if>
             <if test="contactinfo != null"> contactInfo = #{contactinfo}, </if>
+            <if test="auditstatus != null"> auditStatus = #{auditstatus}, </if>
         </set>
         where bookId = #{bookid}
     </update>
@@ -70,6 +72,7 @@
             <if test="bookauthor != null and bookauthor != '' "> and b.bookAuthor like concat('%',#{bookauthor},'%') </if>
             <if test="booktypeid != null"> and b.bookTypeId = #{booktypeid} </if>
             <if test="uploaderId != null"> and b.uploaderId = #{uploaderId} </if>
+            <if test="auditstatus != null"> and b.auditStatus = #{auditstatus} </if>
         </where>
         ORDER BY isSameSex DESC, b.bookId DESC
         limit #{begin}, #{size}
@@ -99,6 +102,7 @@
             <if test="bookauthor != null and bookauthor != '' "> and bookAuthor like concat('%',#{bookauthor},'%') </if>
             <if test="booktypeid != null"> and bookTypeId = #{booktypeid} </if>
             <if test="uploaderId != null"> and uploaderId = #{uploaderId} </if>
+            <if test="auditstatus != null"> and auditStatus = #{auditstatus} </if>
         </where>
     </select>
 

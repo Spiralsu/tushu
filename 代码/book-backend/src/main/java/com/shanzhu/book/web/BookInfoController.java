@@ -102,4 +102,12 @@ public class BookInfoController {
     public Integer updateBookInfo(@RequestBody BookInfo bookInfo) {
         return bookInfoService.updateBookInfo(bookInfo);
     }
+
+    /**
+     * 审核图书
+     */
+    @PostMapping(value = "/audit")
+    public Integer auditBook(@RequestParam Integer bookid, @RequestParam Integer auditstatus, @RequestParam(required = false) String reason) {
+        return bookInfoService.auditBook(bookid, auditstatus, reason);
+    }
 }

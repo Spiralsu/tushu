@@ -60,6 +60,11 @@ public class BookInfoServiceImpl implements BookInfoService {
         if (bookInfo.getIsborrowed() == null) {
             bookInfo.setIsborrowed(0);
         }
+        
+        // 【新增】刚发布的图书默认为待审核状态
+        if (bookInfo.getAuditstatus() == null) {
+            bookInfo.setAuditstatus(0);
+        }
 
         int result = bookInfoMapper.insert(bookInfo);
 
@@ -135,5 +140,29 @@ public class BookInfoServiceImpl implements BookInfoService {
     @Override
     public BookInfo queryBookInfoById(Integer id) {
         return bookInfoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public Integer auditBook(Integer bookid, Integer auditstatus, String reason) {
+        BookInfo book = bookInfoMapper.selectByPrimaryKey(bookid);
+        if (book == null) return 0;
+        
+        book.setAuditstatus(auditstatus);
+        int result = bookInfoMapper.updateByPrimaryKeySelective(book);
+        
+        if (result > 0) {
+            String msg = auditstatus == 1 ? "【系统通知】您的书籍《" + book.getBookname() + "》已通过审核并上架！" : "【系统通知】您的书籍《" + book.getBookname() + "》审核未通过。原因：" + (reason == null || reason.isEmpty() ? "无" : reason);
+            messageMapper.insert(new Message(book.getUploaderid(), msg));
+            
+            User uploader = userMapper.selectByPrimaryKey(book.getUploaderid());
+            if (uploader != null && uploader.getOpenId() != null) {
+                if (auditstatus == 1) {
+                    WechatPushUtils.pushMessage(uploader.getOpenId(), "书籍审核通过", "您的《" + book.getBookname() + "》现已成功上架！");
+                } else if (auditstatus == 2) {
+                    WechatPushUtils.pushMessage(uploader.getOpenId(), "书籍发布被驳回", "您的《" + book.getBookname() + "》审核未通过，原因：" + (reason == null || reason.isEmpty() ? "无" : reason));
+                }
+            }
+        }
+        return result;
     }
 }

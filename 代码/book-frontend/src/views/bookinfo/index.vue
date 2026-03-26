@@ -25,8 +25,10 @@
             <el-image :src="item.bookimg ? 'http://localhost:9111/BookManager' + item.bookimg : ''" fit="cover" class="book-main-img">
               <div slot="error" class="error-img-slot"><i class="el-icon-collection"></i></div>
             </el-image>
-            <div class="status-tag" :class="{'out': item.inventory <= 0}">
-              {{ item.inventory > 0 ? '剩余 ' + item.inventory : '漂流中' }}
+            <div class="status-tag" :class="{'out': item.inventory <= 0 || item.auditstatus !== 1}">
+              <span v-if="item.auditstatus === 0">待审核</span>
+              <span v-else-if="item.auditstatus === 2">审核驳回</span>
+              <span v-else>{{ item.inventory > 0 ? '剩余 ' + item.inventory : '漂流中' }}</span>
             </div>
           </div>
           <div class="book-content-box">
@@ -60,22 +62,22 @@
     </div>
 
     <el-dialog :title="formTitle" :visible.sync="dialogFormVisible" width="800px" custom-class="glass-dialog" center>
-      <el-form :model="form" ref="ruleForm" label-width="90px">
+      <el-form :model="form" ref="ruleForm" :rules="rules" label-width="90px">
         <el-row :gutter="40">
           <el-col :span="14">
-            <el-form-item label="图书名称"><el-input v-model="form.bookname" placeholder="书名" /></el-form-item>
-            <el-form-item label="图书作者"><el-input v-model="form.bookauthor" placeholder="作者" /></el-form-item>
-            <el-form-item label="图书分类">
+            <el-form-item label="图书名称" prop="bookname"><el-input v-model="form.bookname" placeholder="书名" /></el-form-item>
+            <el-form-item label="图书作者" prop="bookauthor"><el-input v-model="form.bookauthor" placeholder="作者" /></el-form-item>
+            <el-form-item label="图书分类" prop="booktypeid">
               <el-select v-model="form.booktypeid" style="width: 100%">
                 <el-option v-for="item in typeData" :key="item.booktypeid" :label="item.booktypename" :value="item.booktypeid"/>
               </el-select>
             </el-form-item>
-            <el-form-item label="书籍总数"><el-input-number v-model="form.bookcount" :min="1" style="width: 100%" /></el-form-item>
-            <el-form-item label="寄语简介">
-              <el-input type="textarea" v-model="form.bookdesc" :rows="2" placeholder="谈谈读书感悟（所有人可见）" />
+            <el-form-item label="书籍总数" prop="bookcount"><el-input-number v-model="form.bookcount" :min="1" style="width: 100%" /></el-form-item>
+            <el-form-item label="寄语简介" prop="bookdesc">
+              <el-input type="textarea" v-model="form.bookdesc" :rows="2" placeholder="谈谈读书感悟（所有人可见，选填）" />
             </el-form-item>
-            <el-form-item label="交接说明">
-              <el-input type="textarea" v-model="form.contactinfo" :rows="2" placeholder="微信号/宿舍号（仅审核通过后对借阅者可见，绝对保密）" />
+            <el-form-item label="交接说明" prop="contactinfo">
+              <el-input type="textarea" v-model="form.contactinfo" :rows="2" placeholder="微信号/宿舍号（必须填写，仅审核通过后可见）" />
             </el-form-item>
           </el-col>
 
@@ -151,9 +153,16 @@ export default {
   data() {
     return {
       tableData: [], recordTotal: 0, typeData: [],
-      queryParam: { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null },
+      queryParam: { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, auditstatus: 1 },
       dialogFormVisible: false, formType: 0,
       form: { bookid: null, bookname: "", bookauthor: "", bookprice: 0, booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null },
+      rules: {
+        bookname: [{ required: true, message: '请填写图书名称', trigger: 'blur' }],
+        bookauthor: [{ required: true, message: '请填写图书作者', trigger: 'blur' }],
+        booktypeid: [{ required: true, message: '请选择图书分类', trigger: 'change' }],
+        bookcount: [{ required: true, message: '请填写书籍总数', trigger: 'blur' }],
+        contactinfo: [{ required: true, message: '请填写交接说明(必须填写)', trigger: 'blur' }]
+      },
       tableLoading: false,
       borrowDialogVisible: false, borrowLoading: false,
       borrowForm: { bookid: null, borrowreason: '', borrowDays: 30 },
@@ -226,9 +235,15 @@ export default {
     },
 
     submitForm() {
-      const action = this.formType === 0 ? addBookInfo : updateBookInfo;
-      if (this.formType === 0) { this.form.inventory = this.form.bookcount; this.form.uploaderid = this.id; }
-      action(this.form).then((res) => { if (res === 1) { this.$message.success("操作成功"); this.fetchData(); this.dialogFormVisible = false; } });
+      this.$refs.ruleForm.validate((valid) => {
+        if (valid) {
+          const action = this.formType === 0 ? addBookInfo : updateBookInfo;
+          if (this.formType === 0) { this.form.inventory = this.form.bookcount; this.form.uploaderid = this.id; }
+          action(this.form).then((res) => { if (res === 1) { this.$message.success("操作成功！提交后将进入审核阶段。"); this.fetchData(); this.dialogFormVisible = false; } });
+        } else {
+          return false;
+        }
+      });
     },
     handleDelete(row) {
       if (row.inventory < row.bookcount) {
@@ -240,13 +255,13 @@ export default {
       });
     },
     resetQuery() {
-      // 清空所有条件，包括 uploaderId
-      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, uploaderId: null };
+      // 清空所有条件，恢复仅看审核通过的数据
+      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, uploaderId: null, auditstatus: 1 };
       this.fetchData();
     },
-    // 【新增】：仅查询自己的发布
+    // 【新增】：仅查询自己的发布 (取消auditstatus过滤，查看自己的所有状态记录)
     handleMyPublished() {
-      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, uploaderId: this.id };
+      this.queryParam = { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, uploaderId: this.id, auditstatus: null };
       this.fetchData();
     },
     openFootprint(row) {

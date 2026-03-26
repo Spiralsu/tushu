@@ -76,4 +76,14 @@ public interface BookInfoService {
      * @return 结果
      */
     Integer updateBookInfo(BookInfo bookInfo);
+
+    /**
+     * 审核图书
+     *
+     * @param bookid   图书ID
+     * @param auditstatus 审核状态 1:通过 2:驳回
+     * @param reason   驳回原因
+     * @return 结果
+     */
+    Integer auditBook(Integer bookid, Integer auditstatus, String reason);
 }
