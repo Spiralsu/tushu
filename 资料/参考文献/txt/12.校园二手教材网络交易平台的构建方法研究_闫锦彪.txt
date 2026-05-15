@@ -1,0 +1,271 @@
+2 0 2 1年1月2 5日
+第5卷 第2期现代信息科技
+Modern Information Technology  Jan.2021  
+Vol.5 No.2107
+2021.1收稿日期 ：2020-11-02
+基金项目 ：山东华宇工学院大学生创新训练
+项目（X202013857027 ）校园二手教材网络交易平台的构建方法研究
+闫锦彪，杨冬梅，张进
+（山东华宇工学院 ，山东 德州  253034 ）
+摘  要：针对高校大学生对教材等各类书籍的强烈需求 ，校园二手书交易平台应运而生 。文章着眼于校园二手教材的交
+易，研究Django、Python、HTML5、CSS3以及JavaScript 等技术在网站开发中的运用 。通过分析校园教材使用率的现状和
+Django的应用情况 ，提出了基于 Django的校园二手教材交易网站的建设方法 ，为实现校园二手教材的网上交易 ，搭建二手教材
+校园网上交易平台 ，丰富校园教材选购方式提供思路和方法 。
+关键词：Django；Python；网站开发 ；校园二手教材
+中图分类号 ：TP311       文献标识码 ：A  文章编号 ：2096-4706 （2021）02-0107-04
+Research on the Construction Method of the Network Trading Platform for
+Campus Second-hand Textbooks
+YAN Jinbiao， YANG Dongmei， ZHANG Jin
+（Shandong Huayu University of Technology ，Dezhou  253034， China）
+Abstract： In view of the strong demand of college students for textbooks and other books，the campus second-hand books trading 
+platform emerges as the times require. This paper focuses on the transaction of campus second-hand textbooks and studies the application of 
+Django，Python，HTML5，CSS3，JavaScript and other technologies in website development. Through analyzing of the status of usage 
+rate of the campus textbooks and the Django application situation， construction method of the campus second-hand textbooks trading 
+website is proposed. In order to realize online transactions of campus second-hand textbooks，this paper constructs second-hand textbooks 
+campus online trading platform ，which provide ideas and methods for riching campus textbooks ’selection and purchase ways.
+Key words ：Django；Python；website development ；campus second-hand textbook
+0  引  言
+山东华宇工学院目前开设 30个本科专业和 35个专科专
+业，每个专业开设课程近 50门，在校生人数过万 ，每学期
+征订教材数万本 。面对如此庞大的教材需求量 ，我校实行的
+是统一购买 、统一发放的制度 ，而且通常是一次性使用 ，教
+材使用寿命仅为半年 。
+通常新教材售价较高 ，使用率却较低 ，再加上许多学生
+在结课后教材都在七成新以上 ，教材改版变动不大等情况 ，
+我校实行教材的循环利用有很高的必要性 。但由于没有方
+便、适宜的交易平台 ，学生毕业后只能将教材当废纸处理 ，
+造成了大量的资源浪费 。如何避免教材资源的浪费 ，提高教
+材的循环使用率是我们亟待解决的难题 ，也是本篇文章的研
+究重点。作者基于 Django框架完善的功能 、前沿的设计理
+念以及在网站开发领域中的优势和特色 ，针对高校大学生对
+教材等各类书籍的强烈需求 ，构建了基于 Django技术的校
+园二手书交易平台 ，该平台将有利于教材的循环使用 。
+1  关于 DjangoDjango作为一种开源的框架 ，采用了 MVT的设计模式 ，
+被用于各种网站的开发 。由于 Django能够使开发复杂的 、
+数据库驱动的网站变得简单 ，并注重组件的重用性和 “可插
+拔性”，敏捷开发和 DRY法则（Don’t Repeat Yourself ）等，
+将会在 Python中被普遍地使用 ，甚至包括配置文件和数据
+模型。
+例如，Django的Model层自带了操作数据库的 ORM组
+件，使我们在开发当中 ，无需书写和学习繁杂的 SQL语句
+就可以方便的操作数据库 ，做增删改查等核心操作 。另外，
+Django自带了后台管理界面 ，我们可以直接配置使用 ，能
+够大大降低开发后台管理界面的难度 ，并缩短开发时间 。
+2  校园二手教材交易网站平台介绍
+针对校园二手教材交易网站的特性 ，主要进行了前端页
+面和后台功能的划分 。
+前端页面分为便于用户查看的前台模块和用于网站维
+护管理的后台管理模块 。其中，前台模块主要包括向用户
+展示的页面 ，后台模块包括商品的管理 、商品类型的管理
+等等。
+前端页面功能的实现需要后台系统的支持 ，这里包括但
+不限于，登录模块 ，显示模块 ，购买模块 ，权限模块 。具体
+功能模块情况如图 1所示。DOI:10.19850/j.cnki.2096-4706.2021.02.027第2期 现代信息科技108
+2021.13  校园二手教材交易网站建设的方法
+根据山东华宇工学院的教材使用现状以及 Django用于
+网站开发建设中的优势特色 ，我们进行了基于 Django的校
+园二手教材网上交易平台的建设研究 。
+3.1  搭建系统环境
+校园二手教材交易网站的设计与制作 ，采用的系统是
+Windows 系统，在开发之前 ，需要下载和安装在 Windows
+平台上运行的软件 ，搭建网站运行所需的系统环境 。此外，
+为了提高开发效率 ，还需要安装集成开发环境 。因此，在开
+发之前，需要做一下准备 ：
+（1）从Python官网下载最新版的 Python 3.7.3安装并
+添加到 Windows 环境变量中 。（2）安装 VirtualenvWrapper 及使用，通过 Pip install 
+virtualenvwrapper-win 在命令行进行安装 。这个是用来创建
+虚拟环境的包 ，使用虚拟环境可以让包管理更加方便 。
+（3）创建虚拟环境 ，在虚拟环境中安装 Django 2.1.4 。
+（4）安装 Pycharm profession 集成开发环境 。
+3.2  实现注册 、登录、购物车、订单等功能
+对于校园二手教材交易网站功能的实现 ，需要针对不同
+的功能，创建不同的应用来进行管理 ，使用 Admin整合各
+个应用，生成后台管理模块 。具体应用创建如下 ：
+（1）创建应用 Myauth，用来存放关于注册和登录的
+功能模块 ，实现用户注册和用户登录功能 。登录视图如图 2
+所示。次级详情页
+用户注册页
+用户登录页前台模块
+前端页面 后台功能
+后台管理模块购物车页面
+主页展示
+个人信息页
+用户登录页
+商品类型模块
+商品控制模块
+用户管理模块
+权限管理登录模块普通用户
+管理员
+显示模块关键词类型检索
+商品展示
+购买模块加入购物车
+购买商品
+权限模块普通用户权限
+管理员权限查看购买商品
+登录后台管理系统 ，上架 /删除 /编辑
+商品，管理普通用户类型列表页面
+商品列表页面类型添加页面
+商品添加页面
+用户列表页面类型修改删除
+商品修改 /删除
+用户修改 /删除
+管理员注册 /
+删除 /登录
+图1  校园二手教材交易网站功能模块
+图2  登录视图
+通过短信验证码的方式验证用户注册 ，从数据库中校验
+账号密码完成登录 。登录视图函数的代码为 ：
+@require_POSTdef login_view(request):
+    form = LoginForm(request.POST)
+    if form.is_valid():第2期109
+2021.1        login_telephone = form.cleaned_data.get('telephone')
+        login_password = form.cleaned_data.get(' password')
+        login_remember = form.cleaned_data.get('remember')
+        user = authenticate(request ，username= login_
+telephone,password = login_password)
+        if user:
+            if user.is_active:
+                login(request ，user)
+                if remember:
+                    request.session.set_expiry(None)
+                else:
+                    request.session.set_expiry( 0)
+                return restful.ok()
+            else:
+                return restful.unauth(message=" 您的账号已经被
+冻结了 !")
+        else:
+            return restful.params_error(message=" 手机号或者
+密码错误 !")    else:
+        errors = form.get_errors()
+        return restful.params_error(message=errors) 
+（2）创建应用 Shop，处理网站中关于教材的浏览和搜
+索功能。实现教材以类别区分浏览和详情浏览 ，实现简单的
+关键词搜索 、过滤等功能 ：
+@admin.register(Category)
+class CategoryAdmin(admin. ModelAdmin):
+  list_display = ['name', 'slug']
+  prepopulated_ﬁelds = {'slug': ('name',)}
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+   list_display = ['name', 'slug', ' price',  'available', 'created',  
+'updated']
+   list_ﬁlter = ['available', 'created', ' updated']
+  list_editable = ['price', 'available']
+  prepopulated_ﬁelds = {'slug': ('name',)}
+往购物车添加教材的页面如图 3所示。
+图3  添加教材到购物车
+代码为：
+def add(self,product ，quantity= 1，update_quantity=False):
+# 添加教材到购物车并更新
+    product_id = str(product.id)
+    if product_id not in self.cart:
+        self.cart[product_id] = {'quantity': 0,
+                                 'price': str(product.price)}
+    if update_quantity:
+        self.cart[product_id]['quantity'] = quantity
+    else:
+        self.cart[product_id]['quantity'] += quantity
+    self.save()
+def save(self):
+# 中间件在看到这个属性的时候 ，就会保存 session    self.session.modiﬁed = True
+（3）创建应用 Orders，实现订单功能 。实现用户填写
+基本信息 ，提交订单并在数据库中生成记录等功能 ，代码为：
+Class Order(models.Model) :
+  username = models.CharField(max_length=100 ,null=" 
+True" , verbose_name=" 姓名 ")
+  telephone = models.CharField(max_length=13,verbose_
+name="电话 ")
+  email = models.EmailField(verbose_name=" 邮箱 ")
+  address = models.CharField(max_length=250,verbose_
+name="地址 ")
+  academy = models.CharField(max_length=100, 
+null=True,verbose_name=" 学院 ")
+  created = models.DateTimeField(auto_now_add=True)闫锦彪，等：校园二手教材网络交易平台的构建方法研究第2期 现代信息科技110
+2021.1  updated = models.DateTimeField(auto_now=True)
+  paid = models.BooleanField(default=False)
+class Meta:
+  ordering = ('-created',)
+  verbose_name = " 订单 "
+  verbose_name_plural =" 订单 "
+def _str_(self):
+  return 'Order {}'.format(self.id)
+（4）使用 Django的Admin系统对网站后台进行管理 。
+管理网站内容 ，实现日常运营 ，包含管理网站的教材售价 、
+是否有货 、添加教材和类别 、上传教材图片等功能 。
+由于 Django的验证系统采用的是用户名验证 ，包含了
+ﬁrst_name ，last_name 等国内不会用到的字段 ，所以，在校
+园二手教材交易网站的设计与制作中 ，重构 Django的验证
+系统，可以实现手机号加密码登录的验证方式 。
+对于网站中的注册及登录 、购物车、订单等功能 ，将它
+们作为单独的应用来开发 ，完成后集成到项目中 ，通过这样
+的方式，可以实现模块之间的单独开发 、单独测试 ，能够降
+低代码之间的耦合性 ，提高代码的可读性和可维护性 。在实
+现的过程中 ，由于每个应用都是独立的 ，所以可以集中精力
+在单个应用的开发和测试上 ，每完成一个 ，就集成到项目中
+进行测试 。
+4  结  论校园二手教材网络交易平台的构建 ，力求在网站模块划
+分和功能方面做到尽善尽美 ，使网站功能模块之间能够相互
+独立又相互协作 ，最大限度地消除潜在错误 ，提高访问效率 ，
+在二手书交易平台领域拥有一席之地 ，解决我校二手教材的
+再利用问题 。但校园二手教材交易网站的最终实现 ，依然会
+存在很多问题和漏洞 ，还需不断地测试 、调试和优化 ，本文
+通过校园二手教材网络交易平台构建的方法探讨和研究 ，希
+望能够对相关网站的构建提供参考和借鉴 。
+参考文献 ：
+[1] 杨刚 .Django 框架中通用类视图的用法 [J]. 电脑知识与技
+术，2016，12（13）：103-104.
+[2] 濮文强，曹磊，夏斌.基于Django框架的关键词排名监
+控系统设计 [J]. 微型机与应用 ，2017，36（20）：97-100.
+[3] 汤磊.基于Django的维稳平台情报信息管理与分析系统
+研究与实现 [D]. 成都：西南交通大学 ，2017.
+[4] 王兆媛.基于Django框架的图书管理系统的设计与实现  
+[D].长春：吉林大学 ，2016.
+[5] 钱志远.基于Web的Python编程环境研究  [J].数字技
+术与应用 ，2016（10）：54.
+作者简介 ：闫锦彪（1999.10—），男，汉族，山东济宁人 ，
+本科在读 ，研究方向 ：数字媒体技术专业 ；杨冬梅（1982.09—），
+女，汉族，山东德州人 ，讲师，硕士，研究方向 ：艺术设计与数字
+媒体技术研究 ；张进（1987.11—），男，汉族，山东德州人 ，讲师，
+硕士，研究方向 ：影像艺术与数字媒体技术研究 。
+        btn_Select = transform.Find("btn_
+Select").GetComponent<Button>();
+        btn_Select.onClick.AddListener(() =>
+        {
+            LoadingPanel.Instance.LoadScene();
+        });
+    }
+}
+3.5  功能描述
+调车培训系统主要分为培训系统和考核系统 。
+培训系统分为引导 、教学和警示模块 ，针对调车作业中
+的实际需求进行相应的设计 ，其中引导模块主要用于对学员
+的提示，在进行相应步骤的时候给出正确的引导 ；教学模块
+主要用于教师和学员之间的有效沟通 ，让教师能够实时了解
+学员的学习情况 ，让学员能够全面了解教师的意图 。警示模
+块主要用于对学员错误操作给出及时的警示 ，同时对错误操
+作的后果进行告知 ，帮助学员树立起正确的操作意识和负责
+任的职业态度 。
+考核系统主要分为学院实际操作模块 、系统自动评分模
+块和教师评分模块 ，对学员在考核中的实际操作进行自动评
+分，然后再交由教师做进一步的调整 。4  结  论
+本次研究主要针对 VR调车作业培训系统进行设计 ，一
+方面能够增加培训人员的作业安全系数 ，减少培训过程的投
+入成本；另一方面也能够通过 VR系统的整体功能来增加培
+训的效率 ，让每个相关培训人员都能够基于自身的实际情况
+做出适当调整 ，希望本次研究能为我国铁路系统的人才培养
+工作起到积极作用 。
+参考文献 ：
+[1] 余为红.铁路调车作业安全风险控制问题对策 [J]. 铁道运
+营技术，2020，26（3）：14-15.
+[2] 陈韬，王文宪，吕红霞，等.高速铁路枢纽站技术作业计
+划与动车所调车作业计划协同编制研究  [J].铁道学报 ，2020，42
+（4）：17-26.
+[3] 杜哓旭.车站接发车作业智能培训系统  [D].兰州：兰州
+交通大学 ，2019.
+[4] 都云兵.车站联锁仿真系统的研发与应用  [J]. 铁路通信
+信号工程技术 ，2014，11（5）：16.
+[5] 郑凯.融合3D技术的计算机联锁车务仿真系统设计与实
+现 [D].北京：北京交通大学 ，2015.
+作者简介 ：路焘（1983.11—），男，汉族，新疆乌鲁木齐人 ，
+工程师，本科，研究方向 ：铁路自动化 。（上接106页）

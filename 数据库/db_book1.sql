@@ -11,7 +11,7 @@
  Target Server Version : 80044 (8.0.44)
  File Encoding         : 65001
 
- Date: 23/03/2026 21:43:11
+ Date: 26/03/2026 23:45:17
 */
 
 SET NAMES utf8mb4;
@@ -36,7 +36,7 @@ CREATE TABLE `book_info`  (
   `inventory` int NULL DEFAULT 1 COMMENT '当前剩余库存',
   `contactInfo` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '交接联系方式(仅审核通过后可见)',
   PRIMARY KEY (`bookId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '图书信息表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '图书信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of book_info
@@ -53,6 +53,13 @@ INSERT INTO `book_info` VALUES (10, '机械制图项目教程', '朱春香', 0.0
 INSERT INTO `book_info` VALUES (11, '机械制图习题集(第3版）', '胡胜', 0.00, 1, '好好读书', 0, '/files/1773671446929_机械制图习题集(第3版）.jpg', 3, 1, 1, 1, '123');
 INSERT INTO `book_info` VALUES (12, '机械制图典型习题及解答（第二版）', '李三', 0.00, 1, '', 0, '/files/1773671530588_机械制图典型习题及解答（第二版）.jpg', 3, 1, 1, 1, '1');
 INSERT INTO `book_info` VALUES (13, '活着', '余华', 0.00, 1, '', 1, '/files/1773671553357_活着.jpg', 3, 1, 1, -1, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (14, '', '', 0.00, 1, '', 0, '', 2, 1, 1, 1, '');
+INSERT INTO `book_info` VALUES (15, '1', '1', 0.00, 1, '', 0, '', 2, 2, 1, 1, '1');
+INSERT INTO `book_info` VALUES (16, '1', '1', 0.00, 1, '', 0, '', 2, 1, 1, 1, '1');
+INSERT INTO `book_info` VALUES (17, '1', '1', 0.00, 1, '1', 0, '', 2, 2, 1, 1, '1');
+INSERT INTO `book_info` VALUES (18, '11', '11', 0.00, 1, '11', 0, '', 2, 2, 1, 1, '11');
+INSERT INTO `book_info` VALUES (19, '11', '11', 0.00, 1, '11', 0, '', 2, 1, 1, 1, '11');
+INSERT INTO `book_info` VALUES (20, '11', '11', 0.00, 1, '11', 0, '', 2, 2, 1, 1, '11');
 
 -- ----------------------------
 -- Table structure for book_type
@@ -63,7 +70,7 @@ CREATE TABLE `book_type`  (
   `bookTypeName` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL COMMENT '院系名称',
   `bookTypeDesc` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL COMMENT '院系英文名或描述',
   PRIMARY KEY (`bookTypeId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of book_type
@@ -163,7 +170,7 @@ CREATE TABLE `message`  (
   `isRead` tinyint NULL DEFAULT 0,
   `createTime` datetime NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`messageId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 190 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 210 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of message
@@ -357,6 +364,26 @@ INSERT INTO `message` VALUES (186, 3, '【逾期惩罚】您的借阅已逾期�
 INSERT INTO `message` VALUES (187, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：47 分。', 0, '2026-03-16 23:00:00');
 INSERT INTO `message` VALUES (188, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：45 分。', 0, '2026-03-23 20:59:00');
 INSERT INTO `message` VALUES (189, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：43 分。', 0, '2026-03-23 21:00:00');
+INSERT INTO `message` VALUES (190, 2, '【系统通知】您的书籍《》已发布！', 0, '2026-03-26 21:32:59');
+INSERT INTO `message` VALUES (191, 2, '【信用奖励】发布书籍奖励生效！本次恢复 2 分 (今日已累计恢复 2/5 分)，当前信用分：68 分。', 0, '2026-03-26 21:32:59');
+INSERT INTO `message` VALUES (192, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：41 分。', 0, '2026-03-26 21:59:00');
+INSERT INTO `message` VALUES (193, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：39 分。', 0, '2026-03-26 22:00:00');
+INSERT INTO `message` VALUES (194, 2, '【系统通知】您的书籍《1》已发布！', 0, '2026-03-26 22:04:58');
+INSERT INTO `message` VALUES (195, 2, '【信用奖励】发布书籍奖励生效！本次恢复 2 分 (今日已累计恢复 4/5 分)，当前信用分：70 分。', 0, '2026-03-26 22:04:58');
+INSERT INTO `message` VALUES (196, 2, '【系统通知】您的书籍《1》审核未通过。原因：1', 0, '2026-03-26 22:10:54');
+INSERT INTO `message` VALUES (197, 2, '【系统通知】您的书籍《1》已发布！', 0, '2026-03-26 22:11:38');
+INSERT INTO `message` VALUES (198, 2, '【信用奖励】发布书籍奖励生效！本次恢复 1 分 (今日已累计恢复 5/5 分)，当前信用分：71 分。', 0, '2026-03-26 22:11:38');
+INSERT INTO `message` VALUES (199, 2, '【系统通知】您的书籍《1》已通过审核并上架！', 0, '2026-03-26 22:12:02');
+INSERT INTO `message` VALUES (200, 2, '【系统通知】您的书籍《1》已发布！', 0, '2026-03-26 22:13:09');
+INSERT INTO `message` VALUES (201, 2, '【系统通知】您的书籍《1》审核未通过。原因：1', 0, '2026-03-26 22:13:12');
+INSERT INTO `message` VALUES (202, 2, '【系统通知】您的书籍《11》已发布！', 0, '2026-03-26 22:15:31');
+INSERT INTO `message` VALUES (203, 2, '【系统通知】您的书籍《11》审核未通过。原因：1', 0, '2026-03-26 22:15:35');
+INSERT INTO `message` VALUES (204, 2, '【系统通知】您的书籍《11》已发布！', 0, '2026-03-26 22:16:00');
+INSERT INTO `message` VALUES (205, 2, '【系统通知】您的书籍《11》已通过审核并上架！', 0, '2026-03-26 22:16:03');
+INSERT INTO `message` VALUES (206, 2, '【系统通知】您的书籍《11》已发布！', 0, '2026-03-26 22:16:26');
+INSERT INTO `message` VALUES (207, 2, '【系统通知】您的书籍《11》审核未通过。原因：1', 0, '2026-03-26 22:16:32');
+INSERT INTO `message` VALUES (208, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：37 分。', 0, '2026-03-26 22:59:00');
+INSERT INTO `message` VALUES (209, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：35 分。', 0, '2026-03-26 23:00:00');
 
 -- ----------------------------
 -- Table structure for user
@@ -383,8 +410,8 @@ CREATE TABLE `user`  (
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, '系统管理员', 'admin', '123456', 1, 1, 2, NULL, NULL, 100, 0, NULL);
-INSERT INTO `user` VALUES (2, '王某', '243121201', '123456', 0, 1, 1, 'UID_2CDO4DAZsd9E1Vn3O0NCNJhxEry2', '大数据与智能工程系', 66, 3, '2026-03-16');
-INSERT INTO `user` VALUES (3, '李某', '243121202', '123456', 0, 1, 1, 'UID_AqWFQ9ImI1tEWIrrUL39tvP8KzFg', '大数据与智能工程系', 43, 5, '2026-03-16');
+INSERT INTO `user` VALUES (2, '王某', '243121201', '123456', 0, 1, 1, 'UID_2CDO4DAZsd9E1Vn3O0NCNJhxEry2', '大数据与智能工程系', 71, 5, '2026-03-26');
+INSERT INTO `user` VALUES (3, '李某', '243121202', '123456', 0, 1, 1, 'UID_AqWFQ9ImI1tEWIrrUL39tvP8KzFg', '大数据与智能工程系', 35, 5, '2026-03-16');
 INSERT INTO `user` VALUES (4, '刘某', '243121203', '123456', 0, 1, 0, NULL, '大数据与智能工程系', 54, 3, '2026-03-16');
 
 SET FOREIGN_KEY_CHECKS = 1;

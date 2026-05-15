@@ -1,0 +1,967 @@
+SPC: 270 Model 5G pp. 1–10 (col. fig: NIL)
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+SustainableProductionandConsumptionxxx(xxxx)xxx
+Contents lists available at ScienceDirect
+SustainableProductionandConsumption
+journal homepage: www.elsevier.com/locate/spc
+Researcharticle
+Exploringantecedentsofbehaviouralintentionandpreferencesin
+onlinepeer-to-peerresourcesharinginaSwedishuniversitysetting
+RafaelLaurentia,∗,FernandoManuelBarriosAcuñab
+aIPD Integrated Product Development, MMK Department of Machine Design, KTH Royal Institute of Technology, Brinellvägen 83, 114
+28 Stockholm, Sweden
+bSEED Department of Sustainable Development, Environmental Science and Engineering, KTH Royal Institute of Technology, Teknikringen 10b, 100
+44 Stockholm, Sweden
+a r t i c l e i n f o
+Article history:
+Received26July2019
+Receivedinrevisedform5October2019
+Accepted27October2019
+Availableonline xxxx
+Keywords:
+Sharingeconomy
+Peer-to-peersharing
+Behaviouralintention
+Sustainableconsumption
+Theoryofplannedbehaviour
+Sustainabilitya b s t r a c t
+Resource-optimizationplatformsappearasavalidoptiontomoresustainablemodesofconsumption.
+Thesuccessoftheseplatformsmostlydependsonthecapabilitytocomprehendthepotentialusers’
+motivesforengagement.WedevelopedandtestedaconceptualmodelbasedontheTheoryofPlanned
+Behaviour(TPB)toinvestigatetherelativesignificanceofconsumermotivesforandagainstusinga
+peer-to-peer(P2P)sharingplatform.Qualitativeinterviewsofanelicitationstudy(n=7)followeda
+quantitativesurvey(n=325)withpotentialusers.Thesizeofthedemandforaccessingspecificproducts
+andservicesandthetypeoftransactionmodepreferredwerealsoinvestigated.Attitudetowardsusing
+aP2PsharingplatformisthestrongestpredictorofbehaviouralintentionamongtheTPBconstructs.
+Ecologicalsustainability,senseofbelonging,trustinotherusers,andfamiliarityarethemostcritical
+factorsdeterminingtheattitudetowardsusingthepotentialplatform;processriskconcernswere
+identifiedasthemainhinder.Thereweremoreprovidersthantakerstoalllikelyitemsenquired,
+andaccommodationandcar-sharinghadthemostsignificantasymmetricratiosremarkably.Services
+ingeneralandstudymaterialsweretheitemswiththehighestpotentialdemandandsupply.The
+preferredmodeofexchangefortheplatformisafreesystemwhichincludesdonationandsecond-hand
+sales,andtransferofpointsormoney.Thisstudycontributestoabetterunderstandingofconsumer
+motivationsanddesirestoengageinsharingresourcesforsustainabilitytransformations.
+©2019InstitutionofChemicalEngineers.PublishedbyElsevierB.V.Allrightsreserved.
+1. Introduction 1
+IdleresourcesandthepopularizationofInformationandCom- 2
+munication Technologies (ICTs) tools among consumers have 3
+contributedtothere-emergenceofcollaborativewaysofcon- 4
+sumption,oftenreferredtoassharingeconomyorcollaborative 5
+consumption(Ryuetal.,2018).Inthis‘‘novel’’socio-economic 6
+paradigm, ICT redefined traditional sharing, bartering, lending, 7
+trading, renting, gifting, and swapping (Botsman and Rogers, 8
+2011).Consumersgranteachothertemporaryaccesstounderuti- 9
+lizedphysicalassets(‘‘idlecapacity’’),possiblyformoney,through 10
+an online platform (Frenken and Schor, 2017). Online market 11
+placesemergedasamoreresource-efficientwaytofulfillinga 12
+range of customer needs, including mobility, accommodation, 13
+meals,andeveninvestmentsandpersonalloans.Theinterestin 14
+thesharingeconomyhasincreasednotonlybyusersbutalso 15
+byinvestorswhoareoptimisticabouttheirprofitpotential.For 16
+example,byearly2019,Uberhadahighervaluation(US$72bn) 17
+∗Correspondingauthor.
+E-mail address: rafa@kth.se(R.Laurenti).than the market capitalization of General Motors (US$56bn); 18
+Airbnb (US$31bn) was valued almost as much as the world’s 19
+largesthotelchainMarriot(US$44bn)(Wirtzetal.,2019). 20
+Despiteitsfinancialpromisesandenvironmentalexpectations, 21
+a few fundamental aspects remain unclear. First, the sharing 22
+economy has disrupted some solid market segments such as 23
+tourism and accommodation (e.g., Airbnb) and urban mobility 24
+(e.g.,Uber).However,whetherweareonlyexperimentingwith 25
+thesurgeofmarketnichesoralarge-scaletransitiontowards 26
+sustainableconsumptionmodesinseveralareasisanongoing 27
+debate.Second,scholarshavestartedexploringreasonsofusers 28
+totakepartinthesharingeconomy(e.g. Bucheretal.,2016; 29
+Hamari et al., 2016; Hawlitschek et al., 2018) but they have 30
+departedfromaselectedsetoffactors. 31
+Inthisstudy,weexploredantecedentsofbehaviouralinten- 32
+tionandpreferencestouseanonlinepeer-to-peer(P2P)resource 33
+sharing platform in the context of a Swedish university, KTH 34
+RoyalInstituteofTechnology.KTHisthelargesttechnicaluni- 35
+versityinSwedenandhasambitioussustainabledevelopment 36
+objectivesfortheareas:education,research,collaboration,work 37
+environment,campus,travel,purchasingandprocurement,man- 38
+agement of chemical, and organization & management (KTH, 39
+https://doi.org/10.1016/j.spc.2019.10.002
+2352-5509/ ©2019InstitutionofChemicalEngineers. PublishedbyElsevierB.V.Allrightsreserved.SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+2 R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx
+2016a).However,inthesustainabilityobjectives,theword‘‘con- 1
+sumption’’ appears only three times; all of them referred to 2
+‘‘energyconsumption’’.Theword‘‘sharing’’doesnotappearon 3
+anyoccasion,and‘‘share’’appearsinonlytwoopportunities;one 4
+referringtoenergyandanotherreferringtothepercentageof 5
+people that go to the university inpublic transport and bicy- 6
+cle. Hence, the university does not contemplate, in any of its 7
+sustainabilityobjectives,sharingstrategiesinordertopromote 8
+responsible consumption among students and personnel. The 9
+studythereforewasalsoafirstattempttoinitiateeffortstowards 10
+promotingmoresustainableconsumptionpatternsamongstu- 11
+dentsandpersonnelattheuniversity.Universitycommunities 12
+havethesuitablecontextforsharingeconomyactivitiestoflour- 13
+ish—senseofcollectiveness,localproximityandtrustamong 14
+peers,studentsneedtemporaryaccesstodailylifetimes,etc. 15
+(Ertzetal.,2016;Schaefersetal.,2016). 16
+Inthissharingplatform,studentsandstaffoftheuniversity 17
+could (a) lend and borrow consumer goods from each other, 18
+and(b)offerandaccessservices.Weinvestigatedthemotiva- 19
+tions,barriers,desiredtypesofassetsandservices,andpreferred 20
+modeoftrading(e.g.monetaryorpointsexchange).Aqualitative 21
+elicitationstudyprecededaquantitativesurvey.Thepre-study 22
+formedthebasistopostulateasetof13mainhypotheses.We 23
+usedmultilinearregressionstoanalysetheresults. 24
+2. Theoretical background 25
+2.1. Online peer-to-peer resource sharing 26
+Many terms have been utilized to capture and define the 27
+modernsharingphenomenonmostofteninterchangeably(Lau- 28
+rentietal.,2019).Forexample,sharingeconomy(Frenkenand 29
+Schor, 2017), collaborative consumption (Botsman and Rogers, 30
+2011),access-basedeconomy(BardhiandEckhardt,2012),peer- 31
+to-peersharing(Hawlitscheketal.,2018)aresomeoftheterms 32
+used.Thevarietynamingmirrorsthevariousbusinessmodels 33
+ofonlineresourcessharingplatforms(Ranjbarietal.,2018).A 34
+recentstudy(Wirtzetal.,2019)hasusedtwodimensions,(a) 35
+accessprovisionvstransferofownership,and(b)peer-to-peer 36
+vsplatform-providedassets,todefinesharingeconomybusiness 37
+models.Theauthorsconsidersharingeconomyplatformsasonly 38
+thosethatprovideaccesstoassets,resourcesandserviceswith- 39
+outthetransferofownershipeitherP2P-ormarketer-provided 40
+resources. We expand this scope to include services and the 41
+compensationschemeofthesharingtransaction‘monetary’and 42
+‘nonmonetary’asthefocusofthisstudy(toprightquadrantin 43
+Fig.1). 44
+Acornerstonecommunalityintheseplatformbusinessmodels 45
+(anddifferencefromtheirrespectivetraditionalincumbents)is 46
+thattheyoperateviaanonlineplatformthatmakelocatingassets 47
+andresources,exchanging,reservingandusingthem,andmaking 48
+paymentconvenientandseamless. 49
+2.2. Models of consumer behaviour 50
+Varioustheorieshavebeendevelopedovertheyearstotryto 51
+explainthebehaviourofthehumanbeing.However,itisessential 52
+tonotethatnotallbehaviourcanbecategorizedinthesame 53
+way. For example, nobody finds it strange to understand that 54
+repetitive actions such as brushing teeth and eating breakfast 55
+donotseemtohavethesamecausesasproposingmarriageor 56
+travellingabroad.So,inordertotrytoexplainbehaviour,itisa 57
+priorityfirsttocategorizeit.Asthepresentresearchseeks,inter 58
+alia,toexplorethereasonsforandagainsttoprovideandaccess 59
+productsandservices,itiscrucialtounderstandwhatfactors 60
+affectconsumerbehaviourconcerningconsumption. 61Oneofthebest-knownmodelstoexplainconsumptionbe- 62
+haviouristhe‘‘RationalChoiceModel’’(Homans,1961).Accord- 63
+ing to this model, consumers acquire products or services by 64
+analysingindividualcostsandbenefitsofdifferentdecisionsand 65
+endupfinallychoosingtheselectionthatprovidesthehighestnet 66
+benefits(Jackson,2005).Thismodelhasundergoneconsiderable 67
+criticism.First,establishcognitiveprocessesischallengingatall 68
+times(Smith,1991).Theevidencesuggeststhatpeopletendto 69
+takementalshortcutsthroughthecreationofroutinesandhabits 70
+thatmakeitdifficultforabehaviourtochange(Corsinietal., 71
+2019),thusevadingcognitiveprocesses(DietzandStern,1995). 72
+Secondly,feelingshardlycanbeseparatedfromcognitivepro- 73
+cesses(Nespor,1987).Third,consumerbehaviourofteninvolves 74
+theconsumer’svalues,whichmaydifferfromrationalanalysis 75
+(Sartietal.,2017). 76
+The so-called adjusted expectancy-value theories (Wigfield 77
+andEccles,2000)offeredmoreholisticexplanationstothe‘‘Ra- 78
+tional Choice Model’’. The ‘‘Simple Expectancy-Value Attitude 79
+Theory’’ establishes that consumption behaviour is exclusively 80
+boundtotheexpectationsoftheconsumer(Jackson,2005).The 81
+consumer’s attitude construct is the summation of the beliefs 82
+weightedbyevaluationsoftheproduct’scharacteristics. 83
+The‘‘Means-EndChainTheory’’(Gutman,1982)intendedto 84
+beamorequalitativethanthepreviousmodels.Thetheorypos- 85
+tulates that consumer behaviour is based on the achievement 86
+ofgoals;thatis,theconsumeracquiresitemstofulfilpersonal 87
+objectivesthroughthecharacteristicsoftheproduct(Babinetal., 88
+2019).Themodelhasarelationshipwiththe‘‘rationalchoice 89
+model’’butalsoaddstheconsumer’svaluesandtheirattitude 90
+inthisregard(Hosanyetal.,2019).Theapplicationofthismodel 91
+alsohavedrawbacks.First,itrequiresladderinginterviewswhich 92
+canbeextremelytime-consuming;andsecondlythepredictive 93
+powerofthemodelcanbesignificantlycompromisedbyseveral 94
+factors, such as lack of an established theoretical framework, 95
+samplefeatures,datacollectionprocedures,andanalysismethods 96
+(Costaetal.,2004). 97
+Oneofthemostcommonlyappliedbehaviouraltheoriesinthe 98
+fieldofenvironmentalpsychologyisTheoryofPlannedBehaviour 99
+(TPB)(Ajzen,1991,1985)byIcekAjzen(Eometal.,2019).TheTPB 100
+isanextensionoftheTheoryofReasonedAction(TRA)(Fishbein 101
+and Ajzen, 1975). These theories postulate that the intention 102
+toperformthebehaviourisamaindeterminantoftheactual 103
+behaviour.Behaviouralintentionisdeterminedbytheattitude 104
+towardsthebehaviourandsubjectivenorms(FishbeinandAjzen, 105
+1975).Theattitudecomponentisthepersonalperceptionthat 106
+a person has about something and can be positive, negative, 107
+orindifferent(Ajzen,1991).Inthisway,theattitudeconstruct 108
+relatestotheadvantagesanddisadvantagesofferedbythatbe- 109
+haviour.Subjectivenormsrelatetotheunwrittenrulesofsociety 110
+(FeolaandBinder,2010).Itreferstoallthosebehavioursthat, 111
+despitenotbeingformallydocumented,theindividualisaware 112
+that they are accepted or not and there is, therefore, a social 113
+burdentoexecuteitornot(Ajzen,1991).Aclassicexampleof 114
+subjectivenormsisusuallytheneedtosmokeordrinkalcohol 115
+tobeacceptedinagroup(McmillanandConner,2003).Finally, 116
+theperceivedbehaviouralcontrol(onlyintheTPB)referstothe 117
+perceptionabouthoweasyordifficultistoperformthebehaviour 118
+(Maddenetal.,1992).Fig.2illustrateshowtheTPBmodel. 119
+Despite the long and varied use of the TPB model in dif- 120
+ferentcontexts,themodelisnotwithoutlimitationsandcriti- 121
+cism(Sniehottaetal.,2014).SomementionthattheTPBmodel 122
+leavesimportantcomponentsofconsumptionoutsidetheanaly- 123
+sis (Corsini et al., 2019). For example, factors such as the 124
+monotonyofbehaviour(theroutine)areexempt(Jackson,2005). 125
+Additionally,normativevaluesdonotseemtobefullyencom- 126
+passedwhenconsideringattitude(TrafimowandFinlay,1996). 127SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx 3
+Fig. 1.Separatingtheplatformdimensionsofresourceprovider,assetprovisionvsownershiptransfer,andcompensationscheme.
+Fig. 2.ConceptualmodeloftheTheoryofPlannedBehaviour(Ajzen,1991).
+Thisisimportantbecausesomebehaviours,amongwhichthe 1
+pro-environmentalonesstandout,seemtobebasedonpersonal 2
+norms rather than attitudes (Feola and Binder, 2010). In fact, 3
+socio-psychologicalevidenceshowsthatsomebehavioursarenot 4
+influencedbyattitudenorintention(Jackson,2005).Asifthat 5
+were not enough, sometimes an inverse phenomenon occurs, 6
+wheretheintentionendsupaffectingtheattitude.Thetheory 7
+alsodoesnotseemtocontemplatechangesinbehaviourdueto 8
+exogenousfactorseither.Forexample,peoplecanchangetheir 9
+attitudeandintentionregardingrecyclingduetolegalincentives 10
+orimprovementsinthecollectionsystem.Inthisway,people 11
+startrecyclingwithouthavingapositiveattitudeaboutitbut, 12
+overtime,therecyclingbehaviourgeneratesapositiveattitude 13
+towardsit(Jackson,2005). 14
+Therehavebeenotherbehaviouralmodelsthatconsideredthe 15
+normativeandmoralaspectsinamoreholisticway,andthus 16
+suchastheNorm-ActivationTheory(Schwartz,1977)andthe 17
+Value-Belief-Norm(Stern,2000).IntheSchwartzmodel,forex- 18
+ample,pro-environmentaloraltruisticbehaviourappearswhen 19
+the person’s morality is ‘‘activated’’ by means of four factors, 20
+amongwhicharefeelingsofprideoranticipatedguiltforthe 21
+performanceofthebehaviour(Schwartz,1977).InStern’smodel, 22behaviourisalsodrivenbymorality;whichforceonetoactina 23
+certainway,butpersonalnormsareactivatedwhenpeoplethink 24
+thatviolatinganormwillhaveadverseeffectsonthingsthey 25
+value(Stern,2000).Moralvaluesisantecedentofattitude.Nev- 26
+ertheless,theTPBmodelcanstillaccommodateotherconstructs 27
+(deLeeuwetal.,2015).Elicitingtheseconstructsforthecaseof 28
+usinganonlineP2Psharingplatformisthefocusofthispaper. 29
+3. Materials and methods 30
+We adapted the procedure for conducting questionnaires 31
+based on the TPB proposed by Francis and colleagues (2004) 32
+followingthesteps: 33
+1.Elicitationstudy 34
+2.Determinationofconstructs 35
+3.Developmentofconceptualmodelandhypotheses 36
+4.Quantitativesurvey 37
+5.Pilottestandcorrectionofthequestionnaire 38
+6.Verificationofreliabilityandgeneralmodelconsiderations 39
+3.1. Elicitation study 40
+TheparticipantswerestudentsandstaffoftheSwedishtech- 41
+nicaluniversityKTHRoyalInstituteofTechnology.KTHhasap- 42
+proximately 13063 full-time students, 67% of whom are men 43
+and33%arewomen(KTH,2016b).Intermsofemployees,the 44
+universityhas5178employees–ofwhich3572holdfull-timepo- 45
+sitions–approximately37%arewomen,and63%aremen.With 46
+atotalpopulationof18241people,thesamplesizeoftheproject 47
+requiredatleast267peopleforaconfidencelevelof90%and377 48
+peopleforaconfidencelevelof95%.Formultilinearregression 49
+modelsundertheTPBmodel,itisreasonabletoassumemoderate 50
+effect size – i.e., adjusted R2of around .3 – which requires a 51
+sampleofatleast160people(Francisetal.,2004).Theuseof 52
+apeer-to-peersharingplatformfortheKTHcommunitywasthe 53
+studiedbehaviour. 54
+Weformulatedaqualitativequestionnairewithnineopen- 55
+endedquestionscovering: 56SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+4 R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx
+1.behaviouralbeliefsandoutcomeevaluations(tomeasure 1
+theattitude)–3questionsseekingtodeterminethemost 2
+frequentadvantagesanddisadvantagesofusingthe(po- 3
+tential)KTHsharingplatform. 4
+2.normativebeliefs(tomeasuresubjectivenorms)–3ques- 5
+tionscoveringthemostinfluentialgroupsfortherespon- 6
+dent. 7
+3.controlbeliefsandinfluenceofcontrolbeliefs(tomeasure 8
+perceived behavioural control) – 3 questions addressing 9
+thebarriersorprerequisitesforusingtheplatform. 10
+The questions can be seen in Table S1 of the supporting 11
+informationofthisarticle. 12
+Theinvitationtotheelicitationstudywasmadepersonally 13
+anddigitallytovariousstudentsandstaffofKTHduringFebruary 14
+2019.Atotalof15peoplewasinterviewed(40%menand60% 15
+women). Participants could clarify doubts regarding the ques- 16
+tions,butundernocircumstancestheywereprovidedwithex- 17
+amplesofanswersorhowtoanswerthequestions,thusavoiding 18
+toguidetheanswerstowardsonedirectionoranother.Amaxi- 19
+mumtimetoanswerthequestionswasnotconsidered,butthe 20
+interviewslasted35minonaverage. 21
+3.2. Determination of constructs 22
+The answers were coded according to similarity. As much 23
+as possible, we followed the terminologies and definitions of 24
+Hawlitschekandcolleagues(2018)tonamethecodesinorder 25
+toallowforfuturecomparisons.Acut-offruleof25%excluded 26
+theleastimportantcodes.Wefollowedthisprocedureforeach 27
+ofthethreesectionsofthequalitativeinterviews. 28
+For the behavioural beliefs, advantages appeared 49 times 29
+whiledisadvantages28times.Advantagessuchas‘‘tohelpsave 30
+theplanet’’,‘‘togeneratelessenvironmentalimpacts’’and‘‘to 31
+help the environment’’ were coded under the same construct 32
+called‘‘Ecologicalsustainability’’.Aftercoding,weendedupwith 33
+16differentadvantagesanddisadvantagesofusingKTHpeer- 34
+to-peersharingplatform.Then,afterapplyingacut-offruleof 35
+25%toexcludetheleastimportantcodes,weendedupwithfour 36
+advantages(socialexperience,ecologicalsustainability,financial 37
+benefits,senseofbelonging)andfourdisadvantages(processrisk 38
+concerns, effort expectancy, resource scarcity, trust in others). 39
+The responses and codes are available in the supplementary 40
+informationofthisarticle. 41
+Manyinfluentialgroupswerementioned,appearingintotal25 42
+timesforthestudentsand16timesfortheKTHstaff.Byapplying 43
+tocut-offruleof25%,thegroupsidentifiedwere:friends,teach- 44
+ers,classmatesforthestudents;andboss,headofdepartment, 45
+universityboardforthestaff. 46
+Finally,15factorsrelatedtotheprerequisitesandbarriersto 47
+usingtheKTHpeer-to-peersharingplatformwereencounteredin 48
+theinterviews.Withthe25%cut-offrule,fourprerequisites(fa- 49
+miliarity,trustinothers,socialexperience,andvariety)andthree 50
+barriers (process risk concern, effort expectancy, and resource 51
+scarcity)werenominated. 52
+Table1showsthefinallistofthefactorselicitedtothequanti- 53
+tativesurvey(allthefactorsencounteredandtheirfrequencyare 54
+showninTableS2–6ofthesupportinginformationofthisarticle). 55
+3.3. Development of conceptual model and hypotheses 56
+Fig.3illustratetheconceptualmodeldevelopedfromtheelic- 57
+itationstudy.Ourmodelintegratesabroadsetofpotentialmo- 58
+tivesandhindersthroughtheconceptualizationoftheTPBcon- 59
+structs(attitude,subjectivenorm,andperceivedbehaviouralcon- 60
+trol).Withthismodelitwaspossibletoinvestigatetherelative 61
+importanceofthemotivesandhinderstotheTPB’sconstructs. 62Table 1
+Elicitedfactorstothequantitativesurvey.
+Abbreviation Factorname
+SE SocialExperience
+PRC ProcessRiskConcerns
+TIO TrustinOthers
+ES EcologicalSustainability
+EE EffortExpectancy
+SOB SenseofBelonging
+F Familiarity
+FB FinancialBenefits
+RS ResourceScarcity
+V Variety
+Table 2 shows the stated hypotheses. Detailed explanation 63
+ontherationaleforstatingthemarefoundinSection4ofthe 64
+supportinginformationofthisarticle. 65
+3.4. Quantitative survey 66
+Thequantitativequestionnairewasdividedinforparts:(1) 67
+questionsonthepsychologicaldeterminantsofbehaviour;(2) 68
+items willing to provide to and access from the sharing plat- 69
+form;(3)preferredsystemofexchange;and(4)structuraland 70
+demographicalvariables.Thequestionsonthepsychologicalde- 71
+terminantsofbehaviourwereatranslationoftheconstructsof 72
+thebehaviouralmodelfollowingtherecommendationsofFrancis 73
+andcolleagues(2004).Behaviouralintention(BI),attitude(ATT) 74
+andperceivedbehaviouralcontrolweremeasuredonaseven- 75
+pointLikertscale.Subjectivenorms(SN)hadtwocomponents, 76
+normativebeliefsandmotivationtocomply.Normativebeliefs 77
+weremeasuredusingaunipolarLikertscaleof7pointswiththree 78
+questionsfrom‘‘notatall’’to‘‘verymuch’’;andmotivationto 79
+complywereassessedunderindirectmeasurementusingabipo- 80
+larLikertscaleof7points—rangingfrom −3to+3—withthree 81
+questionsthatwentfrom‘‘stronglydisagree’’to‘‘stronglyagree’’. 82
+Foreachnormativebelief,thebeliefscorewasmultipliedbythe 83
+respective motivation to comply score. The resulting summed 84
+products across all the beliefs composed an overall subjective 85
+normscore.Table3showstheconstructs,questionsandscales 86
+thatcomposedthequantitativequestionnaire. 87
+Part2and3ofthesurveyhadmultiple-choicequestionswith 88
+drop-downanswers.Thesequestionsfocusedonthepreference 89
+ofthefutureusersconcerningproducts/servicesthattheywould 90
+liketohaveaccessto,products/servicesthattheywouldliketo 91
+offerandpreferredplatformsystem(Table4). 92
+Structuralanddemographicalvariables,inpart4,wereques- 93
+tionsaddressinggender,age,nationality,andschooltowhichthe 94
+participantbelongsattheendofthequestionnaire. 95
+ThequestionnairewastestedduringthethirdweekofMarch 96
+2019bysixparticipantsoftheelicitationstudyandimproved 97
+where necessary. The questionnaire was tailored to students 98
+and personal accordingly to the respective important groups 99
+(e.g.friends,family,boss).Thefinalversionofthesurveywas 100
+implementedintheAPSISPROsoftware. 101
+3.5. Data analysis 102
+After internal consistency checks, 325 responses (out from 103
+387completedquestionnaires)wereconsideredvalid.70%ofthe 104
+validrespondentswerebetween20and39yearsold;79%were 105
+employeesand31%students;62.5%weremale;40%werefrom 106
+theSchoolofArchitectureandtheBuiltEnvironment.Complete 107
+informationaboutthestructuralanddemographicinformationis 108
+availableinTablesS7–10ofthesupportinginformationofthis 109
+article. 110
+Withthepopulationofthevalidresponses,weperformed: 111SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx 5
+Fig. 3.Conceptualbehaviouralmodeldevelopedfromtheelicitationstudy.
+Table 2
+Listofhypothesestestedinthequalitative.
+Designator Statement
++H1 Financialbenefitshaveapositiveimpactonattitudetowards
+peer-to-peer.
++H2 Socialexperiencehasapositiveimpactonattitudetowards
+peer-to-peer.
++H3 Senseofbelonginghasapositiveimpactonattitudetowards
+peer-to-peer.
++H4 Ecologicalsustainabilityhasapositiveimpactonattitude
+towardspeer-to-peer.
++H5 Varietyhasapositiveimpactonattitudetowardspeer-to-peer.
+Processriskconcernshaveanegativeimpacton:
+−H6a a)attitudetowardspeer-to-peer
+−H6b b)perceivedbehaviouralcontrol.
+−H7 Resourcescarcityhasanegativeimpactonattitudetowards
+peer-to-peer.
+−H8 Effortexpectancyhasanegativeimpactonattitudetowards
+peer-to-peer.
+Familiarityhasapositiveimpacton:
++H9a a)attitudetowardspeer-to-peer
++H9b b)perceivedbehaviouralcontrol
+Trustinotherusershasapositiveimpacton:
++H10a a)attitudetowardspeer-to-peer
++H10b b)perceivedbehaviouralcontrol
++H11 Attitudehasapositiveinfluenceonthebehaviouralintention
+tousepeer-to-peer
++H12 Subjectivenormshaveapositiveinfluenceonthebehavioural
+intentiontousepeer-to-peer
++H13 Perceivedbehaviouralcontrolhasapositiveinfluenceonthe
+behaviouralintentiontousepeer-to-peer
+1.reliability tests to verify the internal consistency of the 1
+questionnaire; 2
+2.multilinearregressions(MLRs)totestthehypothesesofthe 3
+studyandtodeterminethestrengthoftherelationships 4
+betweenthevariablesoftheconceptualmodeland(see 5
+Fig.2);and 6
+3.multivariatestatisticalteststoassessdemographicaldiffer- 7
+encesintheresponses. 8WeusedthesoftwareRStudioversion1.1.463foranalysing 9
+thedata. 10
+3.5.1. Reliability tests 11
+AllconstructshadCronbach’salphaof.70orhigher,indicat- 12
+ingtheirreliability.Kaiser–Meyer–Olkintest(measureofsample 13
+adequacy) gave a meritorious result of .870 with significance 14
+levellowerthan.001.Harman’ssingletestfactorgaveatotal 15SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+6 R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx
+Table 3
+Quantitativequestionnaireusedinthestudy.
+Construct Question Scale
+BI IfKTHSharingPlatformisdeveloped,I...
+BI1.Intendtouseit.
+BI2.Wanttouseit.
+BI3.Expecttogiveitatry.UnipolarLikertfrom1
+(stronglydisagree)to7
+(stronglyagree).
+ATT ATT1.Usingtheplatformcouldbeextremelyharmful/extremelybeneficial.
+ATT2.Usingtheplatformcouldbeaverygoodidea/averybadidea.
+ATT3.Usingtheplatformcouldbeextremelydisadvantageous/extremely
+advantageous.
+ATT4.Usingtheplatformcouldbeextremelyuseful/extremelyworthless.UnipolarLikertfrom1to7.
+SNNormative beliefs component
+Staff version
+Mybosswould...meusingthisplatform.
+Headofdepartmentswould...meusingthisplatform.
+TheUniversityBoardwould...meusingthisplatform.
+Student version
+MyfriendsthinkI...usethisplatform.
+Teacherswould...usingthisplatform.
+Classmateswould...usingthisplatform.UnipolarLikertfrom1
+(stronglydisapprove)to7
+(stronglyapprove).
+Motivation to comply component
+WhenitcomestomattersofusingtheKTHSharingplatform...
+Staff version
+WhatmybossthinksIshoulddoisimportanttome.
+Whattheheadofdepartmentsadvisetodoisimportanttome.
+WhattheUniversityBoardsuggeststodoisimportanttome.
+Student version
+Whatmyfriendsthinkisimportanttome.
+Whatteacherssuggestisimportanttome.
+Whatmyclassmatessayisrelevanttome.BipolarLikertscaleof7points
+from−3(notatall)to +3
+(verymuch).
+PBC PBC1.IamconfidentthatIcouldusetheplatformifIwantedto(Strongly
+disagree/Stronglyagree).
+PBC2.Whentousetheplatformornotisentirelyuptome(Strongly
+disagree/Stronglyagree).
+PBC3.Makingthedecisiontousetheplatformis(Veryeasy/Verydifficult).
+PBC4.Decidingwhentouseornotusetheplatformcouldbe(Veryeasy/Very
+difficult).UnipolarLikertfrom1to7.
+F F1.IamfamiliarwithP2Ponlinesharingplatforms.
+UnipolarLikertfrom1
+(stronglydisagree)to7
+(stronglyagree).TIO TIO1.StudentsandKTHstaffaretrustworthy.
+TIO2.IhavemoreconfidenceinstudentsandKTHstaffthaninstrangers.
+TIO3.StudentsandKTHstaffkeeppromisesandcommitments.
+FB IfIusedtheKTHSharingPlatform,Icould...
+FB1.Savemoney.
+FB2.Lowermyexpenses.
+FB3.Havemoremoneytospendonotherthings.
+V V1.KTHSharingPlatformcouldgiveaccesstolargenumberofproductsand
+services.
+SE WiththeKTHsharingplatform,Icould...
+SE1.Learnnewthings
+SE2.Meetnewpeople
+PRC TheKTHsharingplatformcould...
+PRC1.Constitutealegalrisktome
+PRC2.Constituteaneconomicrisktome
+PRC3.CauseanyothertypeofriskwhenIuseit
+RS WhenusingtheKTHsharingeconomyplatform,itcouldbepossiblethat...
+RS1.Iwillnotbeabletogetaproduct/servicewhenIwanttouseit.
+RS2.Theproduct/servicedoesnotexist.
+ES KTHsharingplatformcouldallowme...
+ES1.Helpsavenaturalresources.
+ES2.Tobeenvironmentallyfriendly.
+ES3.Tohaveasustainablewayofconsumption.
+SOB KTHsharingplatformcould...
+SOB1.Strengthrelationshipsbetweenstudents.
+SOB2.Generateagoodbondbetweenstudents.
+SOB3.Helpintegrationforstudents.
+EE KTHsharingeconomycould...
+EE1.Betimeconsuming.
+EE2.Demandmeeffort.
+EE3.Demandtoplanthingsinadvance.
+changeinthevarianceof29.10%aftertheextractionofafac- 1
+tor,avaluewellbelowtherecommended50%(Podsakoffetal., 22003);thus,commonbiaswasnotaconcerninthestudy.The 3
+internalconsistencyreliability(ICR)ofthefactorswereallabove 4SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx 7
+Table 4
+Questionsaddressingthetypesofproductsandservicesstudentsandstaffarewillingtoprovideandaccessintheplatform,
+andpreferredmodeofexchange.
+Question Option
+Whichproducts/serviceswouldyouliketohave
+accesstofromtheplatform?•Servicesingeneral(teachingassistance,
+languagelessons,baby-sitting,etc.).
+Whichproducts/serviceswouldyoubewillingto
+provide•Tools(hammer,screwdriver,drill,etc.).
+•Car-sharing.
+•Accommodation.
+•Studymaterials(books,workbooks,laptop,
+etc.).
+•Leisureitems(camera,clothes,sports
+equipment).
+•Food.
+•Other.
+Whatformatwouldyoulikethe
+platformtohave?•Monetarysystem—Exchangesarepaidwith
+money.
+•Pointsystem—Pointsareusedasa
+currencyinsteadofmoney.Suppliersand
+usersearnandspendpointsastheylendor
+acquireproductsandservices.
+•Hybridsystem—Pointscanbeusedascash.
+•Freesystem—Theproviderdefineshow
+he/shewantstobepaidfortheproductor
+service(money,pointsorfreeofcharge).
+•Monthlysubscriptiontoaccessproductsand
+services—SimilartoNetflix.
+•Indifferent.
+therecommendedminimumof.70andtherefore,demonstrating 1
+compositereliability(Netemeyeretal.,2012). 2
+Convergent and discriminant validity tests showed that all 3
+squarerootsofallAVEvaluesexceedtheircorrelationwithother 4
+constructs(Fornell–Larckercriterion)exceptforone.Theproblem 5
+occurs for the SOB and SE constructs, which converge to the 6
+samecriterion.Thelattercanbeexplainedduetotheexcessive 7
+similarity of SOB and SE and the fact that, since the sharing 8
+platformisnotinoperation,therespondentswerenotableto 9
+establishacleardifferencebetweenbothconstructs.Whatever 10
+the case, it was decided to keep both constructs for the MLR 11
+modelofATT.Giventheconvergenceofbothconstructs,itwas 12
+expectedthatoneofthemhadanon-standardizedcoefficient 13
+verycloseto0anda p-valueconsiderablygreaterthan.05,which 14
+waslatercheckedinthemodel.Exceptfortheconvergence,the 15
+smallest AVE occurs for PBC (AVE =.487) slightly below the 16
+conventionallimitof.50.However,byeliminatingquestionsPBC1 17
+andPBC2togainIRCandcompositereliability,itwasnotpossible 18
+toreachconvergenceafter25interactions.Therefore,sincethe 19
+AVEvalueisslightlylessthan.50,butthecompositereliabilityof 20
+thefactorismoresignificantthan.60(CR=.78),theconvergent 21
+validityoftheconstructwasstilladequate(TabachnickandFidell, 22
+2012). 23
+3.5.2. Multilinear regression 24
+ThreeMLRmodelsweredeveloped: 25
+1.PBC,SN,andATTasexplanatory(independent)variables 26
+forBI(dependentvariable). 27
+2.SE,PRC,TIO,ES,EE,SOB,F,FB,RS,andVasexplanatory 28
+variablesforATT;and 29
+3.F,TIO,andPRCasexplanatoryvariablesforPBC(dependent 30
+variable). 31
+For each model, we analysed the R-squared (R2),p-values, 32
+Pearson’scorrelationcoefficientsandtheirinterpretationforthe 33
+testofthehypotheses.R2isastatisticalmeasurethatrepresents 34
+theproportionofthevarianceforthedependentvariablethatis 35
+explainedbytheindependentvariablesintheregressionmodels; 36
+thep-valueforeachindependentvariableteststhenullhypoth- 37
+esis that the variable has no correlation with the dependent 38
+variable(a p-valuelowerthan.05indicatesastatisticalsignificant 39correlation);finally,thePearson’scorrelationcoefficientshows 40
+thestrengthofthelinearrelationshipbetweenthedependentand 41
+anindependentvariable. 42
+Informationonthemeans,standarddeviation,minimumand 43
+maximumvaluesfortheconstructsofthebehaviouralmodelare 44
+inTableS11ofthesupportinginformationofthisarticle. 45
+4. Results 46
+4.1. Determinants of behavioural intention 47
+AmultiplelinearregressionwascalculatedtopredictBIbased 48
+ontheirATT,SNandPBC.Asignificantregressionequationwas 49
+foundwithR2of.395(adj.388).Participants’predictedBIisequal 50
+to.366 +.676(ATT) +.011(SN) +.218(PBC),whereATTandPBC 51
+aremeasuredin1–7Likertscale;SNaremeasuredasthesum 52
+oftheproductofthreequestionsina1–7Likertscaleandthree 53
+questionsina −3to+3scale,hencepossiblevaluesrangefrom 54
+−63to+63.ParticipantsBIincreased.676,.011and.218pointfor 55
+eachpointofATT,SNandPBCrespectively. 56
+Pearson’s r coefficients were also computed to assess the 57
+strengthofthelinearrelationshipbetweenBIandthesethree 58
+predictors.TherewaspositivecorrelationbetweenBIandATT 59
+(r=.592),SN(r =.368),andPBC(r =.385).Thesignificance 60
+levelsforeachofthefactorsarebelowp =.05,validatinghy- 61
+pothesesH 11−13.Thisisconsistentwiththepreviousliterature 62
+onconsumermotivesforP2Psharingsuggestingthatattitudehas 63
+thegreatesteffectonintention(Hawlitscheketal.,2018). 64
+4.2. Factors influencing attitude 65
+A multiple linear regression was calculated to predict ATT 66
+basedontheirF,TIO,FB,V,SE,PRC,RS,ES,SOBandEE.These 67
+10predictorsofATTcouldpredict49.2%(R2.492)ofthevariance 68
+(adj.476).However,the p-valueforfinancialbenefits(FB)and 69
+socialexperience(SE)wereabove0.05,thus,rejectinghypothesis 70
+H1and H2. In the case of SE, this was expected due to the 71
+convergenceofvaliditywithsenseofbelonging(SOB).Therefore, 72
+themodelshouldnothavesignificantvariationsincaseofonly 73
+consideringSOBandexcludingSE.Thus,weexcludedSEasa 74
+predictor.Underthisnewmodel,R2remainsunchanged =.492 75SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+8 R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx
+andadjustedR2presentsasmallvariationof.02(adjustedR2= 1
+.478). 2
+Pearson’s r coefficients were also computed to assess the 3
+relationshipbetweenATTandtheseeightpredictors.Therewas 4
+positivecorrelationbetweenATTandSOB(r =.478),ES(r = 5
+.519),V(r =.359),F(r =.359),TIO(r =.407);thecorrelation 6
+issignificantatthe0.01level,thusvalidatinghypothesesH 3,H4, 7
+H5,H9aandH10arespectively.Moreover,therewasanegative 8
+correlationbetweenATTandPRC(r = −.266)atasignificantat 9
+the0.01level,validatinghypothesisH 6a.Thecorrelationbetween 10
+ATTandEE,andATTandRSwasnotsignificantatthe0.01level; 11
+therefore,H 8andH7couldnotbeconfirmed. 12
+Inthisway,avariationof47.8%oftheattitudecanbeex- 13
+plainedbysixpredictors.Participants’predictedATTisthenequal 14
+to2.076 +.109(F) +.151(TIO) +.073(V) −.132(PRC) + +.187 15
+(ES)+.158(SOB),whereallthesepredictorsaremeasuredin1–7 16
+Likertscale. 17
+4.3. Influence of control beliefs 18
+F,TIOandPRCpredictsonly12%(adjR2.12)ofthevariation 19
+inthemultiplelinearregressioncomputedforPBC.The p-value 20
+forTIOwasabove.05thereforeexcludedfromtheregression 21
+equation;hypothesisH 10bwasrejectedbecauseofthehigh p- 22
+value.Inthisway,participantspredictedPBCisequalto5.061 23
++.118(F) −.199(PRC),whereFandPRCaremeasuredin1–7 24
+Likertscale.ParticipantsPBCincreased.118anddecreased.199. 25
+pointforeachpointofFandPRCrespectively. 26
+Pearson’rcoefficientindicatedtheexistenceofastatistically 27
+significantrelationshipbetweenPBCandF(r =.240)andPBCand 28
+PRC(r = −.280),validatinghypothesesH 9bandH6b. 29
+The PBC model presented a low R2=.13 and adjusted R230
+=.12. In this way, only 12% of the variation of PBC was ex- 31
+plainedbytheconstructsofF,TIO,andPRC(Table3).Fromthe 32
+non-standardizedcoefficients,anegativevaluewasseenforPRC 33
+andpositivevaluesforFandTIO.Thelargestabsoluteincreases 34
+wereforPRCandF,whoseincreasesinavalueof1produce 35
+absoluteincreasesof.2and.12inthePBCrespectively.Since 36
+thesignificancelevelwaslessthanp =.05forFandPRC,the 37
+hypothesesH 9bandH6bwerevalidated.InthecaseofTIO,the 38
+significancelevelwasnotoriouslyhigh(p =.303)andtherefore, 39
+thenullhypothesiswasrejected,andthehypothesisH 10bwas 40
+invalided.Pearson’scorrelationcoefficientsindicatedmoderate 41
+andstatisticallysignificantcorrelationsforFandPRCwithPCC 42
+valuesequalto0.24and −0.28respectively. 43
+4.4. Summary of the MLR models for hypothesis test 44
+Table 5 presents a summary of the results for the study’ 45
+hypotheses. 46
+4.5. Sharing potential 47
+4.5.1. Takers 48
+Servicesingeneralhadthehighestdemandeditemamong 49
+therespondents.77.23%expressedinterestinhavingaccessto 50
+servicesfromtheKTHpeer-to-peersharingplatform.Closelyin 51
+secondplaceappearsstudymaterialswith69.23%ofrespondents. 52
+Leisureitemsandtoolswerevirtuallytied(65.85%and65.23% 53
+respectively).Accommodationappearedonlyinfifthplacewith 54
+59.69%.Verylaggingappearcar-sharingandfood,whichonlyhad 55
+41.84%and25.54%respectively.Inthisway,itcanbeinferred 56
+thattheselasttwoproductsdonotinterestthestudypopulation, 57
+anditsincorporationintotheplatformwouldnotbeadvisable. 58
+Remarkably,havingaccesstocar-sharingandfoodhadtheleast 59
+popularityamongbothstudentsandstaff.Theorderingfromthe 60firsttothefourthdesiredproductvariedslightlybetweenboth 61
+groupsofrespondents,beingstudymaterialsthemostdesired 62
+product for the students, while for the staff were services in 63
+general. 64
+4.5.2. Providers 65
+The product with the most significant number of possible 66
+providerswasservicesingeneralwith64.65%oftherespondents. 67
+Servicessuchaslanguageclasses,schoolhelp,orcookingclasses, 68
+couldbethemoststraightforwardforbothproviderandtaker 69
+sincetheydonotinvolverisksoftheftordamage.Studymaterials 70
+appeared as the second most popular items among providers 71
+(58.15%).Finally,leisureitemsandtoolstiedinthirdplacewith 72
+50.46%ofrespondents. 73
+Comparingtheresponsesofstudentsandstaffaspotential 74
+providers,studentswereevidentlymoreinterestedinproviding 75
+study materials and services, while staff had a larger prefer- 76
+enceforprovidingservicesingeneral.Bothgroupsshowedthe 77
+leastinterestinprovidingcar-sharing(8.92%).Intriguingly,the 78
+popularityofprovidingfood(22%)wasasequalasofproviding 79
+accommodationforbothstudentsandstaff. 80
+4.5.3. Asymmetries in supply & demand 81
+Wefoundanasymmetricratiobetweensupplyanddemand. 82
+Themostsignificantdifferencewasinproductsthataredifficult 83
+toaccess,suchasaccommodationandcars.Thus,only21.54% 84
+oftherespondentswereinterestedinprovidingaccommodation 85
+(versus60%whowereinterestedinhavingaccess)and8.92%in 86
+providingcarsforcar-sharing(versus42%thatexpressedinterest 87
+inhavingaccesstoacarfromaKTHpeer). 88
+Detailedinformationaboutthesupply–demandpotentialand 89
+asymmetriesareinTableS12ofthesupportinginformationma- 90
+terialofthisarticle. 91
+4.6. Preferred system of exchange 92
+51.69%oftherespondentsexpressedthattheywouldprefer 93
+theKTHsharingplatformtooperateinachoice-freesystemof 94
+exchange; that is, a system in which the provider determines 95
+theformofpayment;whichcanbemonetary,bypoints,freeof 96
+chargeorthroughapureexchange—suchasservicebyservice, 97
+productbyproductoracombinationofthese.Insecondplace 98
+with37.54%ofrespondentswantingahybridsystembetween 99
+monetaryandpointexchange;inthishybridsystemuserscould 100
+pay for the exchange both in cash or with points (similar to 101
+bitcoin). Under this system, both supplier and consumer earn 102
+pointsthroughtheprovisionorconsumptionofanitem,points 103
+thatlatercanbeusedinsteadofcash.Closeinthirdplacewas 104
+themonetarysystem32%ofpreference.Althoughthissystem 105
+isthesimplesttoimplementofall,itwouldhavethehighest 106
+probabilitytoleadtothesocalledenvironmentalreboundeffects. 107
+Farinfourthplacewasthepointsystem–whichdoesnotcon- 108
+templatethepaymentincash–with24%ofrespondentsopting 109
+forthissystem.12.62%wereindifferenttothesystem,andonly 110
+8.62%wereinterestedinasubscriptionsystemsimilartotheone 111
+offeredbyNetflixorSpotify.Intriguingly,studentsandstaff,there 112
+arenosignificantdifferenceswhenchoosingthedesignofthe 113
+platform. Both groups share the same preference in the same 114
+order. 115
+5. Conclusion 116
+Thisstudyexploredpsychologicalantecedentsofbehavioural 117
+intention towards using an online P2P resource sharing plat- 118
+forminaSwedishuniversitysetting.Theuniversityhasambi- 119
+tiousenvironmentalobjectivesbutnoneaddressessustainable 120SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx 9
+Table 5
+Summaryofthevalidationofthehypothesesofthebehaviouralmodelofthestudy.
+# Description Result Resultdescription Conclusion
++H1FBhaveapositiveinfluenceonATT. p-value>.05 FBdoesnotinfluenceATT. H 1rejected.
++H2SEhasapositiveinfluenceonATT. Nottested Hypothesisnottestedduetoconvergence. None.
++H3SOBhasapositiveinfluenceonATT. p-value<.05 SOBinfluencesATTpositively. H 3validated.
++H4EShasapositiveinfluenceonATT. p-value<.05 ESinfluencesattitudepositively. H 4validated.
++H5VhasapositiveinfluenceonATT. p-value<.05 VinfluencesATTpositively. H 5validated.
+−H6aPRChaveanegativeinfluenceonATT. p-value<.05 PRCinfluencesATTnegatively. H 6avalidated.
+−H6bPRChaveanegativeinfluenceonPBC. p-value<.05 PRCinfluencesPBCnegatively. H 6bvalidated.
+−H7RShasanegativeinfluenceonATT. p-value ≈.05 RSdoesnotinfluenceattitude. H 7rejected.
+−H8EEhasanegativeinfluenceonATT. p-value<.05 EEinfluencesATTnegatively. H 8validated.
++H9aFhasapositiveinfluenceonATT. p-value<.05 FinfluencesATTpositively. H 9avalidated.
++H9bFhaspositiveinfluenceonPBC. p-value<.05 FinfluencesPBCpositively. H 9bvalidated.
++H10aTIOhasapositiveinfluenceonATT. p-value<.05 TIOinfluencesATTpositively. H 10avalidated.
++H10bTIOhasapositiveinfluenceonPBC. p-value>.05 TIOdoesnotinfluencePBC. H 10brejected.
++H11ATThasapositiveinfluenceonBI. p-value<.05 ATTinfluencesBIpositively. H 11validated.
++H12SNhaveapositiveinfluenceonBI. p-value<.05 SNinfluenceBIpositively. H 12validated.
++H13PBChasapositiveinfluenceonBI. p-value<.05 PBCinfluencesBIpositively. H 13validated.
+consumption among students and staff. We developed a be- 1
+haviouralmodelfromaqualitativeelicitationstudybasedonthe 2
+TPBconstructs.Attitudetowardstheplatform,subjectivenorms 3
+and perceived behavioural control explained 39% of the vari- 4
+anceofbehaviouralintention.Attitudehadthestrongesteffects 5
+onbehaviouralintention,followedbytheperceivedbehavioural 6
+controlandsubjectivenorms.Amongthekeydeterminantsof 7
+attitude,ecologicalsustainability,followedbysenseofbelonging, 8
+trustinothers,andfamiliaritywerethemostimportantpredic- 9
+tors.Conversely,processriskconcernshadthestrongestnegative 10
+effectonattitude,whileeffortexpectancy,resourcescarcity,and 11
+financialbenefitsshowedtohavenosignificanteffectsonthe 12
+user’sattitude. 13
+Wealsoinvestigatedpreferredcategoriesofproducts&ser- 14
+vicestoofferandaccessaswellasthedesiredsystemofex- 15
+change.Servicesingeneralandstudymaterialsappearasthe 16
+itemsthatbothstudentsandstaffoftheuniversitymostwantto 17
+provideandhaveaccessto.Besides,bothitemshadthemostsig- 18
+nificantnumberofdualroleusers(i.e.usersintendingtoconsume 19
+andprovide).Thepreferredmodeofexchangefortheplatformis 20
+afreesystem(whichincludesdonationandsecond-handsales). 21
+Ahybridsystem,inwhichuserscouldchoosepoints(e.g.tokens) 22
+ormoneyinthetransactions,wasthesecondpreferredsystem 23
+andmaypresentsignificantadvantagesforimplementation. 24
+Wheninterpretingtheresultsofthisstudy,afewlimitations 25
+shouldbeacknowledgedandmayleadtoseveralavenuesfor 26
+furtherresearch.First,theresultsarenotgeneralizabletoother 27
+contexts as this study investigates the intention to use a P2P 28
+resourcesharingplatformrestrictstotheuniversitycommunity. 29
+Secondly,thisstudyadoptedtheTPBmodel;althoughthisframe- 30
+workundoubtedlycastsrelevantlightontheresearchrelatedto 31
+theP2Presourcesharing,alternativetheoreticallensesshouldbe 32
+systematicallyexploredtoaccountformorevarianceofusers’ 33
+intentiontoparticipateinthesharingeconomy.Third,thesurvey 34
+had only 325 valid responses; future surveys should consider 35
+givingsmallrewards,suchaslotteryofcinematickets,toincrease 36
+thenumberofrespondents.Finally,ourstudylookedatusers’ 37
+intentions and no inference to actual behaviour is possible to 38
+draw. 39
+Thesharingeconomymovementhasbeencharacterizedby 40
+many promises and paradoxes, especially when large venture 41
+capitalinvestmentsareinvolved.Nevertheless,manyoftheneg- 42
+ative effects may not exist due to the intrinsic characteristics 43
+ofuniversitycommunities(e.g.trust,geographicalproximityof 44
+users, sense of belonging). Therefore, implementing a P2P re- 45
+sourcesharingplatforminuniversitiesmaypresentaviableway 46
+to infiltrate a sharing culture and sustainable consumption in 47
+society. 48Acknowledgments 49
+We are grateful to the participants of the elicitation study 50
+andtothosewhorespondedthesurvey.RLacknowledgesthe 51
+financialsupportfromtheCE@KTHinitiative. 52
+Appendix A. Supplementary data 53
+54 Supplementarymaterialrelatedtothisarticlecanbefound 55
+onlineathttps://doi.org/10.1016/j.spc.2019.10.002. 56
+References 57
+Ajzen,I.,1985.Fromintentionstoactions:Atheoryofplannedbehavior.Action 58
+Control11–39.http://dx.doi.org/10.1007/978-3-642-69746-3_2. 59
+Ajzen, I., 1991. The theory of planned behavior. Organ. Behav. Hum. Decis. 60
+Process.50,179–211.http://dx.doi.org/10.1016/0749-5978(91)90020-T. 61
+Babin,B.J.,James,K.W.,Camp,K.,Jones,R.P.,Parker,J.M.,2019.Pursuingpersonal 62
+constructsthroughquality,value,andsatisfaction.J.Retail.Consum.Serv.51, 63
+33–41.http://dx.doi.org/10.1016/j.jretconser.2019.05.021. 64
+Bardhi, F., Eckhardt, G.M., 2012. Access-based consumption: The case of car 65
+sharing: Table 1. J. Consum. Res. 39, 881–898. http://dx.doi.org/10.1086/ 66
+666376. 67
+Botsman, R., Rogers, R., 2011. What’s Mine Is Yours: How Collaborative Con- 68
+sumption Is Changing the Way We Live. HarperCollins Publishers, New 69
+York. 70
+Bucher,E.,Fieseler,C.,Lutz,C.,2016.What’smineisyours(foranominalfee) 71
+- Exploring the spectrum of utilitarian to altruistic motives for internet- 72
+mediated sharing. Comput. Hum. Behav. 62, 316–326. http://dx.doi.org/10. 73
+1016/j.chb.2016.04.002. 74
+Corsini, F., Laurenti, R., Meinherz, F., Appio, F., Mora, L., 2019. The advent of 75
+practicetheoriesinresearchonsustainableconsumption:Past,currentand 76
+future directions of the field. Sustainability 11 (341), http://dx.doi.org/10. 77
+3390/su11020341. 78
+Costa,A.I.A.,Dekker,M.,Jongen,W.M.F.,2004.Anoverviewofmeans-endtheory: 79
+potentialapplicationinconsumer-orientedfoodproductdesign.TrendsFood 80
+Sci.Technol.15,403–415.http://dx.doi.org/10.1016/j.tifs.2004.02.005. 81
+deLeeuw,A.,Valois,P.,Ajzen,I.,Schmidt,P.,2015.Usingthetheoryofplanned 82
+behavior to identify key beliefs underlying pro-environmental behavior in 83
+high-schoolstudents:Implicationsforeducationalinterventions.J.Environ. 84
+Psychol.42,128–138.http://dx.doi.org/10.1016/j.jenvp.2015.03.005. 85
+Dietz, T., Stern, P.C., 1995. Toward a theory of choice: Socially embedded 86
+preference construction. J. Socio. Econ. 24, 261–279. http://dx.doi.org/10. 87
+1016/1053-5357(95)90022-5. 88
+Eom, K., Papadakis, V., Sherman, D.K., Kim, H.S., 2019. The psychology of 89
+proenvironmentalsupport:Insearchofglobalsolutionsforaglobalprob- 90
+lem. Curr. Dir. Psychol. Sci. 0963721419854099. http://dx.doi.org/10.1177/ 91
+0963721419854099. 92
+Ertz, M., Durif, F., Arcand, M., 2016. Collaborative consumption: Conceptual 93
+snapshotatabuzzword.J.Entrep.Educ.19,1–23. 94
+Feola, G., Binder, C.R., 2010. Towards an improved understanding of farmers’ 95
+behaviour: The integrative agent-centred (IAC) framework. Ecol. Econ. 69, 96
+2323–2333.http://dx.doi.org/10.1016/j.ecolecon.2010.07.023. 97
+Fishbein, M., Ajzen, I., 1975. Belief, Attitude, Intention and Behavior: An 98
+IntroductionToTheoryandResearch.Addison-Wesley. 99SPC: 270
+Pleasecitethisarticleas:R.LaurentiandF.M.B.Acuña,Exploringantecedentsofbehaviouralintentionandpreferencesinonlinepeer-to-peerresourcesharinginaSwedish
+universitysetting.SustainableProductionandConsumption(2019),https://doi.org/10.1016/j.spc.2019.10.002.
+10 R. Laurenti and F.M.B. Acuña / Sustainable Production and Consumption xxx (xxxx) xxx
+Francis, J.J., Eccles, M.P., Johnston, M., Walker, A., Grimshaw, J., Foy, R., 1
+Kaner,E.F.S.,Smith,L.,Bonetti,D.,2004.ConstructingQuestionnairesBased 2
+on the Theory of Planned Behaviour: A Manual for Health Services Re- 3
+searchers. Centre for Health Services Research, University of Newcastle, 4
+NewcastleuponTyne,UK. 5
+Frenken, K., Schor, J., 2017. Putting the sharing economy into perspective. 6
+Environ. Innov. Soc. Transit. 23, 3–10. http://dx.doi.org/10.1016/j.eist.2017. 7
+01.003. 8
+Gutman,J.,1982.Ameans-endchainmodelbasedonconsumercategorization 9
+processes.J.Mark.46(60),http://dx.doi.org/10.2307/3203341. 10
+Hamari,J.,Sjöklint,M.,Ukkonen,A.,2016.Thesharingeconomy:Whypeople 11
+participate in collaborative consumption. J. Assoc. Inf. Sci. Technol. 67, 12
+2047–2059.http://dx.doi.org/10.1002/asi.23552. 13
+Hawlitschek,F.,Teubner,T.,Gimpel,H.,2018.Consumermotivesforpeer-to-peer 14
+sharing. J. Cleaner Prod. 204, 144–157. http://dx.doi.org/10.1016/j.jclepro. 15
+2018.08.326. 16
+Homans, G.C., 1961. Social Behavior: Its Elementary Forms. Harcourt, Brace, 17
+Oxford,England. 18
+Hosany,S.,Buzova,D.,Sanz-Blas,S.,2019.Theinfluenceofplaceattachment, 19
+ad-evokedpositiveaffect,andmotivationonintentiontovisit:Imagination 20
+proclivity as a moderator. J. Travel Res. 0047287519830789. http://dx.doi. 21
+org/10.1177/0047287519830789. 22
+Jackson,T.,2005.MotivatingSustainableConsumption:AReviewofEvidenceon 23
+ConsumerBehaviourandBehaviouralChange.AReportTotheSustainable 24
+DevelopmentResearchNetwork.Surrey. 25
+KTH,2016a.KTH’SSustainableDevelopmentObjectives2016-2020.KTHRoyal 26
+InstituteofTEchnology,Sweden,Stockholm. 27
+KTH, 2016b. Annual Report. KTH Royal Institute of Technology, Stockholm, 28
+Sweden. 29
+Laurenti, R., Singh, J., Toni, M., Cotrin, J., Sinha, R., 2019. Sharing econ- 30
+omystate-of-research:asystematicmapping.Sustainability(submittedfor 31
+publication). 32
+Madden,T.J.,Ellen,P.S.,Ajzen,I.,1992.Acomparisonofthetheoryofplanned 33
+behaviorandthetheoryofreasonedaction.Personal.Soc.Psychol.Bull.18, 34
+3–9.http://dx.doi.org/10.1177/0146167292181001. 35
+Mcmillan, B., Conner, M., 2003. Using the theory of planned behaviour to 36
+understand alcohol and tobacco use in students. Psychol. Health Med. 8, 37
+317–328.http://dx.doi.org/10.1080/1354850031000135759. 38
+Nespor,J.,1987.Theroleofbeliefsinthepracticeofteaching.J.Curric.Stud. 39
+19,317–328.http://dx.doi.org/10.1080/0022027870190403. 40Netemeyer,R.,Bearden,W.,Sharma,S.,2012.ScalingProcedures:IssuesandAp- 41
+plications, Scaling Procedures. Sage Publications, http://dx.doi.org/10.4135/ 42
+9781412985772. 43
+Podsakoff,P.M.,MacKenzie,S.B.,Lee,J.Y.,Podsakoff,N.P.,2003.Commonmethod 44
+biasesinbehavioralresearch:Acriticalreviewoftheliteratureandrecom- 45
+mendedremedies.J.Appl.Psychol.http://dx.doi.org/10.1037/0021-9010.88. 46
+5.87. 47
+Ranjbari, M., Morales-Alonso, G., Carrasco-Gallego, R., 2018. Conceptualizing 48
+the sharing economy through presenting a comprehensive framework. 49
+Sustainability10,http://dx.doi.org/10.3390/su10072336. 50
+Ryu,H.,Basu,M.,Saito,O.,2018.Whatandhowarewesharing?Asystematic 51
+review of the sharing paradigm and practices. Sustain. Sci. 14, 515–527. 52
+http://dx.doi.org/10.1007/s11625-018-0638-2. 53
+Sarti,S.,Corsini,F.,Gusmerotti,N.M.,Frey,M.,2017.Foodsharing:Makingsense 54
+between new business models and responsible social initiatives for food 55
+wasteprevention.Econ.PolicyEnergyEnviron.2017(1–2),123–134. 56
+Schaefers,T.,Wittkowski,K.,Benoit(néeMoeller),S.,Ferraro,R.,2016.Conta- 57
+giouseffectsofcustomermisbehaviorinaccess-basedservices.J.Serv.Res. 58
+19,3–21.http://dx.doi.org/10.1177/1094670515595047. 59
+Schwartz,S.H.,1977.In:Berkowitz,L.B.T.-A.,E.S.P.(Eds.),NormativeInfluences 60
+onAltruism.AcademicPress,pp.221–279.http://dx.doi.org/10.1016/S0065- 61
+2601(08)60358-5. 62
+Smith, V.L., 1991. Rational choice: The contrast between economics and 63
+psychology.J.Polit.Econ.99,877–897.http://dx.doi.org/10.1086/261782. 64
+Sniehotta, F.F., Presseau, J., Araújo-Soares, V., 2014. Time to retire the theory 65
+ofplannedbehaviour.HealthPsychol.Rev.8,1–7.http://dx.doi.org/10.1080/ 66
+17437199.2013.869710. 67
+Stern, P.C., 2000. New environmental theories: Toward a coherent theory of 68
+environmentally significant behavior. J. Soc. Issues 56, 407–424. http://dx. 69
+doi.org/10.1111/0022-4537.00175. 70
+Tabachnick,B.G.,Fidell,L.S.,2012.UsingMultivariateStatistics,sixthed.Harper 71
+andRow.Pearson,Essex,NewYork,http://dx.doi.org/10.1037/022267. 72
+Trafimow,D.,Finlay,K.A.,1996.Theimportanceofsubjectivenormsforaminor- 73
+ityofpeople:betweensubjectsandwithin-subjectsanalyses.Personal.Soc. 74
+Psychol.Bull.22,820–828.http://dx.doi.org/10.1177/0146167296228005. 75
+Wigfield,A.,Eccles,J.S.,2000.Expectancy–valuetheoryofachievementmotiva- 76
+tion.Contemp.Educ.Psychol.25,68–81.http://dx.doi.org/10.1006/ceps.1999. 77
+1015. 78
+Wirtz,J.,So,K.K.F.,Mody,M.A.,Liu,S.Q.,Chun,H.H.,2019.Platformsinthepeer- 79
+to-peersharingeconomy.J.Serv.Manag.http://dx.doi.org/10.1108/JOSM-11- 80
+2018-0369. 81

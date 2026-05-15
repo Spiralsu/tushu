@@ -1,0 +1,1195 @@
+Journal of Library Services and Technologies , 4(2), 2022 
+ISSN: 2616 -1354 (Print)  2636 -7424 (Online) Available online at credencepressltd.com  
+10.47524/jlst.v4i2.2  
+ 
+Design and implementation of an online bookstore : The case  of University of 
+Ilorin  (UNILORIN ) Bookshop  
+ 
+Olubukola Oluyemisi Ajiboye  
+Department of Library and Informatio n Science, University of Ilorin, Nigeria  
+E-mail:  getbukkyajayi@gmail.com  
+ 
+Mufutau Ayobami Asiru  
+Principal Librarian  
+Federal Polytechnic, Ado -Ekiti  
+E-mail: ayobamimufu@gmail.com  
+ 
+Taiye Emmanuel  Ogunlade  
+ E-mail: ogunlade.emma@gmail.com  
+ 
+ 
+Abstract  
+This study  aimed at developing an online platform where books and other  items are made available online for 
+convenience, faster way of checking product details and making purchase online  at University of Ilorin  
+(UNILORIN ) Bookshop . This addressed the problem of searching for availability and comparing prices of textbooks 
+phys ically which can be exhausting and time consuming in one’s search for information. The research methodology 
+adopted the use of questionnaire and observation to determine bookshop users’ needs of an online bookstore. The 
+results showed that 80% of the respo ndents indicated interest in buying books online. Observation was used to 
+gather information about the existing system’s operations particularly on price update of books and collection of 
+new books. The inadequacies of the existing system were improved on by the proposed system. The new system 
+made use of a markup language HTML, PHP (Hypertext Preprocessor; a server -side scripting language) as the main 
+code for the program, CSS framework Bootstrap, CSS (Cascading Style Sheet) MySQL as the database for the 
+system.  This project has been able to browse through product categories, use the search option, check product 
+description and price, add to cart and also increase the number of Item, select the delivery method and finally, make 
+payment. It was recommended that further work be done using another web stack such as Nodejs, Mongodb, Ruby 
+on Rails or design a mobile app using hybrid technology.  
+ 
+Keywords : Design, implementation, online, bookstore, produc t 
+ 
+Introduction  
+Electronic commerce commonly known as 
+e-Commerce which is a subset of e -Business 
+consists of buying and selling of products or 
+services over electroni c systems such as the 
+internet and other computer networks. E -
+commerce is the use of the Internet for 
+marketing, identification, payment and 
+delivery of goods and services. Through the 
+e-commerce technology, the Internet has 
+revolutionized the mode of busi ness 
+transactions by providing consumers with 
+the ability to bank, invest, purchase, 
+distribute, communicate, explore, and 
+research from virtually anywhere, anytime where there is Interne t access  Anup ( as cited  
+in Ayo 2011 ). 
+A user who access es the website is 
+able to select the desired product that he/she 
+wants to buy which is added to their c art 
+(list of intended online purchases a customer 
+want(s) to acquire, after which the customer 
+proceed s to fill a billing address, shipping 
+address, a deli very option and payment 
+information such as credit card details.  
+Despite the convenience of online 
+shopping, not everyone chooses to purchase 
+items and services online. Some people like 
+the idea of physically going to a store and 
+experiencing the shopping process. They 
+like to touch the merchandise, try on 
+1Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ clothing, and be around other people. Online 
+shopping doesn't permit shoppers to touch 
+products or have any social interaction. It 
+also doesn't allow them to take the 
+merchandise home the same day they bu y it.  
+Online shopping also eliminates the 
+catchy, yet irritating music, as well as the 
+hundreds, if not thousands, of other like -
+minded individuals who seem to have 
+decided to shop on the same day.  Online 
+shopping allows you to browse through 
+endless poss ibilities, and even offers 
+merchandise that's unavailable in stores. If 
+you're searching for a niche product that 
+may not be distributed locally, you're sure to 
+find what you're looking for on the internet. 
+What's even more useful is the ability to 
+compare  items, similar or not, online. You 
+can search through multiple stores at the 
+same time, comparing material quality, sizes 
+and pricing simultaneously.  
+Existence of online platforms to 
+facilitate on campus book selling has 
+increased throughout the years as the rise of 
+agile information sharing and retrieval 
+become critical factor in processes that 
+occurs within campus proxy. Information 
+dissemination which occurs traditionally 
+have resulted in knowledge obsolescence as 
+in today’s world knowledge is rapidly 
+changing as new innovation comes in.  Over 
+the years, many Universities have embraced 
+the adoption of having an online bookstore, 
+some of the Universities Are University of 
+Oregon, University of Washington, 
+University of Colorado, University of 
+California Lo s Angeles and many others.  
+In order to successfully nurture 
+creativity and innovativeness among its 
+students, Universities must strive to focus on  
+aspect s which relate  to providing quality 
+academic learning, which starts from 
+dissemination and utilization of literature. 
+Examples of online bookstore in Nigeria are Lantern books, iQrabooks, and sunshine 
+bookseller  
+ 
+Statement of  the problem  
+In an academic e nvironment, pivotal to 
+learning are books and academic resour ces 
+that aid the  students  to attain their academic 
+goals  and academic staff  to facilitate 
+teaching and research.  It becomes expedient 
+that there should be access to current and 
+relevant academic  books and learning 
+materials to keep abreast with the tr ends in 
+the various discipline s. The responsibility to 
+purchase these books  at the bookstores  rests 
+on both the staff and students . To make 
+purchase, they must check for its 
+availability,  ask for the price , and compare 
+prices  in order to make an informed 
+decision . Unfortunately, some e nd up 
+walking from a long distance to the 
+bookstore to find out that the item they wish 
+to buy is not available, or the price is more 
+than the price assumed  by the potential 
+buyer, some spend more time i n searching 
+for a book. All these lead to  physical stress,  
+which can be time consuming  thereby  
+leading to  reduce d productivity .  
+In order to ameliorate  the problem s 
+highlighted above, it becomes pertinent  to 
+have an online platform where a client can 
+search for, compare products , check the 
+price, add to ca rt and fill the billing and 
+payment addresses and card details to 
+purchase items listed in their cart s. 
+ 
+Objective s of the study  
+The main objective of this study is to design 
+a responsive and efficient web applica tion 
+that will transform UNILORIN  Bookstore 
+from its traditional way of purchasing books 
+to using an online platform which operates 
+electronically, through the design and 
+implementation of an online bookstore.  
+The specific objectives are to : 
+2Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ 1. design an electronic commerce 
+system , 
+2. develop th is system using server 
+side programming language , and  
+3. implement a payment system and 
+create a method of delivery 
+option.  
+ 
+Significance of the study  
+This system will assist patron s of the 
+bookstore to access books and other items 
+online in an effective manner. This project 
+aims to solve problems associated to 
+traditional way of purchasing books from 
+the bookstore. The system gives 
+convenience, quick access, and easy access 
+to availa ble items in the bookstore.  
+ 
+Scope and limitation of the study  
+This research work is centred on developing 
+a system that provides an effective and 
+efficient way of buying books and other 
+academic  material s in UNILORIN  
+Bookstore. This study is limited to 
+UNILORIN  Bookstore , University of Ilorin . 
+ 
+Literature review  
+The origin of online retailing began in 1995 
+with the launch of eBay and Amazo n. EBay 
+was started in the 1995 by Pierre Omidyar as 
+an online auction. It expanded to involve an 
+online retai l center where goods were 
+purchased.  Jeff Bezos established Amazon, 
+which specia lized itself in book sales. 
+Amazon's website shows the company 
+generated more than $230 billion in revenue 
+in 2018 while posting more than $10 billion 
+in profit or net income. Other e -retailers that 
+operate exclusively online and compete with 
+Amazon include Overstock.com and 
+JD.com . Today , internet stands out to be the 
+biggest medium for selling and buying.  
+Online retail has been one of the 
+most upcoming retail sales in the genre of 
+book sales. In  the last decade,  bookstores have experienced a dramatic decline in their 
+volume of sales, with the online retail 
+marketing having an upsurge. The vast 
+majo rity of the online retail websites are 
+middlemen between the actual publisher s 
+and the consumer, with commissions being 
+paid on each product sold.  Consumers can 
+compare the pric e, quality and availability of 
+items from across the globe (Limayem et al., 
+2000). The power  to displace the traditional 
+markets lies in the ability to satisfy its 
+consumers’ needs better than those 
+traditional business approaches and provide 
+consumers with lower prices, wider 
+selections, better choices, superior services, 
+or more convenience.  Vassos (as cited in  
+Yang, Zielinski &  Cheng, 2009 ). 
+Chevalier and Goolsbee (2003) 
+examine d the college textbook market to 
+determine whether its consumers are 
+forward -looking, where by a forward -looking 
+consumer is defined as a person who 
+purchases  durable goods  today  with the 
+future in mind .  
+According to Muzumdar  (2012), 
+Low price, price flexibility and convenience 
+stands out to be the biggest advantage online 
+medium has compared to on & off campus 
+bookstore. Online medium shows more 
+interaction between buyer and seller, and 
+also more flexibility in pricing policy.  
+The advantage  of online  price 
+comparison is important as it enables and 
+guarantees purchase at the lowest price 
+possible after comparison with different 
+sellers  at specific time frames in the online 
+market . In contrast to the traditional 
+bookstore,  the prices are fi xed and it is 
+difficult to move  between bookstores to 
+compare prices of books before making a 
+decision.  
+In comparison to the traditional 
+markets, books are almost always available 
+in the online markets and globally 
+networked i nformation S ystems can reduce 
+3Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ the search and transaction costs for buyers 
+and sellers to locate and trade and can 
+thereby facilitate the creation of technology -
+mediated electronic exchanges.  This 
+corroborates the findings from Chen et al 
+(2012) which states that print  textbooks in 
+colleges are so expensive that the prices of 
+two textbooks would be equal to an e-book -
+reader. Hence, with the super development 
+of technology, electronic devices’ prices are 
+decreasing compared to a few years ago.  
+According to Malone , Yates and 
+Benjamin (1987 ), comparing on and off 
+campus bookstore  shows  that an online retail 
+doesn’t require an inventory to stock the 
+sales, as every individual retailer, seller can 
+sell his product through his individual 
+inventory. Having multiple sellers helps 
+online retail websites to keep up with the 
+availability of the  book throughout the year. 
+One of the biggest benefits of online 
+shopping is that you can buy almost 
+anything you could imagine without ever 
+leaving your house. Online stores are open 
+24 hours a day and are accessible from any 
+location  with an Internet con nection.  In 
+general, online stores are able to carry more 
+selection than traditional brick -and-mortar 
+stores. Because online stores don’t need to 
+attractively display their items on shelves, 
+they can keep a larger amount of inventory 
+on hand. They also mig ht only have small 
+amounts of each item, since they don’t need 
+to display them, and can order more from 
+their supplier as needed.  Also, online shops 
+tend to provide more information about 
+items for sale than you would get in a 
+physical store . Product descr iptions most 
+often include a description from the 
+manufacturer, another description from the 
+vendor, specific technical and size details, 
+reviews from professional magazines and 
+journals, and  reviews from people who have 
+bought the product. Online book sto res often 
+will have excerpts of the books (usually the first chapter) for you to read. Having all this 
+information available when you are 
+considering a purchase makes you a more 
+informed consumer without having to 
+perform extra research yourself.   
+The abil ity to sell fr om anywhere by  
+the traditional on -campus and off -campus 
+market is important and exchange of money 
+can also be done online for any item 
+purchased. One generally ha s several 
+options of payment methods when 
+purchasing items online. The most common 
+way to pay online is with a credit card; one 
+almost never want s to pay for items online 
+with cash or cash -like methods (e.g., debit 
+cards, money orders, and personal  cheque s). 
+Credit cards offer some additional 
+protections from fraud, including zero -
+liability policies ( one should not be held 
+responsible for purchases made with one’s  
+stolen card) and credit pr otector services 
+alert one to fishy activity. Importantly, credit 
+cards are not directly linked to bank 
+account s, so no m oney will be withdrawn 
+from  account until monthly bill s are paid . 
+This accounts to a large extent for  the 
+success of  on cam pus and off campus 
+bookstores . To counter the se problems, 
+Amazon and eBay in last five years have 
+started using direct checkout methods as 
+Alternative to sign up accounts, where direct 
+check out method doesn’t require a person 
+to feed in and save their account and credit 
+card information (Yang, Zielinski and 
+Chen g, 2009). Also third party online 
+payment and money transfer websites like 
+PayPal act as third party firms for money 
+transfers. PayPal started in 1998 and 
+currently acquired by eBay runs as the most 
+trusted third party money transfer service 
+around the glo be. All eBay purchases, for 
+example, are conducted via P ayPal . PayPal 
+and other payment websites will never ask 
+for your credit card number or other 
+personal information by e -mail.  
+4Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ In summary,  online retail sales are 
+preferred by th e people who are more 
+concerned about price difference in goods . 
+Price is perceived to be one of the factors 
+that is  highly influential between both seller 
+and consumer. Consumers like to exploit  
+low price s, while  sellers prefer  to hav e price  
+flexibility. Price comparison seem s to be the 
+most beneficial tool that the online retaili ng 
+website has over other media . For consumer 
+search engines, the function of “ add to cart ” 
+and “check out as guest” are part of the  
+advantages, but for sellers it is direct 
+trans action with consumer, online money 
+transfers, bundling products.  
+Nigeria is the fastest growing 
+telecommunication country in Africa (Ayo 
+et al., 2007). According to the Nigerian 
+Communications Commission  website , 
+internet users  marginally increased to 
+115,931,255 in March, 2019  ranking Nigeria 
+at the top in the list of African countries 
+with the highest number of internet users . 
+Compared to January 2018, there has been a 
+4 million increase in the number of internet 
+users.  Over 1 12 million Nigerians had 
+access to the internet in 2018, representing 
+56% of the population . This growth 
+percentage represents the increase in the 
+number of internet users between the years 
+2000 and 2019 . In 2009, the figure went 
+above double as 23,982,000  million people 
+used Internet in Nigeria. By June 2010, the 
+number of internet users in Nigeria has 
+grown to 43,982,200 that is 29.5% of the 
+country’s population. The increasing users 
+of internet in Nigeria from 0.1% in 2000 to 
+29.5% of its population in J une 2010, 
+revealed that the use of internet in the 
+country is growing at a sporadic rate and 
+still has the potential to grow higher. 
+Nigeria’s e -commerce market was  recently 
+valued at 225 billion Naira due to the 25% 
+in e-commerce growth. The reason for this 
+growth is not far -fetched as Nigeria is the most populous  nation in Africa. Despite the 
+growth of internet users in Nigeria, much 
+research work has not been done in 
+accessing the B2C e -commerce activity. 
+Presently, many online shopping sites are 
+thriving in Nigeria,  constantly thinking of 
+how to satisfy customers by designing 
+products aimed at  servicing thousands of 
+searchers every week. Some of them are:  
+Jumia.com .ng, Konga.com.ng, Yudala.  
+com.ng, Kaymu.com.ng www.  
+234world.com, Xtaples. net, www.book  
+sng.com, www.orderbay.com . Some of these 
+sites make  the transaction process very user -
+friendly which tends to make buyers prefer 
+the online  market. A site like 234world.com 
+allows buyer to pay to a designated bank 
+account after making online purchases. The 
+items purchased are then shipped to the 
+buyer at the speed of light. Soft Pay allows 
+individua l to receive money online and 
+thereafter use it to pay for purchases made. 
+It even helps online shopping sites to collect 
+payment for purchases made.  
+Considering all these, it is expected 
+that the number of people engaging in e -
+commerce activity will incre ase. E -
+commerce has however not been widely 
+tapped into  in Nigeria . Many Nigerians still 
+treat its benefits with deep skepticism  due to 
+lack of trust . They do not believe that e -
+commerce transactions could be successfully 
+conducte d. In light of the difficu lties facing 
+the e -commerce sector in Nigeria, online 
+vendors are devising techniques to 
+encourage and increase customers’ 
+confidence in online shopping. Popular 
+online vendors like Jumia and Konga have 
+introduced the pay on delivery option where 
+customers  make their orders online without 
+having to pay online; payments are made 
+when the customer receives their goods. 
+This has gone a long way with addressing 
+the trust and security issues associated with 
+buying products online (Gabriel et al 2016).  
+5Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  
+Method s 
+System development lifecycle  
+System development methodology is a 
+standard set of steps used by organization to 
+develop and support their information 
+system, this often follows a lifecycle, the 
+system development life cycle is a common 
+methodology for syste ms development in 
+many organizations, it marks the steps or 
+phase in information system. Systems 
+development methodology is a standard 
+process followed in an organization to 
+conduct all the steps necessary to analyze, 
+design, implement, and maintain 
+inform ation systems.  
+System development lifecycle SDLC 
+is divided into four stages namely Planning, 
+Analysis, Design, Implementation and 
+Operation  
+System planning  is the first phase in 
+the SDLC it has two primary activities 
+which are; firstly, identify the need for a 
+new system or enhanced system secondly; to 
+investigate system and determine the 
+proposed system’s scope.  
+The second phase of the systems 
+development life cycle is systems analysis.  
+During this phase, the analyst thoroughly 
+studies the organization’s current system 
+procedures and the information systems 
+used to perform tasks such as general ledger, 
+shipping, order entry, machine scheduling, 
+and payroll. Analysis has several sub -phases. The first sub -phase involves 
+determining the requirements of the sy stem 
+to determine what the users want from a 
+proposed system. it involves a careful study 
+of any current systems, manual and 
+computerized, that might be replaced or 
+enhanced.  
+ 
+Questionnaire  
+Copies of q uestionnaire were administered 
+randomly to students who came into the 
+bookstore, questionnaire was used to get 
+information about the need for an online 
+bookstore. It contained  both open ended and 
+close ended questions  
+This method was used because  
+questionn aire: 
+1.  Can be analyzed more 'scientifically' 
+and objectively than other forms of 
+research  
+2. It gives the respondent freedom to 
+express their view by using open 
+ended question  
+3. A questionnaire is concise only 
+relevant questions are asked.  
+4. Questionnaire is  not subject to 
+influence decision of the respondent.  
+Fifty -seven (50 ) questionnaire s were 
+administered to patron/student.  
+Result of the questionnaire are 
+represented in charts below.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1:  Gender, interest and mode of payment o nline  
+ 
+Observation  
+For the purpose of observation, in order to 
+understand how  the traditional system 
+works, the researcher  went to the bookstore 
+on several occasion to carefully watch and 
+record the way operations are being carried 
+out. This technique involved gathering of 
+information on how the existing system 
+running of operations in the bookstore, 
+particularly about the up date on price of 
+books and collection of new books. It is a very tedious and time consuming process 
+which has its merits such as:  
+1. It gives room for proper details 
+which are not recorded on document 
+or gotten through the questionnaire.  
+2. It gives more detaile d to know how 
+user behaves when navigating 
+through the books in the bookstore.  
+3. It also give s room  to know the 
+categories of books in the bookstore 
+and the rise of some books.  
+7Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  
+System analysis  
+During this phase, the analyst thoroughly 
+studies the organizat ion’s current system 
+procedures and the information systems 
+used to perform tasks such as general ledger, 
+shipping, order entry, machine scheduling, 
+and payroll. Analysis has several sub -
+phases. The first sub -phase involves 
+determining the requirements of the system 
+to determine what the user s want from a 
+proposed system. I t involves a careful study 
+of any current systems, manual and 
+computerized, that might be replaced or 
+enhanced.  
+ 
+Description of the existing system  
+The current system  in use  by UNILORIN  
+Bookstore is completely manually based. 
+The attendant at the bookstore takes new 
+product, record s it, and write s the price on it 
+before placing it on the shelves. Also when a 
+patron of the bookstore purchases the 
+product, the attendant is responsible for 
+taking record of the price, quantity, and 
+issuing of receipts and also recoding it on 
+the book set aside for that purpose. 
+Overtime , these records are piled up and 
+also they are prone to physical hazard that 
+can r esult to loss of data and information . 
+ 
+Problems of the existing system  
+The following are some of the problem s 
+faced with the existing system.  
+ The system does not have any form of 
+backup in case of fire outbreak or any 
+other disasters.  
+ It is prone to errors  due to manual 
+method of handling information 
+which  are noticed in processed 
+information.  
+ It becomes a problem when many 
+buyers come in to get product thereby 
+leading to long queue in the bookstore  
+ This system is not available 24/7.   This system does not gi ve room for 
+proper comparison of items in the 
+bookstore.  
+ It is time consuming  as a user will 
+need to search through the shelves 
+before finding the item or books 
+desired.  
+ 
+Improvement of the proposed system over 
+the existing system  
+The proposed system is concentrated on 
+easing the management of records of items 
+and other material by developing a 
+bookstore in an online environment. The 
+system would manage all important record 
+about items, book and authors with the use 
+of information technology tools. The 
+creation of a web based application which 
+can be accessed from anywhere in world in 
+digital format of all existing records of the 
+books and items in the bookstore. The 
+system would make product categories, 
+price authors details, and payment 
+processing online  available.  
+ Reducing the complexity of the 
+system and maintain large 
+information.  
+ Record will be efficiently maintained 
+through database management 
+system.  
+ Fast retrieval of documents through 
+search using author, title of books.  
+ Convenience in making compa rison 
+between products  
+ Student can search for product 24/7  
+ Security of the web application will 
+be ensured by putting SSL (Secured 
+Socket Layer) and HTTPS in place  
+ The system provides easy search for 
+records.  
+ Ability to perform adhoc  query to the 
+database by the administartor.  
+ There will be more data integrity.  
+8Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  It eliminates the fear of people 
+reporting criminal or hoodlums in 
+their communities.  
+ Ability to make payment and print 
+receipts online  
+ It eliminates queuing ad helps make 
+better decision  
+ 
+System architecture and design  
+unified modelling  language (UML ) 
+This is a graphical language for 
+visualizing, specifying and 
+constructing the artifact of a 
+software -intensive system. It offers a 
+standard way to write standard 
+system blueprints, including 
+conceptual things such as business 
+processes and system functions  as 
+well as concrete things such as 
+programming language statement, database schemas and reusable 
+software components . 
+ 
+Architecture of the proposed s ystem  
+The architecture supports the exist ing 
+infrastructure re quirement and provides 
+specific recommendation for hardware, 
+software and network structure  based on the 
+existing and projected user needs. The 
+application requirements, data resources and 
+people within an organization are all 
+important in determining the optimum 
+hardware solution. This is represented with 
+three tier architecture that comprises of the 
+User interface, Process management and 
+Database Management System (DBMS). 
+This gives a clear view of what the 
+components of the system, the services they 
+provide and the way these services 
+communicate to bring about proper system 
+functionality.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                Figu re 2: The architecture of  the proposed system  
+9Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ Use Case  
+Use case is a list of step for defining 
+interaction between a role and the system 
+from the user perspective in the way they 
+understand. Use cases are important 
+requirement techniques that have been 
+widely used in modern software 
+engineering. A use case def ines the interactions between external actors and the 
+system under consideration to accomplish a 
+goal and the actor can a person or an 
+organization. It is valuable for system 
+developers; it is an effective technique for 
+gathering systems from user point of  view.  
+Use cases focus on the behavior of the 
+system from external point of view.
+  
+  
+ Figure 3 : User use case diagram of the proposed system  
+10Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+   
+Figure 4 : Administrators use case diagram of the proposed system  
+ 
+Flow c hart 
+This is a diagram or graphic that represents a 
+process or algorithm. The steps are 
+represented by a series of boxes or other specialized symbols with the description of 
+each process and step connected with 
+arrows . 
+Administrator  
+11Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+   
+Figure 5 :  The flowchart online shopping  
+ 
+Justification o f the development t ools 
+These tools adopted for the designing of this 
+system were used because of how well they integrate with each other and proven for the 
+development of similar systems.  
+  
+12Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ Hypertext mark -up language 5 (HTML5)  
+HTML is a standard for creating website 
+pages with  elements  consisting 
+of tags enclosed in  angle brackets  such as 
+<html>. HTML5 is a revision of the 
+traditional HTML 4.01 and XHTML. 
+HTML5 is a markup language used for the 
+structure and presentation of World Wide  
+Web contents and  is based on tags that 
+markup text -based documents . HTML5 was 
+developed to solve compatibility problems 
+that affect the current standard HTML 
+4.01style syntax some include proprietary 
+plugin and  APIs  (when a web page 
+developed in one browser may not be able to 
+load in another browser). The major 
+advantage of HTML5 is the ability to 
+support multimedia on mobile devices. 
+HTML5 also included some new features 
+which can really change the way users 
+interact with documents including:  
+ New  parsing  rules for enhanced 
+flexibility  
+ New  attribute s 
+ Elimination of outmoded or redundant 
+attributes  
+ Drag and drop capabilities from one 
+HTML5 document to another  
+ 
+Cascading style sheet  
+Cascading Style Sheet (CSS) is used to 
+contro l formatting of element within the 
+layout of website pages and it can be created 
+within a HTML or within an external style 
+sheet. CSS only functions with the existence 
+of an html code. They can be used to define 
+text style, color and size. CSS is used for 
+creating styles that can be used repeatedly in 
+a web page which takes less typing than the 
+equivalent formatting with tags, thus saving 
+you kilobytes of disk space. Apart from 
+styling which CSS is generally known to be 
+used for; the structure of applicatio ns can be 
+built using CSS, meaning the application would be table less. This attribute increases  
+its demand in today’s web de signing.  
+Hypertext pre-processor (PHP)  
+PHP is a scripting language that is widely 
+used by a lot of developers. PHP supports 
+MySQL database and a variety of other 
+database such as Sybase, Oracle and 
+PostgreSQL. This flexible support is useful 
+if you ever need to move your application to 
+differen t database (Bacon, 2007). PHP is 
+well optimized to with a fast response time 
+on web applications. This can have  a large 
+base of core classes which can be used to 
+build Graphical User Interface (GUI). PHP 
+has the advantage of been scalable and a 
+static lang uage.  
+ 
+MySQL (Structured Query Language)  
+This is an open source and a comprehensive 
+relational database server. It been used to 
+develop web software applications. It 
+supports large database with up to 50 
+million rows, it is fast and can run on 
+different op erating systems. MySQL offers 
+exceptional security features that ensure 
+absolute data protection. In terms of 
+database authentication and mechanism for 
+ensuring only authorized to have access to 
+the database.  
+ 
+Java script  
+JavaScript is an interpreted language with a 
+C programming language like syntax. It is 
+embedded directly into HTML page to make 
+them responsive. JavaScript is a lightweight 
+scripting language which make web page to 
+be interactive. They are used to add more  
+functionality, validate forms, create cookies 
+and detect browsers . 
+ 
+Database Management System  
+Database management system is a software 
+system that uses a standard method for 
+cataloging, retrieving and running queries on 
+data. The DBMS manages incoming data, 
+13Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ organizes data and provide ways for data to 
+be modified or extracted by user or other 
+progra ms (Tech Terms, 2014) other to modify. DMBS stores data in such a way 
+that is a lot easier to retrieve, manipulate and 
+help in structure information.
+ 
+ 
+Figure 6: Screenshot of database table  
+ 
+Bootstrap f ramework  
+Bootstrap  is a free and open -source 
+collection of tools for creating websites and 
+web applications. It contains HTML - and 
+CSS-based design templates for typography, 
+forms, buttons, navigation and other 
+interface components, as well as optional 
+JavaScript extensions. It uses 12 gr id layout 
+for it responsive design.  
+ 
+System implementation, testing and 
+evaluation  
+Presentation of the system interface  
+This shows the system interface of the 
+design environment of each window in the   
+E-Police Management system.  This includes 
+some of the user page, product, categories 
+and Administrative page.  
+ 
+Homepage  
+This is the first page which loads when the 
+application is started, it contain s a slider 
+with three slides at the center, categories 
+section, navigation menu such  as checkout 
+page, and product list beneath the slider.  
+14Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  
+Figure 7: Homepage.  
+  
+15Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ Administrator login page  
+This is the page which grants the admin 
+authorization to admin page where the admin can add product, modify product 
+details, oversee reports, orders and delete 
+product.  
+ 
+Figure 8: Admin login page.  
+ 
+Report page   
+This is a page on the administrator page 
+where report about order can be seen, details   
+such as the product ID, product price, order 
+ID, product title, and product quantity.  
+ 
+Figure 9: Report page  
+ 
+Order  page 
+The order menu show case orders that have 
+been completed, it show the amount,   
+transaction, ID, currency and status of the 
+order.  
+16Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  
+Fig 10: Order page  
+ 
+View p roduct  
+This page showcase the product and the 
+corresponding description, such as the ID,   
+Title category, price and quantity of the 
+product with an option to delete a product.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Add p roduct page  
+ This page enables the admin to input new 
+record of a product the details that will be 
+supplied are  The product title, description, author, and 
+price.  
+Figure 11: Add product page.  
+ 
+17Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ Categories page  Categories page shows different categories 
+of product in the administrative area.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 12: Categories  
+ 
+Users in a dmin  
+Users page the name and other details of 
+registered user such as the user email, 
+username and user password.
+ 
+Figure 13: Users  
+ 
+Shop page  
+This page showcase different types of 
+product uploaded irrespective of the   
+category, it also shows  the search button 
+which can be used to search for product.  
+18Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+  
+Figure 14: Shop page  
+ 
+Checkout p age is a page that shows the 
+product, price, quantity and cumulative price of product based on   quantity of the item 
+selected.it also the include s the subtotal 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 15: Check out page  
+ 
+Summary  
+The main aim of  the development of this 
+project was to transform  UNILORIN  
+bookstore  system  from its traditional way of 
+purchasing books to using an online 
+platform which operates electronically,   
+ 
+through  the design and implementation of an 
+online bookstore.  
+In achieving the necessary objectives 
+for developing the new system, the existing 
+system was studied, analyzed and corrected 
+19Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ to provide an efficiency and reliability 
+system.  
+ The main objective of the  new 
+system is to digitize all existing records of 
+books kept by UNILORIN  Bookstore and 
+enabling  some manual processes of the 
+existing system to be done electronically. 
+These processes include creating product 
+categories, adding a new user admin, adding 
+new products, modification of existing 
+product details, getting order and report 
+details.  
+ 
+Conclusion  
+This project has been able to fulfil its 
+objective by developing an online bookstore 
+using UNILORIN  bookstore as the case 
+study, it will serve the users and also ease 
+the way they buy product online.  It will 
+facilitate 24/7 service to access the platform 
+online and also provide a way of making 
+comparison and selection of delivery 
+method.  
+The system will  be effective if it is 
+used for the purpose it was meant for and 
+other purpose s that it can serve such as the 
+sales of other learning material s available at 
+the book shop. Also, the awareness of this 
+platform should be made known to student s 
+and staff of the university on the 
+University’s website , as it will help them get 
+help in terms of how they can acquire 
+academic materials and stationery materials 
+which can help them in study or research 
+purpose.  
+In addition to this, anyone who 
+desires  to work further on the same project 
+can use another web stack such as Nodejs, 
+Mongodb or Ruby on Rails or design a 
+mobile app using hybrid technology.  
+ 
+References  
+Ayo, C. K., Ekong O. U ., Fatudimu, I.T., & 
+Adebiyi , A. A. (2007 ). M-Commerce 
+Implementation in Nigeria: Trends and Issues. Journal of Internet 
+Banking and Commerce ,12 (2).  
+Ayo, C. K. (2011); Business -to-Consumer 
+E-commerce in Nigeria: Prospect 
+and Challenges;  African Journal of 
+Business Management , 5(13), 5109 -
+5117.  
+Chen, Y. , Fan, S., & He, Z. (2012). 
+Exploratory research: The effects of 
+electronic books on college students. 
+Johnson & Wales University, 
+Providence, RI.  
+Chevalier, J., & Goolsbee, A. (2003). 
+Measuring prices and price 
+competition online:Amazon.com and 
+BarnesandNoble.com. Quantitative 
+Marketing and Economics , 1(6), 
+203–222. 
+Gabriel, J.M.O., Ogbuiwe, T.O., & Ahiauzu, 
+L. (2016). Online shopping systems 
+in Nigeria: Evolution, trend and 
+prospects. Asian Research Journal of 
+Arts & Social Sciences , 1(4), 182-
+276. 
+Limayem, M., Khalifa, M. & Frini, A. 
+(2000). What makes consumers buy 
+from the internet? A longitudinal 
+study of online shopping. IEEE 
+Transactions on Systems. Man and 
+Cybernetics – Part A: Systems and 
+Humans , 30(4), 421 –432. 
+Malone, T., JoAnne, Y., & Benjamin, R. 
+(1987). Electronic markets and 
+electronic hierarchies. 
+Communications of the ACM,  30(6), 
+484-497. 
+Muzumdar, P. ( 2012) . Online Bookstore -A 
+trend in textbook sales management 
+for services marketing. Journal of 
+Management and Marketing 
+Research . The University of Texas at 
+Arlington.  
+Yang. J., Zielinski, J ., & Cheng, L. (2009). 
+Purchasing college textbook from E - 
+bookstore - An empirical study. 
+20Olubukola Oluyemisi Ajiboye and Ogunlade Taiye Emmanuel: Design and implementation of an 
+online bookstore: The case of University of Ilorin Bookshop  
+ 
+ 
+Journal of Library Services and  Technologies, Volume 4 Number 2 , 2022  
+ 
+ International Journal Management 
+in Education , 3(2),162- 178. 
+ 
+ 
+ 
+21

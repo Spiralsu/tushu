@@ -1,0 +1,388 @@
+Reception date: 21 October 2016  • Acceptance date: 15 March 2017
+DOI: https://doi.org/10.5944/openpraxis.9.1.432 
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91 (ISSN 2304-070X)
+Analysis of Student and Faculty Perceptions of Textbook Costs 
+in Higher Education
+Michael Troy Martin 
+ , Olga Maria Belikov 
+ , John Hilton III 
+ ,  
+David Wiley 
+  & Lane Fischer 
+Brigham Young University (USA)
+troy_martin@byu.edu , olgambelikov@byu.edu , johnhiltoniii@byu.edu ,  
+david.wiley@byu.edu  & lane_fischer@byu.edu
+Abstract 
+The cost of textbooks has continued to impact students in higher education. Students have reported that they 
+make decisions on which courses to take based on the specific cost of textbooks. Faculty have reported willingness to use open textbooks to help ease the burden on students but are unsure where to find viable options. We examined the responses of 676 students and 573 faculty from a large private university (Brigham Young University, Provo, Utah) to understand the real impact of textbooks costs to students and how they are dealing with this ongoing problem. We found that 66% of students at this institution have not purchased a textbook due to cost. We also discovered that 91% of faculty at this institution would be willing to use OER alternatives and that 53% of them would welcome assistance identifying and adapting materials for their course.
+Keywords: Cost of higher education; open educational resources; open textbooks; OER
+Introduction
+Textbooks have been a key pedagogical tool in the United States since the early 1800s, and 
+educators have long been interested in providing the highest quality textbook possible to their students (Brandt, 1964). Textbooks are often the primary method of distributing course content and learning material to students. When selecting appropriate textbooks teachers are often faced with two challenges: access to quality material (Oakes & Saunders, 2002) and adapting the materials to fit their needs (Williams, 1983, p. 251). 
+Although textbooks are an integral element in the educational process, there is still considerable 
+debate on what constitutes a quality textbook. Textbook evaluation has been researched and discussed in the context of pedagogical improvement for many years, including the work of Franzen & Knight (1922) which is nearly a century old. Various scholars have suggested different ways to help teachers become more systematic and objective in their selection approach (Chastain, 1971; Tucker, 1975; Candlin & Breen, 1979; Daoud & Celce-Murcia, 1979; Williams, 1983; Sheldon, 1988; Skierso, 1991; Ur, 1996; Littlejohn, 1996). 
+One aspect of textbook adoption in higher education that bears scrutiny is their cost. The average 
+college student in the United States now spends over $900 per year on textbooks (Allen, 2010). This expense can be a large fraction of the overall cost of a college degree, particularly at community colleges. Indeed, the increasing textbook costs are making a college education prohibitively expensive for many students (Kingkade, 2011). Partly in response to the rising cost of textbooks, Open Educational Resources (OER) have been developed to reduce the cost of educational content, including textbooks. Recent research has shown that high quality, openly licensed textbooks can 
+be made available to students at dramatically reduced costs, potentially eliminating the textbook barrier to a college education (Caswell, 2012). 
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+80 Michael Troy Martin et al.
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+The proliferation of OER provides a new option for evaluating, selecting and adapting textbooks. 
+Open textbooks are OER that allow students and educators free access to openly licensed 
+educational content. In most instances, open textbooks are licensed to allow teachers to modify the content and customize it for use in their own teaching environments. 
+University professors, as well as K-12 teachers, schools, districts and states, are now able to 
+draw upon OER to retain, reuse, revise, remix, and redistribute course textbooks at dramatically reduced costs (Wiley, 2014). These open textbooks can also be iteratively improved by the authors from year to year or from course to course. To make these improvements most effectively, educators need data about textbook efficacy and training on how to adapt them. 
+While OER enables teachers to adapt material to better suit the needs of their students it can 
+also provide an opportunity for students and school districts to save substantial amounts of money by eliminating the need to purchase expensive textbooks (Bliss, Hilton, Wiley & Thanos, 2013; Hilton & Wiley, 2011). In the present study, we sought to first explore college students’ perceptions of the 
+costs of textbooks and potential impact of adopting OER. We then discuss faculty members’ willingness to consider open textbooks as a viable solution to textbook costs.
+Students and the Costs of Higher Education
+Rising costs of higher education in the United States have made it so that the percentage of the 
+cost of college borne by students (as opposed to government) has risen from 33% to more than 50% over the last 30 years (The Pell Institute, 2015). Between 2004 and 2012 the total student debt in the United State nearly tripled from $364 billion in 2004 to $966 billion in 2012 (Lee, van der Klaauw, Haughwout, Brown & Scally, 2014). These costs have risen so rapidly that the federal government has created a College Scorecard project, in order to help students better understand the costs associated with attending various colleges (Whitehouse, 2016).
+Textbooks are a significant part of the costs facing students, and in some instances, such as 
+community colleges, can be even more expensive than tuition. The College Board (2013), estimated that full-time students at public two-year colleges spend $1270 per year on textbooks and course supplies. In contrast, two semesters of tuition at California community colleges cost $1104 (assuming twelve credits taken each semester). The cost of textbooks can be extremely troublesome for students; Selnack (2014) surveyed 2,039 college students from more than 150 different university campuses and found that 93.6% were concerned with textbook costs and that nearly half reported that textbook costs influenced the classes they took each semester. 
+Perhaps most significant is the impact that textbook costs can have on student academic behavior. 
+The Florida Virtual Campus, which combines 12 public universities and 28 public colleges across Florida, conducted a survey (2012) of 22,129 university students and found the following:
+·
+ 63% of students reported not having purchased a 
+required textbook due to cost, 
+· 35% reported taking fewer courses because of the 
+financial impact of high textbook costs, 
+· 14% reported dropping a course because of the 
+financial impact of high textbook costs
+· 10% withdrew from a course because of the 
+financial impact of high textbook costs
+Faculty Perceptions of Open Textbooks
+While there are many aspects to the costs of higher education, the typical professor cannot do 
+anything about them (e.g. the cost of tuition). However, many faculty members do control the textbooks that they assign. Because open textbooks are free, faculty adoption of open textbooks can significantly decrease costs for students. One persistent challenge is that many faculty members are not aware of OER. Allen and Seaman (2014) surveyed a nationally representative sample of 
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+81
+Analysis of Student and Faculty Perceptions of Textbook Costs in Higher Education
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+2,144 college faculty members in the United States and found that only 34% of respondents were 
+aware of OER. Moreover, they found that proven efficacy and trusted quality were the most important factors for faculty in determining which textbooks to adopt.
+In terms of quality, faculty who have used OER have expressed positive perceptions of the quality 
+of the OER textbooks they have used in multiple studies (Bliss et al., 2013). Moreover, Hilton (2016) examined nine efficacy studies when OER were substituted for traditional textbooks, and found that students using OER did as well as or better than students using commercial products. The mantra that “you get what you pay for” does not actually apply to the use of OER. 
+In a similar perception-study of 80 teachers, Bliss et al. (2013) found that only 9% of teachers 
+reported negative impressions of the OER material they used, while 34% stated that the open textbooks were better and 55% said they were the same. They also found that more than 20 percent of the positive teacher comments reflected a feeling that the cost of the OER textbook was better both for the students and for them as instructors as well. In addition, a third of teacher comments praised the customization and adaptability of OER material.
+From the existing literature, it appears that students have been deeply concerned with the cost 
+of textbooks and report that these costs negatively impact their academic performance. Faculty who have used open textbooks seem to value them, and yet approximately two-thirds are not aware of them. In the present study, we sought to better understand student and faculty feelings regarding cost and open textbook adoption. While some of our questions replicate, and confirm what has previously been done, we also explored how students perceive that they would spend the money they saved if they did not have to purchase textbooks as well as the willingness of faculty members who have not previously used open textbooks to begin using them. Specifically, this study was guided by the following primary research questions:
+1.
+ How do students perceive that textbook costs influence 
+their academic success?
+2. What would students do with the money they 
+saved if they didn’t buy textbooks?
+3. What are students’ general feelings about textbook 
+costs?
+4. What percentage of faculty were willing to consid
+er using open textbooks?
+5. What percentage of faculty wanted help finding open 
+textbooks?
+6. Why do faculty members say they would or 
+would not be willing to use an open textbook?
+Methodology
+To investigate these questions, we gathered data from two separate surveys (one for faculty  
+n= 2417 ) and one to (n=3115) that were administered between February and March of 2016. This 
+survey took place at Brigham Young University (Provo, UT), a large private religious university located in the United States. Faculty participants were asked questions about their perception and understanding of OER as it pertains to textbooks and textbooks usage. Student participants were randomly selected juniors and seniors and consisted of a variety of different majors and academic foci. They were surveyed regarding textbook costs and what they would do with money saved from offset costs were OER to be adopted.
+Data Collection
+The evaluation instrument included fixed response and open-ended questions to allow for free 
+response feedback from the students and faculty. These open response comments were analyzed and coded for patterns as to what students might do with the money they saved by using OER textbooks. Faculty responses as to why they would/would not use OER textbooks were also coded to further understand the implications of their responses.
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+82 Michael Troy Martin et al.
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+Instruments
+Our instruments (see Appendix A for a copy of both the student and faculty survey) were drawn 
+from previously peer-reviewed tools based on a similar study conducted by Bliss, Robinson, Hilton and Wiley (2013) as well as by Florida Virtual Campus (2012). The questionnaires were developed by a measurement expert to help ensure validity and reliability. The student survey included 14 questions, three of which were open response. While the first 13 questions dealt directly with the subject of textbook costs, the final question allowed the participants to provide any additional thoughts or comments on the subject.
+The faculty survey had 18 questions of which 8 were open-response. It should be noted that in 
+this survey an ‘open textbook’ was defined as “. . .digital textbooks that are (1) free of charge and (2) provide faculty with permission to make a wide range of changes, customizations, and improvements.”  We acknowledge that open textbooks are available in printed formats; however, 
+since most open textbooks are used digitally, we used this simplified definition.
+Data Coding Procedures
+For open-ended questions a coding schema was developed by two individuals to analyze the 
+information provided. After reviewing all the responses, we identified several categories. Responses were reviewed and grouped into these categories. We arrived at the final codes after multiple iterations.
+For the faculty survey the key open-ended questions related to their willingness to use or not use 
+open textbooks’, specifically--why they would and would not be willing to use them. As the question 
+was analyzed: “Why would  you be willing to use an open textbook?”, many responses also included 
+reasons why they would not.
+We conducted a knowledge-based sentiment analysis (Ortony, Clore & Collins, 1990) to gather 
+information on general perceptions, and then implemented exploratory coding procedures to search for emergent themes across student and faculty responses. The data were coded by multiple researchers to try to accommodate for reviewer interpretation of results.
+Results
+Student Findings
+Eight themes emerged for the question, “If you didn’t have to pay for textbooks, how would you use 
+the money you saved?” These themes were used to create related codes as shown in Table 1.
+Table 1: Comment Codes and Grouping for Student Responses
+Code # Code Name Key Coding Words and Phrases
+1 Housing Rent, room, housing costs.
+2 Food Food, groceries, board, meals
+3 Savings and debt reduction Savings, investments, pay off debt
+4 Transportation Gas, car repairs, transportation needs
+5 Health Dr. bills, prescriptions 
+6 Education Upgrade computer, supplies, pay off loans
+7 Clothes Clothes, new shoes
+8 Recreation Travel, dates, social activities
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+83
+Analysis of Student and Faculty Perceptions of Textbook Costs in Higher Education
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+How do students perceive that textbook costs influence their academic success?
+The total number of student respondents that fully participated (i.e. students who answered each 
+question) in the survey was 676 (for a response rate of 21.7%). The survey was voluntary and not associated with a specific class, or assignment. Students said that on average they paid $100 per textbook, which, depending on the number and type of classes taken could be about $1,000 per year. In total, 66% of students said they had not purchased a textbook because of its cost. Of those students, 47% said that not purchasing the textbook negatively affected their grade in the class (representing 28% of all respondents). In a free response section, one student directly commented on this issue, stating, “The $200–600 I save every three months is worth dropping a half GPA point.”
+Perhaps even more significantly, 86% of students said that they have delayed purchasing a 
+textbook because of cost and of those 52% believe that delaying this purchase negatively affected their grade in the class. In terms of time to graduation, it may be significant that 20.6% of students reported they had registered for fewer courses because of related textbooks costs. In addition, 33.28% of students said they had delayed taking, or had not registered for, a specific section of a course because of textbook costs. 
+What would students do with the money they saved if they didn’t buy textbooks?
+Students were asked in an open-response format what they would spend their money on if textbooks 
+were free. As expected, there was a wide variety of responses given by the 651 students who chose to share what they would do with the money that could be saved if they weren’t required to purchase textbooks. In reviewing these responses 8 separate themes emerged as outlined in table 2. Because each comment could conceivably receive multiple codes, the total number of comment codes exceeds the number of actual comments.
+Table 2: Comment Codes from Student Open Response 
+Comment Category Number of Times Coded Percent of Total Codes
+Housing 323 28.86%
+Food 317 28.32%
+Savings 230 20.55%
+Education 119 10.63%
+Transportation  58  5.18%
+Recreation  48  4.28%
+Health  15  1.34%
+Clothes   9  0.80%
+Housing made up 28.86% of the open responses that were given. Most students have housing 
+costs and expressed that they would redirect any savings to housing costs. The savings, however 
+are only a fraction of typical housing costs, so it was unclear how the degree financial savings from using OER textbooks would help offset that cost. However, upon examining the responses, the following comment exemplifies the sentiment shared: “To pay for housing and food so that I didn’t have to work as many hours. It would positively influence my ability to focus on school and creating opportunities for post-graduation.” In other words, saving money on textbooks would enable the students to work less hours and help offset the cost of housing. 
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+84 Michael Troy Martin et al.
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+The second category was that of using the savings to purchase healthier food--especially, fresh 
+fruits and vegetables which can be expensive. Students expressed that they had encountered times 
+when they were forced to choose between food expenses and textbook costs. Examples of comments that reflect this include the following: “To eat healthier. I would spend more money on good food.”
+Students also commented that if they could save money on textbooks that they would use those 
+savings to pay off student loans, or simply put the money in savings. This finding showed that money is often put towards education either directly or indirectly. The following response reflects this intent:
+“I have a family. I would use it for better groceries, clothing needs or shoes, but most of the time 
+the money is from a loan. If I didn’t have to get textbooks, I could get smaller school loans. That would be incredible.”
+What are students’ general feelings about textbook costs?
+At the end of the survey students were invited to share any final thoughts that they had about 
+textbook costs. Out of the 653 students who completed the survey, 601 (over 92%) provided feedback in the free response portion that asked for their general comments about textbooks. Of these comments, 12 (1.5%) were positive, 44 (7.3%) were neutral, and 325 (54.1%) were negative statements. Furthermore, an additional 223 (37.1%) were categorized as extremely negative. Positive comments were overwhelmingly conditioned on textbook cost and quality, such as  
+“I understand, to a point, why textbooks are so expensive. I have no problem paying 100–200 dollars per textbook,” and “I appreciate keeping textbooks when it was a good, thought out, well written choice.” Neutral comments tended to offer the student’s alternate approaches to obtaining textbooks or class materials without discussing the cost of textbooks. For instance, one student stated, “I like how you can rent textbooks for a semester,” and another remarked they “like when teachers use free online articles instead.” 
+Negative statements reflected many student frustrations, especially regarding the bookstore buy-
+back, teachers insisting on students having the newest editions, and being required to purchase textbooks that rarely were used. Examples of negative responses include, “Often a professor requires a costly textbook that we can’t sell back for hardly anything. Sometimes I buy a textbook and we don’t even use it,” and “New editions don’t usually change enough to be worth the cost.” Extremely negative responses differed from negative responses in the intensity of diction and subject matter. One student described, “It is absurd to ask students to pay for books when perfectly viable resources exist online for free.” Other response asserted, “Textbooks are the biggest scam targeting the poorest demographic. Requiring specific editions is a gross abuse of power for monetary gain” and “THEY ARE COMPLETELY RIPPING YOU OFF. Someone along the line is greedy. Why do we need to keep having the most updated versions? I just hate it all.” The sentiment analysis showed that students had strong opinions regarding textbook costs that were especially directed towards traditional textbook publishers. 
+Faculty Findings
+Six specific themes emerged from coding and analysis of the faculty responses. The Faculty Survey 
+Table 3 lists the final codes as well as their generic grouping used in the present study.
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+85
+Analysis of Student and Faculty Perceptions of Textbook Costs in Higher Education
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+Table 3: Comment Codes and Grouping for Faculty Responses
+Code # Code Name Key Coding Words and Phrases
+1 Save money Save money, reduce costs to students
+2 Equal quality Equal quality, suitable, well developed
+3 Variety Change, different, new
+4 Convenience Digital, easy to access, keep
+6 Customize content Modifiable, update, keep current
+What percentage of faculty were willing to consider using open textbooks and would like help 
+identifying them?
+In total, 573 of faculty members completed this survey for a response rate of 23.7%. Participants 
+were asked to share the courses that they taught, their age as well as their current rank or position with the institution. A breakdown of academic rank of participating faculty is as follows: professor (30.18%), associate professor (29.47%), assistant professor (20.00%), and adjunct faculty (20.35%).
+While an overwhelming majority (90%) of respondents were open to the notion of using open 
+resources, it was contingent upon the OER being ‘suitable’, or at least equal in quality to what they were currently using. For those indicating that they would be willing to using OER replacements for their classes almost 69% were not aware of specific OER alternatives to the materials. However, 53% of faculty who were willing to use open textbooks indicated that they would appreciate help in finding and identifying open textbook alternatives.
+Why do faculty members say they would be willing or not willing to use an open textbook?
+Faculty could share open responses as to why they would or would not be willing to use open 
+textbooks. We created six main themes as outlined in Table 4. Of the total number of faculty that participated in the survey (574), 83% chose to share their comments (474) and feelings on why they would be willing to use OER materials. These responses were collected and grouped into six distinct categories. The desire by the faculty to save students money, or to alleviate the cost of education represented a majority (74%) of the responses. Examples of this sentiment include comments like: “. . .anything to save the students money. . .” and “. . .to help reduce the financial burden to students. . .”. 
+The second theme (25% or 121 of the comments) that emerged had to do with the notion that 
+OER content had to be equal to the material that they were currently using. Responses in this area include comments like: “I don’t mind using OER if it is of equal quality”, “The content must be suitable to what I am currently using”, and “If the OER textbooks are well developed with adequate exercises and sample problems.” It was interesting to note that 13% of faculty were also interested in providing students (OER) materials in order to improve accessibility.
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+86 Michael Troy Martin et al.
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+Table 4: Comment Codes for Faculty Open Response 
+Comment Category Number of Responses Percent of Total (responses)
+Save students money 350 74.15%
+Equal quality 121 25.63%
+Convenient access  62 13.13%
+Ability to customize content  50 10.59%
+Variety in classroom  26  5.51%
+There were seven (less than 1% of total) responses from faculty to the question as to why they 
+would not use open resources. This response was underwhelming as compared to the responses 
+that expressed positive sentiment towards OER. These comments focused on a few common 
+themes such as the lack of time, lack of technology and the lack of practice exercises. The comments suggest some common misconceptions regarding OER and included statements like the following: “I don’t want to invest the time to rebuild my course.” And that the lack of certain technologies like wireless networks would prohibit the use of OER because “. . .wireless isn’t available in [my area of] our building. . .” or that the use of electronic devices would cause “. . .a unique cognitive burden of distraction. . .”. These comments suggest that there is an opportunity to educate some on what OER is and how both students and faculty can benefit from its use. The notion that OER implies a tethered, or digital-only requirement supports the opportunity that more information, or formal training is needed.
+Discussion
+This study could highlight some perceptions and feelings about student textbook costs and faculty 
+perceptions of the same. Students reported that they would use the savings that open textbooks afford them to address personal financial needs including housing and healthy eating choices. Students also would redirect this money into reducing debt and furthering their education. As in the Florida Virtual University (2012) report students reported that textbook costs negatively affect their academic performance. They also report postponing taking certain courses because of textbook prices. Perhaps most significantly, registering for fewer courses causes students to delay graduation and can add to the overall cost of their education. The aggregated influence of approximately one-fifth of all students taking fewer courses because of textbook costs can be significant. The potential impact of money saved for students would improve quality of living, decrease cost of education, and would often be invested into educational pursuits. 
+The impact at Brigham Young University was generally smaller than that reported by Florida Virtual 
+Campus (2012). This may be because Brigham Young University is a highly selective private school. The availability of “all you can eat” full-time tuition tiers at Brigham Young University, compared to community college contexts where students pay for each credit, likely contributes to this difference as well. We find it noteworthy that, even in the context of a highly selective private school, textbook costs have a significant impact on students. It is interesting to note that the data obtained in this survey is like the findings of the Florida Virtual Campus in which 63% of students surveyed in Florida did not purchase the suggested course textbook because of price. Similarly, in our study, 66% of students at this institution made a similar choice and choose to not purchase the textbook suggested because of cost. These findings broadly suggest that students at this institution make similar choices 
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+87
+Analysis of Student and Faculty Perceptions of Textbook Costs in Higher Education
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+as the students surveyed in the Florida Virtual Campus survey in that they are aware of the cost 
+of textbooks and make decisions as to whether they will, or will not, purchase course material based on price. 
+The fact that over one third of the students select specific sections of a course because of textbook 
+costs is intriguing because it implies that textbook cost may be playing a larger role in student life than faculty realize. Institutions should consider providing faculty support in evaluating and adopting open textbooks because improved student performance and quicker graduation rates would benefit the institution. 
+It was not surprising to learn that students did not appreciate high textbook costs, but the volume 
+of extremely negative responses indicates that many students feel like they are being exploited in the system of higher education. The various stakeholders need to realize the deep sense of frustration experienced by many college students.
+The responses from faculty show that most are willing to use open textbooks but would like to 
+have some direction and/or training on how to use them. The prevailing attitude was an acknowledgement that textbook prices are high and faculty feel sympathy for the cost burden that is placed upon students. Faculty would like to help students offset the cost of education and are open to exploring the use of OER. Although the barriers of adopting OER are high, faculty who are aware appear to be willing to invest in adopting OER with the proper institutional support. The implications of this are that awareness of OER is still low and needs to be increased, and support for implementation needs to be supported by the institution because the desire to explore OER for student benefit exists.
+While our study did not focus directly on the impact of open textbook adoption on student 
+achievement it is an extremely important outcome for future studies. It would be equally interesting to explore how students leverage OER after their time with an institution and how that affects their lifelong learning pursuits and interests. Future research should look at not only the differences in student success rates across teachers and across time but also how and if they chose to continue to access OER for areas of interest of their own choosing. In other words, does the practice of using OER affect their study after they leave the institutions of formal study.
+Conclusion 
+We acknowledge that this study has several limitations. First, this study relies solely on self-report data and does not examine actual student behavior. For example, these data do not clearly demonstrate that students who save money on textbooks truly take additional courses. Additional studies should focus on confirming these changes in student behaviors (Fischer, Hilton, Robinson & Wiley, 2015). Second, this survey focused primarily on student and faculty perceptions of costs related to open digital texts; it would be interesting to explore whether faculty perceptions would have changed had the possibilities of open printed materials been explored. 
+Another key limitation is that this study took place only at one university and only involved specific 
+class levels of students on campus. Several comments and feedback given reflected the notion that underclassmen (Freshmen and Sophomores) may spend more money on core, or required coursework. It would also be interesting in a future study to evaluate the open responses of both the faculty and students and determine if the textbook costs vary, or are the similar, between different majors and across academic disciplines. Additional studies would probably benefit from gathering data from multiple institutions and from different student types and demographics across the United States and other locations. 
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+88 Michael Troy Martin et al.
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+This study revealed some key perceptions and feeling of faculty and students toward OER. The 
+potential impact from an academic perspective that 66% of students surveyed say that they have 
+not purchased a textbook because of cost. Of those, 47% say that not purchasing the textbook negatively affected their grade in the class. In a similar trend, 86% of students say that they have delayed purchasing a textbook because of cost and of those that delayed purchase 52% report that this negatively affected the grade received. 37% of students reported that they have dropped a course because of textbook costs and 21% have registered for fewer courses. 4% of students in the survey say that not being able to purchase a textbook because of cost has caused them fail or withdraw from the course. Clearly the cost of textbooks can impact academic progress when students delay taking courses or withdraw altogether from classes in which they are enrolled.
+The study revealed that 83% of faculty surveyed are aware of the price of the textbooks they 
+require students to purchase. Of total responses, 69% were not aware of OER alternatives and of that number 53% would appreciate help identifying suitable alternatives. Most revealing, however, is that 91% of the faculty in this survey said that they would be willing to use an OER materials in the classroom.
+Using OER textbooks can decrease the total cost of education for students and potentially improve 
+graduation rates. Faculty are willing to use OER to reduce the financial burden placed on students but would welcome assistance in locating and adapting suitable OER alternatives.
+References
+Allen, N. (2010). A cover to cover solution: How open textbooks are the path to textbook affordability. 
+Retrieved from http://www.studentpirgs.org/textbooks-reports/a-cover-tocover-solution 
+Allen, I. E., & Seaman, J. (2014). Opening the curriculum: Open educational resources in US Higher 
+Education, 2014 . Babson Survey Research Group.
+Bliss, T. J., Hilton III, J., Wiley, D., & Thanos, K. (2013). The cost and quality of online open 
+textbooks: Perceptions of community college faculty and students. First Monday, 18(1). https://
+doi.org/10.5210/fm.v18i1.3972  
+Bliss, T., Robinson, T. J., Hilton, J., & Wiley, D. (2013). An OER COUP: College teacher and student 
+perceptions of Open Educational Resources. Journal of Interactive Media in Education , 2013 (1), 
+1–25. http://doi.org/10.5334/2013-04 
+Brandt, L. W. (1964). How does one select an introductory textbook? Contemporary Psychology, 
+9(8), 332–332. https://doi.org/10.1037/007645  
+Candlin, C. N. & Breen, M. P. (1979). Evaluating, adapting and innovating language teaching 
+materials. In C. Yorio, K. Perkins and J. Schacter (Eds.) On TESOL ‘79: The learner in focus 
+(pp. 86–108). Washington, D.C.: Teachers of English to Speakers of Other Languages.
+Caswell, T. (2012). The Open Course Library of the Washington State Colleges. In D. G. Oblinger 
+(ed.). Game changers: Education and information technologies  (pp. 259–262). Washington D.C.: 
+Educause. 
+Chastain, K. (1971). The development of modern language skills: Theory to practice (pp. 376–384). 
+Philadelphia: The Center for Curriculum Development, Inc. 
+College Board (2013). Trends in college pricing 2013. Retrieved from https://trends.collegeboard.
+org/sites/default/files/college-pricing-2013-full-report.pdf
+Daoud, A. & Celce-Murcia, M. (1979). Selecting and evaluating a textbook. In M. Celce-Murcia & 
+L. McIntosh (Eds.). Teaching English as a second or foreign language  (pp. 302–307). Cambridge, 
+MA: Newbury House Publishers.
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+89
+Analysis of Student and Faculty Perceptions of Textbook Costs in Higher Education
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+Fischer, L., Hilton III, J., Robinson, T. J. & Wiley, D. (2015). A multi-institutional study of the impact 
+of open textbook adoption on the learning outcomes of post-secondary students. Journal of 
+Computing in Higher Education , 27(3), 159–172. https://doi.org/10.1007/s12528-015-9101-x  
+Florida Virtual Campus. (2012). 2012 Florida Student Textbook Survey. Tallahassee, FL. Retrieved 
+from https://florida.theorangegrove.org/og/file/10c0c9f5-fa58-2869-4fd9-af67fec26387/1/2012_
+Florida_Student_Textbook_Survey.pdf
+Franzen, R. H., & Knight, F. B. (1922). Textbook Selection . York, PA: Warwick & York, Inc.
+Hilton III, J. L. (2016). Open educational resources and college textbook choices: a review of 
+research on efficacy and perceptions. Education Technology Research and Development, 64(4), 
+573–590. https://doi.org/10.1007/s11423-016-9434-9
+Hilton III, J. L., & Wiley, D. (2011). Open access textbooks and financial sustainability: A case study 
+on Flat World Knowledge. The International Review of Research in Open and Distributed 
+Learning , 12(5), 18–26. http://dx.doi.org/10.19173/irrodl.v12i5.960
+Kingkade, T. (2011, November 8). Rising costs force students to skimp on textbooks. Huffington 
+Post. http://www.huffingtonpost.com/2011/08/11/studentadvocates-sound-alarm-on-textbooks_  
+n_924536.html  
+Lee, D., van der Klaauw, W., Haughwout, A., Brown, M., & Scally, J. (2014). Staff Reports: Federal 
+Reserve Bank of New York, Number 668, JEL classification: D12, D14, I22. Retrieved from 
+https://www.newyorkfed.org/research/staff_reports/sr668.html
+Littlejohn, A. (1996). The analysis of language teaching materials: Inside the Trojan Horse. In  
+B. Tomlinson (Ed.). Materials development in language teaching (pp. 191–213). Cambridge: 
+Cambridge University Press.
+Oakes, J. & Saunders, M. (2002). Access to Textbooks, Instructional Materials, Equipment, and 
+Technology: Inadequacy and Inequality in California’s Public Schools . UCLA: UCLA’s Institute 
+for Democracy, Education, and Access. Retrieved from http://escholarship.org/uc/item/4ht4z71v
+Ortony, A., Clore, G. L., & Collins, A. (1990). The cognitive structure of emotions . Cambridge 
+university press.
+Pell Institute, The (2015). Indicators of Higher Education Equity in the United States. Retrieved from: 
+http://www.pellinstitute.org/downloads/publications-Indicators_of_Higher_Education_Equity_in_the_US_45_Year_Trend_Report.pdf
+Selnack, E. (2014). Fixing the Broken Textbook Market: How Students Respond to High Textbook 
+Costs. Center for Public Interest, Inc. Retrieved from http://www.uspirg.org/sites/pirg/files/reports/
+NATIONAL%20Fixing%20Broken%20Textbooks%20Report1.pdf
+Sheldon, L. (1988). Evaluating ELT textbooks and materials. ELT Journal, 42(4), 237–246. 
+Skierso, A. (1991). Textbook selection and evaluation. In M. Celce Murcia (Ed.). Teaching English 
+as a second or foreign language  (pp. 432–453). Boston: Heinle and Heinle.
+Tucker, C. A. (1975). Evaluating beginning textbooks. English Teaching Forum, 13, 355–361.
+Ur, P. (1996). A course in language teaching: Practice & Theory (pp. 184–187). Cambridge: 
+Cambridge University Press.
+Whitehouse (2016). “College Scorecard.” Retrieved in May 11, 2016 from https://www.whitehouse.
+gov/issues/education/higher-education/college-score-card  
+Wiley, D. (2014, March 5). The Access Compromise and the 5th R. Iterating toward openness . 
+Retrieved from http://opencontent.org/blog/archives/3221
+Williams, D. (1983). Developing Criteria for Textbook Evaluation . ELT Journal , 37(3).
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+90 Michael Troy Martin et al.
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+Appendix A
+A copy of the student instrument is included here:
+ Q1 -  Clicking the button below indicates that you 
+have read and understood the above consent 
+and desire of your own free will to participate in this study.
+ Q2 - What college/university are you attending?
+ Q3 -  Approximately how much money do you spend per 
+class on textbooks?
+ Q4 - How do you pay for textbooks?
+ Q5 - Have you ever not purchased a 
+textbook for a class because of the cost of the textbook?
+ Q6 -  Do you think that not purchasing the textbook 
+influenced your grade in the course in a negative 
+way?
+ Q7 - Has not purchasing a textbook contributed 
+to your decision to drop a course?
+ Q8 - Has not purchasing a textbook ever 
+caused you to fail or withdraw from a course?
+ Q9 - Have you ever delayed purchasing a 
+textbook for a class because of the cost of the textbook?
+Q10 - Do you think that delaying purchasing the textbook influenced your grade in a negative way?
+Q11 - Have you ever registered for fewer courses because of textbooks costs?Q12 - Have you ever not registered for a specific section of a course because of textbook costs?Q13 - If you didn’t have to pay for textbooks, how would you use the money you saved?Q14 - What additional thoughts would you like to share regarding textbook costs?
+A copy of the faculty survey  is included here:
+ Q1 - What is your academic appointment/rank?
+ Q2 - What is your age?
+ Q3 - What courses do you typically teach? 
+(e.g. introductory physics)
+ Q4 -  Do you require students to purchase a textbook 
+or other commercially published resources 
+for use in your classes?
+ Q5 -  In the course(s) where you do not require 
+students to purchase textbooks or other commercially 
+published materials, what do you use in place of these resources?
+ Q6 - How much do the substitute materials 
+cost?
+ Q7 - How did you find the substitute 
+materials?
+ Q8 -  How do you choose textbooks for lower-division 
+courses? (catalogue numbers 100–200 or 
+1000–2000)
+ Q9 -  Do you know the list price of the 
+textbook or other commercially published resources you 
+require your students to purchase?
+Q10 - Approximately how much do they cost?
+Q11 -  How do you choose textbooks for upper-division 
+undergraduate courses? (catalogue numbers 
+300–400 or 3000–4000—not graduate courses)
+Q12 - RemovedQ13 - 
+ The following questions ask you about “open textbooks.” 
+By “open textbooks” we mean digital 
+textbooks that are (1) free of charge and (2) provide faculty with permission to make a wide range of changes, customizations, and improvements. Are you aware of any open textbooks that could be used to replace traditional textbooks or other commercially published resources in your course?
+Q14 - 
+ If a suitable open textbook could be identified 
+for the course you teach, would you be willing 
+to use it?
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 
+91
+Analysis of Student and Faculty Perceptions of Textbook Costs in Higher Education
+Open Praxis, vol. 9 issue 1, January–March 2017, pp. 79–91
+Q15 - Why would you be willing to use an open textbook?
+Q16 - Why would you not be willing to use an open textbook?Q17 - Would you like assistance in identifying a suitable open textbook?Q18 - 
+ Please provide your name and email address
+ so that a campus librarian can assist you in 
+identifying a suitable open textbook for your course(s).
+Papers are licensed under a Creative Commons Attribution 4.0 International License
+Downloaded from search.informit.org/doi/10.3316/informit.760521798634627. on 05/14/2026 04:41 PM AEST; UTC+10:00. © Open Praxis , 2017.
+Available under a Creative Commons Attribution Licence. 

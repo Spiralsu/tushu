@@ -1,0 +1,2480 @@
+IIIEE Theses 20 22:02 
+ 
+ 
+ 
+ 
+ 
+ 
+Exploring Consumers’ Attitudes towards Second -
+Hand Book Sharing in China:  
+Motivations and Barriers  
+ 
+Boyan Wei  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Supervisors  
+Ana Maria Arbelaez  
+Andrius Plepys  
+ 
+Thesis for the fulfilment of the  
+Master of Science in Environmental Management and Policy  
+Lund, Sweden , May  2022 
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+© You may use the contents of the IIIEE publications for informational purposes only. You may not copy, lend, hire, transmit or redistribute these 
+materials for commercial purposes or for compensation of any kind without written permission from IIIEE. When  using IIIEE material you must include 
+the following copyright notice: ‘Copyright © Boyan WEI , IIIEE, Lund University. All rights reserved’ in any copy that you make in a clearly visible 
+position. You may not modify the materials without the permission of the author.  
+ 
+Published in 20 15 by IIIEE, Lund University, P.O. Box 196, S -221 00 LUND, Sweden,  
+Tel: +46 – 46 222 02 00, Fax: +46 – 46 222 02 10, e -mail: iiiee@iiiee.lu.se . 
+ 
+ISSN 1401 -9191 Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+I Acknowledgements  
+These two years have been among the most meaningful times of my life. My attitude towards 
+consumption and life has changed in a direction which makes me satisfied. Also, I would like 
+to mention some special people who have made this journe y an unforgettable one.  
+Thank you both to my supervisor s Andrius and Ana for providing insightful and helpful 
+feedback on my thesis. It is enjoyable reading and learning from your feedback. Not only was 
+my insight  gained and my skills improved, but it also  made me feel that writing, especially 
+professional academic writing, needs years of accumulation. Thank you both for your support 
+of my thesis writing! It was a great learning experience for me. Much appreciated!  
+To finally land on this interesting topic of consumption, I would like to thank for Beatrice and 
+Oksana’s helpful guidance from the initial period. The communications with PhD student 
+Chujia on this topic, who was suggested by Oksana, also inspired me a lot. Thank you, Chujia!  
+It is hard to believ e how many inspiring people I have met  since being a member of the EMPers. 
+B27, what a family! Particularly, the consulting teamwork, in which I was working with Jannick 
+and Elaine for Thule, and was working with Emily, Martina and Nahla for Axis, added sp ecial 
+memory to my learning activities at IIIEE. Someone I appreciate put that you would know a 
+person not by a party, but by teamwork. It is! Also, thank you Flora, Caitlin, Anna, Hedda, Isha, 
+Ismat, Sebi, Chris, Emma, Jiqing, Yijun and other friends in o ur B27 family. I have learned a lot 
+from you on many aspects during those two years.  
+Thank you, Thomas and Naoko, for your patient and helpful guidance on my course paper. 
+And particularly, thank you, Naoko, for your effort contributing to organizing our i nsti during 
+Covid time. Much appreciated! And thank you all the teachers, coordinators, and TA of the 
+EMP courses. It’s incredible to meet you all in my life.  
+Finally, I  want to  express my gratitude  to the people closest to me.  I feel grateful for the 
+continued support of my family, Mama, Papa, Grandma… And also I feel grateful for the 
+inspiration from Master Ip and Master Huitong on how to perceive life.  
+It will be soon to leave this beautiful city – Lund, yet memories of those two years still are, and 
+will be vivid in my mind.  
+ 
+ 
+ Author, IIIEE, Lund University  
+II Abstract  
+The traditional linear business model, together with the throw -away mentality, will a ccelerate 
+the use of virgin  resources. In contrast, growth in a circular economy will alleviate the use of 
+finite resources in both production and consumption phases. On the side of consumption, the 
+collaborative consumption/sharing economy is one of the solutions for reducing resou rce use. 
+Consumers are important in the thriving of sharing economy. However, little knowledge is 
+known about consumers’ attitudes toward sharing models, particularly for books and other 
+physical goods. China is one of those underexplored regions for such sharing models. Thus, the 
+aim of this study is to investigate consumers’ attitudes, motivations and barriers relating to 
+sharing economy, with particular emphasis on second -hand books. Empirical data was collected 
+through an online survey and following dee per interviews.  
+The results observed that though the overall attitude is positive for consumers engaging in 
+second -hand book sharing, the trend that barriers outweigh motivations appears. And how 
+motivations and barriers work may be case -dependent.  
+ 
+ 
+Keywo rds: Consumer Attitudes, Motivations, Barriers, Sharing Economy, Second -Hand Books  
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+III Executive Summary  
+Problem Definition and Research Questions  
+The traditional linear business model, together with the throw -away mentality, will increase the 
+consumption lev el, continually consuming virgin resources and adding pressure on waste 
+management at the same time (Gullstrand et al., 2016). In contrast, a circular economy will 
+alleviate the use of finite resources in both production and consumption phases by applying and 
+promoting the idea of reuse, repair, recycling, upcycling and etc. (Geissdoerfer et al., 2017).  
+In these consumption models, the collaborative consumption model/sharing economy is an 
+emerging phenomenon that reduces resource use in the use phase of th e products by sharing, 
+swapping, exchanging, and bartering (Botsman and Rogers, 2010). To make the  sharing  
+economy possible to achieve, consumers’ willingness to accept and use products via th is model 
+is one of the key factors. However, little knowledge is  currently known about consumers’ 
+attitudes towards sharing economy.  
+Though increasing focus and research on sharing economy in recent years, the gap between 
+theory and implementation still remain obvious, and this happens to be stronger when it is 
+implem ented in a different context (Catulli et al., 2017).   
+China is one of the underexplored regions for sharing economy. Particularly, the peer -to-peer-
+based sharing model, compared to the prevailing B2C sharing model in China, is less researched. 
+And second -hand book sharing is one of the representative sharing models of peer -to-peer-
+based sharing.  
+This study aims to fill these gaps by addressing the following research questions:  
+RQ1: What are consumers’ attitudes towards second -hand book sharing in Ch ina? 
+RQ2: What are the motivations and barriers perceived by consumers towards second -hand book 
+sharing?  
+RQ3: Why do consumers have such attitudes, and why do they value these motivations and 
+barriers?  
+Research Design and Methodology  
+To answer the researc h questions exhibited in earlier section, both the inductive and the 
+abductive approach were adopted. To answer RQ1, the inductive approach was used to 
+generalize what consumers’ attitudes towards second -hand book sharing via literature review. 
+The items i dentified in the literature review section are then used to form survey questions, in 
+which RQ2 will be further answered. To answer RQ3, the abductive approach was used through 
+conducting consumer interviews based on the results of the survey.  
+In this stu dy, the empirical data collection was finalized through an explanatory sequential mixed 
+method approach, including a quantitative survey and subsequent qualitative semi -structured 
+interviews. The sequence for collecting empirical data is as follows.  
+- Literature reviews to get relatively sufficient knowledge on consumers’ attitudes towards 
+second -hand book sharing.  
+- Online survey to the consumers to further explore and validate consumers’ attitudes, especially 
+the motivations and barriers perceived by cons umers for second -hand book sharing.  Author, IIIEE, Lund University  
+IV - Follow -up interviews to examine the reasons and/or meanings behind the consumers’ 
+attitudes.  
+This sequence includes the procedure of item generation, item purification, and item validation 
+suggested by prior researche rs (Churchill, 1979; Hollebeek et al., 2014) . 
+ 
+Figure I. Research Design and Methodology  
+Source: the author  
+Conclusions and Recommendations  
+The results of this study indicate an overall positive attitude for consumers in engaging in 
+second -hand book sharing in the future. However, it seems that the barriers outweigh the 
+motivations currently.  
+The two main barriers observed are the desire to own and a lack of trust in strangers. Many 
+would perhaps turn to online second -hand book sharing platforms to av ert these barriers, but 
+still, they remarked that the impractical and complicated processes involved in the online 
+platform are another critical obstacle.  
+While conducting this study, some knowledge gaps were  identified that need further research in 
+the fu ture. Research on second -hand book sharing or other sharing models are still in their 
+infancy. It would be useful to conduct similar research, perhaps on other product groups, in 
+other context in China or different countries to compare consumers’ attitudes  towards sharing 
+models, as well as their motivations and barriers.  
+The notion of ownership is an interesting topic and is worth further research; for example, its 
+changing or updating along with people’s participation in various consumption models.  
+The in tention of consumers got from this study can not fully reflect consumers' behavior. As 
+the discrepancy between consumers’ intention and behavior, especially for circular 
+Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+V consumption, is noted by other research (Lydia Zepeda and David Deal, 2009; Marie von 
+Meyer -Hö fer et al., 2015). Further study to fill this gap is worthwhile.  
+ Author, IIIEE, Lund University  
+VI Table of Contents  
+ACKNOWLEDGEMENTS  ................................ ................................ ................................ .............  I 
+ABSTRACT  ................................ ................................ ................................ ................................ .... II 
+EXECUTIVE SUMMARY  ................................ ................................ ................................ ............  III 
+LIST OF FIGURES  ................................ ................................ ................................ .....................  VII 
+LIST OF TABLES  ................................ ................................ ................................ .......................  VII 
+ABBREVIATION S (IF REQUIRED)  ................................ ................................ ..........................  IX 
+1 INTRODUCTION  ................................ ................................ ................................ ..................  1 
+1.1 BACKGROUND  ................................ ................................ ................................ ................................ ................ 1 
+1.2 PROBLEM DEFINITION  ................................ ................................ ................................ ................................ ..2 
+1.3 AIM AND RESEARCH QUESTIONS  ................................ ................................ ................................ ................ 3 
+1.4 SCOPE AND DELIMITA TIONS ................................ ................................ ................................ ........................ 3 
+1.5 ETHICAL CONSIDERATIONS  ................................ ................................ ................................ ......................... 4 
+1.6 AUDIENCE  ................................ ................................ ................................ ................................ ....................... 4 
+1.7 DISPOSITION  ................................ ................................ ................................ ................................ ................... 4 
+2 LITERATURE REVIEW  ................................ ................................ ................................ ....... 6 
+2.1 THEORETICAL FOUNDATION  ................................ ................................ ................................ ...................... 6 
+2.1.1 Sharing Economy  ................................ ................................ ................................ ................................ ......6 
+2.2 UNDERSTANDING WHAT THE CONSUMERS ’ ATTITUDES ARE ABOUT : MOTIVATIONS AND 
+BARRIERS PERCEIVED BY CONSUMERS FOR THE SECOND -HAND BOOK SHARING  .......................... 9 
+2.2.1  General consumer attitude  ................................ ................................ ................................ ......................... 9 
+2.2.2  Motivations  ................................ ................................ ................................ ................................ ............... 9 
+2.2.3  2.2.3 Barriers  ................................ ................................ ................................ ................................ ........ 10 
+2.2.4  Summary  ................................ ................................ ................................ ................................ ................  11 
+3 RESEARCH DESIGN, MATERIALS AND METHOD  ................................ ......................  13 
+3.1 RESEARCH DESIGN  ................................ ................................ ................................ ................................ ..... 13 
+3.2 METHOD USED TO COLLECT DATA ................................ ................................ ................................ ........ 14 
+3.2.1  Literature Review  ................................ ................................ ................................ ................................ ... 14 
+3.2.2  Survey  ................................ ................................ ................................ ................................ ....................  15 
+3.2.3  Interviews  ................................ ................................ ................................ ................................ ...............  16 
+3.3 METHOD USED TO ANALYZE DATA ................................ ................................ ................................ ....... 17 
+3.3.1  Literature Review  ................................ ................................ ................................ ................................ ... 17 
+3.3.2  Survey  ................................ ................................ ................................ ................................ ....................  17 
+3.3.3  Interviews  ................................ ................................ ................................ ................................ ...............  19 
+4 RESULTS AND ANALYSIS ................................ ................................ ................................ .. 20 
+4.1 DEMOGRAPHIC CHARACTERISTICS  ................................ ................................ ................................ ..........  20 
+4.2 BACKDROP CHARACTERISTIC OF CONSUMERS ’ GENERAL ATTITUDES  ................................ ............  21 
+4.2.1  General Attitudes for Second -Hand Book Sharing  ................................ ................................ ................  21 
+4.2.2  Correlations of Demographic Characteristics and General Attitudes  ................................ .......................  22 
+4.3 MOTIVATIONS FOR THE SECOND -HAND BOOK SHARING  ................................ ................................ . 24 
+4.3.1 Descriptive Analysis for Motivations (based on Q9 -Q11)  ................................ ................................ ...... 25 
+4.3.2  Relevance of motivations and backdrop characteristic  ................................ ................................ ...............  29 
+4.3.3  Text Analysis for the Open -Ended Question (Q11) in the Survey  ................................ .........................  32 
+4.4 BARRIERS FOR SECOND -HAND  BOOK SHARING  ................................ ................................ .....................  32 
+4.4.1  Descriptive Analysis for Barriers (based on Q12 -Q14)  ................................ ................................ ..........  32 
+4.4.2  Relevance of barriers and backdrop characteristic  ................................ ................................ ....................  35 
+4.4.3  Text Analysis For the Open -Ended Question (Q14) in the Survey ................................ ........................  38 Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+VII 5 DISCUSSION  ................................ ................................ ................................ ........................  39 
+5.1 RESULTS REFLECTIONS ................................ ................................ ................................ ...............................  39 
+5.2 METHODOLOGY REFLECTIONS  ................................ ................................ ................................ ................  41 
+6 CONCLUSION  ................................ ................................ ................................ .....................  42 
+BIBLIOGRAPHY  ................................ ................................ ................................ ..........................  44 
+APPENDIX A :THE SURVEY  ................................ ................................ ................................ ..... 51 
+APPENDIX B: INTERVIEW GUIDE  ................................ ................................ .........................  57 
+APPENDIX C: CALCULATION OF THE SURVEY SAMPLING SIZE  ................................ ... 60 
+APPENDIX D: ENTIRE OUTCOME OF THE ANOVA ANALYSIS  ................................ ....... 61 
+APPENDIX E: ENTIRE OUTCOME OF THE T -TEST  ................................ ...........................  69 
+APPENDIX F: ENTIRE OUTCOME OF THE MEAN VALUE AND SD  ................................  70 
+ 
+ 
+List of Figures  
+Figure 2 -1. Three foundational cores of sharing economy  ................................ ....................  7 
+Figure 3 -1. The research framework  ................................ ................................ .......................  14 
+Figure 4 -1. Demographic characteristics of sampling  ................................ ..........................  21 
+Figure 4 -2. General attitudes of consumers  ................................ ................................ ...........  22 
+Figure 4 -3. Cross -tabulation: reading habit – sharing experiences  ................................ ..... 23 
+Figure 4 -4. Cross -tabulation: reading habit - willingness in the future  ..............................  23 
+Figure 4 -5. Cross -tabulation: cost for book per month – sharing experiences  ................  24 
+Figure 4 -6. Cross -tabulation: cost for book per month – willingness in the future  .........  24 
+Figure 4 -7. Voting for motiations  ................................ ................................ ............................  27 
+Figure 4 -8. Voting results for barriers  ................................ ................................ .....................  34 
+ 
+ 
+ 
+List of Table s 
+Table 2 -1. Motivations identified in the literature  ................................ ................................ . 11 
+Table 2 -2. Barriers identified in the literature  ................................ ................................ ........ 12 
+Table 4 -1. Mean Value and SD for motivations  ................................ ................................ .... 25 
+Table 4 -2. Results of T -test for motivations  ................................ ................................ ..........  29 
+Table 4 -3. Results of ANOVA for motivations  ................................ ................................ .... 30 
+Table 4 -4. Mean Value and SD for barriers  ................................ ................................ ...........  33 
+Table 4 -5. Results of T -test for barriers  ................................ ................................ .................  35 Author, IIIEE, Lund University  
+VIII Table 4 -6. Results of ANOVA for barriers  ................................ ................................ ............  36 
+ 
+ 
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+IX Abbreviations  
+ 
+ANOVA  Analysis of variance  
+B2B   Business to business  
+B2C   Business to consumer    
+SD  Standard deviation  
+SDG  Sustainable Development Goal  
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+1 1 Introduction  
+Together with the rapid growth in the economy, in the past decades, the rapid development of 
+globalization and the productivity of consumer goods has greatly accelerated the level of 
+consumption worldwide (Murray et a l., 2017). This dramatic growth in consumption has added 
+significant pressure to the exploitation of natural resources and thus caused various 
+environmental problems (Kaza et al., 2018). In the traditional linear model of production, many 
+resources are sim ply converted to waste, such as ending in landfills (Geissdoerfer et al., 2017). 
+Also, the mindset of “take and throw” was working to increase the consumption level, 
+continually consuming virgin resources and adding pressure on waste management at the same  
+time (Gullstrand et al., 2016).  
+In contrast to the linear model, the idea of a circular economy is based on slowing or even 
+closing the material loop or having more sustainable product designs to maximize the utilization 
+of materials and minimize the ene rgy used and waste generated within the production process 
+(Geissdoerfer et al., 2017). In other words, by applying and promoting the idea of reuse, repair, 
+recycling, upcycling and etc., a circular economy makes it alleviated from the exploitation of 
+finite resources.  
+On the side of consumption, several models work to reduce the resource use can be identified, 
+for instance, consumption of second -hand products, access -based consumption (e.g. renting 
+and leasing ), and collaborative consumption (e.g. sharin g) (Mont and Heiskanen, 2015; 
+Gullstrand et al., 2016).  
+In these consumption models, the collaborative consumption model /sharing economy  is an 
+emerging phenomenon that reduces resource use in the use phase of the products by sharing, 
+swapping, exchanging,  and bartering (Botsman and Rogers, 2010). Collaborative consumption 
+is a fast -growing movement around the world, and in its practice, not only physical products 
+(e.g. cars, bikes, tools, and clothing) can be shared, but also space (e.g. accommodations), s kills, 
+services, time and etc. (Botsman and Rogers, 2010).  
+To make the sharing  economy possible to achieve, consumers’ willingness to accept and use 
+products via th is model is one of the key factors. However, little but slowly growing knowledge 
+and litera ture available on consumers’ attitudes towards  the collaborative consumption 
+model /sharing economy.  
+Focusing on the sharing economy, this study aims to fill the research gaps about the consumers’ 
+acceptance and attitudes towards it.  
+1.1 Background  
+The collab orative consumption model, or named sharing economy, usually refers to the peer -
+to-peer-based activity of obtaining, giving, or sharing the  access to goods and services (Botsman 
+and Rogers, 2010). With the emergence and the burgeoning of sharing businesses  such as 
+Airbnb and Uber happened in the US, sharing economy has attracted great attention around the 
+world (Belk, 201 9). Under this trend of expansion of sharing economy, the sharing business in 
+China is also under rapid growth; the data from the State Information Center showed that in 
+2019 the transactions of the sharing economy in China accounted for 3.28 trillion Chine se yuan 
+(China State Information Center, 2020).  
+The sharing economy in China has its own unique character because the landscape of the sharing 
+economy may differ from the contexts of countries or urban due to various factors such as 
+culture, social norms,  values and etc. (Waes et al., 2020). In China, the B2C sharing models tend Author, IIIEE, Lund University  
+2 to be dominant, for example, in the segment of mobility sharing the B2C sharing is dominant 
+and the cars for sharing are owned by the company because of the short of ownership of 
+personal cars in China (Mont et al., 2020). And B2C sharing model in China showed that the 
+ownership often belongs to the company and the goods or services are often provided through 
+IT solutions/services (Mont et al., 2020). In other product groups, for ex ample, sharing of 
+physical goods such as umbrellas, portable power banks, and household products are also mainly 
+supported by the B2C sharing model in China (Mont et al., 2020). And accordingly, the literature 
+about sharing economy in China mainly focuses on these B2C sharing models.  
+Compared to the prevailing B2C sharing model in China, the peer -to-peer sharing model is in 
+the minority and is less researched. Sharing of books is a typical peer -to-peer sharing model in 
+China. Sharing of used books/ second -hand books often happens in local communities (Zhou, 
+2015), on university campuses (Li et al., 2020; Yi et al., 2020), and via online sharing platforms 
+(Zheng et al., 2019; Wang, 2021) in China.  
+Though less influence on the resource -saving compared to the c ar-sharing or bike -sharing, 
+second -hand book sharing still has its value in contributing to a more sustainable lifestyle and 
+has the potential to make the local communities more connected. The global  book publishing 
+industry  accounts for $112.5 billion in 2022 (IBISworld, 2021). And according to the data 
+disclosed in 2010 by WWF, about 50% of the commercially harvested wood worldwide had 
+finally turned into a paper product and was mainly driven by the global publishing industry 
+(WWF, 2010). To apply more ci rcular business models in the book publishing industry became 
+increasingly important, and some idea of circularity has already been applied/designed in the 
+sector along the supply chain, for example, raising the efficiency of the material use, being 
+respon sible for chemical use, closing the loop of the production, and etc. Further, along with 
+the basic rationale in the waste hierarchy that “reuse” is greener than “recycle”, a circular 
+consumption model like sharing business also plays an important role with in the supply chain 
+of the book publishing industry. It is difficult to find data on how much wood of equal value is 
+saved through the sharing of used books, but we can assume the potential environmental 
+benefits of sharing of books from the waste hierarch y. In this regard, sharing such used books 
+will bring them back from the waste to the resource again and thus extend their use -value, and 
+this will to some extent, decrease the cost of waste management as well (Wang, 2018).  
+It should be noted that in this  paper, the second -hand book sharing followed the rationale in 
+Muñoz and Cohen’s paper  “ A socioeconomic system enabling an intermediated set of exchanges of goods 
+and services  between individuals and organizations which aim to increase efficiency and opti mization of  sub-
+utilized resources in society (2017) ”, and the key attributes of the concept second -hand sharing in 
+this paper include both B2B, B2C, for -low-profit and non -profit initiatives, exchange, reuse, 
+reselling, gifting. More details of this conc ept will be discussed in the literature review section.  
+1.2 Problem Definition  
+Though increasing focus and research on sharing economy in recent years, the gap between 
+theory and implementation still remain obvious, and this happens to be stronger when it is 
+implemented in a different context (Catulli et al., 2017). In China, on the governmental side, the 
+circular economy as a key topic has been incorporated into the government’s Five -year 
+Development Plan since 2006 (Zhu, 2017). On the market side, the relativ ely fast growth in the 
+economy and the huge market potential make the Chinese market willing to apply circular 
+business models. From a decision makers’ point of view, sharing economy is thus worthy of 
+support.  
+To enable sharing economy, it is vital that f uture consumers are willing to accept and use 
+products through various sharing business models. However, little knowledge is now available Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+3 on consumers’ attitudes towards such sharing models. Exploring them helps reduce the 
+knowledge gap and adds to the ac ademic discourse regarding the consumers’ acceptance and 
+attitudes toward sharing economy.  
+The peer -to-peer-based sharing model, compared to the prevailing B2C sharing model in China, 
+is less researched. And second -hand book sharing is one of the currently  happening peer -to-
+peer-based sharing phenomena in China, which often happens on university campuses, in 
+neighboring communities, or via online sharing platforms. Doing research on second -hand 
+book sharing may gain more knowledge on people’s reflections es pecially on the peer -to-peer-
+based sharing model in the Chinese context.  
+1.3 Aim and Research Questions  
+Firstly, this study is aimed to investigate consumers’ acceptance and attitudes toward second -
+hand book sharing in China. Secondly, by combining the quantit ative and qualitative research 
+methods, this study will then investigate what are the underlying motivations and barriers 
+relevant to changing consumers’ consumption intention and behavior towards second -hand 
+book sharing, as well as the possible reasons b ehind these motivations and barriers. Broadly 
+speaking, this study will also contribute to adding the knowledge for the gap of sharing economy 
+between theory and implementation, and will also add understanding to the non -mainstream 
+peer-to-peer-based shari ng model in China. Also, it aims to create better awareness within the 
+sector among different stakeholders for better implementation and management of this sharing 
+market.  
+Thereby the RQs are as follows,  
+RQ1: What are consumers’ attitudes towards second -hand book sharing in China?  
+RQ2: What are the motivations and barriers perceived by consumers towards second -hand book 
+sharing?  
+RQ3: Why do consumers have such attitudes, and why do they value these motivations and 
+barriers?  
+1.4  Scope and Delimitations  
+The focus of this study falls under the sharing model for second -hand books or so -called used 
+books. In this study, the rationale for second -hand book sharing follows the definition of “ A 
+socioeconomic system enabling an intermediated set of e xchanges of goods and services  between individuals and 
+organizations which aim to increase efficiency and optimization of  sub-utilized resources in society (Muñ oz and 
+Cohen , 2017). ” Plus, though “reuse” and “exchange” are the ideal circumstances of second -hand 
+book sharing in this regard, other non -profit or low -profit second -hand shopping or reselling 
+are also included. Gifting is also regarded as part of second -hand book sharing in this study.   
+As mentioned earlier, second -hand book sharing in China ofte n happens on university campuses 
+(Li et al., 2020; Yi et al., 2020), in local communities (Zhou, 2015), and via online sharing 
+platforms (Zheng et al., 2019; Wang, 2021). University campuses are the easiest to gain access 
+to, and the university students ar e chosen as the target group to do research in this study. It also 
+should be pointed out that the sharing platforms mentioned here mainly work for quality 
+inspection of books and delivering books between sharers and users without owning the books 
+(Zheng et  al., 2019).  Author, IIIEE, Lund University  
+4 1.5  Ethical Considerations  
+This study is not funded by any agencies or businesses; Thus, the results of the study will not 
+be impacted by any stakeholders who might have an interest in this study. All the participants 
+involved in this study were  voluntary and retained the right and freedom to quit the survey or 
+interview at any time. Permissions were got prior to the start of the survey and interview from 
+the participants. And the non -business purpose (only for Master Thesis) was well disclosed a nd 
+how the participant will contribute to the research was clearly stated. Before the interview 
+officially started, allowances were requested from the interviewees on recording the session and 
+the recordings will only be kept by the author. It needs to be pointed out that since the 
+interviewees came from the answers where they filled in their contacts in the last question in 
+the survey about their willingness to be interviewed, their anonymity was respected and was 
+accordance with the survey. So, the person al information was not asked during the interview; 
+only the questions testing/probing why they have chosen such motivations or barriers were 
+asked. Plus, the interviewees were allocated a specific identifier (Ix) through the paper and thus 
+the anonymity wa s kept. The material collected from the participants both on the survey and 
+the interview will be kept on the author’s own PC and cloud account for five years after 
+graduation; and these will only be used for this research.   
+1.6 Audience  
+As this thesis is par t of the EMP (Environmental Management and Policy) Master's Program, 
+thus the International Institute for Industrial Environmental Economics faculty at Lund 
+University may be my initial audience. As this study is going to provide a literature review and 
+related summary of motivations and barriers as well as the consumers’ attitudes toward the 
+second -hand book sharing attitude in the Chinese context, especially for the university campus, 
+thus, this study might be of interest to the academia who would like to  explore the consumers’ 
+acceptance in sharing economy, especially for the peer -to-peer sharing business model in China 
+(the mainstream sharing business model in China is B2C sharing). Also, this study could be 
+relevant to the online second -hand book sharin g platforms that would like to explore 
+consumers’ acceptance of this sharing model, especially among university students in China. 
+Plus, this study could also serve as market research for the organizations or student groups 
+within the universities, externa l green organizations and sharing companies, and even some 
+physical stores having some business related to the second -hand book sharing to have a better 
+understanding of consumers’ thoughts on the second -hand book sharing in China, which 
+perhaps could cont ribute to their initiative in implementing sharing activities or businesses.  
+This study might also be relevant to the consumers in bridging the connections between 
+consumers and academia and business. And as the sharer and user could be the same person in 
+the second -hand book sharing, it is beneficial to let them to have a better understanding of this 
+sharing model, especially on the acceptance of consumer, which could be of help to increase 
+the overall acceptance of this sharing model.  
+1.7 Disposition  
+This th esis progresses as follows,  
+Section 1 introduces the backdrop of this research and defines the research question. The aim 
+of the research, the research questions, and the research scope are also stated in this section.  
+ 
+Section 2 provides a literature revi ew on the perception of the concept of sharing economy, its 
+terminologies, characteristics, benefits, etc. This chapter also includes the implementation of the Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+5 sharing business on second -hand book sharing. In accordance with the aim and flow of this 
+resear ch, the literature of the summary of the motivations and barriers for consumers towards 
+second -hand book sharing is conducted followingly, which is the base of the designing for the 
+following online survey and interview method to collect empirical data.  
+Section 3 describes how this research was designed and the rationale behind it. It explains why 
+the methods - literature review, online survey and the following interview are used in finalizing 
+this research, as well as the methods and basic statistical too ls for analyzing the data collected 
+by such methods.  
+Section 4 discloses the results and analysis of the methodes of interviews and surveys. It draws 
+a big picture of the attitudes of consumers within the university campus in China towards 
+second -hand book  sharing. Further, the vital motivations and barriers, as well as the analyses of 
+the correlation between these factors and different data groups that author chose (e.g. gender 
+group ). 
+Section 5 discusses the main findings of the study. The implications and overall reflections of 
+this study are included by connecting the results of section 4 and section 2. The reflections 
+about the limitations to this study is also included in this section.  
+Section 6 concludes the main findings of this resear ch and also provides recommendations for 
+future study.  Author, IIIEE, Lund University  
+6 2 Literature Review  
+2.1 Theoretical Foundation  
+It is common sense that natural resources are the fundamental support for human productivity 
+and other economic activities. However, such resources are scarce a nd limited. In the traditional 
+linear model of production, many resources are simply converted to waste, such as ending in 
+landfills (Geissdoerfer et al., 2017). Also, the mindset of “take and throw” was working to 
+increase the consumption level, continual ly consuming virgin resources and adding pressure on 
+waste management at the same time (Gullstrand et al., 2016).  
+In contrast to the linear model, a circular economy makes it alleviates from the exploitation of 
+finite resources. On the consumption side, f or example,  
+sharing economy works under the primary mechanism of the circular economy, especially for 
+slowing the loop, closing the loop, and extending the utilization phase of the product to raise 
+the resource efficiency (Mentink, 2014, p. 24; Mont et al ., 2017, p. 12; Bocken et al., 2016, p. 5).  
+2.1.1  Sharing Economy  
+Terminologies  
+Before the sharing business burgeoned over past decade, researchers had already discussed the 
+definitions or terminologies of the sharing economy, and this issue kept concern and di scussed 
+by researchers continuously. Some possible terminologies discussed by researchers over past 
+two decades were: “product -service system (Mont, 2002)”, “collaborative consumption 
+(Botsman and Rogers, 2010)”, “transactions without transfer of ownership ,” or so -called 
+“ access -based consumption (Belk, 2019)”, “peer -to-peer based activities of exchange 
+(Dąbrowska & Gutkowska, 2015)”,  “resources circulation system (Ertz et al., 2016)”, and etc. 
+Further, some scholars had also discussed the vague boundary of this concept and further raised 
+a more comprehensive framework - they positioned the sharing economy into three 
+foundational cores: (1) access economy; (2) platform economy; (3) community -based economy 
+(Acquire et al., 2017).  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+7  
+Figure 2-1. Three foundational cores of sharing economy  
+Source: adapted from Acquire et al. (2017)  
+In this regard, the ideal sharing economy combines the three cores mentioned above and falls 
+in the mix set in the m iddle of the Figure 2 -1 (see Sharing Economy Ideal). However, in practice, 
+a certain implementation of a sharing model may fall into one specific area or one intersection 
+area between two cores in Figure 2 -1; for example, accommodation sharing businesses l ike 
+Airbnb or car -sharing businesses like Didi in China are the examples of the Access Platform. 
+When it comes to the sharing of second -hand books, the typical sharing model in which people 
+share the used books among peers falls into the intersection area of the Access Economy and 
+Community -based Economy – see Community -based Access area in Figure 2 -1. In this regard, 
+people share the idling books and extend their utilization value (Access Economy) with a non -
+contract and non -monetization (Community -based E conomy) aim and way among peers 
+(Acquire et al., 2017). Interestingly, with the support of Internet Technology, the emerging 
+second -hand book sharing online platform (mentioned in the introduction section) added new 
+understanding to this sharing model in t he Chinese sharing context within the past decade, 
+which makes the second -hand book sharing model into the middlemost set area in the Figure 
+2-1 as the Sharing Economy Ideal.  
+In regard of the vague boundary of the concept of sharing economy, various resea rchers also 
+discussed the spectrum of this concept from a narrow perspective to a broader perspective 
+(Acquire et al., 2017). For example, Benkler deemed that the sharing economy should happen 
+in the social sharing systems rather than the market (20 04); Th us the sharing modles happened 
+in the marketplace is excluded from this concept but gifting is accepted as sharing (Benkler, 
+2014). However, Belk raised the concepts of true sharing and pseudo -sharing, and although the 
+true sharing concept in this research  exclude the commercial exchange happened in the market 
+place similarly as Benkler put (20 04), Belk’s true sharing excludes gifting (2014). Many 
+researchers agreed that the sharing economy promotes access instead of ownership (Stephany, 
+2015; Cockayne, 201 6; Eckhardt and Bardhi 2016; Frenken and Schor 2017). Stephany ( 2015) 
+and  Cockayne (2016) emphasized that the process in the sharing model without transferring 
+the ownership should be happening via the online digital platforms. And Cockayne (2016) 
+furthe r restricted the online digital platforms into the peer -to-peer ones, but the 
+Author, IIIEE, Lund University  
+8 conceptualization in Stephany ( 2015) showed that both the peer -to-peer platforms and B2C 
+platforms like Zipcar work for the concept of sharing economy. On the monetary side, Ste phany 
+( 2015) and Cockayne (2016) also somewhat disclosed the profit -driven characteristics of the 
+concept of sharing economy in their researches, however, Eckhardt and Bardhi (2016) and 
+Frenken and Schor (2017)’s research did not specifically emphasize on  this point and showed 
+the non -profit driven ways are acceptable in this concept.  
+In a broader perception of the concept of sharing economy, many scholars emphasized the 
+vague boundary of this concept and various forms included in this concept (Lessig, 20 08; 
+Botsman, 2013; Schor, 2014; Habibi et al., 2017; Muñ oz and Cohen, 2017). For example, in 
+Habibi’s (2017) hypothesis, the author disclosed that the diverse field with hybrid forms is one 
+of the characteristics of the sharing economy and that the sharing  economy includes the 
+continuum area between “true sharing” and “pseudo -sharing” instead of the binary 
+classification “true sharing” and “pseudo -sharing” mentioned in Belk (2014). A broader 
+perception of sharing economy often showed relatively loose restri ctions on the 
+conceptualization, especially on whether it is profit -driven or non -profit -driven. Schor (2014) 
+summarized that the sharing activities basically have the following characteristic: recirculation 
+of the goods, increased utilization of the durab le assets, exchange of the services, and sharing 
+of productive assets. It needs to be pointed out that besides the physical goods, Schor (2014) 
+disclosed the sharing of services and Botsman (2013) disclosed the sharing of place and skills or 
+time to stuff as part of the diverse field with hybrid forms within the sharing activities in their 
+researches.  
+This study adheres to the conceptualization of the sharing economy in a broader way of 
+understanding as disclosed in Muñoz and Cohen’s paper “ A socioeconomic  system enabling an 
+intermediated set of exchanges of goods and services between individuals and organizations which aim to increase 
+efficiency and optimization of sub -utilized resources in society (2017) ”, and the key attributes of the 
+concept second -hand  sharing in this paper include both B2B, B2C, for -low-profit and non -
+profit initiatives, exchange, reuse, reselling, gifting. By applying this conceptualization, the 
+author intended to cover most of the common sharing methods happening in the current 
+Chin ese sharing business. Also, it is also needed to point out that B2B and B2C methods of 
+sharing models were included here because in the real practice of sharing business in the Chinese 
+market, there exists more than one single method of sharing economy. In  other words, even a 
+peer-to-peer leading sharing model may have some B2C or B2B elements. For example, in this 
+study, the online second -hand book sharing platforms still included some B2C services (Wang, 
+2021).  
+Besides the advantages of sharing economy th at could promote financial benefit, societal 
+experience, and improve the life quality of people, it also may have some positive environmental 
+externalities by using the sharing economy platform (Albinsson et al., 2019). For example, the 
+sharing economy pro vides opportunities for the reduction of the total resource use and carbon 
+footprints (Mi & Coffman, 2019) and the reduction of pollutants, emissions, and energy 
+expenditure (Albinsson et al., 2019), and the promotion of the resource efficiency in the 
+production (Leismann et al., 2019). And the sharing economy also has the benefit to achieving 
+the UN’s SDG goals by increasing economic efficiency and information transparency (Mi & 
+Coffman, 2019). Though the potential of the sharing economy in sustainability is praised, we 
+cannot hastily regard all the sharing models to be sustainable because sustainability would be 
+case-dependent (Albinsson et al., 2019). Acquire et al. (2017) also disclosed the sharing 
+economy’s contested nature; for example, the sustainable  motivation would perhaps finally 
+become the secondary motivation in the sharing case in which it aimed initially at sustainable 
+promise. Other cases or phenomena that happened in sharing economy also remarked the gap Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+9 between theory and implementation rega rding sustainability (Fishman et al., 2014; Tussyadiah 
+& Pesone, 2016; Parguel et al., 2017).  
+2.2 Understanding What the Consumers’ Attitudes Are about: 
+Motivations and Barriers Perceived by Consumers for the 
+Second -Hand Book Sharing  
+ 
+Consumers’ attitudes towards second -hand book sharing are, as well as their motivations and 
+barriers, diverse in the literature. Some motivations and barriers in the following small sections 
+also came from the motivations and barriers for second -hand shopping or rent ing. Still, they 
+could also apply to the case of second -hand book sharing conceptualized in this study.  
+2.2.1  General consumer attitude  
+Research on consumers’ attitudes and behavior showed that discrepancies existed between 
+attitudes and behaviors; for example, consumers’ actual behaviors might not be positive though 
+they retain the positive attitudes (Anja Kollmuss & Julian Agyeman, 2002). Such discrepancies 
+are more evident in the cases of environmentally significant behaviors, for example, purchasing 
+green pro ducts (Lydia Zepeda and David Deal, 2009; Marie von Meyer -Hö fer et al., 2015). 
+Similarly, under these circumstances, consumers would finally choose a traditional consumption 
+model rather than a sharing business model even though they have positive attitude s toward 
+sharing economy; in other words, the positive attitudes toward sharing economy do not 
+necessarily lead to the resulting participation in sharing economy (Armstrong et al., 2015). 
+Further, consumers’ attitudes toward sharing economy do not stay sta ble or constant but are 
+influenced by their personal factors and social factors, such as life stage, economic conditions, 
+and etc. (D’Agostin et al., 2020). Also, though the sharing businesses could be free or cheap, 
+still large amounts of consumers would be hesitant or reluctant toward sharing economy due to 
+various reasons (Tukker, 2015).  
+In general, though the concept of sharing economy has been gradually well known among 
+people in the recent decade and has been applied into several product groups such as car sharing, 
+bike sharing, and clothes sharing, its market share remained low compared to the whole 
+consumer goods market (Borg et al., 2020). And the overall acceptance of sharing business also 
+remained low among consumers (Tunn et al., 2019). Also, ev en though internet technology 
+spurred the sharing market and more diverse modes of sharing in the past ten years, such as 
+sharing of services and skills, consumers' attitudes towards the sharing economy changed 
+dramatically (Gullstrand et al., 2016).  
+2.2.2  Motivations  
+Although not sufficient knowledge on consumers’ acceptance on second -hand book sharing 
+can be found, generally some motivations from the research of the broader second -hand 
+product market can be summarized, such as economic reason (e.g. money -savin g), convenience 
+reason (e.g. timd and effort savings), and ideology reason (e.g. need for uniqueness and 
+recreation) (Padmavathy et al., 2019); and the environmental awareness (e.g. resources saving) 
+(Liu et al., 2021).  
+As mentioned above, internet technol ogy spurred the growth of sharing economy in the past 
+decade. The internet platform played a rather important role in both monetary sharing (e.g. car -
+sharing businesses and accommodation sharing businesses) and non -monetary sharing (e.g. 
+non-monetary hospi tality sharing platform) basically by reducing the transaction cost of 
+matching sharers and users and making it easier in sharing their resources among the peers Author, IIIEE, Lund University  
+10 (Gullstrand et al., 2016). Also, convenience (Zheng et al., 2019), good quality of services an d 
+promotion (Wang, 2021) are regarded as advantages and motivations of the online book sharing 
+platforms in China. Gullstrand et al. (2016) note that the motivations for sharing or exchange 
+vary greatly, depending on whether the purpose of the sharing is m onetary or not. The need for 
+contact and reciprocity, the desire to belong to a community, and pro -sustainability reasons are 
+deemed as motivations for the non -commercial sharing platforms (Gullstrand et al., 2016). And 
+for commercial sharing platforms, th e economic interest and convenience are the motivations 
+that outweigh the reciprocity mentioned above (Zvolska, 2015). Further, the motivations for 
+sharing or exchange also vary greatly depending on the types of products; for example, small 
+products like f ilms, toys, and books are more likely to be shared because their value decreases 
+dramatically after first use (Botsman and Rogers, 2010). Also, researchers found that for the 
+products only have temporary use, for example, children’s products (e.g. crib), s haring of such 
+products might be more environmentally beneficial than purchasing or owning the products 
+(Mont et al., 2006).  
+For the aspect of environmental awareness, the willingness to reduce consumption -related waste 
+is regarded as a motivation for part icipating in sharing activities (Burgio et al., 2014). Guiot and 
+Roux (2010) note that some consumers see the benefits in consuming less and would like to 
+express their personality via purchasing second -hand products. And in the ideology 
+considerations, so me people are motivated by sharing economy because they can have fun using 
+it and feel cool (Gullstrand et al., 2016). And in practice, the opportunity to test the products 
+(Rexfelt and Hiortaf Ornä s, 2009) and the opportunity to change the products more f requently 
+(Borg et al., 2020; Gullstrand et al., 2016) are identified as motivations for sharing economy. 
+The possibility of getting access to the products that no longer available in shops motivated 
+consumers (Gullstrand et al., 2016). And the possibility  of finding rare books through online 
+book sharing platforms also motivated a group of users in China (Wang, 2021).  
+Catulli et al. (2013) noted that flexibility is one of the motivations for sharing economy, in which 
+the users might feel a sense of freedom  for not owning the product but only having access to 
+the product when it is necessary to use it. Similarly, Lu et al. (2016) also identified flexibility as 
+a good motivation for textbook sharing in the context of universities in Shanghai China, in 
+which i t will save physical space for the students. However, the definition of flexibility varied in 
+the research on sharing economy, for example, Bardhi and Eckhardt (2012) in the similar 
+rationale mentioned above, noted that people regarded car -sharing as more flexible than owning 
+a car. But Baumeister (2014) mentioned that people considered the private ownership of the car 
+as more flexible than car -sharing.  
+2.2.3  Barriers  
+Deep rooted in the modern consumer culture, the ownership or the desire to own (Wallendorf  
+and Arnould, 1988), is one of the strong barriers for sharing (Mont,2004a). Ownership, in some 
+cases, is the guarantee for consumers’ sense of safety and could ease their anxiety about not 
+owning (Gullstrand et al., 2016). Also, owning the products means complete control over them; 
+consumers could do whatever they want to the products without worrying about the sanction 
+fees that happened in renting or sharing (Gullstrand et al., 2016). Ownership could also add 
+value to consumers’ social status or their em otional value (Tunn et al., 2019).  
+Though unfamiliarity with the concept was not highly discussed in the research on second -hand 
+book sharing, but has been identified as an obstacle for other products in sharing (Mont, 2004b). 
+And whilst economic reasons,  which are free or cheap, are often regarded as motivations for 
+sharing, Besch (2005) and Gullstrand et al. (2016) also disclosed that these could be obstacles 
+under some circumstances, for example, for long term use renting or sharing could be more 
+expens ive (Gullstrand et al., 2016).  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+11 The initial sharing economy happened mostly among immediate family (Belk, 2010), and though 
+it gradually developed and expanded into sharing among strangers, many people feel 
+uncomfortable sharing their resources outside the  family members. Lack of trust is one of the 
+strong barriers to sharing (Botsman, 2012; Schor, 2014).  
+People are not willing to be involved in sharing because it would be impractical and complicated 
+(Gullstrand et al., 2016). Similar barriers are noted fo r second -hand book sharing both online 
+and on -site in China (Lu et al., 2016; Teng et al., 2019). Concern for hygiene (Gullstrand et al., 
+2016; Teng et al., 2019), low quality of books or services and unclear channels and insufficient 
+promotion (Teng et al ., 2019) are also identified as barriers for second -hand book sharing. Last 
+but not least, the overlap of local library and book sharing in function would be identified as an 
+obstacle.  
+2.2.4  Summary  
+The motivations and barriers are summarized in the tables below, which provide a framework 
+to form survey questions, as well as the backdrop for the follow -up interviews.  
+Table 2-1. Motivations identified in the literature  
+Economic reasons  Free or cheap; money -saving  
+Environmental reasons  Resource -saving  
+Ideological reasons  To express my personality  
+To be unique  
+Feel fun and cool  
+Feel freedom and flexibility  
+Online platforms  Convenience  
+Efficiency in logistics  
+Personalized purpose  To change books more frequently  
+To read more  
+To test before purchasing  
+Searching for rare books no longer in the 
+sale or out of print  
+Connection to community  To associate with people or group  
+To find people with similar reading 
+interests  
+Library related reasons  To find the books not involved in the 
+library  Author, IIIEE, Lund University  
+12 Source: the author  
+Table 2-2. Barriers identified in the literature  
+Unfamiliarity  Not familiar with second -hand book 
+sharing and sharing economy  
+Ideological reasons  Desire to own  
+Connection to community  Low trust for sharing with strangers  
+Online platforms  Impractical and complicated steps 
+involved  
+Services  Low quality of  sharing services  
+Low hygiene condition of  books  
+Low physical state of  books  
+Library related reasons  Unwilling to share because books can be 
+borrowed from library  
+Source: the author  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+13 3 Research Design, Materials and Method  
+This chapter will present how this research is designed and the processes for collecting and 
+analyzing data toward the final outcome. It will explain the logic between each step within the 
+research and will justify the author's design for those steps.  
+3.1 Research Design  
+To answer the research questions exhibited in earlier section, bot h the inductive and the 
+abductive approach were adopted. According to (Blaikie & Priest, 2019), an inductive approach 
+often aimed at establishing descriptions which are built on the data of characteristics and/or 
+regularities collected for “What” question;  and an abductive approach could incorporate the 
+meanings, interpretations, motivations, intentions and so on, and works for answering both 
+“What” and ”Why” Questions. Due to the characteristic of each approach, they were 
+accordingly designed into the rela ted part of the research processes (See Table 3 -1). To answer 
+RQ1, the inductive approach was used to generalize what consumers’ attitudes towards second -
+hand book sharing via literature review. The items identified in the literature review section are 
+then used to form survey questions, in which RQ2 will be further answered. To answer RQ3, 
+the abductive approach was used through conducting consumer interviews based on the results 
+of the survey. This could offer the consumers an opportunity for expressing t heir deep thoughts 
+on motivations and barriers questions based on the survey, or the intentions behind their 
+attitudes.  
+To fulfill the above processes, the design is basically going to finalize the procedures including 
+item generation, item purification, and item validation suggested by prior researchers (Churchill, 
+1979; Hollebeek et al., 2014). In the item generation procedure, the items are selected from the 
+review of literature. The item purification procedure was partly included in the literature revi ew, 
+in which 7 Mandarin -based papers were added to test the item generated whether fits the local 
+Chinese context. In this process, items will be modified or removed. Also, the survey has part 
+of the function in item purification, if one factor does not fi t in its group, this will be observed 
+by the reliability test later. The item validation procedure in this study basically refers to both 
+the online survey and the follow -up interviews. In the online survey, the items generated were 
+converted into survey q uestions. The author used Wenjuanxing platform to design the survey 
+and collect the responses online. A link to the survey was originally designed to be posted for a 
+15-day timeline, but it was extended for one week time in order to get more sufficient amo unt 
+of answers. In -depth interviews after the collection of the data from the earlier online survey 
+were then conducted, in which the author investigates the reasons why consumers have such 
+attitudes based on the outcome of the online survey.  
+In this stud y, the empirical data collection was finalized through an explanatory sequential mixed 
+method approach, including a quantitative survey and subsequent qualitative semi -structured 
+interviews. The aim of applying this mixed -method approach is to get a more i n-depth and 
+comprehensive understanding to the research questions, compared to simply applying an 
+individual qualitative or quantitative data (Creswell, 2014). The logic of this mixed method 
+approach is also in accordance with the design, first, items gene rated will be exhibited with the 
+validation of a designed online survey for exploring consumers’ attitude on second -hand book 
+sharing; Second, there would be in -depth interviews designed based on the earlier surveys. And 
+the relevant sequence in this study  to collect empirical data can be put as follows:  
+- Literature reviews to get relatively sufficient knowledge on consumers’ attitudes towards 
+second -hand book sharing.  Author, IIIEE, Lund University  
+14 - Online survey to the consumers to further explore and validate consumers’ attitudes, e specially 
+the motivations and barriers perceived by consumers for second -hand book sharing.  
+- Follow -up interviews to examine the reasons and/or meanings behind the consumers’ 
+attitudes.   
+ 
+Figure 3-1. The re search framework  
+Source: the author  
+3.2 Method Used to Collect Data 
+3.2.1  Literature Review  
+Firstly, the review of the literature was exhibited to get an initial and fundamental understanding 
+of the concept of the sharing economy and to gather what is known or what is yet not known 
+about the consumers’ attitude towards the second -hand book sharin g in China, which is also 
+the imperative step in the item generation procedure.  
+As mentioned earlier, sharing economy varies in different culture, social norms, values and etc. 
+thus a group of literature reviews in Mandarin are designed to be added in thi s section. This will 
+double -check the items that generated from the literature review step fits the local context well, 
+and will perhaps supple a few missing items or modify some items. This step is indispensable, 
+because it will also double -check whether the literature reviews which are mostly focused on 
+western backdrop fits the Chinese context.  
+In order to access pertinent research on this topic, the author identified and grouped the 
+keywords into the following groups: sharing economy, second -hand book sharing, used book 
+sharing, and consumer attitude. Further, the above groups of keywords were t hen explored 
+through the online database called Scopus. Scopus is Elsevier’s database which incorporates a 
+sufficient amount of peer -reviewed high -quality literature in the top -level subject field such as 
+Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+15 Social Science. The search was firstly conducted by  using the option of searching within article 
+title, abstract, keywords. And the initial searching for “sharing economy+concept” led to 1229 
+documents, “sharing economy+consumers attitude” led to 131 documents, and searching for 
+“sharing economy+second -hand” led to 25 documents. The literature was then ranked by the 
+“highest cited” option and the author scanned the titles, key words, abstracts of the paper to 
+define whether this paper is of relevant, which were then further categorized according to the 
+keyw ords. Also, the similar terminology has been used for searching, for example, collabarative 
+consumption and sharing economy. More papers were further added via the method of 
+snowballing (Wohlin, 2014), in which the bibliography of some key literature, espe cially the 
+highly cited ones on this topic were consulted and more relevant papers were identified. Plus, 7 
+Mandarin -based paper were also added here to test whether the item generated fits the local 
+Chinese context. They were searched from the Mandarin li terature database CNKI (CNKI, 
+n.d.), in which “second -hand book” as a key word to search from “theme” option, which lead 
+to 228 academic papers. Similarly, the author finally selected 7 related paper to complement the 
+literature review in Chinese context b y scanning cited numbers, titles, key words, and abstracts.  
+3.2.2  Survey  
+Based on the motivations and barriers items generated from the literature review, the following 
+survey was implemented in order to examine consumers’ attitudes toward second -hand book 
+sharing in China and, accordingly, to verify the items generated. The survey was designed and 
+published with the support of the Mandarin survey platform Wenjuanxing. The survey questions 
+were mainly quantitative, but also some qualitative questions, which was a  suggested setup for 
+large sample size (Trost, 2007). The survey was anonymous and was implemented in Chinese, 
+and the English version of the survey questions will be provided for transparency reason (See 
+Appendix A). The survey was designed into three sec tions. The core of the survey is section 2 
+in which two Likert scale questions are included. A Likert scale question is one of the most 
+commonly used methods to gather scaled responses in survey research, and it works suitably to 
+the research which aims to  investigate respondents’ acceptance and attitudes and their agreeing 
+level on specific statements (Sachdev & Verma, 2004). This study used a five -point scale to 
+examine consumers’ attitudes towards second -hand book sharing. The choice of each question, 
+“strongly disagree, somewhat disagree, neither agree nor disagree, somewhat agree, strongly 
+agree” are identified for points 1 -5 for the respondents to choose. Such scaling could provide 
+enough options to distinguish among various attitudes without raising t he burden and tiredness 
+of respondents to describe  (Sachdev & Verma, 2004). And to simplify the questions, not all the 
+factors identified from the literature review are included, and some factors are grouped into one 
+question. Also, to alleviate the impact  of social -desirability in answering the survey questions, 
+the items for motivations and barriers generated from literature review are then randomly 
+ordered in the survey, not like they are categorized in several types in the literature review 
+section. Soc ial-desirability bias happens when the respondents are more likely to choose the 
+answer which is more favorable (Podsakoff & Organ, 1986).   
+In total, three sections were included in the survey with 21 questions. Section 1 would ask the 
+respondents about t he general backdrop questions, including their general attitudes on second -
+hand book sharing and related backdrop characteristics such as their reading habit (the number 
+of books read per year) and their cost of purchasing printed books during a certain pe riod of 
+time. The backdrop characteristics would also be added to the cross -tabulation analysis and 
+statistical analysis in the data analysis section, to test whether a certain backdrop characteristic 
+would have stronger impact on consumers’ motivations or  barriers for second -hand book 
+sharing.  
+Section 2 includes 6 questions about motivations and barriers, in which a  Likert scale question 
+is used to investigate their agreeing level of the identified motivations and barriers. Q9 is a Likert Author, IIIEE, Lund University  
+16 Scale question a nd asks about consumers’ agreeing level of 12 different motivations identified 
+from the literature review. Q10 is a ranking question and the respondents are asked to vote for 
+their top 3 motivations from the list in Q9. Q11 is a following supplement questi on to Q9 and 
+Q10,  which is an open -ended, and the respondents could input the factors that they valued 
+important but not included in Q9. Similarly, Q12 -Q14 followed the similar flow but the 
+questions are about the barriers. Section 2 was designed, in othe r words, the data collected from 
+this section is expected as the main body for the following statistical analysis.  
+Section 3 includes the basic demographic questions. And it needs to be pointed out here that 
+the last question of the survey Q21 asked about  the respondents’ willingness to participate in 
+the following interviews. If they answered yes and filled in their contacts in this question, the 
+author will try to reach out to them in this way.  
+The survey was designed as a cross -sectional survey and the data would be collected during one 
+specific time point, in which 15 days were expected in this study. The survey was published 
+online via an online survey platform called Wenjuanxing. The survey platform could accelerate 
+the efficiency of collecting data v ia both links for online website and QR links for social media, 
+and since it is based on Mandarin so it would distribute the survey more fluently in the Chinese 
+context. The link of the survey would be promoted on some universities campus forum, and/or 
+be distributed by the people that the author known in the university campus.  
+The information on potential environmental benefits of second -hand book sharing will be 
+avoided in the survey, neither in the description nor in the questions, thus to reduce the so cial-
+desirability bias from answering the survey by the respondents.  
+When it comes to the sample size, since the large population of the university students (on 
+progress) in China currently, approximately 35 million for 2021 (Chinese Ministry of Education , 
+2022), this study follows Fowler’s (2009) strategy in which the following parameters are regarded 
+important in accessing the appropriate sampling size: margin error, confident level for margin 
+error, standard deviation (SD). The outcome of accessing the sampling size in this study is 
+around 300, and the rationale and related formula can be found in the Appendix (see Appendix 
+C). 
+3.2.3  Interviews  
+The interviews are aimed at generating a deeper understanding and perception of the results of 
+the online survey, for  example, to examine the reasons behind consumers’ attitudes towards the 
+second -hand book sharing. And the questions prepared for the interviewees are mainly focused 
+on the motivations and barriers questions (section 2) in the survey. The interviews were a ll semi -
+structured interviews. And an interview guide was prepared (see Appendix B). In implementing 
+a semi -structured interview, interviewees are allowed to reflect in a way that is deviated from 
+the prepared guiding questions, and the nuances might be ga ined from this process (Bryman, 
+2008).  
+The interviewees were selected and reached out to by the following steps. The last question in 
+the survey (Q21) was designed to ask respondents’ willingness to participate in the follow -up 
+interviews. The author will  reach out to the answers who showed their interest in second -hand 
+book sharing and left their contacts in this question. The interviewees were selected intentionally 
+in this way, the respondents who answered yes to this question and left their contacts ar e more 
+likely to be the person who has an interest in second -hand book sharing or perhaps had related 
+experiences. And the anonymity in the interview was respected in accordance with the survey.  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+17 3.3 Method Used to Analyze Data 
+3.3.1  Literature Review  
+In this study, the approach of content analysis was applied to analyze the information obtained 
+from the literature review process via a method of Synthesis Matrix. This method worked both 
+for the item generation and item purification steps mentioned above. The author we nt through 
+relevant papers and found out contents that are most related to this topic and put them into the 
+matrix in excel. Sub -topics for categorizing the contents are: definition of sharing economy, 
+benefits of sharing economy, motivations and barriers for sharing economy, etc. This method 
+of Synthesis Matrix enables the author to gather useful information from the target papers in a 
+more efficient way and make it more organized and easy to sort out for the further writing 
+process. The review of 7 Mandar in-based paper were also added here to test whether the item 
+generated fits the local Chinese context.  
+Section 2 of the survey (Q9 – Q13, see Appendix A) was then designed and generated based on 
+this step by using the outcome of the literature review espec ially on the motivations and barriers 
+of consumers’ acceptance of second -hand book sharing in China. For example, one of the 
+barriers would be the low hygiene conditions of the used books (e.g. dirty books).  
+3.3.2  Survey  
+This part acts as the main part of the d ata analysis in this research. Finally, 296 answers were 
+received in total, not including the testing ones. By double checking the validity of the answers, 
+the author manually screened out 15 invalid answers, thus leads 281 valid answers, which would 
+work for the following analysis. The basic screening standards applied by the author are as 
+follows: 1) time for filling the survey less than 180s (the suggested answering timing is 300s from 
+pilot testing, and it is perhaps not realistic to finalize the survey  in a reasonable way less than 
+180s) will be double -checked; 2) if further the answers in section 2 showed extreme high 
+consistency, e.g. all strongly agree; 3) if the open answer questions were answered off -topic, 
+then such answers will be excluded from t he following statistical analysis from this initial 
+manually screening. Data of all the answers are downloaded as an excel format, and the 
+descriptive variable which decided to be applied with further statistical analysis will be 
+transformed into a numeric al variable in a way such as 1 for male, 2 for female, and 3 for non -
+binary.  
+Section two of the survey includes the motivations and barriers questions, and is the core part 
+of the survey. As said earlier, after the initial screening conducted by the autho r manually, 281 
+valid answers were prepared for the following process of analysis. And the author chooses the 
+basic statistical parameters Mean Value and standard deviation (SD) to examine the data from 
+motivations and barriers questions and try to find ou t the most vital factors. Then the author 
+would like to see the significance between various groups of variables via the statistical method 
+T-test and ANOVA analysis. Detailed steps are as follows.  
+Reliability  
+As said above, the 281 valid answers passed t he initial screening will be applied a Cronbach 'α 
+analysis on motivation questions and barriers questions (Q9 and Q12, Likert scale questions) to 
+examine the reliability of the answers. Cronbach 'α is a parameter to measure how closely related 
+a set of it ems are, and often used to test the reliability of Likert scale  questions in the surveys 
+(Glen, n.d.). If Cronbach 'α is above 0.8, it indicates that the reliability of t he set of items (here 
+is answers to Q9 and answers to Q12) is good and is proper for following statistical analysis, 
+and Cronbach 'α 0.6 often seen as the baseline (Tavakol & Dennick, 2011). Further, since the Author, IIIEE, Lund University  
+18 motivations questions (Q9) and barriers questi ons (Q12) were originally formed from literature 
+review respectively, thus it is logical to do two separate Cronbach 'α on Q9 and Q12.  
+Most vital Motivations and Barriers  
+After reliability test, Mean Value and standard deviation (SD) are used to analyse th e outcome. 
+Since the Likert scale questions were designed with five separate values 1 -5, then 3 is chosen as 
+a standard to examine the mean value. SD is used to measure the dispersion degree of a set of 
+data. These two parameters are often going hand in ha nd and are often used to find out the 
+central tendency (Mean Value) and dispersion extent (SD Value) of data groups and fit well for 
+the data type and data volume in this study. For example, a higher Meav Value with a smaller 
+spread of SD (±) is more likel y to be an important factor.  
+Correlations of Descriptive Questions and Demographic Questions.  
+In order to examine if some consumer groups have a stronger influence on a certain motivation 
+or barrier, a Student’s T-test (hereinafter T -test) and Analysis o f variance (ANOVA) are used to 
+analyze the correlations between some chosen descriptive questions and demographic questions 
+and motivations or barriers. These analysis were conducted via R language version 4.1.3 (R Core 
+Team, 2022).  
+A T-test is used to ana lyze the correlations between two variables. In this study the gender data 
+was chosen to do the T -test with motivations and barriers. It needs to be pointed out that 
+although the non -binary is a choice designed in the survey, no answer had chosen it.  
+ANOVA analysis is used to analyze the correlation among multiple variables. In this study, it 
+needs to be pointed out that since the target group is university students in China, which means 
+the sampling itself has its own characteristics. This situation l eads to some demographic 
+characteristics not random variables for statistical analysis, and has its autocorrelation. For 
+example, the data on salary condition, education level, and age group in this study are clustered 
+in a certain area and is not randomly  distributed. Thus, the answers to Q1 (Q1: How many 
+printed books have you obtained on average per year during your studies at the university?) and 
+Q2 (Q2: What is the average amount of money do you expect to spend on average for 
+purchasing books per month ?) were transformed into numerical variables for the ANOVA 
+analysis towards the motivations and barriers.  
+For the results of T -test and ANOVA analysis, if P < 0.01, difference was extremely significant; 
+if P < 0.05, difference was significant; if P ＞ 0.05, difference was not significant.  
+Further, for voting questions in section two of the survey, frequency analysis by comparing the 
+means is used to analyze the answers. A bar chart to show the top motivations and barriers in 
+ranking will be presented.  
+In section 1 of the survey, questions were asked about the general attitudes and the related 
+backdrop, and section 3 focused on demographic questions. A descriptive method is applied to 
+analyze the data for those two sections in order to have a big picture of consumers’ general 
+attitude towards second -hand book sharing. A cross -tabulation method is used to analyze such 
+intuitive data, and the internal connections within such descriptive data can be disclosed by 
+charts with the percentage in the results section.  For example, the gender ratio in the group who 
+are satisfied with second -hand book sharing.  
+However, one thing needs to be pointed out here for the cross -tabulation analysis in this study. 
+Consumers' attitudes could be impacted by various external factor s, for example, monthly 
+income, educational level, etc. However, as mentioned in the former section, some demographic Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+19 characteristics in this study have special patterns or characteristics; for example, a large amount 
+of the respondents were undergraduate students and were in the similar age group, which makes 
+it perhaps not effective to use these non random distributed data to do the cross -tabulation 
+analysis. Thus, in this study, the author chooses three data groups gender, reading habits (Q1 in 
+the surve y), and cost for book per month (Q2 in the survey) as 3 variables to do the cross -
+tabulation analysis here and later for correlation analysis in the statistical analysis part.    
+3.3.3  Interviews  
+The language for conducting the interviews is Mandarin. All the in terviews were recorded with 
+the permission of the interviewees and notes were saved as well. Each interview section has two 
+copies of recordings, however, interview 4 and 5 only recorded the sound of the author and 
+very little sound of the interviewees due  to the technical problems. Thus the record of I4 and 
+I5 were mainly based on the notes taken by the author. As mentioned in section 3.2.3, the 
+interviews are aimed at generating a deeper understanding and perception based on the 
+respondents’ answers to th e survey questions, especially on the motivations and barriers 
+questions. Following the abductive logic mentioned above, the author will discuss and 
+categorize them into a part after the statistical analysis outcome in the next section to further 
+complemen t the observed outcome. These interviews were partly transcribed, and the author 
+categorized them mainly based on the category of motivations and barriers to further support 
+the findings of the survey analysis. The outcome of the content analysis of interv iews will be 
+discussed in the discussion section together with other outcomes.  Author, IIIEE, Lund University  
+20 4 Results and Analysis  
+4.1 Demographic Characteristics  
+281 valid answers were generated from all the 296 answers received (not including the testing 
+ones), with 15 invalid answers sc reened out through double -checking the validity of the answers 
+by the author manually. As mentioned earlier, the basic demographic characteristics are included 
+in section 3 of the survey, and the relevant analysis is based on the answers to this section of  
+the survey, and see results of demographic characteristics in Figure 4 -1. Among all the 
+respondents, 278/281 valid answers showed that their status of education is progressing in the 
+university, with the other 2 alumni and 1 answered rather not say. This outcome made sure that 
+the role of our respondents fitted the target group that the author expected in this study as 
+university students. And the majority, 73.31% (206/281) of the respondents’ education level are 
+Bachelor’s Degree. As for age, the two main  age groups are 47.33% (133/281) of 15 -20 years 
+old and 29.89% (84/281) of 21 -25 years old. And for salary, 87.89% of the respondents' answers 
+to the salary question finally fell between the area of 1000 -3000 CNY, where three main groups 
+1000 -1500 CNY, 150 0-2000 CNY, and 2000 -2500 CNY, with few answers falling in other 
+choices. And when it comes to the gender question, 48.75% (137/281) identified themselves as 
+female, and 51.25% (144/281) identified themselves as male, and 0% (0/281) identified 
+themselves a s non -binary.  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+21  
+Figure 4-1. Demographic characteristics of sampling  
+Source: the author  
+4.2 Backdrop Characteristic of Consumers’ General Attitudes  
+4.2.1  General Attitudes for Second -Hand Book Sharing  
+This part of the data is collected mainly from the section 1 of the survey. First of all, it should 
+be noted that due to technical issue, only 72 valid answers collected for question 7 (Q7) in the 
+survey. Thus the answer to Q7 will be analyzed separately based on the 7 2 valid answers and 
+will not be linked to other data in analysis as the author originally expected.  
+The basic situation on general attitudes toward second -hand book sharing gained from the 
+survey showed that 17.44% of the respondents had never heard about second -hand book 
+sharing and the other 2.14% of respondents showed that they do not have any interest to the 
+second -hand book sharing at all. Positively, 82.92% of respondents had participated in the 
+second -hand book sharing at least once, and of which 39. 86% as users (at least once) and 
+43.06% as sharers (at least once). In the group of students who have participated in the second -
+hand book sharing before, the majority showed their satisfaction, with few skipped this 
+Author, IIIEE, Lund University  
+22 question. In the group of students who have not participated in the second -hand sharing before, 
+58.33% showed that they had an interest in trying, the groups of “no interest at all” “no idea” 
+and who skipped this question are at similar proportion, around 10% (based on 72 valid 
+answers). The bi g picture showing the general attitudes of consumers towards the second -hand 
+book sharing are as follows in Figure 4 -2. 
+ 
+ 
+Figure 4-2. General attitudes of consumers  
+Source: the author  
+4.2.2  Correlations of Demographic Characteristics and General 
+Attitudes  
+As mentioned in the methodology section, gender, reading habits (Q1 in the survey), and cost 
+for book per month (Q2 in the survey) are 3 variables to do the cross -tabulation analysis. In the 
+cross -tabulation analysis, the questions related to their past experience and future willingness 
+will be focused. And only evident and obvious differences and patterns in cross -tabulation will 
+be disclosed as outcome here in this section.  
+Gender  
+Between male and female respondents, there were no significant differences. For example, for 
+past experience, 81.94% of male respondents had at least once participated in the second -hand 
+book sharing, and 83.95% of female respondents for this choice . The only slight difference was 
+that 34.47% and 47.22% of male respondents were more likely to be the users and sharers; 
+however, the results in the female group were 45.26% and 38.69%. It seemed that the females 
+were more likely to be the users and the m ales were more likely to be the sharers in this slightly 
+different result.  
+Reading habits  
+This part of the analysis was based on the question Q1: How many printed books have you 
+obtained on average per year during your studies at the university? For  shari ng experience, the 
+results did not show significant differences among different groups. Only slight differences 
+between the group of 30 -50 books year and above 50 book per year. 37.5% as a user and 45% 
+as a sharer in the group of 30 -50 books per year and 3 7.5% as a user and 42.5% as a sharer in 
+the group of above 50 books per year. It seemed that the more books you obtained, the more 
+willing you would like to be a sharer.  
+Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+23  
+Figure 4-3. Cross-tabulation: readin g habit – sharing experiences  
+Source: the author  
+For willingness in the future, there is no big difference among three groups. The majority are 
+willing to try again in the future.  
+ 
+Figure 4-4. Cross-tabulati on: reading habit - willingness in the future  
+Source: the author  
+Cost for Books per Month  
+This part of the analysis is based on the Q2: What is the average amount of money do you 
+expect to spend on average for purchasing books per month ? Firstly, responses choosing group 
+“more” is not considered as only one responder were insufficient for meani ngful analysis. It 
+seemed that groups “100 -150” “150 -200” and “200 -250” have a slightly higher rate in 
+participating in the second -hand book sharing activities no matter as a user or a sharer, with 
+rates of 84.84%, 85.29%, 91.31% respectively.  
+Author, IIIEE, Lund University  
+24  
+Figure 4-5. Cross-tabulation: cost for book per month – sharing experiences  
+Source: the author  
+Further, when it comes to their future attitudes, though all above 60% for willingness to 
+participate in the second -hand s haring, a slight difference happened in the first two groups “0 -
+20” “20 -50” CNY per month, which are the only two groups higher than 70%, with the rates 
+of 71.11% and 70.59%. It seemed that students who spent less on book purchasing per month 
+showed more s atisfaction with the second -hand book sharing and had more willing to 
+participate more in the second -hand book sharing activities in the future.  
+ 
+Figure 4-6. Cross-tabulation: cost for book per month – willingness in the future  
+Source: the author  
+4.3 Motivations for the Second -Hand Book Sharing  
+In this section, the analysis is based on questions 9 -11 in the survey, including the Likert Scale 
+question for motivations, a ranking question for top 3 motivations, and an open question for 
+the respondents to fill in the other motivation factors that not  included in the question 9 but 
+they regard important in their decision -making. The core of these questions is the motivation 
+question (Q9), where the respondents reflected on various motivation factors with a degree of 
+1-5, which indicated from strongly d isagree to strongly agree. As can be seen from the survey, 
+Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+25 1=strongly disagree, 2=somewhat disagree, 3=neither agree nor disagree, 4=somewhat agree, 
+5=strongly agree.  
+4.3.1  Descriptive Analysis for Motivations (based on Q9 -Q11)  
+Reliability  
+As put in the former section, the reliability of the data will be first tested and prepared as a front 
+setting for the following statistical analysis. In this study, all the answers to Q9 were first grouped 
+into 12 data groups (M1 -M12) classified by the 12 sub -questions  within Q9. The Cronbach 'α 
+test was first applied to these data groups (M1 -M12) for the reliability test, and the coefficient 
+calculated out was 0.9658, which was above 0.8 and indicated the reliability of these group of 
+data was good and further analysis  can be more reliable based these data. And the data groups 
+(M1-M12) identified from this step will be continuous to finalize the following statistical 
+analysis.  
+Consumers’ Agreeing Level of Motivation  in Q9  
+Mean value and the SD are applied to analyze the  agreeing level of motivation factors of 
+consumers in this step. The results were as follows. 2 digits after the decimal point were used 
+to present data, and the full value can be found in Appendix (hereafter the same).  
+Table 4-1. Mean Value and SD for motivations  
+Data 
+Group  Related statements in Q9  Mean Value  SD (±)  
+M1 In the second -hand book sharing I could find books 
+that that are not included available in libraries.  3.74 
+ 1.28 
+ 
+M2 The second -hand book sharing could save me a 
+certain amount of  money.  3.83 
+ 1.27 
+ 
+M3 The second -hand book sharing makes it possible for 
+me to change books more frequently and read more.  3.81 
+ 1.20 
+ 
+M4 The second -hand book sharing makes it possible for 
+me to get associated with people or groups which 
+share the common interest with me in reading within 
+the campus/community/neighborhoods.  3.85 
+ 1.19 
+ 
+M5 Participating the second -hand book sharing makes 
+myself  to be unique and could express my 
+personality.  3.69 
+ 1.25 
+ 
+M6 I feel a sense of  freedom and flexibility when sharing 
+the second -hand books.  3.86 
+ 1.16 
+ Author, IIIEE, Lund University  
+26 M7 I feel the second -hand book sharing especially 
+practical for the textbooks which will no longer be 
+used after the course exams.  3.82 
+ 1.34 
+ 
+M8 I like second -hand book sharing because it could 
+save resources and reduce the cost on waste 
+management – it makes more sense to share than to 
+abandon, and it could be one of  the sustainable 
+lifestyles.  3.86 
+ 1.27 
+ 
+M9 Online platforms for secon d-hand book sharing 
+make it more efficient on quality inspection and 
+delivering to the receiver.  3.83 
+ 1.22 
+ 
+M10 Second -hand book sharing seems fun and cool, and I 
+am willing to have a try.  3.79 
+ 1.23 
+ 
+M11 Second -hand book sharing offers me the opportunity 
+to test the books whether I really want to read.  3.74 
+ 1.28 
+ 
+M12 The second -hand book sharing makes it possible to 
+find books that are no longer on sale in the shops or 
+online shopping platforms.  3.99 
+ 1.13 
+ 
+Source: the author  
+All the data from M1 to M12 are all above 3, which means the respondents basically agreed with 
+all the factors involved in question 9 in the survey. Top 3 important factors are: M12, M6, and 
+M8. Finding books that are no longer on sale in the shops or onli ne shopping platforms (M12) 
+was regarded as the first important factor in second -hand book sharing motivations from the 
+results. The factor related to freedom and flexibility (M6) and the factor related to the 
+environmental benefit (M8) are also important factors. Besides, the factor related to online 
+second -hand book sharing platform (M9), the factor related to making connections with the 
+people/group have common interest on reading (M4), and the factor related to saving money 
+(M2) are also good motivation s identified by the respondents in which the Mean Value are all 
+above 3.82.  
+Consumers’ Ranking for Motivations  
+This part of the analysis is based on the answers collected to question 10 (Q10) in the survey. 
+We allowed the respondents to vote for 3 motivat ion factors out of all 12 motivation factors 
+they regard more important than the others, and abstaining for voting is acceptable for this 
+question. Of 281 answers in total, 280 were valid. The outcome of the overall voting was 
+summarized in the chart below .  
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+27  
+Figure 4-7. Voting for moti vations  
+Source: the author  
+ 
+As showen in the chart, M2, M12, M7 gained the most votes from the repondents compared to 
+the ranking M12, M6, M8 from the former outcome of Mean Value and SD Value analysis. 
+While saving money (M2) was not among the top five factors identified by the mean Value and 
+SD Value analysis, it ranked first here in the voting section. A similar phenomenon can be seen 
+from the interviews –the majority of the interviewees regarded money -saving a good motivation 
+for them towards second -hand book sharing. The possibility of second -hand book sharing to 
+find books that are no longer on sale in the shops or online shopping platforms (M12) ranked 
+among the top  3 both in voting section and in the outcome of Mean Value and SD Value 
+analysis. The motivation “ I feel the second -hand book sharing especially practical for the textbooks which 
+will no longer be used after the course exams. (M7) ” ranked third here in the  voting, however, it was 
+not in top 5 factors in the outcome of Mean Value and SD Value analysis. Plus, some answers 
+from the open -ended question echoed the high ranking of M7 here, for example, several 
+respondents mentioned that they are happy to share th e used text book to the following batch. 
+The overall voting results here were almost above 60, however, the ranking of votings here 
+varied to the ranking outcome of Mean Value and SD Value analysis in several motivations. The 
+motivation “ Online platforms f or second -hand book sharing make it more efficient on quality inspection and 
+delivering to the receiver . (M9)” ranked last here with only 50 votes, but it was in top 5 of factors in 
+the outcome of Mean Value and SD Value analysis. And 4/6 interviewees disc losed that digital 
+platforms acted as good motivation in their experience in the interview section. Plus, the 
+motivation “ In the second -hand book sharing I could find books that that are not included available in libraries. 
+(M1)” ranked the second to last in the outcome of Mean Value and SD Value analysis, but it 
+gained top 3 votes here in this section.        
+Important Motivations Understood by the Interviewees  
+7 interviewees were reached out in the interview section and 1 of them rejected the interview 
+finally, which led to 6 interviews being implemented. Though rejected, the reason this person 
+gave might add as input to this section as well.  
+First, in accordance with the trend from the outcome of Mean Value and SD analysis, in which 
+M12 happened to be th e most vital motivation factor, 4/6 interviewees (I1, I3, I4, I5) expressed 
+that the possibility of finding books that are no longer on sale in the shops or online shopping 
+Author, IIIEE, Lund University  
+28 platforms (M12) would be one of the important motivations for second -hand book shar ing due 
+to their own experience. I1 I3 I4 all mentioned the term “ books that out of print ” in this situation, 
+and I5 used the term “old books published long ago ”. As for the second important motivation (M6) 
+identified from the former statistical analysis s tep, 2/6 interviewees also disclosed their thoughts 
+on freedom and flexibility inssues of this factor. “ My initial consideration for using the second -hand 
+book sharing is to spare the physical space in my corridor and lighten the burden of mailing the book s after 
+graduation (I1). ” “Doing second -hand book sharing could save us space for storing the items in the corridor 
+(I2).” As for the third important motivation identified earlier (M8) on sustainable benefit and 
+lifestyle, all the interviewees agreed that second -hand book sharing is a green activity, but only 
+two of them provided concrete examples. “ Like my hometown, a small town without on -site channels 
+for second -hand book sharing, it is a pity that sometimes teaching aids books (exercise book affiliated to the 
+course book) would be sold for paper recycling; but the common books would be kept and knowledge should be 
+respected (I1) .” “For example, recently I saw green collection hold by some student groups in front of the university 
+stadium for reuse of use d books and clothes (I2). ”  
+5/6 interviewees mentioned that second -hand book sharing was cheap or free, which acted as 
+a good motivation factor (I1 I3 I4 I5). However, two of them also disclosed the situation that 
+the fee they paid in the second -hand book sharing was higher than the original price. “ Out of 
+print books will be higher than the original price (I1) .”, “Rare books are expensive. Out of print books will be 
+higher than the original price on Confucius Old Book online platform (I3) .” Several digital  second -hand 
+book sharing platforms were mentioned as a relatively high -frequency words by some 
+interviewees, for example, Duozhuayu (I1, I5, I6 ), Manyoujing (I1), Confucius Old Book online 
+platform (I3), Xianyu (I1). And these interviewees also agreed th at Online platforms for second -
+hand book sharing make it more efficient for quality inspection and delivery to the receiver 
+(M9), for example, “ The disinfection of the Duozhuayu platform is very good, and the books would be sealed 
+with plastic packaging; S ome second -hand book store did not good on this point (I1) .” “Such platform has a 
+certain guarantee. If the sharing was not satisfied, you can choose to return or get refund in a easier way (I6). ”  
+Though it seemed to be convenient, especially for delivering the books via sharing platform, 
+interviewee 2 worried about the online platforms, “ the logistic shut down during the Covid time, so the 
+online platform did not work smoothly (I2) .” Two of the interviewees mentioned the book -crossing 
+activity as a way of second -hand book sharing, and the strengthening of the connection between 
+people and the chance to get interacted with the people who have similar reading interests with 
+them (M4) were regarded as an important motivation by them. “ This book -crossing is a relatively 
+private activity more likely to be happening among my private friend's circle; we swamped or exchanged few books 
+we chose and mailed them directly to my friend’s place, and this is usually inter provincial, at least inter city 
+activities  (I2).” “I have participated in a public book -crossing activity hold by our library and a morning reading 
+activity hold by student groups where people could exchange books of their interest. It was a nice idea, but the pity 
+was that the same book finally w ent back to my side after the exchanging process in my experience (I3). ”  
+Besides the motivation factors included in the former section, interviewee 1 contribute another 
+factor in her own experience, “ The sharing information in my social media chatting gro up for my corridor 
+building is important to me for book sharing or sharing of other kinds of stuff, especially at a special timeline, for 
+example, at the end of a semester  (I1).” “Some student groups will organize green collection for used book under 
+the corridor building or nearby streets on some special days for example, the World Book Day, which is a driver 
+for me to participate book sharing (I2). ” Similarly, “ In my college, the student group will collect used text book 
+from the newly graduated students for students who will possibly use these book in the next semester (I5). ”  
+Last but not least, some personal habits or niche experiences also lead to motivations for 
+second -hand book sharing. For example, interviewee 5 disclosed, “ I like to visit the secon d-hand 
+book market, both online and onsite. I have been to online book sharing platform Duozhuayu’s physical stores 
+in Beijing and Shanghai (I5).” “I have been to a live house in Xiamen city which include book shairing activities Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+29 in their building. And it is interesting that they way of becoming their member is gifting them 10 art related 
+books. It was attractive  (I1).” For the motivation that “ Second -hand book sharing offers me the opportunity 
+to test the books whether I really want to read (M11). ” intervi ewee 4 put that “ For the expensive professional 
+books, I will consider to do the book sharing and see whether the content such as charts and figures are what I 
+expected before purchasing that book (I4) .” Last but not least, besides all the motivation facto rs listed 
+above in this study, interviewee 3 expressed that gifting is one of the motivations he does the  
+book sharing, “ Personally, I like sending books as a gift to my friend, especially at the graduation seasons 
+(I3).”  
+4.3.2  Relevance of motivations and backdrop characteristic  
+As mentioned in the methodology section, three variables were chosen to test whether the 
+motivations (M1 -M12) were influenced significantly by certain variables. The T -test is often 
+applied for groups that have only two variables, and ANOVA is often applied to solve the 
+question where groups that have over two variables. Accordingly, in this study, the T -test was 
+applied to test the relevance of motivations and gender data. ANOVA analysis was applied to 
+test the relev ance of motivations with the reading habit (based on Q1 in the survey) and cost 
+for book per month (based on Q2 in the survey). The results are presented as follows.  
+T-test 
+As put in the methodology section, T -test often works for analyzing a group of data  which has 
+two variables. In this case, since no one answered non -binary choice for the gender question, 
+thus led to female and male variables in the data of gender group. The results including the p -
+value are presented as follows. See the full results in Appendix.  
+Table 4-2. Results of T -test for motivations  
+ 
+Source: the author  
+The results shows that gender group variables towards M6 M7, M8difference is extremely 
+significant in difference. In other words, gender group may, as a demographic characteristic, 
+have a stronger influence on consumers’ choice on motivation factors  especially for freedom 
+and flexibility aspect (M6), idling textbooks aspect (M7), and environmental and resources -
+saving aspect (M8). The remaining 9 factors (M1 -M5, M9 -M12) seemed to be not influenced 
+much by the gender of the respondents.  
+ANOVA Analysis  
+ANOVA analysis is used to analyze the correlation among multiple variables. In the ANOVA 
+analysis, the answers to Q1 was identified as reading habit and were transformed into a group 
+of data called variable 1, the answers to Q2 was identified as cost for book per month and were 
+transformed into a group of data called variable 2. Two groups of data variable 1 and variable 2 
+were implemented ANOVA analysis towards motivation factors (M1 -M12) respectively via the 
+R language version 4.1.3 (R Core Team, 2022). The results including the p -value are presented 
+as follows. See the full results in Appendix.  Motivation 
+Factors  M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 M12 
+P-value  0.33 0.12 0.12 0.12 0.41 0.001  0.0003  0.0001  0.12 0.88 0.55 0.18 Author, IIIEE, Lund University  
+30 Table 4-3. Results of ANOVA for motivations  
+Data 
+Group  Related questions in Q9  Group of  
+Variables  P Value  
+M1 In the second -hand book sharing I could find books 
+that that are not included available in libraries.  Variable1  
+ 0.51 
+ 
+Variable 2  
+ 0.51 
+M2 The second -hand book sharing could save me a 
+certain amount of  money.  Variable1  
+ 0.75 
+ 
+Variable 2  
+ 0.83 
+M3 The second -hand book sharing makes it possible for 
+me to change books more frequently and read more.  Variable1  
+  
+0.61 
+Variable 2  
+ 0.82 
+M4 The second -hand book sharing makes it possible for 
+me to get associated with people or groups which 
+share the common interest with me in reading within 
+the campus/community/neighborhoods.  Variable1  
+  
+0.61 
+Variable 2  
+ 0.89 
+M5 Participating the second -hand book sharing makes 
+myself  to be unique and could express my 
+personality.  Variable1  
+ 0.88 
+ 
+Variable 2  
+ 0.24 
+M6 I feel a sense of  freedom and flexibility when sharing 
+the second -hand books.  Variable1  
+  
+0.46 
+Variable 2  0.94 Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+31  
+M7 I feel the second -hand book sharing especially 
+practical for the textbooks which will no longer be 
+used after the course exams.  Variable1  
+  
+0.92 
+Variable 2  
+ 0.76 
+M8 I like second -hand book sharing because it could 
+save resources and reduce the cost on waste 
+management – it makes more sense to share than to 
+abandon, and it could be one of  the sustainable 
+lifestyles.  Variable1  
+  
+0.58 
+Variable 2  
+ 0.88 
+M9 Online platforms for second -hand book sharing 
+make it more efficient on quality inspection and 
+delivering to the receiver.  Variable1  
+  
+0.71 
+Variable 2  
+ 0.55 
+M10 Second -hand book sharing seems fun and cool, and I 
+am willing to have a try.  Variable1  
+  
+0.34 
+Variable 2  
+ 0.80 
+M11 Second -hand book sharing offers me the opportunity 
+to test the books whether I really want to read.  Variable1  
+  
+0.83 
+Variable 2  
+ 0.49 
+M12 The second -hand book sharing makes it possible to 
+find books that are no longer on sale in the shops or 
+online shopping platforms.  Variable1  
+  
+0.58 
+Variable 2  
+ 0.61 
+Source: the author  Author, IIIEE, Lund University  
+32 As we can see in the chart above, all p -values for group of variable 1 and group of variable 2 
+towards 12 motivations (M1 -M12) are above 0.05, which means the difference between these 
+two groups of variables towards the motivation was not significant. In other words, neither the 
+reading habits nor the book purchasing frenquency identified  in this study have a strong 
+influence on consumers’ motivation towards the second -hand book sharing, specifically on M1 -
+M12. However, the results for barriers all showed significant differences. This discrepancy 
+showed that in general the barriers outweig h the motivations, and this will be further discussed 
+in the discussion section.  
+4.3.3  Text Analysis for the Open-Ended Question (Q11) in the Survey  
+Several respondents mentioned that they are happy to share the used text book to the following 
+batch. And one res pondent who perhaps had received the sharing book from the former batch 
+wrote that the note on these shared books was helpful to me. Whilst this open -ended question 
+was expected to gather new ideas of factors besides M1 -M12 listed earlier, several open ans wers 
+still put the answer within the range of M1 -M12, for example, limited space and space -saving in 
+the corridor, and money -saving. One respondent mentioned e -book in this answer, and put that 
+though shared -book and e -book both might be free or cheap, e -book is not easy for him/her 
+to remember the content, which is one of his/her motivations towards second -hand book 
+sharing.  
+4.4 Barriers for second -hand book sharing  
+In this section, the analysis is based on questions 12 -14 in the survey, including the Likert Scale 
+question for barriers, a ranking question for top 3 barriers, and an open question for the 
+respondents to fill in the other barrier factors that not included in the question 12 but they 
+regard important in their decision -making. The core of th ese questions is the motivation 
+question (Q12), where the respondents reflected on various barrier factors with a degree of 1 -
+5, which indicated from strongly disagree to strongly agree. As can be seen from the survey, 
+1=strongly disagree, 2=somewhat disag ree, 3=neither agree nor disagree, 4=somewhat agree, 
+5=strongly agree.  
+4.4.1  Descriptive Analysis for Barriers (based on Q12 -Q14)  
+Reliability  
+As described in the previous section, the reliability of the data will be first tested and prepared 
+as a front setting f or the following statistical analysis. In this study, all the answers to Q12 were 
+first grouped into 8 data groups (B1 -B8) classified by the 8 sub -questions within Q12. The 
+Cronbach 'α test was first applied to these data groups (B1 -B8) for the reliability  test, and the 
+coefficient calculated out was 0.9368, which was above 0.8 and indicated the reliability of these 
+group of data was good and further analysis can be more reliable based these data. And the data 
+groups (B1 -B8) identified from this step will b e continuous to finalize the following statistical 
+analysis.  
+Consumers’ Agreeing Level of Motivation Factors in Q12  
+Mean value and the SD are applied to analyze the agreeing level of barrier factors of consumers 
+in this step. These two parameters are often  going hand in hand and are often used to find out 
+the central tendency (Mean Value) and dispersion extent (SD Value) of data groups and fit well 
+for the data type and data volume in this study. For example, a higher Mean Value with a smaller 
+spread of SD (±) is more likely to be an important factor. The results are presented in table 4 -
+2. 
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+33 Table 4-4. Mean Value and SD for barriers  
+Data 
+Group  Related statements in Q12  Mean Value  SD (±)  
+B1 I am not familiar with the second -hand book sharing 
+and how it really works.  3.89 1.08 
+B2 I regard it no need to participate in the second -hand 
+book sharing, because all the printed book I need can 
+be borrowed from the library.  3.82 1.19 
+B3 I have low trust in sh aring books with others.  3.92 1.21 
+B4 I find it impractical or complicated in some steps in 
+the second -hand book sharing, for example, 
+information exchange and delivering.  3.99 1.09 
+B5 The second -hand books for sharing perhaps are 
+often books with low quality in physical state (e.g. 
+missing pages).  3.86 1.12 
+B6 The second -hand books for sharing perhaps are 
+often books with low hygiene condition (e.g. dirty 
+books).  3.99 1.05 
+B7 I would prefer to keep the ownership of  the books.  3.96 1.20 
+B8 The servic e supporting the second -hand book 
+sharing perhaps are often with low quality.  3.93 1.14 
+Source: the author  
+All the data from B1 to B8 are all above 3.7, which means the respondents basically agreed with 
+all the barriers involved in question 12 in the survey, and the agreeing level is relative high. Top 
+3 important barriers are: B6, B4, B7. Hygiene conditions (B6) and impractical or complicated 
+steps in the second -hand book sharing (B4) are the top 2 barrier factors identified by the 
+respondents, with l ittle difference between each other. Ownership (B7) is regarded as a third 
+top barrier factor by the respondents. Low trust between the sharer and user (B3) and low 
+quality services supporting the second -hand book sharing (B8) are also regarded as importan t 
+barrier factors which Mean Value are above 3.9.  
+Consumers’ Ranking for Barriers  
+This part of the analysis is based on the answers collected to question 13 (Q13) in the survey. 
+We allowed the respondents to vote for 3 barrier factors out of all 8 barrier factors they regard 
+more important than the others, and abstaining for voting is acceptable for this question. Of 
+281 answers in total, 280 are valid. Plus, respondent 27 voted 4 barriers to this question, then 
+the last vote will be regarded as invalid bas ed on the question that voting for 3 most important 
+factors. The outcome of the overall voting was summarized in the chart below.  
+ Author, IIIEE, Lund University  
+34  
+Figure 4-8. Voting results for barriers  
+Source: the author  
+As showen in the  chart, B4, B2, B1 gained the most votes from the repondents compared to 
+the ranking B6, B4, B7 from the former outcome of Mean Value and SD Value analysis. The 
+factor of impractical or complicated steps in the second -hand book sharing (B4) occupied a 
+high position both in the voting results and the results of Mean Value and SD Value analysis. 
+Alternative in borrowing from the library (B2) and not familiar with second -hand book sharing 
+(B1) are two key factors identified by the respondents in the voting sec tion, which ranked 
+second and third. 5/8 factors gained votes above 100, and the last one (B3) still held the votes 
+of 87, and the difference of votes between each factor is not that much. Though ranking last in 
+the voting section, factor B3 had a better p erformance in the outcome of Mean Value and SD 
+Value analysis, which is in top 5. The factor that not familiar with second -hand book sharing 
+(B1) which ranked last 3 in the outcome of Mean Value and SD Value analysis, however, was a 
+third high factor here in the voting section.     
+Important Motivations Understood by the Interviewees  
+7 interviewees were reached out in the interview section and 1 of them rejected the interview 
+finally, which led to 6 interviews being implemented. Though rejected, the reason this person 
+gave might add as input to this section as well. First, in accordance with the trend from the 
+outcome of Mean Value and SD analysis, in which hygiene conditions (B6) ranked top 1 among 
+all the barrier factors, B6 was also a highly mentioned fac tor in the interview. 4/6 interviewees 
+expressed their concerns on hygiene conditions (B6) and regarded it as a key barrier factor, but 
+the extent and situation varied (I1, I3, I5, I6). “ I am willing and curious to read other’s notes, but I really 
+mind the  oil stain and the odor of others; I am sensitive to the odor (I1). ” “I cannot stand the colorful markers 
+on the book; but if the notes were good, it would be the icing on the cake (I3). ” Interviewee 5 and interviewee 
+6 had similar thoughts both on hygiene condition (B6) and the physical state (B5) barriers, “ I 
+will not mind the hygiene condition and physical state of the book that much if the book only stays with me for a 
+short period of time; but if I decide to collect this book, then I will pay mu ch attention to its hygiene condition and 
+physical state  (I5, I6) .” Specifically, interviewee 6 explained, “ I will not accept and cannot stand the oil 
+stain on the book or the disconnected book; I can accept markers on the book, but I cannot accept unpleas ant 
+hand-writing of notes (I6). ”  
+Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+35 Ownership of the book (B7) ranked top 3 from the outcome of Mean Value and SD analysis 
+and was also the barrier factor that interviewees focused. 4/6 interviewees mentioned this 
+barrier factor (I3, I4, I5, I6), and the sce nenario were likely to be similar. “ The rare books, books 
+out of print, and the books took lots of efforts to get, I would keep the ownership of such books (I3) .” “I woud 
+like to collect and keep the ownership of the books that is rare to me without sharin g; even if it is shared in some 
+circumstances, I will get the book returned (I4) .”  
+The barrier “ I regard it no need to participate in the second -hand book sharing, because all the printed book I 
+need can be borrowed from the library. (B2)” rankend second top in the voting section, and was 
+discussed by several interviewees, as well as the issue of e -book. “ For textbook or books of bestsellers, 
+I will not consider to go for book sharing first. Though not big inventory in the library, I could easily find e -book 
+for such kinds of books. But it may be due to the insufficient awareness on copyright at my place, if the awareness 
+raises, perhaps I will go for sharing on such books (I1) .” “It depends, for coursebook, I will go for library or e -
+book, but for the ligh t reading which might be hardly found in the library I will go for book sharing (I6).  ”  
+Also, a potential interviewee who left contacts but finally rejected the interview reflected reason 
+that “ I hardly participated second -hand book sharing and almost read e -books. Perhaps it will not contribute to 
+your interview much (IR). ” Besides all the barrier factors listed in this study, some new factors 
+popped up during the interview, for example, interviewee 2 said “ Some second -hand book sharing 
+lacks tr ansparency, for example, I cannot make sure the books I shared finally distributed to the mountain areas 
+as they advertised. This will make me hesitate to join such kind of book sharing (I2) .”  
+It also needs to be pointed out here that though the factor th at not familiar with second -hand 
+book sharing (B1) ranked third top in the voting section, but no one in the interviewed reflected 
+or made comments on this points. This bias came from the author’s design and implementation 
+for reaching out the interviewees . The last question in the survey (Q21) was “ Are you interested in 
+the follow -up interviews related to this survey or you would like to discuss this topic with the author? ” The 
+interviewees answered this question with yes and filled in their contacts. Thi s implementation 
+process perhaps made all the interviewees were the people who are interested in the second -
+hand book sharing and familiar with this topic, thus made the people not familiar with second -
+hand book sharing to be interviewed and generated bias .     
+4.4.2  Relevance of barriers and backdrop characteristic  
+As mentioned in the methodology section, three variables were chosen to test whether the 
+barriers (B1 -B8) were influenced significantly by certain variables. The T -test is often applied 
+for groups tha t have only two variables, and ANOVA is often applied to solve the question 
+where groups that have over two variables. Accordingly, in this study, the T -test was applied to 
+test the relevance of barriers and gender data. ANOVA analysis was applied to test the relevance 
+of barriers with the reading habit (based on Q1 in the survey) and cost for book per month 
+(based on Q2 in the survey). The results are presented as follows.  
+T-test 
+See results of T -test for barriers in table 4 -5. 
+Table 4-5. Results of T -test for barriers  
+Barrier 
+Factors  B1 B2 B3 B4 B5 B6 B7 B8 
+P-value  0.002  0.0002  0.00 0.00 0.00 0.00 0.00 0.00 Author, IIIEE, Lund University  
+36 Source: the author  
+From the results of the indicator p -value we can see that the p-values of gender group variables 
+towards all the barrier factors are less than 0.01, which means the difference is extremely 
+significant. In other words, gender group may, as a demographic characteristic, have a stronger 
+influence on consumers’ choice on  all the barrier factors summarized in this study. In this 
+situation, more factors are strongly influenced by the gender group compared to the motivation 
+factors that only 3 factors are influenced.  
+ANOVA Analysis  
+In the ANOVA analysis, the answers to Q1 wa s identified as reading habit and were transformed 
+into a group of data called variable 1, the answers to Q2 was identified as cost for book per 
+month and were transformed into a group of data called variable 2. Two groups of data variable 
+1 and variable 2  were implemented ANOVA analysis towards barrier factors (B1 -B12) 
+respectively via the R language version 4.1.3 (R Core Team, 2022).  
+Table 4-6. Results of ANOVA for barriers  
+Data 
+Group  Related questions in Q9  Group of  
+Variables  P Value  
+B1 I am not familiar with the second -hand book sharing 
+and how it really works.  
+ Variable1  
+ 0.38 
+Variable 2  
+ 0.004  
+B2 I regard it no need to participate in the second -hand 
+book sharing, because all the printed book I need can 
+be borrowed from the library.  Variable1  
+ 0.94 
+Variable 2  
+  0.04  
+B3 I have low trust in sharing books with others.  
+ Variable1  
+ 0.21 
+Variable 2  
+ 0.001  
+B4 Variable1  
+ 0.32        Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+37 I find it impractical or complicated in some steps in 
+the second -hand book sharing, for example, 
+information exchange and delivering.  Variable 2  
+ 0.41 
+B5 The second -hand books for sharing perhaps are 
+often books with low quality in physical state (e.g. 
+missing pages).  
+ Variable1  
+ 0.99 
+Variable 2  
+ 0.15 
+B6 The second -hand books for sharing perhaps are 
+often books with low hygiene condition (e.g. dirty 
+books).  Variable1  
+ 0.91 
+Variable 2  
+ 0.21 
+B7 I would prefer to keep the ownership of  the books.  
+ Variable1  
+ 0.31 
+ 
+Variable 2  
+ 0.24 
+B8 The service supporting the second -hand book 
+sharing perhaps are often with low quality.  Variable1  
+ 0.62 
+Variable 2  
+ 0.03  
+Source: the author  
+As we can see in the chart above, 2 p -values are less than 0.05 and 2 p -values are less than 0.01. 
+It is interesting to find that all these p -values which indicated significant are belonging to the 
+data group of variable 2 (cost for book per month). The difference is significant to B2 and B8, 
+and it is extremely significant to B1 and B3. In other words, for t he barrier “ I regard it no need to 
+participate in the second -hand book sharing, because all the printed book I need can be borrowed from the library 
+(B2).” and low quality services supporting the second -hand book sharing (B8), the variable 
+group “cost for book per month” had a strong influence on consumers’ choice for barriers, 
+while the variable group “reading habit” had no such influence. Similarly, for not familiar with 
+second -hand book sharing (B1) and low trust between the sharer and user (B3) factors,  the 
+variable group “cost for book per month” had a extremely strong influence on consumers’ 
+choice for barrier factors, while the variable group “reading habit” had no such influence. The 
+overall results of this ANOVA analysis showed that people’s average  cost for purchasing books 
+per month might have stronger influence on consumers’ agreeing level towards the barrier Author, IIIEE, Lund University  
+38 factors in this study, while how many books one can obtained in a year does not matter in this 
+situation.       
+4.4.3  Text Analysis For the Open-Ended Question (Q14) in the Survey  
+For barriers, some respondents said that they have no interest in second -hand book sharing 
+themselves or they are not active in participating in second -hand book sharing. Some 
+respondents answered that the types of books w ere limited in the second -hand book sharing 
+which hinder them to participate the sharing activities. Though included in the factor B4, some 
+respondents expressed their concerns on information asymmetry, and one respondent put that 
+“I felt still few of such  book sharing activities in China. And if they are offline activities, you should pay special 
+attention to relevant information. ”  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+39 5 Discussion  
+The aim of this study is to examine consumers’ attitudes toward second -hand book sharing in 
+China, especially on u niversity campuses, and to investigate motivations and barriers influencing 
+how people engage in second -hand book sharing.  
+5.1 Results Reflections  
+This study shows that, to some extent, the overall barriers outweigh motivations in influencing 
+consumers’ choice  in second -hand book sharing. This phenomenon may be caused by several 
+barriers which have a stronger influence.  
+The desire to keep ownership is one major barrier. It was also highlighted in other product 
+groups for sharing (Mont, 2004a; Gullstrand et al.,  2016). This study showed that it depends on 
+circumstances. For instance, some individuals mentioned they were reluctant to share the books 
+that are rare, expensive or the books that took a lot of time and energy to get. Some of them 
+were only willing to s hare such books within immediate family or working group and hoped to 
+get the books returned finally.  
+In this regard, though the motivation about “finding books that are no longer on sale in the 
+shops or on online shopping platforms“ identified as one maj or motivation in the study, it will 
+be turned into a barrier as the desire to own in the end. That means the sharing business model 
+for second -hand books will be proactive less or only once until the user gets the book under 
+this circumstance. Or we can se e that this motivation for finding rare books perhaps motivated 
+only users rather than sharers.  
+In other circumstances, for example, in the circumstances that books are cheap or the 
+consumers do not mind giving up the ownership of the books, second -hand b ook sharing more 
+easily happens. This also follows the rationale that small products like books, films, or toys 
+whose value will decrease dramatically after the first use are more likely to be shared (Botsman 
+and Rogers, 2010).  
+One main barrier is a lack o f trust in sharing with strangers. This phenomenon was also 
+remarked in sharing by other research (Botsman, 2012; Schor, 2014). However, under some 
+circumstances, it seemed that this barrier would be alleviated, and people get motivated. For 
+example, anoth er group of respondents is motivated by the possibility that second -hand book 
+sharing might offer in association with local communities or groups which may have common 
+interests in reading. And some respondents showed that doing the book sharing via online  
+platforms will let them be free of worrying about trust issues because of the efficiency and 
+services the platform could support.   
+Another barrier is unfamiliarity. Although the respondents show an overall positive attitude 
+towards second -hand sharing, m any still reflected that they had never heard or were not clear 
+about the concept of second -hand book sharing or sharing economy. Similarly, the barrier of 
+unfamiliarity also ranked highly as the result of voting questions.  
+The economic reason is one main  motivation for second -hand book sharing. Though the free 
+or cheap price of second -hand book sharing truly attracted a number of users, some individuals 
+still have their own purposes in book sharing, which are not in the original nature of sharing 
+that is based on reuse or exchange. For example, many would pay more to get a book that is 
+out of print. In other words, they just use the channel of book sharing to fulfill their own 
+purposes.  Author, IIIEE, Lund University  
+40 The respondents commonly regarded second -hand book sharing as resource -saving activity. 
+However, other research also observed cases that consumers’ negative attitude towards the 
+environmental aspect of sharing and can hardly associate it with being an option of 
+environmentally sound (Baumeister, 2014; Gullstrand et al., 2016 ). Although the negative point 
+can not be explicitly highlighted in this second -hand book sharing case, the rebound effect 
+should be considered. For example, the users of book sharing might consume the money saved 
+from sharing for another unsustainable con sumption and waste extra resources.  
+Plus, the spill -over effect on other sectors should also be paid attention to when the second -
+hand book sharing market increases in the future. For example, considering the large number 
+of university students in China, t he publication sector, especially for textbooks, may be easily 
+swayed due to the change of students’ way of getting access to books. Also, the spill -over effect 
+on the e -book business sector should be considered. Some respondents also cared about 
+copyright  issue and assumed that the promotion of copyright awareness in the local area might 
+also motivate and draw users for second -hand book sharing from e -book users group for 
+economic reasons.  
+The relationship between local library and book sharing and their o verlap in function plays an 
+important role in consumers’ decision makings for second -hand book sharing. In the results of 
+voting questions, both the motivation about “in the second -hand book sharing I could find 
+books that that are not included available i n libraries” and the barrier about “ all the printed 
+book I need can be borrowed from the library” ranked highly.  
+But whether to be motivated or hindered, it depends on the type of the books. For example, 
+one interviewee reflected that he/she will not con sider book sharing as the first choice for 
+textbooks or books of bestsellers; though not a big inventory in the library, he/she could easily 
+find e -books for such kinds of books. Another interviewee also reflected that the inventory in 
+the school library f or textbooks can hardly support the whole bactch, but the e -book can be 
+easily accessed especially in some places the awareness of copyright is not sufficient.  
+The relationship between book sharing and library, in a broader context of consumption 
+models, is the relationship between collaborative consumption and collective consumption, 
+similar to the example of bike -sharing and public bikes supported by local government in some 
+cities like Hangzhou in China. Lin (2018) noted that the sharing economy would c omplement 
+the collective consumption in many aspects but would also bring new issues and challenges into 
+urban governance or even perhaps cause the waste of resources. If the second -hand book 
+sharing market keeps increasing in the coming future, it will in fluence the management of local 
+libraries; though solid conclusions can not draw from this study, it is worthwhile to be 
+researched in the future.  
+It is a highly debatable issue for the role of online sharing platforms. Although people are mostly 
+driven by  economic reasons and convenience (Zvolska,2015), many are hindered by the 
+impractical and complicated processes of online platforms, for example, information exchange 
+and delivery. And the voting for the convenience of onling sharing platform ranked last in this 
+study.  
+In China, several online second -hand book sharing platforms have been emerging in the last 
+decade. For example, one of these sharing businesses, called Manyoujing was founded in 2016, 
+which was a second -hand book sharing platform based on s ocial media (wechat) applet 
+development. And the data in 2019 showed that the platform had more than 2 million registered 
+users and covered nearly one million books (Wang 2021).  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+41  
+Though the users of such sharing platforms were still increasing these years , and some platforms 
+had even established on -site physical stores, yet consumers complained about the platforms for 
+example, the platforms had limited types of books and no prominent price differentiation had 
+been made compared to common second -hand book s hopping (Wang 2021).  
+Although the company updated their business model for lowering the price, for example, the 
+book sharers would get the benefit of getting another book on the platform, as this study 
+mentioned, the impractical and complicated process is  an significant barrier to consumers. Also, 
+some interviewees disclosed that the Covid situation in recent years hindered the logistics of 
+such second -hand book sharing platforms.   
+5.2 Methodology Reflections  
+The survey is the main method used for data collec tion in this study. The sampling size was 
+applied in a relatively loose way, and the valid answers collected were just around the baseline 
+suggested (Fowler, 2009), thus will to some extent influence the degree of accuracy of the survey.  
+Some reflections from the survey and the interviews show that the respondents more or less 
+cared about their roles as sharers or users in the second -hand book sharing, but such roles did 
+not further separate in the design of the survey.  
+Some outcomes for the Likert scale questions in the survey varied with the ranking question; 
+the bias could exist here because the ranking order would probably be impacted by the question 
+order when filling the answer. For example, the respondents might rank highly the motivations 
+or barriers listed in the front.  
+The way of selecting interviewees may have bias. The author will reach out to the respondents 
+who express their interest and willingness to further interview in the survey and leave their 
+contacts, thus lead to the interviewee s almost the people who know about second -hand book 
+sharing. Information from people who are not familiar with this concept can hardly get in 
+following this process.  Author, IIIEE, Lund University  
+42 6 Conclusion  
+To enable sharing economy, it is important that future consumers are willing to  accept and use 
+sharing business models. By using quantitative and qualitative methods, this study provided 
+empirical evidence to address the following research questions:  
+RQ1: What are consumers’ attitudes towards second -hand book sharing in China?  
+RQ2: W hat are the motivations and barriers perceived by consumers towards second -hand book 
+sharing?  
+RQ3: Why do consumers have such attitudes, and why do they value these motivations and 
+barriers?  
+The results of this study indicate an overall positive attitude for consumers in engaging in 
+second -hand book sharing in the future. However, it seems that the barriers outweigh the 
+motivations currently.  
+The two main barriers observed are the desire to own and a lack of trust in strangers. Many 
+would perhaps turn to o nline second -hand book sharing platforms to avert these barriers, but 
+still, they remarked that the impractical and complicated processes involved in the online 
+platform are another critical obstacle. Other concrete barriers in the book sharing processes, for 
+example, the hygiene conditions of the book, will also largely impact consumers’ decisions for 
+second -hand book sharing. But these barriers vary from person to person.  
+Economic reasons, for example, for free or cheap books, are deemed as one major mot ivation 
+for consumers. However, many would like to pay much higher price for getting an out of print 
+book through book sharing and will perhaps not share this book again.  
+The environmental benefits of book sharing, like resource -saving, might motivate a gr oup of 
+respondents. But how this works depends on concrete cases on consumers’ behavior, and needs 
+further study to validate.  
+For ideology aspects, motivations like “to be unique” “fun and cool” or “expressing their 
+personality” have special influences to a group of respondents. Last but not least, motivations 
+like space -saving or reducing the pressure of mailing used books after graduation which will 
+give consumers freedom or flexibility, also worked as a strong motivation for second -hand book 
+sharing.  
+The perceptions of motivations and barriers are closely connected to consumer behavior and 
+are strongly impacted by prevailing consumers’ cultures in the local context. The desire to own, 
+which has been rooted in modern consumer culture, will resist the devel opment of sharing 
+business models, especially in a market like China, where people attach great value to ownership.  
+Internet technology is another strong reason affecting consumers’ perceptions of motivations 
+and barriers. Online second -hand book sharing platforms will bring consumers more efficiency 
+and convenience, but in practice, it is also a highly debatable issue among consumers. The extent 
+of local context or area supported by internet technology and related logistics also matters for 
+this reason.  
+ 
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+43 While conducting this study, some knowledge gaps were identified that need further research in 
+the future. Research on second -hand book sharing or other sharing models are still in their 
+infancy. It would be useful to conduct similar research, perhaps on  other product groups, in 
+other context in China or different countries to compare consumers’ attitudes towards sharing 
+models, as well as their motivations and barriers.  
+The notion of ownership is an interesting topic and is worth further research; for e xample, its 
+changing or updating along with people’s participation in various consumption models.  
+Lack of trust in strangers, together with the complexity of online sharing platforms which will 
+hinder people from joining sharing activities, is worth inves tigating further.  
+The results of this study assumed positive potential for the development of second -hand book 
+sharing in China, also considering a large number of potential users and the prevailing 
+digitalization on campuses. However, it should be remark ed that consumers’ positive attitudes 
+towards second -hand book sharing do not necessarily lead to resulting consumer behaviors or 
+their actual engagement in sharing.  
+The intention of consumers got from this study can not fully reflect consumers' behavior.  As 
+the discrepancy between consumers’ intention and behavior, especially for circular 
+consumption, is noted by other research (Lydia Zepeda and David Deal, 2009; Marie von 
+Meyer -Hö fer et al., 2015). Further study to fill this gap is worthwhile.  
+Another i nteresting area is the relationship and coordinated development of collaborative 
+consumption and collective consumption, represented by bike -sharing and public bikes, or book 
+sharing and the local library. How they could complement each other in function, as well as 
+their power behind – market and local government, is worth to be researched especially in the 
+Chinese context.  
+ 
+ Author, IIIEE, Lund University  
+44 Bibliography  
+Acquier, A., Daudigeos, T., & Pinkse, J. (2017). Promises and paradoxes of the sharing economy: An organizing 
+framework. Technological Forecasting and Social Change, 125, 1 –10. 
+https://doi.org/ 10.1016/j.techfore.2017.07.006  
+Albinsson, P. A., Perera, B. Y., Nafees, L., & Burman, B. (2019). Collaborative Consumption Usage in the US and India: 
+An Exploratory Study. Journal of Marketing Theory and Practice, 27(4), 390 –412. 
+https://doi.org/10.1080/10696679.2019.1644956  
+Armstrong, C. M., Niinimä ki, K., Kujala, S., Karell, E., & Lang, C. (2015). Sustainable product -service systems for 
+clothing: Exploring consumer perceptions of consumption al ternatives in Finland. Journal of Cleaner Production, 
+97, 30 –39. https://doi.org/10.1016/j.jclepro.2014.01.046  
+Bardhi, F., & Eckhardt, G. M. (2012). Access -Based Consumption: The Case of Car Sha ring. Journal of Consumer 
+Research, 39(4), 881 –898. https://doi.org/10.1086/666376  
+Baumeister, C. K. (2014). Access versus Ownership: Consumers’ Reactions to an Alternative Consumption Mode 
+[Technische Univers itä t Mü nchen]. https://mediatum.ub.tum.de/1184401  
+Belk, R. (2010). Sharing. Journal of Consumer Research, 36(5), 715 –734. https://doi.org/10.1086/612649  
+Belk,  R. (2014). Sharing Versus Pseudo -Sharing in Web 2.0. Anthropologist, 18, 7 –23. 
+https://doi.org/10.1080/09720073.2014.11891518  
+Belk, R. W., Eckhardt, G. M., & Bardhi, F. (2019). Introduction to the Handbook of the Sharing Economy: The paradox 
+of the sharing economy. Handbook of the Sharing Economy. 
+https://www.elgaronline.com/view/edcoll/9781788110532/9781788110532.00005.xml  
+Benkler, Y. (2004). Sharing Nicely: On Shareable Goods and the Emergence of Sharing as a Modality of Economic 
+Production. The Yale Law Journal, 114(2), 273 –358. https://doi.org/10.2307/4135731  
+Besch, K. (2005). Product -service systems for office furniture: Barriers and opportunities on the European market. 
+Journal of Cleaner Production, 13(10), 1083 –1094. https://doi.org/10.1016/j.jclepro.2004.12.003  
+Blaikie, N., & Priest, J. (2019). Designing Social Research: The Logic of Anticipation. John Wiley & Sons.  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+45 Botsman, R. (2012). The currency of the new economy is tru st. 
+https://www.ted.com/talks/rachel_botsman_the_currency_of_the_new_economy_is_trust  
+Botsman, R. (2013, November 21). The Sharing Economy Lacks A Shared Defi nition. Fast Company. 
+https://www.fastcompany.com/3022028/the -sharing -economy -lacks -a-shared -definition  
+Botsman, R., & Rogers, R. (2010). What’s mine is yours : The rise of collaborative consumption. Harper Business.  
+Burgio, K., Geist, N., & Kerr, L. (2014). Brunnshö g: a Collaborative Community.  IIIEE at Lund University, Lund,  9. 
+Catulli, M., Cook, M., & Potter, S. (2017). Consuming use orientated product servic e systems: A consumer culture theory 
+perspective. Journal of Cleaner Production, 141, 1186 –1193. https://doi.org/10.1016/j.jclepro.2016.09.187  
+China State Information Center. (2020). China’s sha ring economy development report (2020). The sharing economy 
+research center of the State Information Center. http://www.sic.gov.cn/News/568/10429.htm  
+Chinese Ministry of Education. (2022). [ 人民网 ]教育部：全 国共有各级各类学校 52.93万所  在校生 2.91亿人 —中
+华人民共和国教育部政府门户网站 . 
+http://www.moe.gov.cn/fbh/live/2022/54251/mtbd/202203/t20220301_603465.html  
+Churchill, G. A. (1979). A Paradigm for Dev eloping Better Measures of Marketing Constructs. Journal of Marketing 
+Research, 16(1), 64 –73. https://doi.org/10.1177/002224377901600110  
+CNKI. (n.d.). 中国知网 . Retrieved 19 May 2022, from https://www.cnki.net/  
+Cockayne, D. (2016). Sharing and neoliberal discourse: The economic function of sharing in the digital on -demand 
+economy. Geoforum, 77, 73 –82. https://doi.org/10.1016/j.geoforum.2016.10.005  
+Creswell, J. W. (2014a). Research design: Qualitative, quantitative, and mixed methods approaches (4th ed). SAGE 
+Publications.  
+Creswell, J. W. (2014b). A Concise Introduction to Mixed Methods Research. SAGE Publ ications.  
+Dąbrowska, A., & Gutkowska, K. (2015). COLLABORATIVE CONSUMPTION AS A NEW TREND OF 
+SUSTAINABLE CONSUMPTION. Oeconomia, 14 (2), 39 –49. Author, IIIEE, Lund University  
+46 D’Agostin, A., de Medeiros, J. F., Vidor, G., Zulpo, M., & Moretto, C. F. (2020). Drivers and barriers for the a doption 
+of use -oriented product -service systems: A study with young consumers in medium and small cities. Sustainable 
+Production and Consumption, 21, 92 –103. https://doi.org/10.1016/j.spc.2019.11.00 2 
+Eckhardt, G. M., & Bardhi, F. (2016). The Relationship between Access Practices and Economic Systems. Journal of the 
+Association for Consumer Research. https://doi.org/10.1086/684684  
+Ertz, M., Durif, F., & Arc and, M. (2016). Collaborative Consumption: Conceptual Snapshot at a Buzzword. SSRN 
+Electronic Journal. https://doi.org/10.2139/ssrn.2799884  
+Fishman, E., Washington, S., & Haworth, N. (2014). Bike share’s  impact on car use: Evidence from the United States, 
+Great Britain, and Australia. Transportation Research Part D: Transport and Environment, 31, 13 –20. 
+https://doi.org/10.1016/j.trd.2014.05.013  
+Fowler, F. (2009). Survey Research Methods (4th ed.). SAGE Publications, Inc. https://doi.org/10.4135/9781452230184  
+Frenken, K., & Schor, J. (2017). Putting the sharing economy into perspective. Environmen tal Innovation and Societal 
+Transitions, 23, 3 –10. https://doi.org/10.1016/j.eist.2017.01.003  
+Geissdoerfer, M., Savaget, P., Bocken, N. M. P., & Hultink, E. J. (2017). The Circular Economy – A new sustainability 
+paradigm? Journal of Cleaner Production, 143, 757 –768. https://doi.org/10.1016/j.jclepro.2016.12.048  
+Glen, S. (n.d.). Cronbach’s Alpha: Definition, Interpretation, SPSS. Statistic s How To. Retrieved 19 May 2022, from 
+https://www.statisticshowto.com/probability -and-statistics/statistics -definitions/cronbachs -alpha -spss/  
+Guiot, D., & Roux, D. (2010). A Second -hand Shoppers’ Motivation Scale: Antecedents, Consequences, and Implications 
+for Retailers. Journal of Retailing, 86(4), 355 –371. https://doi.org/10.1 016/j.jretai.2010.08.002  
+Gullstrand, E. E., Lehner, M., & Mont, O. (2016). Exploring consumer attitudes to alternative models of consumption: 
+Motivations and barriers. Journal of Cleaner Production, 123, 5 –15. https://doi.org/10.1016/j.jclepro.2015.10.107  
+Habibi, M. R., Davidson, A., & Laroche, M. (2016). What managers should know about the sharing economy. Business 
+Horizons, 60. https: //doi.org/10.1016/j.bushor.2016.09.007  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+47 Hollebeek, L. D., Glynn, M. S., & Brodie, R. J. (2014). Consumer Brand Engagement in Social Media: Conceptualization, 
+Scale Development and Validation. Journal of Interactive Marketing, 28(2), 149 –165. 
+https://doi.org/10.1016/j.intmar.2013.12.002  
+IBISWorld. (n.d.). IBISWorld —Industry Market Research, Reports, and Statistics. Retrieved 26 April 2022, from 
+https://www.ibisworld.com/default.aspx  
+Ishtiaq, M. (2019). Book Review Creswell, J. W. (2014). Research Design: Qualitative, Quantitative and Mixed Methods 
+Approaches (4th ed.). Thousand Oaks, CA: Sage. English Language Teaching, 12(5), 40. 
+https://doi.org/10.5539/elt.v12n5p40  
+Kaza, S., Yao, L. C., Bhada -Tata, P., & Van Woerden, F. (2018). What a Waste 2.0: A Global Snapshot of Solid Waste 
+Management to 2050. World Bank. https://doi.org/10.1596/978 -1-4648 -1329 -0 
+Kollmuss, A., & Agyeman, J. (2002). Mind the Gap: Why do people act environmentally and what are the barriers to pro -
+environmental behavior? Environmental Education Research, 8( 3), 239 –260. 
+https://doi.org/10.1080/13504620220145401  
+Lessig, L. (2008). Remix: Making art and commerce thrive in the hybrid economy. Penguin Press.  
+Mi, Z., & Coffman, D. (2019). The sharing econom y promotes sustainable societies. Nature Communications, 10(1), 
+1214. https://doi.org/10.1038/s41467 -019-09260 -4 
+Mont, O. (2004a). Product -service systems: Panacea or myth? [Thesis/doccomp, Lund Un iversity]. 
+http://lup.lub.lu.se/record/467248  
+Mont, O. (2004b). Reducing Life -Cycle Environmental Impacts through Systems of Joint Use. Greener Management 
+International, 45, 63 –77. 
+Mont, O., Dalhammar, C.,  & Jacobsson, N. (2006). A new business model for baby prams based on leasing and product 
+remanufacturing. Journal of Cleaner Production, 14(17), 1509 –1518. 
+https://doi.org/10.1016/j.jclepro.200 6.01.024  
+Mont, O., & Heiskanen, E. (2015). Breaking the stalemate of sustainable consumption with industrial ecology and a 
+circular economy. In L. Reisch & J. Thø gersen, Handbook of Research on Sustainable Consumption (pp. 33 –48). 
+Edward Elgar Publishing. https://doi.org/10.4337/9781783471270.00009  Author, IIIEE, Lund University  
+48 Mont, O. K. (2002). Clarifying the concept of product –service system. Journal of Cleaner Production, 10(3), 237 –245. 
+https://doi.org/10.1016/S0959 -6526(01)00039 -7 
+Mont, O., Plepys, A., Palgan, Y. V., Lehner, M., Curtis, S., Zvolska, L., & Velez, A. M. A. (2020). Urban sharing in 
+Shanghai (European Research Council No.771872; City Report No.3, U rban Sharing Team). Media -Tryck, Lund 
+University.  
+Muñ oz, P., & Cohen, B. (2017). Mapping out the sharing economy: A configurational approach to sharing business 
+modeling. Technological Forecasting and Social Change, 125, 21 –37. 
+https://doi.org/10.1016/j.techfore.2017.03.035  
+Murray, A., Skene, K., & Haynes, K. (2017). The Circular Economy: An Interdisciplinary Exploration of the Concept 
+and Application in a Global Context. Journal of Business Eth ics, 140(3), 369 –380. 
+OECD. (2020). Education at a Glance 2020: OECD Indicators. OECD. https://doi.org/10.1787/69096873 -en 
+Padmavathy, C., Swapana, M., & Paul, J. (2019). Online second -hand shopping motiv ation – Conceptualization, scale 
+development, and validation. Journal of Retailing and Consumer Services, 51, 19 –32. 
+https://doi.org/10.1016/j.jretconser.2019.05.014  
+Parguel, B., Lunardo, R.,  & Benoî t -Moreau, F. (2017). Sustainability of the sharing economy in question: When second -
+hand peer -to-peer platforms stimulate indulgent consumption. In Post -Print (hal -01819619; Post -Print). HAL. 
+https://ideas.repec.org/p/hal/journl/hal -01819619.html  
+Podsakoff, P. M., & Organ, D. W. (1986). Self -Reports in Organizational Research: Problems and Prospects. Journal of 
+Management, 12(4), 531 –544. https://doi.org/10.1177/014920638601200408  
+R Core Te am (2022). R: A language and environment for statistical  computing. R Foundation for Statistical Computing, 
+Vienna,  Austria. URL https://www.R -project.org/.  
+Roser, M., & Ortiz -Ospina, E. (2016a). Global Education. Our World in Data. https://ourworldindata.org/global -
+education  
+Roser, M., & Ortiz -Ospina, E. (2016b). Global Education. Our World in Data. https://ourworldindata.org/global -
+educa tion Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+49 Sachdev, S. B., & Verma, H. V. (2004). Relative importance of service quality dimensions: A multisectoral study.  Journal 
+of services research,  4(1). 
+Schor, J. (2016). DEBATING THE SHARING ECONOMY. Journal of Self -Governance and Management Economics, 
+4(3), 7 –22. 
+Stephany, A. (2015). The business of sharing: Making it in the new sharing economy.  
+Trost, J., & Hultå ker, O. (2012). Enkä tboken. 4: e upplagan.  Lund: studentlitteratur, 91 -92. 
+Tukker, A. (2015). Product services for a resource -efficient and cir cular economy – a review. Journal of Cleaner 
+Production, 97, 76 –91. https://doi.org/10.1016/j.jclepro.2013.11.049  
+Tunn, V. S. C., Fokker, R., Luijkx, K. A., De Jong, S. A. M., & Schoormans, J. P. L. (2019). Making Ours Mine: Increasing 
+Consumer Acceptance of Access -Based PSS through Temporary Product Customisation. Sustainability, 11(1), 274. 
+https://doi.org/10.3390/su11010274  
+Tussyadiah, I. P., & Pesonen, J. (2016). Impacts of Peer -to-Peer Accommodation Use on Travel Patterns. Journal of 
+Travel Research, 55(8), 1022 –1040. https://doi.org/10.1177/0047287515608505  
+van Waes, A., Farla, J., & Raven, R. (2020). Why do companies’ institutional strategies differ across cities? A cross -case 
+analysis of bike sharing in Shanghai & Amsterdam. Environmental Innovation and So cietal Transitions, 36, 151 –
+163. https://doi.org/10.1016/j.eist.2020.06.002  
+von Meyer -Hö fer, M., Olea -Jaik, E., Padilla -Bravo, C. A., & Spiller, A. (2015). Mature and Emerging Organic Markets: 
+Mode lling Consumer Attitude and Behaviour With Partial Least Square Approach. Journal of Food Products 
+Marketing, 21(6), 626 –653. https://doi.org/10.1080/10454446.2014.949971  
+WWF. (n.d.). Publishers Turn Over a New Leaf. Retrieved 26 April 2022, from 
+https://wwf.panda.org/wwf_news/?196213/Publishers -Turn -Over -a-New-Leaf 
+Zepeda, L., & Deal, D. (2009). Organic and loc al food consumer behaviour: Alphabet Theory. International Journal of 
+Consumer Studies, 33(6), 697 –705. https://doi.org/10.1111/j.1470 -6431.2009.00814.x  
+Zvolska, L. (2015). Sustainability Pot entials of the Sharing Economy: The case of accommodation sharing platforms. 
+IIIEE Master Thesis. http://lup.lub.lu.se/student -papers/record/8055286  Author, IIIEE, Lund University  
+50 Wang 王宁 . (2018).  分享经济是一种改良运动 ——一个 “市场与社会 ”的分析框架 —中国知网 . (n.d.). Retrieved 
+20 May 2022, from 
+https:// kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2018&filename=GDSK201
+802021&uniplatform=NZKPT&v=_8um -VGizZRELdYlqHC_07f0LHfa -swkWsY -
+IbxsWxUneZdAuhOnyOucKhdYZzEr  
+Zhou 周婷炜 . (2015). 社区二手市场的发展现状和前景 . 中国管理信息化 , 18(19), 172 –175. 
+Yi et al. 易莉 . (2020 ). 共享经济下大学生闲置物品二手交易现状研究及解决方案 ——以成都高校为例 —中国
+知网 . Retrieved 20 May 2022, from 
+https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=XDBY202
+008010&uniplatform=NZKPT&v=v1dZF89FgrRiZ8Hr9b3bxkXiy2hrEOxNNmCi4Gzst8SrHO30DZxFq -
+ytylkSzqBD  
+Li et al. 李美 , 陈铭善 , 黄冬连 , 黄金燕 , & 闫红艳 . (2020). 关于高校旧书回收再利 用的研究 ——以“海大时光
+旧书屋 ”为例 . 福建茶叶 , 42(03), 341 –342. 
+Lin 林晓珊 . (2018). 集体消费与协同消费 :城市产品服务系统中的政府与市场 . 广东社会科学 , 02, 202 –214. 
+Tang et al. 汤敏 , 郑乾 , 陈佳雨 , 杨敏 , 李冰鑫 , & 江磊 . (2019). 共享经济下大学校园二手市场的发展现状及
+对策研究 . 商场现代化 , 09, 140 –141. https://doi.org/10.14013/j.cnki.scxdh.2019.09.077  
+Wang 王世胜 . (2021). 循环经济下网络二手书平台的探索实践 ——以“漫游鲸 ”为例 . 出版广角 , 03, 52 –54. 
+https://doi.org/10.16491/j.cnki.cn45 -1216/g2.2021.03.012  
+Zheng et al. 郑乾 , 张新宇 , 白昌山 , 汤敏 , & 董峥峥 . (2019). 浅析共享经济下二手市场的发展现状 . 商场现代
+化, 10, 182 –183. https://doi.org/10.14013/j.cnki.scxdh.2019.10.106  
+Lu et al. 陆婉婷 , 刘景军 , & 张林立 . (2014). 大学生二手书共用共享的路径研究 ——以上海市松江大学城为
+例. 考试周刊 , 55, 164 –165. 
+ 
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+51 Appendix A :The Survey   
+The survey will be distributed in China. It will also be translated to increase transparency.   
+Introductory text:  
+Dear consumers of the second -hand book sharing,  
+Thank you for opening the link and participating in the questionnaire! My name is Boyan Wei, 
+I am from China, and I am a Master student in the program “Environmental Management and 
+Policy” at Lund University in Sweden. Currently I am writing my Master thesis and for that I 
+need data from the consumers who have experienced any means of s econd -hand book sharing 
+like you. Here the second -hand book sharing we refer to low -profit or non -profit second -hand 
+exchange (reuse) of books.  
+The following questionnaire will take around five minutes to complete. Please be aware that 
+sometimes it would b e allowed to skip some questions, for example, you only need to answer 
+one question between Q7 and Q8. There are no right or wrong answers, please fill in what is 
+most applicable to you.   
+Of course, your answers will remain anonymous. Thank you for your h elp! Further, if you are 
+interested in the follow -up interviews (perhaps will take about 15min) related to this survey or 
+you would like to discuss this topic with the author, please answer the last question with your 
+contact information (Wechat, QQ, phone , email, etc.) The author would reply you from 8th 
+Apr 2022 till 10 days after the survey closed.  
+The survey will be published online for answering between 8th Apr 2022, 7am - 22th Apr 2022, 
+12am; GMT+8.  
+☐ I agree to the anonymized saving of my answers.  
+Section 1  
+Q1: How many printed books have you obtained on average per year during your studies at 
+the university? (Including both the textbooks for the course and the books you bought for 
+your own interest)  
+⚫ Less than 30.  
+⚫ 30-50. 
+⚫ Above 50.  
+ 
+Q2: What is the av erage amount of money do you expect to spend on average for purchasing 
+books per month ? 
+ (Unit: ¥ Chinese Yuan)  
+⚫ 0-20 
+⚫ 20-50 
+⚫ 50-100 
+⚫ 100-150 Author, IIIEE, Lund University  
+52 ⚫ 150-200 
+⚫ 200-250 
+⚫ 250-300 
+⚫ More  
+Comment field: More -please enter:  
+ 
+Q3: What is/are the most likely  way(s) for you to handle idling books? Multiple answers are 
+possible.  
+⚫ Discarding the idle books.  
+⚫ Sending the idle books to the paper recycling or selling them as waste paper.  
+⚫ Keeping them with yourself  as collections.  
+⚫ Second -hand book shop  
+⚫ Donations  
+⚫ Book  sharing.  
+⚫ I do not know/I have never thought about how to deal with my idle books yet.  
+ 
+Q4: Which the following ways of getting second -hand books is most likely for you  
+⚫ Second -hand book shop.  
+⚫ Flee market exhibited in the university.  
+⚫ On-site second -hand boo k sharing activities organized by the university or other 
+organizations.  
+⚫ Online platform including the transactions of  second -hand books sharing.  
+⚫ Obtaining/offering the used books from/to the family members, neighborhoods, or the 
+people I knew.  
+⚫ None of  the above.  
+ 
+Q5: Have you ever participated in the second -hand book sharing activities during your study 
+in the university? (Here the means of the second -hand book sharing activities are not limited, 
+but it needs to be point out here that those activities a re for low -profit or non -profit.)  
+⚫ Yes, I have at least participated once as a sharer in the relevant activities.  
+⚫ Yes, I have at least participated once as a user in the relevant activities.  
+⚫ No, I have never heard such activities.  
+⚫ No, I prefer not to buy the second -hand books.  
+ 
+Q6: How often do you participate in the second -hand books sharing activities?  
+⚫ Never.  
+⚫ Once per semester.  
+⚫ Twice per semester.  
+⚫ More than twice per semester.  
+⚫ Will participate frequently as long as I got the information.  
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+53 Q7: What is yo ur current attitude towards second -hand book sharing? (for those who have not 
+participated in the second -hand book sharing before)  
+⚫ I have no interest.  
+⚫ I am willing to try.  
+⚫ I have no idea.  
+ 
+Q8: What is your current attitude towards second -hand book sharing ? (for those who have 
+already participated in the second -hand book sharing before)  
+⚫ I am satisfied with second -hand book sharing and perhaps will do it more often in the 
+future.  
+⚫ I am not satisfied with second -hand book sharing and perhaps will not do it aga in. 
+ 
+Section 2  
+Q9: For the following potential motivations, to what extent they would influence your decision 
+in participating in the second -hand sharing? Please indicate. (Likert scale question, 1=strongly 
+disagree, 2=somewhat disagree, 3=neither agree no r disagree, 4=somewhat agree, 5=strongly 
+agree )  
+ Extent (order 
+number )  
+1. In the second -hand book sharing I could find books that that 
+are not included available in libraries.   
+2. The second -hand book sharing could save me a certain 
+amount of  money.   
+3. The second -hand book sharing makes it possible for me to 
+change books more frequently and read more.   
+4. The second -hand book sharing makes it possible for me to 
+get associated with people or groups which share the 
+common interest with me in reading within the 
+campus/community/neighborhoods.   
+5. Participating the second -hand book sharing makes myself  
+to be unique and could express my personality.   
+6. I feel a sense of  freedom and flexibility when sharing the 
+second -hand books.   
+7. I feel the second -hand book sharing especially practical for 
+the textbooks which will no longer be used after the course 
+exams.   
+8. I like second -hand book sharing because it could save 
+resources and reduce the cost on waste management – it 
+makes more sense to share than to abandon, an d it could be 
+one of  the sustainable lifestyles.   
+9. Online platforms for second -hand book sharing make it 
+more efficient on quality inspection and delivering to the 
+receiver.   
+10. Second -hand book sharing seems fun and cool, and I am  Author, IIIEE, Lund University  
+54 willing to have a try.  
+11. Second -hand book sharing offers me the opportunity to test 
+the books whether I really want to read.   
+12. The second -hand book sharing makes it possible to find 
+books that are no lo nger on sale in the shops or online 
+shopping platforms.   
+  
+ 
+Q10: Ranking, please rank the top three factors which would influence your decision in the 
+second -hand book sharing from Q9, ______________.  
+Q11: What other motivation factors do you consider important that are not included above? 
+______________.  
+Q12: For the following potential barriers, to what extent they would influence your decision 
+in participating in the second -hand sharing? Please indicate. (Likert scale question, 1=strongly 
+disagree, 2=somewhat disagree, 3=neither agree nor disagree, 4=somewhat agree, 5=strongly 
+agree )  
+ Extent (order 
+number )  
+1. I am not familiar with the second -hand book sharing and 
+how it really works.   
+2. I regard it no need to participate in the second -hand bo ok 
+sharing, because all the printed book I need can be borrowed 
+from the library.   
+3. I have low trust in sharing books with others.   
+4. I find it impractical or complicated in some steps in the 
+second -hand book sharing, for example, information 
+exchange and delivering.   
+5. The second -hand books for sharing perhaps are often books 
+with low quality in physical state (e.g. missing pages).   
+6. The second -hand books for sharing perhaps are often books 
+with low hygiene condition (e.g. dirty books).   
+7. I wou ld prefer to keep the ownership of  the books.   
+8. The service supporting the second -hand book sharing 
+perhaps are often with low quality.   
+ 
+Q13: Ranking, please rank the top three factors which would influence your decision in the 
+second -hand book sharing from Q12, ______________.  
+Q14: What other barrier factors do you consider important that are not included above? 
+______________.  
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+55 Section 3  
+Q15: What is the name of your university? ______________  
+Q16: How old are you?  
+⚫ 15-20 
+⚫ 21-25 
+⚫ 26-30 
+⚫ 30 and old er 
+ 
+Q17: Gender?  
+⚫ Female  
+⚫ Male  
+⚫ Non-binary  
+ 
+Q18: What is the highest level of education you have completed? (ongoing education included)  
+⚫ Bachelor's Degree   
+⚫ Master's Degree  
+⚫ PhD or higher  
+ 
+Q19: What is your current studying or working status in the university?  
+⚫ Student of  your university  
+⚫ Alumni  
+⚫ Exchange student  
+⚫ Employed full -time 
+⚫ Employed part -time  
+⚫ Retired  
+⚫ Rather not say  
+Comment field: Exchange student -please enter the name of your original university which you 
+belong to:  
+Q20: What is the average mo unt of money you could obtained per month ? (Unit: ¥ Chinese 
+Yuan)  
+⚫ 0-500 
+⚫ 500-1000 
+⚫ 1000 -1500 
+⚫ 1500 -2000 
+⚫ 2000 -2500 
+⚫ 2500 -3000 
+⚫ 3000 -3500 
+⚫ 3500 -4000 
+⚫ 4000 -4500 
+⚫ 4500 -5000 Author, IIIEE, Lund University  
+56 ⚫ More  
+⚫ Rather not say  
+Comment field: More -please enter:  
+Q21: Are you interested in the follow -up interviews related to this survey or you would like to 
+discuss this topic with the author?  
+⚫ No. 
+⚫ Yes. please fill in your contact information (Wechat, QQ, phone, email, etc.) here ______  
+ 
+Thank -you message: Thank you for answering my questions. Have a nice day!  
+ 
+ 
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+57 Appendix B: Interview Guide  
+ 
+Mode  
+via telephone or chatting function of social media (Wechat or QQ).  
+Opening  (Briefly, introduce the aim and topic of the interview, introduce the anonymity of 
+this interview)  
+Hi, I am happy th at you showed your interests on the topic of second -hand sharing in China 
+and thanks for participating in the earlier survey. Thank you for answering the last question in 
+the survey with yes to show your willingness to be interviewed and filling your conta cts in the 
+last question. Tha anonymity will be kept in accordance with the survey.  
+Questions  
+The questions to be asked during the interview are as follows. The author will ask the questions 
+one by one to the interviewees with 3 example questions in questi on 1. 
+Motivation s 
+1. In the second -hand book sharing I could find books that that are not included available 
+in libraries.  
+What do you think of this factor?  
+Why do you regard this factor important (e.g. strongly agree in the answer) or not 
+important?  
+Would you mind giving some examples or experiences to support your opinion?  
+2. The second -hand book sharing could save me a certain amount of money.  
+3. The second -hand book sharing makes it possible for me to change books more 
+frequently and rea d more.  
+4. The second -hand book sharing makes it possible for me to get associated with people 
+or groups which share the common interest with me in reading within the 
+campus/community/neighborhoods.  
+5. Participating the second -hand book sharing makes myse lf to be unique and could 
+express my personality.  Author, IIIEE, Lund University  
+58 6. I feel a sense of freedom and flexibility when sharing the second -hand books.  
+7. I feel the second -hand book sharing especially practical for the textbooks which will 
+no longer be used after the course e xams.  
+8. I like second -hand book sharing because it could save resources and reduce the cost 
+on waste management – it makes more sense to share than to abandon, and it could be one of 
+the sustainable lifestyles.  
+9. Online platforms for second -hand book sha ring make it more efficient on quality 
+inspection and delivering to the receiver.  
+10. Second -hand book sharing seems fun and cool, and I am willing to have a try.  
+11. Second -hand book sharing offers me the opportunity to test the books whether I really 
+want to read.  
+12. The second -hand book sharing makes it possible to find books that are no longer on 
+sale in the shops or online shopping platforms.  
+Barrier s 
+1. I am not familiar with the second -hand book sharing and how it really works.  
+2. I regard it no nee d to participate in the second -hand book sharing, because all the 
+printed book I need can be borrowed from the library.  
+3. I have low trust in sharing books with others.  
+4. I find it impractical or complicated in some steps in the second -hand book sharing,  for 
+example, information exchange and delivering.  
+5. The second -hand books for sharing perhaps are often books with low quality in 
+physical state (e.g. missing pages).  
+6. The second -hand books for sharing perhaps are often books with low hygiene 
+condition  (e.g. dirty books).  
+7. I would prefer to keep the ownership of the books.  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+59 8. The service supporting the second -hand book sharing perhaps are often with low 
+quality.  
+ 
+ 
+ 
+ Author, IIIEE, Lund University  
+60 Appendix C: Calculation of the survey sampling size  
+ 
+As Fowler (2009) suggested, in case the population is big, the following formula helps to 
+estimate a proper sampling size:  
+ 
+Three main parameters to run the formula are: Confident level, SD, and the margin of error. 
+The author follows a relative loose setting with 95%, ±6%, 0.05 suggested in the paper.  
+Then the outcome of the survey sampling size is around 300.  
+ 
+ 
+ 
+Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+61 Appendix D: Entire Outcome of the ANOVA Analysis  
+ 
+#(ANOVA)  
+#-------------------- Motivation ---------------  
+ 
+M1 ~ variables1 + variables2:  
+aov2 < - aov (M1 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    2.3   1.137   0.686  0.505  
+variables2    7   10.5   1.495   0.902  0.506  
+Residuals   271  449.3   1.658  
+ 
+M2 ~ variables1 + variables2  
+aov2 < - aov(M2 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    0.9  0.4669   0.286  0.752  
+variables2    7    5.8  0.8262   0.505  0.830  
+Residuals   271  443.1  1.6350  
+ 
+M3 ~ variables1 + variables2  
+aov2 < - aov(M3 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  Author, IIIEE, Lund University  
+62 variables1    2    1.4  0.7139   0.489  0.614  
+variables2    7    5.3  0.7603   0.521  0.819  
+Residuals   271  395.6  1.4599  
+ 
+M4 ~ variables1 + variables2  
+aov2 < - aov(M4 ~ variables1 + variables2, dat a = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    1.4  0.7075   0.493  0.611  
+variables2    7    4.2  0.6027   0.420  0.889  
+Residuals   271  388.8  1.4346  
+M5 ~ variables1 + variables2  
+aov2 < - aov(M5 ~ variables1 + vari ables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    0.4  0.1986   0.128  0.880  
+variables2    7   14.2  2.0282   1.309  0.246  
+Residuals   271  419.8  1.5493  
+ 
+M6 ~ variables1 + variables2  
+aov2 < - aov(M6 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    2.1  1.0631   0.781  0.459  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+63 variables2    7    3.1  0.4428   0.325  0.942  
+Residuals   271  369.1  1.3619   
+ 
+M7 ~ variables1 + variables2  
+aov2 <- aov(M7 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    0.3  0.1571   0.087  0.917  
+variables2    7    7.6  1.0801   0.596  0.759  
+Residuals   271  491.2  1.8127  
+ 
+M8 ~ variables1 + va riables2  
+aov2 < - aov(M8 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    1.8  0.8889   0.541  0.583  
+variables2    7    5.1  0.7272   0.442  0.875  
+Residuals   271  445.4  1.6437  
+ 
+M9 ~ var iables1 + variables2  
+aov2 < - aov(M9 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    1.0  0.5131   0.344  0.709  Author, IIIEE, Lund University  
+64 variables2    7    8.8  1.2601   0.845  0.551  
+Residuals   271  404.0  1.4906  
+M10 ~ variables1 + variables2  
+aov2 < - aov(M10 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+              Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    3.3  1.6485   1.079  0.341  
+variables2    7    5.8  0.8279   0.542  0.802  
+Residuals   271  414.1  1.5280  
+ 
+M11 ~ variables1 + variables2  
+aov2 < - aov(M11 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    0.6   0.312   0.189  0.828  
+variables2    7   10.6   1.518   0.922  0.490  
+Residuals   271  446.3   1.647  
+ 
+M12 ~ variables1 + variables2  
+aov2 < - aov(M12 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    1.4  0.7014   0.547  0.579  
+variables2    7    7.0  0.9964   0.777  0.607  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+65 Residuals   271  347.6  1.2825  
+ 
+#-------------------- Barriers --------------  
+B1 ~ variables1 + variables2  
+aov2 < - aov(B1 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+variables1    2   2.17   1.084   0.980 0.37677    
+variables2    7  23.63   3.376   3.052 0.00415 **  
+Residuals   271 299.78   1.106                    
+--- 
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’  0.1 ‘ ’ 1  
+ 
+ 
+ 
+B2 ~ variables1 + variables2  
+aov2 < - aov(B2 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)   
+variables1    2    0.2  0.0864   0.062 0.9397   
+variables2    7   20.6  2.9464   2.122 0.0416 *  
+Residuals   271  376.3  1.3886                  
+--- 
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1  Author, IIIEE, Lund University  
+66  
+B3 ~ variables1 + variables2  
+aov2 < - aov(B3 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+variables1    2    4.3   2.146   1.557 0.21269    
+variables2    7   33.3   4.753   3.448 0.00149 **  
+Residuals   271  373.6   1.378                    
+--- 
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’  0.1 ‘ ’ 1                 
+ 
+B4 ~ variables1 + variables2  
+aov2 < - aov(B4 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    2.7   1.329   1.130  0.325  
+variables2    7    8.5   1.209   1.028   0.412  
+Residuals   271  318.8   1.177  
+ 
+B5 ~ variables1 + variables2  
+aov2 < - aov(B5 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    0.0  0.0051   0.004  0.996  Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+67 variables2    7   13.5  1. 9322   1.543  0.153  
+Residuals   271  339.3  1.2521  
+ 
+B6 ~ variables1 + variables2  
+aov2 < - aov(B6 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2   0.21  0.1048   0.096  0.909  
+variables2    7  10.70  1.5282   1.394  0.208  
+Residuals   271 297.04  1.0961  
+ 
+B7 ~ variables1 + variables2  
+aov2 < - aov(B7 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)  
+variables1    2    3.4   1.687   1 .175  0.310  
+variables2    7   13.1   1.872   1.303  0.249  
+Residuals   271  389.2   1.436  
+  
+B8 ~ variables1 + variables2  
+aov2 < - aov(B8 ~ variables1 + variables2, data = data)  
+summary(aov2)  
+             Df Sum Sq Mean Sq F value Pr(>F)   
+variables1    2    1.2  0.6046   0.480 0.6193   Author, IIIEE, Lund University  
+68 variables2    7   20.0  2.8564   2.268 0.0294 *  
+Residuals   271  341.4  1.2597                  
+--- 
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1   
+ 
+ 
+ Exploring Consumers’ Attitudes towards Second -Hand Book Sharing in China  
+69 Appendix E: Entire Outcome of the T-test 
+ 
+T-test for motivations  
+ 
+ 
+T-test for barriers  
+ 
+ 
+ 
+Author, IIIEE, Lund University  
+70 Appendix F: Entire Outcome of the Mean Value and SD  
+ 
+ Mean  Sd 
+Motivations    
+M1 3.740214  1.284573  
+M2 3.829181  1.267451  
+M3 3.814947  1.198775  
+M4 3.846975  1.186863  
+M5 3.686833  1.245623  
+M6 3.857651  1.156204  
+M7 3.822064  1.335107  
+M8 3.857651  1.270976  
+M9 3.829181  1.215673  
+M10 3.786477  1.229385  
+M11 3.743772  1.278324  
+M12 3.985765  1.127486  
+Barriers    
+B1 3.88968  1.078326  
+B2 3.822064  1.190893  
+B3 3.918149  1.211725  
+B4 3.985765  1.085527  
+B5 3.864769  1.122595  
+B6 3.985765  1.048712  
+B7 3.964413  1.203632  
+B8 3.928826  1.137944  
+ 
