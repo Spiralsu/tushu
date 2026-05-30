@@ -1,0 +1,240 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="Draw.IO" version="21.0.0" type="device">
+  <diagram id="er-diagram-final" name="系统E-R图">
+    <mxGraphModel dx="1100" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 核心实体 -->
+        <mxCell id="e_user" value="用户" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;align=center;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="180" y="300" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e_book" value="图书信息" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;align=center;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e_type" value="图书类型" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;align=center;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="880" y="100" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e_borrow" value="借阅记录" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;align=center;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="580" y="480" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e_wish" value="求书心愿" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontStyle=1;align=center;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="180" y="480" width="90" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- 关系菱形 -->
+        <mxCell id="r_publish_book" value="发布" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="380" y="200" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r_belong" value="属于" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="730" y="100" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r_borrow" value="借阅" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="380" y="390" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r_wish" value="发布" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="180" y="390" width="70" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 属性椭圆 -->
+        <mxCell id="a_user_id" value="&lt;u&gt;用户ID&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="270" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_user_name" value="姓名" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="315" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_user_phone" value="联系电话" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="75" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_book_id" value="&lt;u&gt;图书编号&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="60" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_book_name" value="书名" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="105" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_book_author" value="作者" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="150" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_book_status" value="在馆状态" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="430" y="195" width="75" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_type_id" value="&lt;u&gt;类型ID&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="60" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_type_name" value="类型名称" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="105" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_type_desc" value="类型描述" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="150" width="75" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_borrow_id" value="&lt;u&gt;借阅ID&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="440" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_borrow_date" value="借阅日期" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="485" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_return_date" value="归还日期" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="530" width="75" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_wish_id" value="&lt;u&gt;心愿ID&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="440" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_wish_bookname" value="书名" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="485" width="75" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a_wish_date" value="发布日期" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="530" width="75" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 关系连线 -->
+        <!-- 用户到发布(图书)关系 -->
+        <mxCell id="l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="e_user" target="r_publish_book">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l1_label" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l1">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 发布(图书)到图书信息关系 -->
+        <mxCell id="l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="r_publish_book" target="e_book">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l2_label" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l2">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 图书信息到属于关系 -->
+        <mxCell id="l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="e_book" target="r_belong">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l3_label" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l3">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 属于关系到图书类型 -->
+        <mxCell id="l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="r_belong" target="e_type">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l4_label" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l4">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 用户到借阅关系 -->
+        <mxCell id="l5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="e_user" target="r_borrow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l5_label" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l5">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 借阅关系到借阅记录 -->
+        <mxCell id="l6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="r_borrow" target="e_borrow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l6_label" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l6">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 借阅记录到图书信息关系（修正：n:1） -->
+        <mxCell id="l7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="e_borrow" target="e_book">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l7_label" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l7">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 用户到发布(心愿)关系 -->
+        <mxCell id="l8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="e_user" target="r_wish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l8_label" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l8">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 发布(心愿)到求书心愿 -->
+        <mxCell id="l9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeColor=#000000;" edge="1" parent="1" source="r_wish" target="e_wish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l9_label" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontStyle=1;fontColor=#000000;" vertex="1" connectable="0" parent="l9">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 实体到属性的连线 -->
+        <mxCell id="lu1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_user" target="a_user_id">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lu2" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_user" target="a_user_name">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lu3" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_user" target="a_user_phone">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lb1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_book" target="a_book_id">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lb2" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_book" target="a_book_name">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lb3" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_book" target="a_book_author">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lb4" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_book" target="a_book_status">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lt1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_type" target="a_type_id">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lt2" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_type" target="a_type_name">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lt3" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_type" target="a_type_desc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lbr1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_borrow" target="a_borrow_id">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbr2" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_borrow" target="a_borrow_date">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lbr3" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_borrow" target="a_return_date">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="lw1" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_wish" target="a_wish_id">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lw2" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_wish" target="a_wish_bookname">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lw3" style="endArrow=none;html=1;strokeColor=#000000;strokeWidth=1.2;" edge="1" parent="1" source="e_wish" target="a_wish_date">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

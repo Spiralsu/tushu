@@ -37,11 +37,11 @@ export function register(params) {
 }
 
 // 修改密码
-export function alterPassword(params) {
+export function updatePassword(data) {
   return request({
-    url: '/user/alterPassword',
+    url: '/user/updatePassword',
     method: 'post',
-    params
+    data
   })
 }
 

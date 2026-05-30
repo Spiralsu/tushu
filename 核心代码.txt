@@ -1,0 +1,237 @@
+用户登录功能核心代码：
+@Override
+public R userLogin(User user) {
+    User dbUser = userMapper.selectByUserName(user.getStudentid());
+    if (dbUser == null) return R.error("学号不存在，请联系管理员录入账号");
+
+    if (!dbUser.getUserpassword().equals(user.getUserpassword())) {
+        return R.error("密码错误");
+    }
+
+    if (user.getIsadmin() != null && !user.getIsadmin().equals(dbUser.getIsadmin())) {
+        String roleName = user.getIsadmin() == 1 ? "管理员" : "读者";
+        return R.error("登录失败：该账号不是" + roleName + "身份");
+    }
+
+    if (dbUser.getStatus() == 0) return R.error("账号未启用，请联系管理员");
+    if (dbUser.getStatus() == 2) return R.error("账号已被禁用");
+
+    String token = TokenProcessor.getInstance().generateToken();
+    saveUser(token, dbUser);
+
+    return R.ok("登录成功").put("token", token).put("user", dbUser);
+}
+图书发布与审核核心代码：
+@Override
+public Integer addBookInfo(BookInfo bookInfo) {
+    if (bookInfo.getBookcount() != null && bookInfo.getInventory() == null) {
+        bookInfo.setInventory(bookInfo.getBookcount());
+    }
+    if (bookInfo.getIsborrowed() == null) {
+        bookInfo.setIsborrowed(0);
+    }
+    if (bookInfo.getAuditstatus() == null) {
+        bookInfo.setAuditstatus(0);
+    }
+    int result = bookInfoMapper.insert(bookInfo);
+    if (result > 0 && bookInfo.getUploaderid() != null) {
+        messageMapper.insert(new Message(bookInfo.getUploaderid(),
+            "【系统通知】您的书籍《" + bookInfo.getBookname() + "》已发布！"));
+        User uploader = userMapper.selectByPrimaryKey(bookInfo.getUploaderid());
+        if (uploader != null 
+            && (uploader.getCreditScore() == null || uploader.getCreditScore() < 100)) {
+            java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+            String todayStr = sdf.format(new java.util.Date());
+            String updateStr = uploader.getScoreUpdateDate() == null 
+                ? "" : sdf.format(uploader.getScoreUpdateDate());
+            int todayAdded = uploader.getTodayAddScore() == null 
+                ? 0 : uploader.getTodayAddScore();
+            if (!todayStr.equals(updateStr)) {
+                todayAdded = 0;
+                uploader.setScoreUpdateDate(new java.util.Date());
+            }
+            int currentScore = uploader.getCreditScore() == null 
+                ? 100 : uploader.getCreditScore();
+            if (todayAdded < 5 && currentScore < 100) {
+                int canAdd = Math.min(2, 5 - todayAdded);
+                int finalScore = Math.min(100, currentScore + canAdd);
+                int actualAdded = finalScore - currentScore;
+                if (actualAdded > 0) {
+                    uploader.setCreditScore(finalScore);
+                    uploader.setTodayAddScore(todayAdded + actualAdded);
+                    userMapper.updateByPrimaryKeySelective(uploader);
+                    messageMapper.insert(new Message(uploader.getUserid(),
+                        "【信用奖励】发布书籍奖励生效！本次恢复 " + actualAdded 
+                        + " 分 (今日已累计恢复 " + (todayAdded + actualAdded) 
+                        + "/5 分)，当前信用分：" + finalScore + " 分。"));
+                }
+            }
+        }
+    }
+    if (result > 0 && bookInfo.getBookname() != null) {
+        List<BookWish> wishes = bookWishMapper
+            .selectUnfulfilledWishesByBookName(bookInfo.getBookname());
+        for (BookWish wish : wishes) {
+            messageMapper.insert(new Message(wish.getUserId(),
+                "好消息！您在心愿广场求购的书籍《" + bookInfo.getBookname() + "》被发布啦！"));
+            bookWishMapper.fulfillWish(wish.getWishId(), 0);
+            User wisher = userMapper.selectByPrimaryKey(wish.getUserId());
+            if (wisher != null && wisher.getOpenId() != null) {
+                WechatPushUtils.pushMessage(wisher.getOpenId(), "🌟 心愿被点亮！",
+                    "您求购的《" + bookInfo.getBookname() + "》被发布啦！快去借阅！");
+            }
+        }
+    }
+    return result;
+}
+
+@Override
+public Integer auditBook(Integer bookid, Integer auditstatus, String reason) {
+    BookInfo book = bookInfoMapper.selectByPrimaryKey(bookid);
+    if (book == null) return 0;
+    book.setAuditstatus(auditstatus);
+    int result = bookInfoMapper.updateByPrimaryKeySelective(book);
+    if (result > 0) {
+        String msg = auditstatus == 1 
+            ? "【系统通知】您的书籍《" + book.getBookname() + "》已通过审核并上架！" 
+            : "【系统通知】您的书籍《" + book.getBookname() + "》审核未通过。原因：" 
+                + (reason == null || reason.isEmpty() ? "无" : reason);
+        messageMapper.insert(new Message(book.getUploaderid(), msg));
+        User uploader = userMapper.selectByPrimaryKey(book.getUploaderid());
+        if (uploader != null && uploader.getOpenId() != null) {
+            if (auditstatus == 1) {
+                WechatPushUtils.pushMessage(uploader.getOpenId(), "书籍审核通过",
+                    "您的《" + book.getBookname() + "》现已成功上架！");
+            } else if (auditstatus == 2) {
+                WechatPushUtils.pushMessage(uploader.getOpenId(), "书籍发布被驳回",
+                    "您的《" + book.getBookname() + "》审核未通过，原因：" 
+                        + (reason == null || reason.isEmpty() ? "无" : reason));
+            }
+        }
+    }
+    return result;
+}
+图书归还传递核心代码：
+@Override
+@Transactional
+public Integer returnBook(Integer borrowId, Integer bookId, 
+                          String returnMsg, String contactInfo) {
+    Borrow borrow = borrowMapper.selectByPrimaryKey(borrowId);
+    if (borrow == null || borrow.getState() != 1) return 0;
+    borrow.setState(2);
+    borrow.setReturntime(new Date());
+    borrow.setReturnmsg(returnMsg);
+    borrowMapper.updateByPrimaryKeySelective(borrow);
+    BookInfo book = bookInfoMapper.selectByPrimaryKey(bookId);
+    if (book != null) {
+        Integer oldUploaderId = book.getUploaderid();
+        book.setInventory(book.getInventory() + 1);
+        if (book.getInventory() > 0) book.setIsborrowed(0);
+        book.setUploaderid(borrow.getUserid());
+        if (contactInfo != null && !contactInfo.trim().isEmpty()) {
+            book.setContactinfo(contactInfo);
+        } else {
+            book.setContactinfo("新主人暂未留下具体地址，请申请后通过系统留言沟通。");
+        }
+        bookInfoMapper.updateByPrimaryKeySelective(book);
+        String newOwnerMsg = "【漂流接力】恭喜！您已读完《" + book.getBookname() + "》。\n"
+            + "由于这是漂流书籍，书本物理上现在由您保管。系统已自动将该书转移到了您的"
+            + "【我借出的】列表中。\n等待下一位有缘人申请时，您将作为新的传递者与TA"
+            + "当面交接暗号！让知识继续流动吧！";
+        messageMapper.insert(new Message(borrow.getUserid(), newOwnerMsg));
+        if (oldUploaderId != null && !oldUploaderId.equals(borrow.getUserid())) {
+            messageMapper.insert(new Message(oldUploaderId,
+                "【系统通知】您最初发布的《" + book.getBookname() 
+                + "》已经被前一位读者读完，并成功接力成为了下一站的火种。感谢您的分享！"));
+        }
+    }
+    return 1;
+}
+交接暗号验证核心代码：
+@Override
+@Transactional
+public R verifyCode(Integer borrowId, String secretCode) {
+    Borrow borrow = borrowMapper.selectByPrimaryKey(borrowId);
+    if (borrow == null) return R.error("记录不存在");
+    if (borrow.getState() != 4) return R.error("当前状态不支持验证暗号");
+    if (borrow.getSecretCode() == null 
+        || !borrow.getSecretCode().equals(secretCode)) {
+        return R.error("暗号错误，请核对后再试！");
+    }
+    User borrower = userMapper.selectByPrimaryKey(borrow.getUserid());
+    if (borrower != null && borrower.getCreditScore() != null 
+        && borrower.getCreditScore() < 60) {
+        return R.error("阻断交易！该借阅者近期违规信用已跌破60，系统强制终止交接！");
+    }
+    borrow.setState(1);
+    borrow.setBorrowtime(new Date());
+    borrowMapper.updateByPrimaryKeySelective(borrow);
+    BookInfo book = bookInfoMapper.selectByPrimaryKey(borrow.getBookid());
+    if (book != null && book.getUploaderid() != null) {
+        User uploader = userMapper.selectByPrimaryKey(book.getUploaderid());
+        if (uploader != null 
+            && (uploader.getCreditScore() == null || uploader.getCreditScore() < 100)) {
+            java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+            String todayStr = sdf.format(new java.util.Date());
+            String updateStr = uploader.getScoreUpdateDate() == null 
+                ? "" : sdf.format(uploader.getScoreUpdateDate());
+            int todayAdded = uploader.getTodayAddScore() == null 
+                ? 0 : uploader.getTodayAddScore();
+            if (!todayStr.equals(updateStr)) {
+                todayAdded = 0;
+                uploader.setScoreUpdateDate(new java.util.Date());
+            }
+            int currentScore = uploader.getCreditScore() == null 
+                ? 100 : uploader.getCreditScore();
+            if (todayAdded < 5 && currentScore < 100) {
+                int canAdd = Math.min(3, 5 - todayAdded);
+                int finalScore = Math.min(100, currentScore + canAdd);
+                int actualAdded = finalScore - currentScore;
+                if (actualAdded > 0) {
+                    uploader.setCreditScore(finalScore);
+                    uploader.setTodayAddScore(todayAdded + actualAdded);
+                    userMapper.updateByPrimaryKeySelective(uploader);
+                    messageMapper.insert(new Message(uploader.getUserid(),
+                        "【信用奖励】成功交接给下一位书友！本次恢复 " + actualAdded 
+                        + " 分 (今日已累计恢复 " + (todayAdded + actualAdded) 
+                        + "/5 分)，当前：" + finalScore + " 分。"));
+                }
+            }
+        }
+    }
+    return R.ok("暗号正确！交接成功，书籍正式进入漂流中。");
+}
+微信消息推送核心代码：
+@Component
+public class WechatPushUtils {
+
+    private static final String APP_TOKEN = "AT_ytET10XI7sqmlk96LFcvyIibVDTktvE0";
+
+    @SuppressWarnings("unchecked")
+    public static void pushMessage(String uid, String title, String content) {
+        if (uid == null || uid.trim().isEmpty() || !uid.startsWith("UID_")) {
+            System.out.println("用户未绑定有效的 WxPusher UID，取消推送");
+            return;
+        }
+        try {
+            RestTemplate restTemplate = new RestTemplate();
+            String url = "https://wxpusher.zjiecode.com/api/send/message";
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
+            Map<String, Object> body = new HashMap<>();
+            body.put("appToken", APP_TOKEN);
+            body.put("content", "<h1>" + title + "</h1><br/>"
+                + "<p style='color:#409EFF; font-size:16px;'>" + content + "</p>");
+            body.put("summary", title);
+            body.put("contentType", 2);
+            List<String> uids = new ArrayList<>();
+            uids.add(uid);
+            body.put("uids", uids);
+            HttpEntity<Map<String, Object>> request = new HttpEntity<>(body, headers);
+            Map<String, Object> response = restTemplate.postForObject(url, request, Map.class);
+            System.out.println("WxPusher 推送结果: " + response);
+        } catch (Exception e) {
+            System.out.println("WxPusher 推送失败: " + e.getMessage());
+        }
+    }
+}

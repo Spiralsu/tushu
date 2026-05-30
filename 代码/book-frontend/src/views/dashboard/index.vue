@@ -187,12 +187,26 @@ export default {
       request({ url: '/borrow/bindWx', method: 'post', params: { userId: this.id, openId: this.wxOpenId } }).then(res => {
         if(res.code === 0 || res === 1) {
           this.$message.success("微信推送绑定成功！");
-          this.isWxBound = true; // 绑定成功，状态变为 true
+          this.isWxBound = true;
           this.wxDialogVisible = false;
         } else {
           this.$message.error(res.msg || "绑定失败");
         }
       });
+    },
+    submitUnbindWx() {
+      this.$confirm('确定要解除微信推送绑定吗？解除后将无法收到借阅通知。', '提示', { type: 'warning' }).then(() => {
+        request({ url: '/borrow/unbindWx', method: 'post', params: { userId: this.id } }).then(res => {
+          if(res.code === 0 || res === 1) {
+            this.$message.success("微信解绑成功！");
+            this.isWxBound = false;
+            this.wxOpenId = '';
+            this.wxDialogVisible = false;
+          } else {
+            this.$message.error(res.msg || "解绑失败");
+          }
+        });
+      }).catch(() => {});
     },
 // 打开限制大小的微信扫码窗口
     openWxPusherWindow() {

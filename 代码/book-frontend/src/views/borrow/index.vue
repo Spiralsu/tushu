@@ -25,16 +25,22 @@
           <el-table-column label="学号" width="140" align="center"><template slot-scope="{row}"><span style="color: #606266; font-family: monospace; font-size: 14px;">{{ row.studentid || row.studentId || '暂无数据' }}</span></template></el-table-column>
           <el-table-column label="申请理由" prop="borrowreason" min-width="150" show-overflow-tooltip />
           <el-table-column label="申请时间" prop="applytime" width="160" align="center" sortable />
-          <el-table-column label="流转状态" width="100" align="center">
+          <el-table-column label="流转状态" width="120" align="center">
             <template slot-scope="{row}">
               <el-tag v-if="row.state === 0" type="info" size="small">待审核</el-tag>
-              <el-tag v-else-if="row.state === 1" type="primary" size="small">漂流中</el-tag>
+              <el-tag v-else-if="row.state === 1" :type="isOverdue(row) ? 'danger' : 'primary'" size="small">{{ isOverdue(row) ? '逾期未还' : '漂流中' }}</el-tag>
               <el-tag v-else-if="row.state === 2" type="success" size="small">已归还</el-tag>
               <el-tag v-else-if="row.state === 3" type="danger" size="small">已驳回</el-tag>
               <el-tag v-else-if="row.state === 4" type="warning" size="small">⏳ 待交接</el-tag>
               <el-tag v-else-if="row.state === 5" type="info" effect="plain" size="small" style="color:#909399;">已撤销</el-tag>
               <el-tag v-else-if="row.state === 6" type="info" effect="dark" size="small" style="background-color: #909399; border-color: #909399;">已遗失</el-tag>
               <el-tag v-else-if="row.state === 7" type="info" effect="plain" size="small" style="color:#C0C4CC;">已失效</el-tag>
+            </template>
+          </el-table-column>
+          <el-table-column label="借阅进度" width="160" align="center">
+            <template slot-scope="{row}">
+              <span v-if="row.state === 1" style="font-size: 12px; color: #606266;">{{ getRemainingTimeText(row) }}</span>
+              <span v-else style="font-size: 12px; color: #C0C4CC;">-</span>
             </template>
           </el-table-column>
           <el-table-column label="操作" width="160" align="center" fixed="right">
@@ -44,7 +50,7 @@
                 <el-button size="mini" type="danger" plain round @click="handleAudit(row, 3)">驳回</el-button>
               </template>
               <el-button v-else-if="row.state === 4" size="mini" type="danger" plain round @click="handleCancel(row)">强制撤销</el-button>
-              <el-button v-else-if="row.state === 1" size="mini" type="danger" round plain @click="handleReturn(row)">强制归还</el-button>
+              <el-button v-else-if="row.state === 1" size="mini" type="danger" round plain @click="handleReturn(row)">辅助传递</el-button>
               <el-button v-else size="mini" type="text" disabled>{{ row.state === 5 ? '已撤销' : (row.state === 6 ? '已遗失' : (row.state === 7 ? '已失效' : '已结束')) }}</el-button>
             </template>
           </el-table-column>
@@ -175,6 +181,16 @@ export default {
     checkPermission,
     getCreditType(score) { if (score == null || score >= 90) return 'success'; if (score >= 60) return 'warning'; return 'danger'; },
 
+    // 判断是否逾期
+    isOverdue(item) {
+      if (!item.borrowtime) return false;
+      const days = (item.borrowDays != null) ? item.borrowDays : 30;
+      if (days === 0) return true;
+      const dueTime = new Date(item.borrowtime).getTime() + days * 24 * 3600 * 1000;
+      const now = new Date().getTime();
+      return now > dueTime;
+    },
+
     // 【修复】：计算剩余天数及逾期提醒
     getRemainingTimeText(item) {
       if(!item.borrowtime) return '';
@@ -199,11 +215,10 @@ export default {
       this.listLoading = true; const params = { ...this.listQuery };
       if (!this.checkPermission(['admin'])) { if(this.activeTab === 'borrow') params.userId = this.id; else params.uploaderId = this.id; }
       queryBorrowsByPage(params).then(response => {
-        let dataList = [];
-        if (response.data && Array.isArray(response.data)) { dataList = response.data; this.total = response.total || response.data.length; }
-        else if (response.rows) { dataList = response.rows; this.total = response.total; }
-        else { dataList = response.data || []; this.total = response.count || 0; }
-        this.list = dataList; this.listLoading = false;
+        // 和 bookinfo 保持一致，简单清晰的处理
+        this.list = response.data || [];
+        this.total = response.count || 0;
+        this.listLoading = false;
       }).catch(() => { this.listLoading = false })
     },
     handleFilter() { this.listQuery.page = 1; this.getList() },
@@ -269,7 +284,7 @@ export default {
           if(res.code === 0 || res === 1) {
             this.$message.success("催促通知已成功发送！");
           } else {
-            // 【修复】：把后端“还没到期，请耐心等待”的提示弹出来
+            // 【修复】：把后端"还没到期，请耐心等待"的提示弹出来
             this.$message.error(res.msg || "操作失败");
           }
         });

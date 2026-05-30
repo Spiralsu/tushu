@@ -11,7 +11,7 @@
  Target Server Version : 80044 (8.0.44)
  File Encoding         : 65001
 
- Date: 26/03/2026 23:45:17
+ Date: 30/05/2026 11:33:58
 */
 
 SET NAMES utf8mb4;
@@ -25,7 +25,6 @@ CREATE TABLE `book_info`  (
   `bookId` int NOT NULL AUTO_INCREMENT,
   `bookName` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `bookAuthor` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
-  `bookPrice` decimal(10, 2) NOT NULL,
   `bookTypeId` int NOT NULL COMMENT '所属院系ID',
   `bookDesc` varchar(1000) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL,
   `isBorrow` tinyint NOT NULL DEFAULT 0 COMMENT '0:在库 1:漂流中 2:申请中',
@@ -36,30 +35,26 @@ CREATE TABLE `book_info`  (
   `inventory` int NULL DEFAULT 1 COMMENT '当前剩余库存',
   `contactInfo` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NULL DEFAULT NULL COMMENT '交接联系方式(仅审核通过后可见)',
   PRIMARY KEY (`bookId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '图书信息表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 25 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '图书信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of book_info
 -- ----------------------------
-INSERT INTO `book_info` VALUES (1, '机械原理', '武照云', 0.00, 1, '', 1, '/files/1773027308032_机械原理.jpg', 2, 1, 1, 0, '此书已遗憾退出漂流');
-INSERT INTO `book_info` VALUES (3, '三体', '刘慈欣', 0.00, 11, '', 1, '/files/1773068360902_三体.jpg', 3, 1, 1, 0, '尚能A-XX');
-INSERT INTO `book_info` VALUES (4, '明朝那些事儿', '当年明月 ', 0.00, 11, '', 0, '/files/1773068440736_明朝那些事儿.jpg', 1, 1, 1, 1, 'A');
-INSERT INTO `book_info` VALUES (5, '经济学原理', 'N.格里高利·曼昆', 0.00, 8, '', 1, '/files/1773070403846_经济学原理.jpg', 3, 1, 1, 0, '此书已遗憾退出漂流');
-INSERT INTO `book_info` VALUES (6, '计算机组成原理', '谭志虎', 0.00, 3, '', 1, '/files/1773070454436_计算机组成原理.jpg', 3, 1, 1, 0, '此书已遗憾退出漂流');
-INSERT INTO `book_info` VALUES (7, '深入理解计算机系统', '兰德尔', 0.00, 3, '', 1, '/files/1773131701247_深入理解计算机系统.jpg', 4, 1, 1, 0, '此书已遗憾退出漂流');
-INSERT INTO `book_info` VALUES (8, '计算机网络', '谢希仁', 0.00, 3, '', 0, '/files/1773131765291_计算机网络.jpg', 4, 1, 1, 1, '尚能C-XX');
-INSERT INTO `book_info` VALUES (9, '机械制图与CAD习题集', '中国煤炭教育协会职业教育教材编审委员会', 0.00, 1, '', 0, '/files/1773131845211_机械制图与CAD习题集.jpg', 4, 1, 1, 1, '尚能C-xxx');
-INSERT INTO `book_info` VALUES (10, '机械制图项目教程', '朱春香', 0.00, 1, '', 1, '/files/1773131937806_机械制图项目教程.jpg', 4, 1, 1, 0, '此书已遗憾退出漂流');
-INSERT INTO `book_info` VALUES (11, '机械制图习题集(第3版）', '胡胜', 0.00, 1, '好好读书', 0, '/files/1773671446929_机械制图习题集(第3版）.jpg', 3, 1, 1, 1, '123');
-INSERT INTO `book_info` VALUES (12, '机械制图典型习题及解答（第二版）', '李三', 0.00, 1, '', 0, '/files/1773671530588_机械制图典型习题及解答（第二版）.jpg', 3, 1, 1, 1, '1');
-INSERT INTO `book_info` VALUES (13, '活着', '余华', 0.00, 1, '', 1, '/files/1773671553357_活着.jpg', 3, 1, 1, -1, '此书已遗憾退出漂流');
-INSERT INTO `book_info` VALUES (14, '', '', 0.00, 1, '', 0, '', 2, 1, 1, 1, '');
-INSERT INTO `book_info` VALUES (15, '1', '1', 0.00, 1, '', 0, '', 2, 2, 1, 1, '1');
-INSERT INTO `book_info` VALUES (16, '1', '1', 0.00, 1, '', 0, '', 2, 1, 1, 1, '1');
-INSERT INTO `book_info` VALUES (17, '1', '1', 0.00, 1, '1', 0, '', 2, 2, 1, 1, '1');
-INSERT INTO `book_info` VALUES (18, '11', '11', 0.00, 1, '11', 0, '', 2, 2, 1, 1, '11');
-INSERT INTO `book_info` VALUES (19, '11', '11', 0.00, 1, '11', 0, '', 2, 1, 1, 1, '11');
-INSERT INTO `book_info` VALUES (20, '11', '11', 0.00, 1, '11', 0, '', 2, 2, 1, 1, '11');
+INSERT INTO `book_info` VALUES (1, '机械原理', '武照云', 1, '', 1, '/files/1773027308032_机械原理.jpg', 2, 1, 1, 0, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (3, '三体', '刘慈欣', 11, '', 1, '/files/1773068360902_三体.jpg', 3, 1, 1, 0, '尚能A-XX');
+INSERT INTO `book_info` VALUES (4, '明朝那些事儿', '当年明月 ', 11, '', 0, '/files/1773068440736_明朝那些事儿.jpg', 1, 1, 1, 1, 'A');
+INSERT INTO `book_info` VALUES (5, '经济学原理', 'N.格里高利·曼昆', 8, '', 1, '/files/1773070403846_经济学原理.jpg', 3, 1, 1, 0, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (6, '计算机组成原理', '谭志虎', 3, '', 1, '/files/1773070454436_计算机组成原理.jpg', 3, 1, 1, 0, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (7, '深入理解计算机系统', '兰德尔', 3, '', 1, '/files/1773131701247_深入理解计算机系统.jpg', 4, 1, 1, 0, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (8, '计算机网络', '谢希仁', 3, '', 0, '/files/1773131765291_计算机网络.jpg', 4, 1, 1, 1, '尚能C-XX');
+INSERT INTO `book_info` VALUES (9, '机械制图与CAD习题集', '中国煤炭教育协会职业教育教材编审委员会', 1, '', 0, '/files/1773131845211_机械制图与CAD习题集.jpg', 4, 1, 1, 1, '尚能C-xxx');
+INSERT INTO `book_info` VALUES (10, '机械制图项目教程', '朱春香', 1, '', 1, '/files/1773131937806_机械制图项目教程.jpg', 4, 1, 1, 0, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (11, '机械制图习题集(第3版）', '胡胜', 1, '好好读书', 1, '/files/1773671446929_机械制图习题集(第3版）.jpg', 3, 1, 1, -1, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (12, '机械制图典型习题及解答（第二版）', '李三', 1, '', 1, '/files/1773671530588_机械制图典型习题及解答（第二版）.jpg', 3, 1, 1, -1, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (13, '活着', '余华', 1, '', 1, '/files/1773671553357_活着.jpg', 3, 1, 1, -1, '此书已遗憾退出漂流');
+INSERT INTO `book_info` VALUES (22, 'Java编程思想', '埃克尔', 3, '', 0, '/files/1779361506977_Java编程思想.jpg', 2, 1, 1, 1, '尚能1-XXX');
+INSERT INTO `book_info` VALUES (23, '土木工程英语（第二版）', '田妍妍', 1, '', 0, '/files/1779974628395_29657902-1_w_1701065829.jpg', 3, 1, 1, 1, '尚能X-XXX');
+INSERT INTO `book_info` VALUES (24, '地球科学文化研究文集', '段怡春', 5, '', 0, '/files/1780105507849_11720228320-1_w_1709658910.jpg', 4, 1, 1, 1, '尚能X-XXX');
 
 -- ----------------------------
 -- Table structure for book_type
@@ -101,7 +96,7 @@ CREATE TABLE `book_wish`  (
   `create_time` datetime NULL DEFAULT NULL,
   `fulfill_user_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`wish_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of book_wish
@@ -127,7 +122,7 @@ CREATE TABLE `borrow`  (
   PRIMARY KEY (`borrowId`) USING BTREE,
   INDEX `fk_user`(`userId` ASC) USING BTREE,
   INDEX `fk_book`(`bookId` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '漂流记录表' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 35 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci COMMENT = '漂流记录表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of borrow
@@ -158,6 +153,14 @@ INSERT INTO `borrow` VALUES (23, 2, 9, NULL, NULL, '2026-03-10 19:54:46', '测�
 INSERT INTO `borrow` VALUES (24, 3, 7, '2026-03-16 22:34:47', '2026-03-16 22:35:06', '2026-03-16 22:34:36', '1', 6, '【遗失登记】1', '306482', 2);
 INSERT INTO `borrow` VALUES (25, 3, 1, '2026-03-16 22:39:05', '2026-03-16 22:39:44', '2026-03-16 22:38:57', '1', 6, '【遗失登记】1', '958643', 1);
 INSERT INTO `borrow` VALUES (26, 2, 13, '2026-03-16 22:57:37', '2026-03-16 22:57:47', '2026-03-16 22:57:29', '1', 6, '【遗失登记】1', '241773', 1);
+INSERT INTO `borrow` VALUES (27, 2, 12, '2026-04-01 19:49:05', '2026-04-01 19:49:21', '2026-04-01 19:48:22', '11', 6, '【遗失登记】Q1', '469129', 2);
+INSERT INTO `borrow` VALUES (28, 2, 11, '2026-05-21 16:36:52', '2026-05-21 16:38:23', '2026-05-21 16:36:10', 'k', 6, '【遗失登记】456', '748709', 30);
+INSERT INTO `borrow` VALUES (29, 3, 22, NULL, NULL, '2026-05-29 09:00:47', '使用图书', 0, NULL, NULL, 1);
+INSERT INTO `borrow` VALUES (30, 2, 9, '2026-05-29 09:33:18', NULL, '2026-05-29 09:13:02', '申请使用', 1, NULL, '891826', 20);
+INSERT INTO `borrow` VALUES (31, 3, 9, NULL, NULL, '2026-05-29 09:13:03', '使用', 5, '【用户放弃】不可', '702878', 30);
+INSERT INTO `borrow` VALUES (32, 2, 23, '2026-05-29 09:15:52', '2026-05-29 09:19:54', '2026-05-29 09:15:41', '申请使用', 2, '很好用', '473477', 30);
+INSERT INTO `borrow` VALUES (33, 3, 23, '2026-05-29 09:20:38', '2026-05-30 09:40:15', '2026-05-29 09:20:25', '申请使用', 2, '好书', '557188', 0);
+INSERT INTO `borrow` VALUES (34, 2, 24, NULL, NULL, '2026-05-30 09:54:41', '1天', 5, '【用户放弃】不需要了', NULL, 1);
 
 -- ----------------------------
 -- Table structure for message
@@ -170,7 +173,7 @@ CREATE TABLE `message`  (
   `isRead` tinyint NULL DEFAULT 0,
   `createTime` datetime NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`messageId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 210 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 336 CHARACTER SET = utf8mb3 COLLATE = utf8mb3_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of message
@@ -384,6 +387,132 @@ INSERT INTO `message` VALUES (206, 2, '【系统通知】您的书籍《11》已
 INSERT INTO `message` VALUES (207, 2, '【系统通知】您的书籍《11》审核未通过。原因：1', 0, '2026-03-26 22:16:32');
 INSERT INTO `message` VALUES (208, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：37 分。', 0, '2026-03-26 22:59:00');
 INSERT INTO `message` VALUES (209, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：35 分。', 0, '2026-03-26 23:00:00');
+INSERT INTO `message` VALUES (210, 3, '【系统通知】有同学申请借阅了您发布的书籍《机械制图典型习题及解答（第二版）》！\nTA 的申请理由是：[11]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-04-01 19:47:45');
+INSERT INTO `message` VALUES (211, 2, '【系统通知】你的漂流申请《机械制图典型习题及解答（第二版）》已通过！\n对方交接说明：【1】\n你的专属提货暗号为：【469129】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-04-01 19:48:22');
+INSERT INTO `message` VALUES (212, 3, '【系统通知】您发布的书籍《机械制图典型习题及解答（第二版）》借阅申请已通过审核！请等待交接。', 0, '2026-04-01 19:48:22');
+INSERT INTO `message` VALUES (213, 3, '【信用奖励】成功交接给下一位书友！本次恢复 3 分 (今日已累计恢复 3/5 分)，当前：38 分。', 0, '2026-04-01 19:49:05');
+INSERT INTO `message` VALUES (214, 3, '【遗失通知】很遗憾，您发布的《机械制图典型习题及解答（第二版）》被读者登记为遗失。原因：Q1', 0, '2026-04-01 19:49:21');
+INSERT INTO `message` VALUES (215, 2, '【扣分通知】因登记书籍遗失，系统已自动扣除您 10 信誉分。保护好每一本书是对漂流社区的尊重！', 0, '2026-04-01 19:49:21');
+INSERT INTO `message` VALUES (216, 2, '【系统通知】您的书籍《WQD》已发布！', 0, '2026-04-01 19:54:13');
+INSERT INTO `message` VALUES (217, 3, '好消息！您在心愿广场求购的书籍《WQD》被发布啦！', 0, '2026-04-01 19:54:13');
+INSERT INTO `message` VALUES (218, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：36 分。', 0, '2026-04-01 19:59:00');
+INSERT INTO `message` VALUES (219, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：34 分。', 0, '2026-04-01 20:00:00');
+INSERT INTO `message` VALUES (220, 2, '【系统通知】您的书籍《WQD》已通过审核并上架！', 0, '2026-04-01 20:25:18');
+INSERT INTO `message` VALUES (221, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：32 分。', 0, '2026-04-15 11:59:00');
+INSERT INTO `message` VALUES (222, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：52 分。', 0, '2026-04-15 11:59:00');
+INSERT INTO `message` VALUES (223, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：30 分。', 0, '2026-04-15 12:00:00');
+INSERT INTO `message` VALUES (224, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：50 分。', 0, '2026-04-15 12:00:00');
+INSERT INTO `message` VALUES (225, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：28 分。', 0, '2026-05-11 17:59:00');
+INSERT INTO `message` VALUES (226, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：48 分。', 0, '2026-05-11 17:59:00');
+INSERT INTO `message` VALUES (227, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：26 分。', 0, '2026-05-11 18:00:00');
+INSERT INTO `message` VALUES (228, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：46 分。', 0, '2026-05-11 18:00:00');
+INSERT INTO `message` VALUES (229, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：24 分。', 0, '2026-05-11 18:59:00');
+INSERT INTO `message` VALUES (230, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：44 分。', 0, '2026-05-11 18:59:00');
+INSERT INTO `message` VALUES (231, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：22 分。', 0, '2026-05-11 19:00:00');
+INSERT INTO `message` VALUES (232, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：42 分。', 0, '2026-05-11 19:00:00');
+INSERT INTO `message` VALUES (233, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：20 分。', 0, '2026-05-11 19:59:00');
+INSERT INTO `message` VALUES (234, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：40 分。', 0, '2026-05-11 19:59:00');
+INSERT INTO `message` VALUES (235, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：18 分。', 0, '2026-05-11 20:00:00');
+INSERT INTO `message` VALUES (236, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：38 分。', 0, '2026-05-11 20:00:00');
+INSERT INTO `message` VALUES (237, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：16 分。', 0, '2026-05-11 20:59:00');
+INSERT INTO `message` VALUES (238, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：36 分。', 0, '2026-05-11 20:59:00');
+INSERT INTO `message` VALUES (239, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：14 分。', 0, '2026-05-11 21:00:00');
+INSERT INTO `message` VALUES (240, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：34 分。', 0, '2026-05-11 21:00:00');
+INSERT INTO `message` VALUES (241, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：12 分。', 0, '2026-05-15 09:59:00');
+INSERT INTO `message` VALUES (242, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：32 分。', 0, '2026-05-15 09:59:00');
+INSERT INTO `message` VALUES (243, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：10 分。', 0, '2026-05-15 10:00:00');
+INSERT INTO `message` VALUES (244, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：30 分。', 0, '2026-05-15 10:00:00');
+INSERT INTO `message` VALUES (245, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：8 分。', 0, '2026-05-15 10:59:00');
+INSERT INTO `message` VALUES (246, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：28 分。', 0, '2026-05-15 10:59:00');
+INSERT INTO `message` VALUES (247, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：6 分。', 0, '2026-05-15 11:00:00');
+INSERT INTO `message` VALUES (248, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：26 分。', 0, '2026-05-15 11:00:00');
+INSERT INTO `message` VALUES (249, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：4 分。', 0, '2026-05-15 11:59:00');
+INSERT INTO `message` VALUES (250, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：24 分。', 0, '2026-05-15 11:59:00');
+INSERT INTO `message` VALUES (251, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：2 分。', 0, '2026-05-15 12:00:00');
+INSERT INTO `message` VALUES (252, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：22 分。', 0, '2026-05-15 12:00:00');
+INSERT INTO `message` VALUES (253, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：0 分。', 0, '2026-05-15 12:59:00');
+INSERT INTO `message` VALUES (254, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：20 分。', 0, '2026-05-15 12:59:00');
+INSERT INTO `message` VALUES (255, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：18 分。', 0, '2026-05-15 13:00:00');
+INSERT INTO `message` VALUES (256, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：16 分。', 0, '2026-05-16 10:59:00');
+INSERT INTO `message` VALUES (257, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：14 分。', 0, '2026-05-16 11:00:00');
+INSERT INTO `message` VALUES (258, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：12 分。', 0, '2026-05-16 11:59:00');
+INSERT INTO `message` VALUES (259, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：10 分。', 0, '2026-05-16 12:00:00');
+INSERT INTO `message` VALUES (260, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：8 分。', 0, '2026-05-16 12:59:00');
+INSERT INTO `message` VALUES (261, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：6 分。', 0, '2026-05-16 13:00:00');
+INSERT INTO `message` VALUES (262, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：4 分。', 0, '2026-05-16 13:59:00');
+INSERT INTO `message` VALUES (263, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：2 分。', 0, '2026-05-16 14:00:00');
+INSERT INTO `message` VALUES (264, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：0 分。', 0, '2026-05-16 14:59:00');
+INSERT INTO `message` VALUES (265, 3, '【系统通知】有同学申请借阅了您发布的书籍《机械制图习题集(第3版）》！\nTA 的申请理由是：[k]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-21 16:35:56');
+INSERT INTO `message` VALUES (266, 2, '【系统通知】你的漂流申请《机械制图习题集(第3版）》已通过！\n对方交接说明：【123】\n你的专属提货暗号为：【748709】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-05-21 16:36:10');
+INSERT INTO `message` VALUES (267, 3, '【系统通知】您发布的书籍《机械制图习题集(第3版）》借阅申请已通过审核！请等待交接。', 0, '2026-05-21 16:36:10');
+INSERT INTO `message` VALUES (268, 3, '【遗失通知】很遗憾，您发布的《机械制图习题集(第3版）》被读者登记为遗失。原因：456', 0, '2026-05-21 16:38:24');
+INSERT INTO `message` VALUES (269, 2, '【扣分通知】因登记书籍遗失，系统已自动扣除您 10 信誉分。保护好每一本书是对漂流社区的尊重！', 0, '2026-05-21 16:38:24');
+INSERT INTO `message` VALUES (270, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：98 分。', 0, '2026-05-21 17:00:50');
+INSERT INTO `message` VALUES (271, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：96 分。', 0, '2026-05-21 18:59:00');
+INSERT INTO `message` VALUES (272, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：94 分。', 0, '2026-05-21 19:00:00');
+INSERT INTO `message` VALUES (273, 2, '【系统通知】您的书籍《Java编程思想》已发布！', 0, '2026-05-21 19:05:12');
+INSERT INTO `message` VALUES (274, 2, '【信用奖励】发布书籍奖励生效！本次恢复 2 分 (今日已累计恢复 2/5 分)，当前信用分：92 分。', 0, '2026-05-21 19:05:12');
+INSERT INTO `message` VALUES (275, 2, '【系统通知】您的书籍《Java编程思想》已通过审核并上架！', 0, '2026-05-21 19:06:01');
+INSERT INTO `message` VALUES (276, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：92 分。', 0, '2026-05-21 19:59:00');
+INSERT INTO `message` VALUES (277, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：90 分。', 0, '2026-05-21 20:00:00');
+INSERT INTO `message` VALUES (278, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：88 分。', 0, '2026-05-21 20:59:00');
+INSERT INTO `message` VALUES (279, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：86 分。', 0, '2026-05-21 21:00:00');
+INSERT INTO `message` VALUES (280, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：84 分。', 0, '2026-05-21 21:59:00');
+INSERT INTO `message` VALUES (281, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：82 分。', 0, '2026-05-21 22:00:00');
+INSERT INTO `message` VALUES (282, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：80 分。', 0, '2026-05-28 20:59:00');
+INSERT INTO `message` VALUES (283, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：78 分。', 0, '2026-05-28 21:00:00');
+INSERT INTO `message` VALUES (284, 3, '【系统通知】您的书籍《土木工程英语（第二版）》已发布！', 0, '2026-05-28 21:23:55');
+INSERT INTO `message` VALUES (285, 3, '【信用奖励】发布书籍奖励生效！本次恢复 2 分 (今日已累计恢复 2/5 分)，当前信用分：80 分。', 0, '2026-05-28 21:23:55');
+INSERT INTO `message` VALUES (286, 3, '【系统通知】您的书籍《土木工程英语（第二版）》已通过审核并上架！', 0, '2026-05-28 21:24:43');
+INSERT INTO `message` VALUES (287, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：78 分。', 0, '2026-05-28 21:59:00');
+INSERT INTO `message` VALUES (288, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：76 分。', 0, '2026-05-28 22:00:00');
+INSERT INTO `message` VALUES (289, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：74 分。', 0, '2026-05-29 08:59:00');
+INSERT INTO `message` VALUES (290, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：72 分。', 0, '2026-05-29 09:00:00');
+INSERT INTO `message` VALUES (291, 2, '【系统通知】有同学申请借阅了您发布的书籍《Java编程思想》！\nTA 的申请理由是：[使用图书]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-29 09:00:47');
+INSERT INTO `message` VALUES (292, 4, '【系统通知】有同学申请借阅了您发布的书籍《机械制图与CAD习题集》！\nTA 的申请理由是：[申请使用]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-29 09:11:24');
+INSERT INTO `message` VALUES (293, 4, '【系统通知】有同学申请借阅了您发布的书籍《机械制图与CAD习题集》！\nTA 的申请理由是：[使用]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-29 09:12:37');
+INSERT INTO `message` VALUES (294, 2, '【系统通知】你的漂流申请《机械制图与CAD习题集》已通过！\n对方交接说明：【尚能C-xxx】\n你的专属提货暗号为：【124449】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-05-29 09:12:51');
+INSERT INTO `message` VALUES (295, 4, '【系统通知】您发布的书籍《机械制图与CAD习题集》借阅申请已通过审核！请等待交接。', 0, '2026-05-29 09:13:02');
+INSERT INTO `message` VALUES (296, 2, '【系统通知】你的漂流申请《机械制图与CAD习题集》已通过！\n对方交接说明：【尚能C-xxx】\n你的专属提货暗号为：【891826】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-05-29 09:13:02');
+INSERT INTO `message` VALUES (297, 4, '【系统通知】您发布的书籍《机械制图与CAD习题集》借阅申请已通过审核！请等待交接。', 0, '2026-05-29 09:13:03');
+INSERT INTO `message` VALUES (298, 3, '【系统通知】你的漂流申请《机械制图与CAD习题集》已通过！\n对方交接说明：【尚能C-xxx】\n你的专属提货暗号为：【702878】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-05-29 09:13:03');
+INSERT INTO `message` VALUES (299, 4, '【系统通知】您发布的书籍《机械制图与CAD习题集》借阅申请已通过审核！请等待交接。', 0, '2026-05-29 09:13:03');
+INSERT INTO `message` VALUES (300, 3, '【系统通知】您已撤销对《机械制图与CAD习题集》的借阅。', 0, '2026-05-29 09:13:30');
+INSERT INTO `message` VALUES (301, 4, '【通知】对方在【交接阶段】撤销了借阅。原因：[不可]', 0, '2026-05-29 09:13:30');
+INSERT INTO `message` VALUES (302, 3, '【系统通知】有同学申请借阅了您发布的书籍《土木工程英语（第二版）》！\nTA 的申请理由是：[申请使用]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-29 09:15:36');
+INSERT INTO `message` VALUES (303, 2, '【系统通知】你的漂流申请《土木工程英语（第二版）》已通过！\n对方交接说明：【尚能X-XXX】\n你的专属提货暗号为：【473477】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-05-29 09:15:41');
+INSERT INTO `message` VALUES (304, 3, '【系统通知】您发布的书籍《土木工程英语（第二版）》借阅申请已通过审核！请等待交接。', 0, '2026-05-29 09:15:42');
+INSERT INTO `message` VALUES (305, 3, '【信用奖励】成功交接给下一位书友！本次恢复 3 分 (今日已累计恢复 3/5 分)，当前：75 分。', 0, '2026-05-29 09:15:52');
+INSERT INTO `message` VALUES (306, 2, '【漂流接力】恭喜！您已读完《土木工程英语（第二版）》。\n由于这是漂流书籍，书本物理上现在由您保管。系统已自动将该书转移到了您的【我借出的】列表中。\n等待下一位有缘人申请时，您将作为新的传递者与TA当面交接暗号！让知识继续流动吧！', 0, '2026-05-29 09:19:54');
+INSERT INTO `message` VALUES (307, 3, '【系统通知】您最初发布的《土木工程英语（第二版）》已经被前一位读者读完，并成功接力成为了下一站的火种。感谢您的分享！', 0, '2026-05-29 09:19:54');
+INSERT INTO `message` VALUES (308, 2, '【系统通知】有同学申请借阅了您发布的书籍《土木工程英语（第二版）》！\nTA 的申请理由是：[申请使用]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-29 09:20:15');
+INSERT INTO `message` VALUES (309, 3, '【系统通知】你的漂流申请《土木工程英语（第二版）》已通过！\n对方交接说明：【尚能X-XXX】\n你的专属提货暗号为：【557188】。碰面拿到书后，请将此暗号出示给发布者，由发布者在系统中进行核销。', 0, '2026-05-29 09:20:25');
+INSERT INTO `message` VALUES (310, 2, '【系统通知】您发布的书籍《土木工程英语（第二版）》借阅申请已通过审核！请等待交接。', 0, '2026-05-29 09:20:26');
+INSERT INTO `message` VALUES (311, 2, '【信用奖励】成功交接给下一位书友！本次恢复 3 分 (今日已累计恢复 3/5 分)，当前：95 分。', 0, '2026-05-29 09:20:38');
+INSERT INTO `message` VALUES (312, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：73 分。', 0, '2026-05-29 09:59:00');
+INSERT INTO `message` VALUES (313, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：71 分。', 0, '2026-05-29 09:59:00');
+INSERT INTO `message` VALUES (314, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：98 分。', 0, '2026-05-29 09:59:00');
+INSERT INTO `message` VALUES (315, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：69 分。', 0, '2026-05-29 10:00:00');
+INSERT INTO `message` VALUES (316, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：67 分。', 0, '2026-05-29 10:00:00');
+INSERT INTO `message` VALUES (317, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：96 分。', 0, '2026-05-29 10:00:00');
+INSERT INTO `message` VALUES (318, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：65 分。', 0, '2026-05-29 10:59:00');
+INSERT INTO `message` VALUES (319, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：63 分。', 0, '2026-05-29 10:59:00');
+INSERT INTO `message` VALUES (320, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：94 分。', 0, '2026-05-29 10:59:00');
+INSERT INTO `message` VALUES (321, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：61 分。', 0, '2026-05-29 11:00:00');
+INSERT INTO `message` VALUES (322, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：59 分。', 0, '2026-05-29 11:00:00');
+INSERT INTO `message` VALUES (323, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除您 2 信用分。当前剩余：92 分。', 0, '2026-05-29 11:00:00');
+INSERT INTO `message` VALUES (324, 3, '【漂流接力】恭喜！您已读完《土木工程英语（第二版）》。\n由于这是漂流书籍，书本物理上现在由您保管。系统已自动将该书转移到了您的【我借出的】列表中。\n等待下一位有缘人申请时，您将作为新的传递者与TA当面交接暗号！让知识继续流动吧！', 0, '2026-05-30 09:40:15');
+INSERT INTO `message` VALUES (325, 2, '【系统通知】您最初发布的《土木工程英语（第二版）》已经被前一位读者读完，并成功接力成为了下一站的火种。感谢您的分享！', 0, '2026-05-30 09:40:15');
+INSERT INTO `message` VALUES (326, 4, '【系统通知】您的书籍《地球科学文化研究文集》已发布！', 0, '2026-05-30 09:45:12');
+INSERT INTO `message` VALUES (327, 4, '【信用奖励】发布书籍奖励生效！本次恢复 2 分 (今日已累计恢复 2/5 分)，当前信用分：94 分。', 0, '2026-05-30 09:45:12');
+INSERT INTO `message` VALUES (328, 4, '【系统通知】您的书籍《地球科学文化研究文集》已通过审核并上架！', 0, '2026-05-30 09:45:29');
+INSERT INTO `message` VALUES (329, 4, '【系统通知】有同学申请借阅了您发布的书籍《地球科学文化研究文集》！\nTA 的申请理由是：[1天]\n目前正在等待管理员审核，请留意后续通知。', 0, '2026-05-30 09:54:41');
+INSERT INTO `message` VALUES (330, 2, '【系统通知】您已撤销对《地球科学文化研究文集》的借阅。', 0, '2026-05-30 09:56:53');
+INSERT INTO `message` VALUES (331, 4, '【通知】对方在【交接阶段】撤销了借阅。原因：[不需要了]', 0, '2026-05-30 09:56:53');
+INSERT INTO `message` VALUES (332, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除 2 信用分。当前剩余：63 分', 0, '2026-05-30 10:59:00');
+INSERT INTO `message` VALUES (333, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除 2 信用分。当前剩余：92 分', 0, '2026-05-30 10:59:00');
+INSERT INTO `message` VALUES (334, 3, '【逾期惩罚】您的借阅已逾期！系统已扣除 2 信用分。当前剩余：61 分', 0, '2026-05-30 11:00:00');
+INSERT INTO `message` VALUES (335, 4, '【逾期惩罚】您的借阅已逾期！系统已扣除 2 信用分。当前剩余：90 分', 0, '2026-05-30 11:00:00');
 
 -- ----------------------------
 -- Table structure for user
@@ -410,8 +539,8 @@ CREATE TABLE `user`  (
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES (1, '系统管理员', 'admin', '123456', 1, 1, 2, NULL, NULL, 100, 0, NULL);
-INSERT INTO `user` VALUES (2, '王某', '243121201', '123456', 0, 1, 1, 'UID_2CDO4DAZsd9E1Vn3O0NCNJhxEry2', '大数据与智能工程系', 71, 5, '2026-03-26');
-INSERT INTO `user` VALUES (3, '李某', '243121202', '123456', 0, 1, 1, 'UID_AqWFQ9ImI1tEWIrrUL39tvP8KzFg', '大数据与智能工程系', 35, 5, '2026-03-16');
-INSERT INTO `user` VALUES (4, '刘某', '243121203', '123456', 0, 1, 0, NULL, '大数据与智能工程系', 54, 3, '2026-03-16');
+INSERT INTO `user` VALUES (2, '王某', '243121201', '123456', 0, 1, 1, 'UID_2CDO4DAZsd9E1Vn3O0NCNJhxEry2', '大数据与智能工程系', 95, 3, '2026-05-29');
+INSERT INTO `user` VALUES (3, '李某', '243121202', '123456', 0, 1, 1, 'UID_AqWFQ9ImI1tEWIrrUL39tvP8KzFg', '大数据与智能工程系', 61, 3, '2026-05-29');
+INSERT INTO `user` VALUES (4, '刘某', '243121203', '123456', 0, 1, 0, NULL, '大数据与智能工程系', 90, 2, '2026-05-30');
 
 SET FOREIGN_KEY_CHECKS = 1;

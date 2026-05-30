@@ -155,7 +155,7 @@ export default {
       tableData: [], recordTotal: 0, typeData: [],
       queryParam: { page: 1, limit: 12, bookname: null, bookauthor: null, booktypeid: null, auditstatus: 1 },
       dialogFormVisible: false, formType: 0,
-      form: { bookid: null, bookname: "", bookauthor: "", bookprice: 0, booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null },
+      form: { bookid: null, bookname: "", bookauthor: "", booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null },
       rules: {
         bookname: [{ required: true, message: '请填写图书名称', trigger: 'blur' }],
         bookauthor: [{ required: true, message: '请填写图书作者', trigger: 'blur' }],
@@ -197,7 +197,7 @@ export default {
     handleFilter() { this.queryParam.page = 1; this.fetchData(); },
     handleCreate() {
       this.formType = 0;
-      this.form = { bookid: null, bookname: "", bookauthor: "", bookprice: 0, booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null };
+      this.form = { bookid: null, bookname: "", bookauthor: "", booktypeid: 1, bookdesc: "", contactinfo: "", bookcount: 1, inventory: 1, bookimg: "", uploaderid: null };
       this.dialogFormVisible = true;
     },
     handleUpdate(row) { 

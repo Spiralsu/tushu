@@ -83,11 +83,11 @@ export default {
             newPassword: this.ruleForm.newPassword
           }
           updatePassword(data).then(res => {
-            if (res === 1) {
+            if (res.code === 0) {
               this.$message.success('密码修改成功，请牢记新密码！');
               this.resetForm(formName);
             } else {
-              this.$message.error('原密码错误或修改失败');
+              this.$message.error(res.msg || '原密码错误或修改失败');
             }
           })
         } else {
